@@ -1,0 +1,45 @@
+/* CSS Document */
+
+#navlist
+{
+	width: 95%;
+	color: #669900;
+	font-weight: normal;
+	margin: 0px;
+	padding: 1px;
+}
+
+#navlist li
+{
+	margin: 0px;
+	text-align: left;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #669900;
+	list-style-type: none;
+}
+
+#navlist li a
+{
+	display: block;
+	text-decoration: none;
+	padding-top: 0.25em;
+	padding-right: 1em;
+	padding-bottom: 0.25em;
+	padding-left: 1em;
+}
+
+#navlist li a:link, #navlist li a:visited {
+	color: #669900;
+	text-decoration: none;
+}
+
+#navlist li a:hover
+{
+	color: #666600;
+	background-color: #CEE0A5;
+	background-image: url(../../images/small/pic1g.gif);
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	border-bottom-color: #666600;
+}

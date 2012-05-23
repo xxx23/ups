@@ -1,0 +1,27 @@
+body {
+  font-size: 0.9em;
+  
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  line-height: 2em;
+  background-color: #FFF;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.news {
+  position: absolute;
+  height: 170px;
+  left: 25px;
+  border-left-style:none;
+  border-left-color:#6699FF;
+  border-left-width:1px;
+  /*border: 0px solid #CCCCCC;*/
+  background-image:url(../images/index/newsmain.gif);
+  background-repeat: repeat-y;
+  font-size: 0.9em;
+  font-color:color: #aaaaaa;
+
+}
+
+
+

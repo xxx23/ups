@@ -1,0 +1,29 @@
+.inner {
+	list-style-position: outside;
+	list-style-type: none;
+}
+.inner {
+	margin-bottom: 5px;
+	padding-bottom: 0.5em;
+	border: 1px solid #666666;
+	background-color: #95d3e8;
+}
+.inner ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	line-height: 25px;
+	text-align: center;
+}
+.inner li {
+	background-image: url(../images/f4.gif);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+img {
+	vertical-align: middle;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+}

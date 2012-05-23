@@ -1,0 +1,255 @@
+HTML {
+	SCROLLBAR-FACE-COLOR: #c0c0c0; SCROLLBAR-HIGHLIGHT-COLOR: #9d9d9d; SCROLLBAR-SHADOW-COLOR: #9d9d9d; SCROLLBAR-3DLIGHT-COLOR: #e0e0e0; SCROLLBAR-ARROW-COLOR: #ffffff; SCROLLBAR-TRACK-COLOR: #e0e0e0; SCROLLBAR-DARKSHADOW-COLOR: #e0e0e0
+}
+TD {
+	FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 18px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+TD A {
+	FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 18px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: underline
+}
+TD A:hover {
+	FONT-SIZE: 12px; COLOR: #cc0000; LINE-HEIGHT: 18px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+FORM {
+	MARGIN: 0px
+}
+.norow {
+	FONT-SIZE: 1px; LINE-HEIGHT: 1px
+}
+.SecretItem {
+	PADDING-BOTTOM: 9px; COLOR: #696969; PADDING-TOP: 9px
+}
+.SecretItem2 {
+	PADDING-BOTTOM: 9px; PADDING-TOP: 11px
+}
+.FontMajor {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; FONT-SIZE: 12px; PADDING-BOTTOM: 4px; COLOR: #464646; LINE-HEIGHT: 18px; PADDING-TOP: 4px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+.FontWhite {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #ffffff; LINE-HEIGHT: 16px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.FontWhite A {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #ffffff; LINE-HEIGHT: 16px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; LETTER-SPACING: 0px; TEXT-DECORATION: underline
+}
+.FontWhite A:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #ff0000; LINE-HEIGHT: 16px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; LETTER-SPACING: 0px; TEXT-DECORATION: none
+}
+.FontGrey {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #666666; LINE-HEIGHT: 18px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; LETTER-SPACING: 0px
+}
+.FontGrey A {
+	FONT-WEIGHT: bolder; FONT-SIZE: 12px; PADDING-BOTTOM: 4px; COLOR: #4c4c4c; LINE-HEIGHT: 18px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; HEIGHT: 20px; TEXT-DECORATION: underline
+}
+.FontGrey A:hover {
+	FONT-SIZE: 12px; COLOR: #cc0000; LINE-HEIGHT: 18px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.FontGreyDeep {
+	FONT-SIZE: 12px; COLOR: #666666; LINE-HEIGHT: 20px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.FontGreyDeep A {
+	FONT-SIZE: 11px; COLOR: #cc0000; LINE-HEIGHT: 18px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: underline
+}
+.FontGreyDeep A:hover {
+	FONT-SIZE: 11px; COLOR: #cc0000; LINE-HEIGHT: 18px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.Copyright {
+	FONT-SIZE: 11px; PADDING-BOTTOM: 6px; COLOR: #cccccc; LINE-HEIGHT: 13px; PADDING-TOP: 4px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.Copyright A {
+	FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: underline
+}
+.Copyright A:hover {
+	FONT-SIZE: 11px; COLOR: #cccccc; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.PageNumber {
+	FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+.PageNumber A {
+	FONT-SIZE: 12px; COLOR: #cc0000; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.PageNumber A:hover {
+	FONT-SIZE: 12px; COLOR: #cc0000; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: underline
+}
+.NumberFontSize {
+	PADDING-LEFT: 11px; WIDTH: 115px; COLOR: #cc0000; PADDING-TOP: 3px
+}
+.NumberFontSize2 {
+	PADDING-LEFT: 11px; WIDTH: 260px; COLOR: #cc0000; PADDING-TOP: 3px; TEXT-ALIGN: right
+}
+.FormFormat INPUT {
+	BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid; FONT-SIZE: 10px; BORDER-LEFT: #666666 1px solid; BORDER-BOTTOM: #666666 1px solid; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"; BACKGROUND-COLOR: #f6f6f6
+}
+.FormFormat TEXTAREA {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; BORDER-LEFT: #999999 1px solid; COLOR: #666666; BORDER-BOTTOM: #999999 1px solid; BACKGROUND-COLOR: #f3f3f3
+}
+.FontRight {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 10px; FONT-SIZE: 12px; PADDING-BOTTOM: 6px; COLOR: #666666; LINE-HEIGHT: 18px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.TitleRed {
+	FONT-WEIGHT: bolder; FONT-SIZE: 12px; COLOR: #ff0000; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; LETTER-SPACING: 1px; BACKGROUND-COLOR: #ffffff
+}
+.TitleGrey {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #999999; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; BACKGROUND-COLOR: #ffffff
+}
+.TitleRedColorBg {
+	FONT-WEIGHT: bolder; FONT-SIZE: 12px; COLOR: #ff0000; PADDING-TOP: 1px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; LETTER-SPACING: 1px
+}
+.TitleGreyColorBg {
+	FONT-WEIGHT: bolder; FONT-SIZE: 11px; COLOR: #4c4c4c; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+.TitleGreyDeep {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"; BACKGROUND-COLOR: #ffffff
+}
+.TitleRedDeep {
+	FONT-WEIGHT: bolder; FONT-SIZE: 11px; COLOR: #bd0812; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"; BACKGROUND-COLOR: #ffffff
+}
+.TitleRedDeep2 {
+	FONT-WEIGHT: bolder; FONT-SIZE: 11px; COLOR: #bd0812; LINE-HEIGHT: 14px; PADDING-TOP: 3px; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"; HEIGHT: 20px; BACKGROUND-COLOR: #ffffff
+}
+.TitleGreySubtitle {
+	PADDING-LEFT: 3px; FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #999999; LINE-HEIGHT: 18px; PADDING-TOP: 2px; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"; LETTER-SPACING: 1px; BACKGROUND-COLOR: #ffffff
+}
+.TitleSize {
+	PADDING-TOP: 10px; HEIGHT: 24px
+}
+.EditTitle {
+	PADDING-LEFT: 6px; FONT-WEIGHT: bolder; FONT-SIZE: 12px; COLOR: #cc0000; PADDING-TOP: 12px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; LETTER-SPACING: 2px; TEXT-DECORATION: none
+}
+.EditFont {
+	FONT-SIZE: 12px; COLOR: #464646; LINE-HEIGHT: 20px; PADDING-TOP: 15px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+.EditFont A {
+	FONT-SIZE: 12px; COLOR: #cc0000; LINE-HEIGHT: 18px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: underline
+}
+.EditFont A:hover {
+	FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 18px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+.EditFont2 {
+	FONT-SIZE: 12px; COLOR: #464646; LINE-HEIGHT: 20px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+.EditFont2 A {
+	FONT-SIZE: 12px; COLOR: #cc0000; LINE-HEIGHT: 20px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: underline
+}
+.EditFont2 A:hover {
+	FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 20px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+.ClassFont {
+	PADDING-LEFT: 8px; FONT-WEIGHT: normal; FONT-SIZE: 12px; PADDING-BOTTOM: 4px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+.ClassFont A {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #333333; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: underline
+}
+.ClassFont A:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #cc0000; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.ClassMore {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; FONT-WEIGHT: normal; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; LINE-HEIGHT: 20px; PADDING-TOP: 1px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; HEIGHT: 20px
+}
+.ClassMore A {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #333333; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: underline
+}
+.ClassMore A:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #cc0000; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.ClassMore2 {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 14px; FONT-WEIGHT: normal; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(_img//index_arrow.gif); PADDING-BOTTOM: 0px; COLOR: #333333; LINE-HEIGHT: 20px; MARGIN-RIGHT: 6px; PADDING-TOP: 2px; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; HEIGHT: 20px
+}
+.ClassMore2 A {
+	FONT-WEIGHT: bolder; FONT-SIZE: 12px; COLOR: #cc3300; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.ClassMore2 A:hover {
+	FONT-WEIGHT: bolder; FONT-SIZE: 12px; COLOR: #cc0000; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: underline
+}
+.ClassTitle {
+	FONT-WEIGHT: bolder; FONT-SIZE: 15px; PADDING-BOTTOM: 2px; PADDING-TOP: 3px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+.ClassMargin {
+	MARGIN-RIGHT: 6px
+}
+.MoreLink {
+	PADDING-RIGHT: 3px; FONT-SIZE: 11px; COLOR: #666666; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.MoreLink A {
+	FONT-SIZE: 11px; COLOR: #cc0000; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: underline
+}
+.MoreLink A:hover {
+	FONT-SIZE: 11px; COLOR: #cc0000; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.NewDate {
+	FONT-SIZE: 12px; COLOR: #999999; LINE-HEIGHT: 22px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+.NewLink {
+	FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 22px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+.NewLink A {
+	COLOR: #333333; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: underline
+}
+.NewLink A:hover {
+	COLOR: #cc0000; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.PortfolioLink {
+	PADDING-LEFT: 22px; FONT-SIZE: 12px; PADDING-BOTTOM: 18px; COLOR: #333333; LINE-HEIGHT: 22px; PADDING-TOP: 12px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.PortfolioLink A {
+	FONT-SIZE: 12px; LINE-HEIGHT: 22px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: underline
+}
+.PortfolioLink A:hover {
+	FONT-SIZE: 12px; COLOR: #cc0000; LINE-HEIGHT: 22px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.PortfolioTitle {
+	FONT-WEIGHT: bolder; FONT-SIZE: 12px; COLOR: #999999; LINE-HEIGHT: 18px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.PortfolioTitle A {
+	FONT-SIZE: 12px; COLOR: #4c4c4c; LINE-HEIGHT: 18px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: underline
+}
+.PortfolioTitle A:hover {
+	FONT-SIZE: 12px; COLOR: #cc0000; LINE-HEIGHT: 18px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: underline
+}
+.PortfolioFont {
+	FONT-SIZE: 12px; PADDING-BOTTOM: 3px; COLOR: #696969; LINE-HEIGHT: 18px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.BookListFont {
+	FONT-SIZE: 13px; PADDING-BOTTOM: 4px; COLOR: #333333; LINE-HEIGHT: 18px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+.BookListFont A {
+	FONT-SIZE: 12px; COLOR: #666666; LINE-HEIGHT: 18px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: underline
+}
+.BookListFont A:hover {
+	FONT-SIZE: 12px; COLOR: #cc0000; LINE-HEIGHT: 18px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.TopLink {
+	FONT-SIZE: 12px; COLOR: #cc0000; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; LETTER-SPACING: 1px; TEXT-DECORATION: none
+}
+.TopLink A {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: underline
+}
+.TopLink A:hover {
+	FONT-SIZE: 12px; COLOR: #cc0000; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.PageListTable {
+	PADDING-RIGHT: 9px; PADDING-LEFT: 9px; PADDING-TOP: 8px
+}
+.PageListTableSmall {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-TOP: 6px
+}
+.NewListTable {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; PADDING-TOP: 8px
+}
+.NewListTable2 {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-TOP: 2px
+}
+.PicTable {
+	PADDING-LEFT: 4px; PADDING-BOTTOM: 10px
+}
+.SecretTable {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 3px
+}
+.NumberTable {
+	PADDING-BOTTOM: 6px
+}
+.nodisplay {
+	DISPLAY: none; COLOR: #ffffff
+}
+.no {
+	FONT-SIZE: 1px; VISIBILITY: hidden; LINE-HEIGHT: 1px
+}

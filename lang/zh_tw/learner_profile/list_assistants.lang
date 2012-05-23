@@ -1,0 +1,7 @@
+assistant_id_list = '助教帳號列表'
+assistant_select_modify = '助教查詢與修改'
+assistant_name = '助教姓名'
+assistant_id = '助教帳號'
+assistant = '助教'
+assistant_telephone_num = '助教連絡電話'
+has_not_any_assistant_data = '目前沒有任何助教資料'

@@ -1,0 +1,4 @@
+#/course_admin/after_reset_course.tpl
+reset_delete_course = "重置/刪除課程"
+aleady_reset_delete_course = "已重置/刪除課程"
+back_to_course_search = "回到課程查詢"

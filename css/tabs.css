@@ -1,0 +1,63 @@
+/* CSS Document */
+
+ul#tabnav {
+	list-style-type: none;
+	letter-spacing: 0.1em;
+	padding-bottom: 0.8em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: 0em;
+	line-height: 1.5em;
+	padding-top: 3px;
+	font-size: 10pt;
+}
+ul#tabnav li {
+	float: left;
+	color: #0068BD;
+	background-image: url(../images/tab_bg.png);
+	background-repeat: no-repeat;
+	background-position: left -32px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #CCCCCC;
+	border-bottom-width: 0px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+	padding-right: 0.3em;
+	padding-left: 0.5em;
+	padding-top: 2px;
+	margin-right: 1px;
+	cursor:pointer;
+}
+ul#tabnav a:link, ul#tabnav a:visited {
+	display: block;
+	color: #0068BD;
+	background-color: transparent;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+ul#tabnav a:hover {
+	color: #5599FF;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+body#tabA li.tabA, body#tabB li.tabB, body#tabC li.tabC, 
+body#tabD li.tabD, body#tabE li.tabE, body#tabF li.tabF, 
+{
+	color: #FFFFFF;
+	background-color: #FFFFFF;
+	background-position: 0% 0px;
+	background-image: url(../images/tab_bg.png);
+	background-repeat: no-repeat;
+	padding-top: -5px;
+}
+
+body#tabA li.tabA a:link, body#tabA li.tabA a:visited,
+body#tabB li.tabB a:link, body#tabB li.tabB a:visited,
+body#tabC li.tabC a:link, body#tabC li.tabC a:visited,
+body#tabD li.tabD a:link, body#tabD li.tabD a:visited,
+body#tabE li.tabE a:link, body#tabE li.tabE a:visited,
+{
+	color: #FFFFFF;
+}

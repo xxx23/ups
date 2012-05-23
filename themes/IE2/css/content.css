@@ -1,0 +1,149 @@
+/* CSS Document */
+
+#position {
+	color:#5599FF;
+	float:left;
+}
+#mode-control {
+	color:#666666;
+	float:right;
+}
+.tab {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+	padding-bottom: 0.2em;
+	margin-bottom: 0.5em;
+}
+h1 {
+	color:#FFFFFF;
+	background-image: url(../../../images/item1.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	text-indent: 20px;
+	font-size: 10pt;
+	margin: 0px;
+	padding: 15px;
+}
+.address {
+	color:#5599FF;
+	text-align:left;
+	margin: 0px;
+	padding: 0px;
+}
+.intro {
+	width: 90%;
+	margin-left: auto;
+	margin-top: 0em;
+	background-color: #F4F4F4;
+	padding-top: 0.5em;
+	padding-right: 1em;
+	padding-bottom: 0.5em;
+	padding-left: 1em;
+	margin-right: auto;
+}
+.imp {
+	font-weight: bold;
+	color: #FF6600;
+}
+body {
+	font-size: 10pt;
+	margin:0;
+	padding:0;
+}
+
+a:link {
+	color: #5599FF;
+}
+a:visited {
+	color: #2177BC;
+}
+a:hover, a:active {
+	color:#FF6600;
+	text-decoration:none;
+}
+.al-left {
+	text-align: right;
+	padding-right: 1em;
+}
+input.btn {
+	color: #0068BD;
+	background-repeat: repeat-x;
+	background-position: bottom;
+	border: 1px outset #CEE9FF;
+	background-image: url(../images/table_bg.gif);
+	background-color: #FFFFFF;
+}
+img {
+	border:0;
+}
+
+div.upload{
+	position: absolute;
+	text-align: center;
+	background-color: #5599FF;
+}
+
+div.searchbar {
+    margin-top:0px;
+    text-align:center;
+    width:80%;
+	padding:5px;
+    background-color:#F4F4F4;
+	border:1px;
+	border-color:#6699FF;
+	border-style:dashed;
+}
+div.searchlist{
+    background-image:url(../../../images/arrow_116.gif);
+	background-position:5px 7px;
+	background-repeat:no-repeat;
+    text-align:left;
+	width:80%;
+    margin-top:2px;
+	margin-bottom:2px;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:25px;
+    background-color:#62D5D5;
+	color:#fff;
+	border-color:#fff;
+	border-style:dashed;
+	border-width:1px;
+}
+
+div.describe{
+   width:80%;
+   color:#3399A2;
+   background-image:url(../../../images/295.gif);
+   background-repeat:no-repeat;
+   text-align:left;
+   padding-left:20px;
+   margin-left:80px;
+   margin-top:0;
+   margin-bottom:0px;
+}
+div.button001{
+   margin-top:5px;
+   border-color:#999999;
+   border-width:1px;
+   border-style:solid;
+   height:20px;
+   width:80px;
+   padding-top:3px;
+   background-image:url(../../../images/button001.gif);
+   }
+div.button001 a{
+   color:#333333;
+   text-decoration:none;
+   }
+div.button001 a:hover{
+   color:#336699;
+   text-decoration:none;
+   } 
+button002{
+   font-size:10px;
+   padding-top:3px;
+   }   
+     
+   

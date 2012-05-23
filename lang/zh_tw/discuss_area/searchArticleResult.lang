@@ -1,0 +1,13 @@
+#/discuss_area/searchArticleResult.tpl
+article_search_result = "文章搜尋結果"
+search = "搜尋"
+article_title = "文章標題"
+author = "作者"
+article_content = "文章內容"
+_include = "包含"
+result_of_article = "的文章結果"
+total = "共有"
+data_meet = "筆資料符合"
+post_date = "張貼日期"
+belong_discuss_area = "所屬討論區"
+back_to_article_search = "回文章搜尋"

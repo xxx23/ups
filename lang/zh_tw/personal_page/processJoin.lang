@@ -1,0 +1,4 @@
+#/personal_page/processJoin.tpl
+teacher_community_area = "教師社群專區"
+join_describe = "您好，您已申請成功！請等候這堂課程的主要教師審核！　待通過後您即可進入該課程社群。"
+back_to_teacher_community_area = "回社群教師專區"

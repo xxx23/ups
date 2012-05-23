@@ -1,0 +1,9 @@
+SELECT b.criteria_total, TIME_TO_SEC(b.criteria_content_hour) as take_hour, t.begin_course_cd, t.personal_id, t.course_end 
+			FROM begin_course b, take_course t
+            WHERE b.begin_course_cd=t.begin_course_cd 
+            AND (t.pass=-1 OR t.pass=0) 
+            AND t.allow_course=1 
+            AND b.attribute='0' 
+            AND t.personal_id != 2
+
+18604

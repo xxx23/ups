@@ -1,0 +1,68 @@
+table{
+    width:600px;
+    margin: 0 auto;
+}
+table.services{
+    width:600px;
+    margin: 0 auto;
+}
+
+table.services thead{
+    background:#ccc;
+    text-align:center;
+}
+
+table.services tbody{
+    background:#eee;
+    text-align:center;
+}
+
+table.ws-table
+{
+    margin:20px;
+}
+
+.form-error
+{
+    color:red;
+}
+
+.error
+{
+    color:red;
+}
+.alert
+{
+    display:block;;
+    margin: 0 auto;
+    width:200px;
+    color:white;
+    background:#fe9a2e;
+    text-align:center;
+}
+.formContainer
+{
+    padding:10px;
+}
+form.ws-form
+{
+    background:#eee;
+    
+    width:80%;
+    color: black;
+}
+
+form.ws-form label
+{
+    width:25%;
+    vertical-align:top;
+}
+
+form.ws-form input
+{
+}
+
+form.ws-form
+{
+}
+

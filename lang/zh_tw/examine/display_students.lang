@@ -1,0 +1,7 @@
+name = '姓名'
+student_answer_result = '學生回答結果'
+id = '學號'
+grade = '成績'
+back_to_exam_list = '返回線上測驗題目列表'
+not_examine_yet = '未測驗'
+

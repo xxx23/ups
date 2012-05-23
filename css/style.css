@@ -1,0 +1,24 @@
+/* CSS Document */
+
+body {
+	padding: 0;
+	margin: 0;
+	clear: both;
+	overflow: hidden;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	background-color: #EBEAE5;
+}
+.content {
+	height: 600px;
+	padding: 0px;
+	width: 1021px;
+	margin: auto;
+	clear: both;
+	overflow: hidden;
+	border: 0;
+}
+iframe {
+	border:0;
+}

@@ -1,0 +1,61 @@
+***************************************************************************
+*** How to display the number of users in the chat room on another page ***
+***************************************************************************
+
+This documentation will explain how to display the number of users in your chat room
+on another page of your website.  The page does not have to be written in PHP and no
+PHP programming knowledge is necessary to set up this display counter.
+
+This method requires that the PHP GD library be installed.  Whether it is installed or
+not is not something that you can control, so if it isn't installed then you won't be
+able to do the following.  To see if you have the GD library installed visit
+http://yoursite.com/x7chat2directory/online.php, you will either see a number or a message
+telling you that the GD library is not installed.  If you see the number then you can
+continue this tutorial.
+
+The number that you saw above is the number of people who have been in your chat room in
+the past 30 seconds, or who are currently in the chat room.  Adding this number to your
+website is very simple, add the following HTML code anywhere in your site and the number
+will display there, of course you will need to edit the path to make it point to your
+X7 Chat installation.
+
+---------------------------------------------------------------------------
+<img src="http://yoursite.com/x7chat2directory/online.php?">
+---------------------------------------------------------------------------
+
+*******************
+*** Customizing ***
+*******************
+You can customize the size and color of the display so that it matches your website.  To
+do this you must add "arguments" onto the end of the image URL.  Arguments are seperated
+by &'s and are in the form key=value.  After the list of arguments I will show you an
+example if you do not understand.
+
+
+| Key		| Explanation					| Example (default value)
+-------------------------------------------------------------------------------------------
+| size_x	| The width of the image			| size_x=50 (automatic*)
+| size_y	| The height of the image			| size_y=50 (automatic*)
+| font_size	| The size of the font				| font_size=12 (12)
+| red		| Amount of red in the font color (0-255)	| red=0 (0)
+| blue		| Amount of blue in the font color (0-255)	| blue=100 (0)
+| green		| Amount of green in the font color (0-255)	| green=255 (0)
+| bg_red	| Amount of red in the background (0-255)	| bg_red=255 (255)
+| bg_blue	| Amount of blue in the background (0-255)	| bg_blue=100 (255)
+| bg_green	| Amount of green in the background (0-255)	| bg_green=0 (255)
+-------------------------------------------------------------------------------------------
+* If size_x and/or size_y is not specified it will be calculated automatically to best fit.
+
+***************
+*** Example ***
+***************
+
+Let's say I want a slightly larger font size then the default 12, I would use
+---------------------------------------------------------------------------
+<img src="http://yoursite.com/x7chat2directory/online.php?font_size=14">
+---------------------------------------------------------------------------
+
+Now, let's say I want to keep that larger font size and I want a yellow background
+---------------------------------------------------------------------------
+<img src="http://yoursite.com/x7chat2directory/online.php?font_size=14&bg_red=255&bg_green=255&bg_blue=0">
+---------------------------------------------------------------------------

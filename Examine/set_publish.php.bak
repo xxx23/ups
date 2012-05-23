@@ -1,0 +1,85 @@
+<?php
+	/*author: lunsrot
+	 * date: 2007/06/30 modify
+	 */
+	require_once("../config.php");
+	require_once("../session.php");
+	require_once("publ_info.php");		//displayTime, setTime
+
+	$option = $_GET['option'];
+	if(empty($option))
+		$option = "view";
+	$tmp = gettimeofday();
+	$time = getdate($tmp['sec']);
+	$begin_course_cd = $_SESSION['begin_course_cd'];	
+	call_user_func($option, $_GET['test_no'], $begin_course_cd, $time, $tmp);
+	/*template
+	 * 功能：顯示公開、開始、結束測驗的時間
+	 * 參數：test_no是測驗編號；time是一個陣列，有mon, mday等member data；tmp是紀錄距1970年過了多少時間
+	 * 回傳值：Null
+	 */
+	function view($test_no, $begin_course_cd, $time, $tmp){
+		$sql = "select * from `test_course_setup` where begin_course_cd=$begin_course_cd and test_no=$test_no;";
+		$result = db_query($sql);
+		$row = $result->fetchRow(DB_FETCHMODE_ASSOC);
+		$tpl = new Smarty;
+
+		$tpl->assign('name', $row['test_name']);
+		$tpl->assign('test_no', $test_no);
+		//初次設定時間，以目前的時間代入
+		if(empty($row['d_test_beg'])){
+			displayTime($tpl, $time, "pub", "p");
+			displayTime($tpl, $time, "start", "s");
+			displayTime($tpl, $time, "stop", "d");
+		}else{
+		//已設定過時間，從資料庫內的資料代入
+			displayTime($tpl, str_to_time($row['d_test_public']), "pub", "p");
+			displayTime($tpl, str_to_time($row['d_test_beg']), "start", "s");
+			displayTime($tpl, str_to_time($row['d_test_end']), "stop", "d");
+		}
+		$time = $tmp['sec'];
+		if($row[d_test_public] == NULL)
+			$row['state'] = "未設定";
+		else if( timecmp( $time, strtotime($row[d_test_end]) ) == 1 ){
+			$row['state'] = "測驗結束";
+		}else if( timecmp( $time, strtotime($row[d_test_beg]) ) == 1 ){
+			$row['state'] = "測驗中";
+		}else if( timecmp( $time, strtotime($row[d_test_public]) ) == 1 ){	
+			$row['state'] = "已發佈";
+		}else if( timecmp( $time, strtotime($row[d_test_public]) ) == -1 ){
+			$row['state'] = "未發佈";
+		}
+		$tpl->assign('state', $row['state']);
+		$tpl->assign("time", "發佈時間：".$row[d_test_public]."<br/>"."測驗開始：".$row[d_test_beg]."<br/>"."測驗結束：".$row[d_test_end]);
+
+		assignTemplate($tpl, "/examine/set_publish.tpl");
+	}
+	
+	/*function
+	 * 功能：修改公開、開始、結束測驗的時間
+	 * 參數：test_no是測驗編號；time是一個陣列，有mon, mday等member data；tmp是紀錄距1970年過了多少時間
+	 * 回傳值：Null
+	 */
+	function modify($test_no, $begin_course_cd, $time, $tmp){
+ 
+	  global $DB_CONN;
+	  setTime($DB_CONN, $begin_course_cd, $test_no, "pub", "d_test_public");
+	  setTime($DB_CONN, $begin_course_cd, $test_no, "start", "d_test_beg");
+	  setTime($DB_CONN, $begin_course_cd, $test_no, "stop", "d_test_end");
+	  header("location:../Examine/tea_view.php");
+	}
+
+	/*library
+	 * 功能：將表示時間的字串轉為陣列
+	 * 參數：str是格式為1970-01-01 00:00:00的字串
+	 * 回傳值：陣列，member data為year, mon, mday, hours
+	 */
+	function str_to_time($str){
+		$output = array();
+		$output['year'] = substr($str, 0, 4);
+		$output['mon'] = substr($str, 5, 2);
+		$output['mday'] = substr($str, 8, 2);
+		$output['hours'] = substr($str, 11, 2);
+		return $output;
+	}
+?>

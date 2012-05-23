@@ -1,0 +1,11 @@
+#/personal_page/lookJoin.tpl
+want_join_community_list = "申請加入社群名單"
+no_apply_list = "課程管理者您好! 您的社群目前沒有申請者需審核!!"
+back_to_teacher_community_area = "回教師社群專區"
+teacher_name = "教師名稱"
+join_reason = "申請理由"
+view_join_reason = "觀看申請理由"
+approve = "核准"
+reject_and_enter_reason = "拒絕並輸入理由"
+descibe_ok = "通過：您按下'通過'後，該位教師可登入此教師社群，參與教學分享與討論。"
+describe_reject = "拒絕：您按下'拒絕'後，該位教師可查看拒絕理由，並決定是否再次申請。"

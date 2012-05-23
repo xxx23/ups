@@ -1,0 +1,33 @@
+{config_load file='common.lang'}
+{config_load file='examine/display_students.lang'}
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link href="{$tpl_path}/css/tabs.css" rel="stylesheet" type="text/css" />
+<link href="{$tpl_path}/css/content.css" rel="stylesheet" type="text/css" />
+<link href="{$tpl_path}/css/table.css" rel="stylesheet" type="text/css" />
+<link href="{$tpl_path}/css/form.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="ifr">
+<h1>{#student_answer_result#}</h1>
+	<table class="datatable"><tbody>
+		<tr>
+			<th>{#id#}</th>
+			<th>{#name#}</th>
+			<th>{#grade#}</th>
+		</tr>
+		{foreach from=$people item=person}
+		<tr class="{cycle values=" ,tr2"}">
+			<td>{$person.login_id}</td>
+			<td>{$person.personal_name}</td>
+			<td>
+			{if $person.isreply == 1}<a href="complie_exam.php?option=student_reply&pid={$person.personal_id}">{$person.grade}</a>
+			{elseif $person.grade == ""}{#not_examine_yet#}{else}{$person.grade}{/if}
+			</td>
+		</tr>
+		{/foreach}
+	</tbody></table>
+	<p class="al-left"><a href="complie_exam.php?test_no={$test_no}"><img src="{$tpl_path}/images/icon/return.gif" />{#back_to_exam_list#}</a></p>
+</body>
+</html>

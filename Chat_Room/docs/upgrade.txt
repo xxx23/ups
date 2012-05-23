@@ -1,0 +1,65 @@
+///////////////////////////////////////////////////////////////
+//                                                           //
+//     X7 Chat Upgrade Instructions - Version 2.0.0          //
+//                                                           //
+///////////////////////////////////////////////////////////////
+
+*********************
+*****  Contents *****
+*********************
+	1) Information
+	2) Pre-Upgrade
+	3) Upgrade Instructions
+	4) Post-Upgrade
+	
+
+*********************
+***  Information  ***
+*********************
+	Use these instructions to upgrade from a previous version of X7 Chat 2.
+	You cannot upgrade from X7 Chat Version 1 to X7 Chat Version 2 using these
+	instructions.  Instructions for upgrading from Version 1 to Version 2 are
+	in the file upgradev1.txt, which is also located in the docs directory.
+	
+	You may upgrade directly from Alpha-1 to Alpha-3, you do not need to perform
+	an upgrade for each version.
+	
+	A Patch system has not been finished yet, this means that any upgrade will 
+	destroy any modifications you have made to your chat room code.  A patch system 
+	is currently being developed to change only the files that were updated in the 
+	release and not to disturb custom modifications.  You can expect this system
+	to be finished around the time V2 beta is released.
+
+*********************
+***  Pre-Upgrade ****
+*********************
+	Upload the new X7 Chat files and overwrite the old ones.  You must keep your
+	OLD config.php (don't overwrite it, don't upload the new config.php) and if you
+	modified any of the default themes you do not need to overwrite those either.
+	
+	CHMOD 777 the old config.php file on the server so that it can be updated with
+	the new version information.
+	
+*****************************
+***  Upgrade Instructions ***
+*****************************
+	After the new files have been uploaded to replace the old ones follow these
+	steps.
+		
+		Step 1) Visit http://yourwebsite.com/path_to_x7chat/install.php.  Of
+		course you must replace "yourwebsite.com" with the actual address of
+		your site and "/path_to_x7chat" with the actual path to the 
+		directory that you uploaded X7 Chat to.  The install.php file
+		will guide you through the rest of the upgrade process.  As long as you
+		did not overwrite your old config.php file, the installer will automatically
+		detect that you wish to upgrade.
+		
+		Assistance) If you need assistance with these instructions please
+		visit http://help.x7chat.com.
+		
+		
+*********************
+***  Post-Upgrade ***
+*********************
+	After upgrading you MUST deleted the install.php and the upgradev1.php file.  If you do not
+	anybody can get administrator access.

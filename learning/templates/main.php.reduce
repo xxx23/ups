@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Language" content="zh-tw">
+
+</head>
+<body>
+<br>
+<div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000"></div>
+<script language="JavaScript" src="scripts/overlib_mini.js"></script>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+		<th scope="col" align="center" valign="top" width="700">
+		<img src="images/taiwan.jpg" border="0" usemap="#MapMapMap" />
+		
+		<map name="MapMapMap" id="MapMapMap">
+                  {foreach from=$city item=country }
+                  <area shape="poly" coords="{$country.coords}"target="_blank" alt="" href="" onmouseover="return overlib('<ul><li><a target=_blank href={$country.url}>{$country.name}教學平台資源網</a></li><li><a target=_blank href={$country.url}>數位機會中心：</a></li>{foreach from=$country.doc item=v key=k}
+				  {*<a href=\'angry.php?doc={$v|urlencode}\' target=_blank>{$v}</a><br />{foreachelse}{/foreach}', CAPTION, '所在縣市：{$country.name}',CENTER, WIDTH, 250,TEXTSIZE, 2,CAPTIONSIZE,3,STICKY);"onmouseout="return nd();"/> *}
+                  				  <a href={$country.doc_url[$k]}?banner=1&doc={$v} target=_blank>{$v}</a><br />{foreachelse}該縣市無任何的DOC單位{/foreach}', CAPTION, '所在縣市：{$country.name}',CENTER, WIDTH, 250,TEXTSIZE, 2,CAPTIONSIZE,3,STICKY);"onmouseout="return nd();"/>
+                 
+				  
+				  {/foreach}
+		</map> 
+		</th>
+
+	</tr>
+</table>
+
+</body>
+</html>

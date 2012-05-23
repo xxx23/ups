@@ -1,0 +1,46 @@
+/* CSS Document */
+
+.name {
+	color:#000000;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 5px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.display_style {
+	float:right;
+}
+.login {
+	color:#000000;
+	font-weight: bold;
+	line-height: 2em;
+	margin: 2px;
+	padding: 2px;
+	background-color: #6DD3C8;
+	font-size: 80%;
+	text-align: center;
+}
+.login input{
+	border: 1px solid #257A72;
+}
+.login img {
+	float:right;
+	border:0px;
+}
+.text {
+	border-top-width: 0px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #6DD3C8;
+	border-right-color: #6DD3C8;
+	border-bottom-color: #6DD3C8;
+	border-left-color: #6DD3C8;
+	padding: 0.5em;
+}

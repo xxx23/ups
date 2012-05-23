@@ -1,0 +1,90 @@
+/* CSS Document */
+body {
+margin: 0;
+padding:0;
+background-color:transparent;
+}
+.clmonth {
+	border-collapse: collapse;
+	width: 95%;
+	margin-right: auto;
+	margin-left: auto;
+}
+.clmonth caption {
+	text-align: center;
+	font: bold 90% Georgia, "Times New Roman", Times, serif; 
+	padding-bottom: 4px;
+}
+.clmonth th {
+	background-color: #99C0C7;
+	color: #333333;
+	padding-top: 0.2em;
+	padding-right: 0.4em;
+	padding-bottom: 0.2em;
+	padding-left: 0.4em;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: solid;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	border-top-color: #99C0C7;
+	border-right-color: #99C0C7;
+	border-bottom-color: #99C0C7;
+	border-left-color: #99C0C7;
+}
+.clmonth td {
+	border: 1px solid #99C0C7;
+	padding: 0.2em;
+	vertical-align: top;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: small;
+	width: 10%;
+	height: 5em;
+}
+.clmonth td.previous, .clmonth td.next {
+	background-color: #F6F6F6;
+	color: #C6C6C6;
+}
+.clmonth td.active {
+	background-color: #C7DFE9;
+}
+.clmonth td.today {
+	color: #721B1D;
+	border: 2px solid #EBA9AA;
+}
+.clmonth td.holiday {
+	color: #CC0000;
+}
+.clmonth a:link, .clmonth a:visited {
+	color:#257A72;
+	text-decoration: none;
+}
+.clmonth ul {
+	color:#006699;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	list-style-position: inside;
+	list-style-type: disc;
+	padding: 0em;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+.clmonth th.sat {
+	color:#FFFFFF;
+	background-color: #33BD6A;
+}
+.clmonth th.sun {
+	color:#FFFFFF;
+	background-color: #DB6669;
+}
+.clmonth td.sat {
+	color:#33BD6A;
+}
+.clmonth td.sun {
+	color:#DB6669;
+}

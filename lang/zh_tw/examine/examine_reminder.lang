@@ -1,0 +1,6 @@
+no_title_doc = '無標題文件'
+back_to_exam_list = '回到測驗列表'
+sent_to_following_students = '已寄給下列學生：'
+account = '帳號'
+name = '姓名'
+no_mail_to_remind = '若 email 欄位為空，代表這名學生目前沒有 email 可通知。'

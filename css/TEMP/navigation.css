@@ -1,0 +1,50 @@
+/* CSS Document */
+
+#navlist
+{
+	width: 95%;
+	color: #990000;
+	font-weight: normal;
+	margin: 0px;
+	padding: 1px;
+}
+
+#navlist li
+{
+	list-style: none;
+	margin: 0px;
+	text-align: left;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #009900;
+}
+
+#navlist li a
+{
+	display: block;
+	padding: 0.25em 0.5em 0.25em 0.5em;
+	text-decoration: none;
+	text-align:center;
+	border-right-width: 1em;
+	border-left-width: 1em;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #009900;
+	border-left-color: #009900;
+}
+
+#navlist li a:link { color: #009900; }
+#navlist li a:visited { color: #006633; }
+
+#navlist li a:hover
+{
+border-left: 1em solid #;
+	color: #990000;
+	background: white;
+	border-right-width: 1em;
+	border-left-width: 1em;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #A8E41B;
+	border-left-color: #A8E41B;
+}

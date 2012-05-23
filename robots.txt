@@ -1,0 +1,4 @@
+#檔案功能：不讓search engine的robot抓到我們的測試網頁。
+
+User-agent:*
+Disallow:/

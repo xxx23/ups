@@ -1,0 +1,9 @@
+#/course_admin/unit_basic.tpl
+course_type = "開課類別"
+all_type = "所有開課類別"
+add_type = "新增開課類別,請輸入類別名稱及所屬類別(若為最上層則填最上層即可)"
+click_type = "點選所屬類別，會跳出視窗顯示所有單位，點選任一單位，可新增子類別至該單位下。"
+error = "格式錯誤或此欄空白"
+type_name = "類別名稱"
+beyond_type = "所屬類別"
+enter = "確定送出"

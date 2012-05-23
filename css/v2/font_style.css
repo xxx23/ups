@@ -1,0 +1,136 @@
+h1 {
+	color: #0000CC;
+	background-image: url(../../images/small/h1.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	text-indent: 55px;
+	line-height: 50px;
+}
+h2 {
+	color: #0000CC;
+	background-image: url(../../images/small/h2.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	text-indent: 40px;
+	line-height: 35px;
+}
+h3 {
+	color: #669900;
+	text-indent: 5px;
+	border-bottom-width: 4px;
+	border-left-width: 1px;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-bottom-color: #669900;
+	border-left-color: #669900;
+	padding: 0.4em;
+	font-size: x-large;
+}
+h4 {
+	color: #0000CC;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #669900;
+	padding: 0.2em;
+}
+.page {
+	text-align: center;
+}
+.page a:link {
+	text-decoration:none;
+	border: 1px solid #0066FF;
+	padding-top: 0.1em;
+	padding-right: 0.3em;
+	padding-bottom: 0.1em;
+	padding-left: 0.3em;
+}
+.page a:visited {
+	text-decoration:none;
+	border: 1px solid #666600;
+	padding: 0.2em;
+}
+.page a:hover {
+	text-decoration:none;
+	border: 1px solid #669900;
+	padding: 0.2em;
+}
+.page a:active {
+	text-decoration:none;
+	border: 1px solid #999999;
+	padding: 0.2em;
+}
+.notice {
+	font-weight: normal;
+	color: #990000;
+	background-color: #F0FFD0;
+	text-indent: 10px;
+	padding: 10px;
+	border: 1px solid #990000;
+}
+.intro {
+	color: #0000FF;
+}
+.intro_samll {
+	color: #0000FF;
+	font-size: small;
+}
+.comment {
+	font-size: small;
+	color: #669900;
+	text-align: right;
+}
+.address {
+	font-size: small;
+	color: #669900;
+	margin: 1px;
+	padding: 1px;
+}
+.address a:link, .address a:visited {
+	color: #0066FF;
+}
+.address a:hover {
+	color: #669900;
+	text-decoration: none;
+}
+.top {
+	text-align:right;
+}
+.top a:link, .top a:visited {
+	background-image: url(../../images/small/pic6.gif);
+	border-bottom-width: medium;
+	border-bottom-style: double;
+	border-bottom-color: #0066FF;
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-right: 0.2em;
+	padding-bottom: 0.1em;
+	padding-left: 1em;
+	text-decoration: none;
+	color: #0066FF;
+}
+.top a:hover {
+	background-image: url(../../images/small/pic6g.gif);
+	border-bottom-width: 0px;
+	color: #669900;
+}
+.mylink {
+	text-align:right;
+	margin: 5px;
+}
+.mylink a:link, .mylink a:visited {
+	border-bottom-width: medium;
+	border-bottom-style: double;
+	border-bottom-color: #0066FF;
+	padding-right: 0.2em;
+	padding-bottom: 0.1em;
+	padding-left: 1.3em;
+	text-decoration: none;
+	color: #0066FF;
+}
+.mylink a:hover {
+	background-image: url(../../images/small/star.gif);
+	border-bottom-width: 0px;
+	color: #669900;
+	background-repeat: no-repeat;
+	background-position: left center;
+}

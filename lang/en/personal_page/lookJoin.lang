@@ -1,0 +1,11 @@
+#/personal_page/lookJoin.tpl
+want_join_community_list = "Request to join the community list"
+no_apply_list = "Dear course administator, there is no applicants in your community!!"
+back_to_teacher_community_area = "Back to teacher community area"
+teacher_name = "Teacher name"
+join_reason = "Reason for the request"
+view_join_reason = "Check reason for request"
+approve = "Approve"
+reject_and_enter_reason = "Reject and enter the reason"
+descibe_ok = "OK: When you check 'OK', the teacher can enter the teacher community, join the teachting sharing and discussion."
+describe_reject = "Reject: When you check 'Reject', the teacher can check the reason and decide whether to request again."

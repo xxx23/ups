@@ -1,0 +1,85 @@
+<html>
+<meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate,max-age=0"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<script type="text/javascript" src="{$webroot}script/prototype.js"></script>
+<script type="text/javascript" src="{$webroot}script/calendar.js"></script>
+
+<link href="{$tpl_path}/css/tabs.css" rel="stylesheet" type="text/css" />
+<link href="{$tpl_path}/css/content.css" rel="stylesheet" type="text/css" />
+<link href="{$tpl_path}/css/table.css" rel="stylesheet" type="text/css" />
+<link href="{$tpl_path}/css/form.css" rel="stylesheet" type="text/css" />
+<head/>
+
+<body>
+<h1>發佈設定</h1>
+<table class="datatable">
+	<tr>
+		<th>目前狀態：{$state}</th>
+	</tr>
+	<tr>
+		<td>{$time}</td>
+	</tr>
+</table>
+<form method="GET" action="set_publish.php">
+<table class="datatable">
+	<tr>
+		<th>測驗名稱</th><th>發佈時間</th>
+	</tr>
+	<tr>
+		<td>{$name}</td>
+		<td>
+			<input type="text" id="pub_date" name="pub_date" size="10" value="{$pub_date}" readonly/>
+			<script type="text/javascript" language=javascript><!--
+			var pub=new dateSelector();
+			pub.inputName='pub_date';
+			pub.display();
+			--></script>
+			<select name="pub_hour">
+				{html_options values=$pub_hour output=$phour_list selected=$pnow_hour}
+			</select>&nbsp;時&nbsp;
+			<select name="pub_minute">
+				{html_options values=$pub_minute output=$pminute_list}
+			</select>&nbsp;分&nbsp;		</td>
+	</tr>
+	<tr>
+		<th>測驗開始時間</th><th>測驗結束時間</th>
+	</tr>
+	<tr>
+		<td>
+			<input type="text" id="start_date" name="start_date" size="10" value="{$start_date}" readonly/>
+			<script type="text/javascript" language=javascript><!--
+			var start=new dateSelector();
+			start.inputName='start_date';
+			start.display();
+			--></script>
+			<select name="start_hour">
+				{html_options values=$start_hour output=$shour_list selected=$snow_hour}
+			</select>&nbsp;時&nbsp;
+			<select name="start_minute">
+				{html_options values=$start_minute output=$sminute_list}
+			</select>&nbsp;分&nbsp;		</td>
+		<td>
+			<input type="text" id="stop_date" name="stop_date" size="10" value="{$stop_date}" readonly/>
+			<script type="text/javascript" language=javascript><!--
+			var stop=new dateSelector();
+			stop.inputName='stop_date';
+			stop.display();
+			--></script>
+			<select name="stop_hour">
+				{html_options values=$stop_hour output=$dhour_list selected=$dnow_hour}
+			</select>&nbsp;時&nbsp;
+			<select name="stop_minute">
+				{html_options values=$stop_minute output=$dminute_list}
+			</select>&nbsp;分&nbsp;		</td>
+	</tr>
+</table>
+<p class="al-left"><input type="hidden" name="option" value="modify"/>
+<input type="hidden" name="test_no" value="{$test_no}"/>
+<input type="reset" class="btn" value="清除資料"/>
+<input type="submit" class="btn" value="確定送出"/></p>
+</form>
+<p class="al-left"><a href="tea_view.php"><img src="{$tpl_path}/images/icon/return.gif" /> 返回線上測驗列表</a></p>
+</body>
+
+</html>

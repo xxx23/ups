@@ -1,0 +1,99 @@
+********************
+*** Introduction ***
+********************
+AuthMods are files that handle user authentication.  They can be customized to allow X7 
+Chat to integrate with existing user management systems, such as bulletin boards or 
+content management systems.  This documentation covers how to program your own AuthMod.
+Basic knowledge of PHP and MySql is required in order to write your own AuthMod.
+
+Throughout the course of this guide I will refer to the script that you are integrating
+X7 Chat with as the 'original script'.
+
+AuthMod files are stored in /lib/auth/.  The file config.php (in the root directory)
+controls which AuthMod file the chat room is using.  The variable 
+$X7CHAT_CONFIG['AUTH_MODE'] defines which AuthMod the chat room should load.  This variable
+is simply the name of the AuthMod file without the .php extention.
+
+AuthMod files have four basic jobs in an integration environment.
+	1) Handle password encryption
+	2) Get a user's password
+	3) Change a user's password
+	4) Automatically log a user into X7 Chat if they are logged into the original 
+	script.
+	
+Here is a blank authmod for you to start off with, all AuthMods must have these parts:
+----------------------------------------------------------------------------------------
+<?PHP
+	$auth_ucookie = "X7C2U";			// Name of username cookie
+	$auth_pcookie = "X7C2P";			// Name of password cookie
+	$auth_register_link = "../register.php";	// Link to the registration Page
+	$auth_disable_guest = true;			// Disable guest accounts
+	
+	// Any Cookie-Translations will have to go here
+	
+	function auth_encrypt($data){
+		// Encrypt $data
+		return $data;
+	}
+	
+	function auth_getpass($auth_ucookie){
+		// Get the password for user $_COOKIE[$auth_ucookie] (the user's username)
+		return $password;
+	}
+	
+	function change_pass($user,$newpass){
+		// Change $user's password to $newpass
+	}
+?>
+----------------------------------------------------------------------------------------
+
+*****************
+*** Variables ***
+*****************
+First take a look at the variables at the top.  The first two handle the cookie names, if
+the system you wish to integrate with uses a seperate cookie for usernames and passwords
+then you may be able to simply swap the cookie name values in here.  If not you will
+have to handle cookie translations later.  In that case leave the default values.  The
+register_link variable allows you to specify the page that users must register on.  This is
+useful for integration because you can point the user to the registration page for the 
+original script.  The final variable allows you to disable guest access to the chat room 
+when this AuthMod is being used.
+
+***************************
+*** Cookie-Translations ***
+***************************
+Cookie-Translations refers to the process of taking cookies from the original script,
+reading them and creating X7 Chat cookies based on the information in them.  The reason to
+do this is so if a user is logged in on the original script they should automatically be
+logged into X7 Chat when they visit the X7 Chat page so they do not have to login twice.
+
+Cookie translation usually involves connecting to the database, reading the cookies, 
+authenticating the data and then creating a variable called $_COOKIE[$auth_ucookie] with
+the username and a variable called $_COOKIE[$auth_pcookie] with the correct password.
+Since not all original scripts store user information in the same way this process is very
+different depending on the original script.  Here is an example of a Cookie-Translation
+for an original script that uses a single cookie that stores data in the format 
+"username:password".  The cookie from the original script is named "userdata".
+----------------------------------------------------------------------------------------
+if(isset($_COOKIE['userdata'])){
+	$temp = explode(";",$_COOKIE['userdata']);
+	$_COOKIE[$auth_ucookie] = $temp[0];
+	$_COOKIE[$auth_pcookie] = $temp[0];
+}
+----------------------------------------------------------------------------------------
+This is a very simple example and does not require the AuthMod to access the database.  If
+database access is required you must be sure to reconnect to the X7 Chat database when you
+are done or else you may get access denied messages.
+
+*****************
+*** Functions ***
+*****************
+The three functions are fairly self explanatory.  It doesn't matter how they work, just 
+that they get the required information and return it.
+
+************
+*** Help ***
+************
+If you need help E-Mail webmaster@x7chat.com and I'll be happy to help you out.  You should
+also check out the premade AuthMods for examples.  md5.php is the original and most basic
+of them all since it does not do integration.

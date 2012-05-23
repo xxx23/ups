@@ -1,0 +1,138 @@
+///////////////////////////////////////////////////////////////
+//                                                           //
+//     X7 Chat Installation Instructions - Version 2.0.0     //
+//                                                           //
+///////////////////////////////////////////////////////////////
+
+*********************
+*****  Contents *****
+*********************
+	1) Requirements
+	2) Pre-Install
+	3) Installation Instructions
+	4) Post-Install
+	
+
+*********************
+***  Requirements ***
+*********************
+	It is recommend that you use an FTP client for uploading and changing
+	permissions on files and directories.  For assistance in obtaining and
+	using an FTP client please visit http://help.x7chat.com.
+
+	X7 Chat requires that you have a properly configured HTTP server which
+	supports PHP Version 4.2.2* or higher.  X7 Chat also requires some type 
+	of database server.  X7 Chat provides built in support for the following
+	database servers:
+		- MySql 3.23.54* or higher;
+		
+	Additional modules may be available at http://x7chat.com that will allow
+	you to use different database servers.  Instructions for installing 
+	these should come with them.
+		
+	If you are unable to find a module for your database, you may also 
+	program your own  database module for X7 Chat to use.  Intermediate to 
+	advanced knowledge of PHP is required to do this.  Support is not 
+	provided, but documentation is available at http://help.x7chat.com under
+	the developer section.
+	
+	
+	* X7 Chat may function properly with some lower versions but Tech 
+	  Support will not be provided to people who do not meet these system 
+	  requirements.
+
+*********************
+***  Pre-Install ****
+*********************
+	X7 Chat will automatically detect YabbSe and configure itself to use the same
+	database as YabbSe.  If you are an experienced user you may configure X7 Chat to
+	use a different database during installation.  Creating a database beforehand
+	is not necessary.
+	
+*********************
+***  Installation ***
+*********************
+	Follow these steps to install X7 Chat:
+	
+		Step 1) Upload all of the files and directories included with this 
+		download to your webserver.  You should put them in a new directory
+		on your server named something appropriate like "chat".  This new
+		directory *MUST* be directly inside the YabbSe directory.  After uploading
+		you need to be able to access the chat room by going to 
+		http://yoursite.com/YabbSedirectory/x7chatdirectory/install.php.  Everything
+		should be uploaded in BINARY mode**.
+		
+		WARNING: If you do not create a new directory to upload the X7 Chat files to
+		you will overwrite your YabbSe and your board WILL NOT FUNCTION.  We are not
+		responsible for damage to your board if you overwrite the YabbSe files
+		with the X7 Chat files.
+		
+		Step 2) CHMOD 777* the following files and directorys:
+					- /logs/
+					- /mods/
+					- /uploads/
+					- /config.php
+					
+		Step 3) Visit http://yourwebsite.com/YabbSedirectory/x7chatdirectory/install.php.
+		Of course you must replace "yourwebsite.com" with the actual address of
+		your site, "/YabbSedirectory" with the actual path to your board
+		and "/x7chatdirectory" with the actual path to the directory that you 
+		uploaded X7 Chat to.  The install.php file will guide you through the 
+		rest of the installation process.  While running the installation file it
+		will automatically configure itself to integrate with YabbSe, leave the
+		default settings on step 1 in order for this integration to work properly.
+		
+		Step 4) Enter the YabbSe Admin panel and click on Edit your Forum Template 
+			under the Forum Configuration section.
+			In the large text box find:
+			---------------------------------------------------
+			<yabb menu>
+			---------------------------------------------------
+			
+			And after it add:
+			---------------------------------------------------
+			<a href="./X7Chat"><img src="chat.gif" alt="Chat" border="0" /></a>
+			---------------------------------------------------
+			In the above code you will need to replace X7Chat with the name of your X7
+			Chat directory.  You will also need to create a button to match your menu 
+			buttons and then upload it.  Now replace the chat.gif in the above code 
+			with the URL of your new image.
+			
+		Step 5) If you would like to display the number of users in the chat room
+		next to the chat link on your YabbSe, please follow the instructions in this
+		step.
+			1) Enter the YabbSe Admin panel and click on Edit your Forum Template 
+			under the Forum Configuration section.
+			In the large text box find:
+			---------------------------------------------------
+			<a href="./X7Chat"><img src="chat.gif" alt="Chat" border="0" /></a>
+			---------------------------------------------------
+			2) Replace with:
+			---------------------------------------------------
+			<a href="./X7Chat"><img src="chat.gif" alt="Chat" border="0" /> (<img src="./X7Chat/online.php?font_size=10&size_y=10&red=00&green=66&blue=99" border="0" align="absmiddle">)</a>
+			---------------------------------------------------
+			In the above code you will need to replace X7Chat with the name of your X7
+			Chat directory.  Please note that this occurances twice and must be replaced
+			for both occurances.
+			
+		Assistance) If you need assistance with these instructions please
+		visit http://help.x7chat.com.
+		
+		
+		* If using a Windows server then the file needs to be made
+		writeable by everyone.  After installation set the file so it is
+		no longer writeable to everyone.
+		
+		** This is usually the default setting for FTP programs.  If you don't
+		know how to change it then chances are its already on BINARY.  Images and 
+		sound files that are included with X7 Chat will not work unless they
+		are uploaded in BINARY mode.
+		
+*********************
+***  Post-Install ***
+*********************
+	After installation you MUST deleted the install.php file.  If you do not
+	anybody can get administrator access.
+	
+	For added security you may change the permissions on config.php to their
+	former values.

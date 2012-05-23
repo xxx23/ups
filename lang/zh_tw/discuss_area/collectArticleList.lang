@@ -1,0 +1,7 @@
+#/discuss_area/collectArticleList.tpl
+personal_collect_article_list = "個人收藏文章列表"
+author = "作者"
+post_date = "張貼日期"
+belong_discuss_area = "所屬討論區"
+belong_course = "所屬課程"
+want_to_cancel_collect_this_article = "確定要取消收藏此文章嗎?"

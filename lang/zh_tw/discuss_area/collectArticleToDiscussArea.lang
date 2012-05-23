@@ -1,0 +1,7 @@
+#/discuss_area_collectArticleToDiscussArea.tpl
+back_to_article_browse = "回[文章一覽]"
+discuss_area_name = "討論區名稱"
+discuss_area_subject = "討論區主旨"
+select_discuss_area = "選取 討論區"
+action_select = "選擇的動作"
+collect = "收藏"

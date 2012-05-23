@@ -1,0 +1,286 @@
+body{
+	padding:0px;
+	margin:0 auto;
+	text-align: center;
+	background-image:url(../../images/index/bg.jpg);
+	background-position: bottom;
+	/*background-repeat:repeat-x;*/
+	background-attachment:fixed;
+	background-color:#CCD6F7;
+}  
+
+
+.outerContainer {
+
+ 	border-style:ridge;
+        border-color:#cccccc;
+	border-width:2px;
+	padding:0px;
+	margin:0px;
+	margin-left: auto ;
+	margin-right: auto ;
+	width: 970px;
+	text-align:left;
+	background:#fff;
+}
+
+
+.bannerContainer{
+    border-style:none;
+	position: relative;
+	width : 100%;
+	height: 125px;
+	background-image:url(../../images/teach/repeatbanner.png);
+	background-repeat:repeat-x;	
+
+}
+
+.outersitelink {
+	position: absolute;
+	height: 30px;
+	width: 350px;
+	top: 0px;
+	right: 0px;
+}
+
+.changeCourse{
+	position: absolute;
+	
+	height: 25px;
+	width: 300px;
+	top: 2px;
+	right:200px;
+
+	text-align:right;
+	padding:5px;
+}
+
+.changeCourse select{
+	border:2px inset #AAA;
+}
+
+
+.qklink{
+	position: absolute;
+	height: 25px;
+	width: 450px;
+	top: 65px;
+	right:0px;
+	z-index:3;
+	text-align:right;
+}
+
+
+.qklink li {
+	list-style:none;
+	display: inline;
+	height:15px;
+	background: url('../../images/teach/qklink_sprite.gif');
+	background-repeat:no-repeat;
+	font-size:12px;
+	vertical-align:middle;
+	padding-right:3px;
+	border-left: 1px dotted #AAA;
+}
+
+.qklink a{
+	color: #000;
+	text-decoration: none;
+}
+.qklink #news{
+	padding-left:30px; 
+	background-position: 0px 0px;
+}
+.qklink #thermometer{
+	padding-left:22px; 
+	background-position: 0px -16px;
+}
+
+.qklink #help{
+	padding-left:45px; 
+	background-position: 0px -31px;
+	border-right: 1px dotted #AAA;
+}
+
+.qklink #calendar{
+	padding-left:17px; 
+	background-position: 0px -46px;
+}
+
+.qklink #notebook {
+	padding-left:17px; 
+	background-position: 0px -61px;
+	
+}
+
+.leftbanner{
+	position:absolute;
+	left: 0;
+	top:0;
+	height:125px;
+	width:650px;
+	
+	background-image: url(../../images/teach/leftbanner.png);
+	background-repeat: no-repeat;
+}
+
+.rightbanner{
+	position:relative;
+	right:0;
+	top:0;
+	float:right;
+	height:125px;
+	width:196px;
+	border: 0;
+	background-image: url(../../images/teach/rightbanner.png);
+}
+
+.welcomeContainer {
+	height: 162px;
+	width: auto;
+	background-image: url(../../images/teach/welcome.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.menubar {
+	border-top-color: #CC33CC;
+	border-right-color: #CC33CC;
+	border-bottom-color: #CC33CC;
+	border-left-color: #CC33CC;
+	position: relative;
+	width: auto;
+	height: 600px;
+}
+
+.profile_pic {
+	position: relative;
+	visibility: inherit;
+	height: 64px;
+	width: 64px;
+	left: 20px;
+	top: 30px;
+	
+}
+
+.leftContainer {
+	position: relative;
+	left: auto;
+	width: 200px;
+	float: left;
+}
+.linkitem {
+	position: relative ; 
+	font-weight:normal;
+	left:30px ; 
+	top: 98px ; 
+	vertical-align: middle;
+	text-decoration:none;
+	height:30px;
+	
+}
+
+.linkitem a{
+	color:#054811;
+	font-weight:normal;
+	text-decoration:none;
+	font-size: 0.9em;
+}
+
+.linkitem_pic {
+	background-image:url(../../images/teach/item.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	font-size: 1.2em;
+	text-decoration:none;
+	padding-left:30px ; 
+	padding-right:8px ; 
+	font-family: "新細明體"
+}
+
+.welcome_banner{
+	text-align:right;
+	position: relative; 
+	right:15px;
+	top: 8px;
+	float:right;
+	height: 20px;
+	font-size: 1em ;
+	width: 185px ; 
+	border: 0;
+	display: block;
+}
+
+.online_people{
+	position:absolute;
+	right: 0;
+	top: 100px;
+	left: 0px;
+	height: 15px;
+	width: 160px;
+	vertical-align:center;
+	border: 0;
+	padding-left: 28px;
+	background-image:url(../../images/teach/msn.gif) ;
+	background-repeat: no-repeat; 
+	background-position: left center ;	
+	text-decoration: none;
+	font-size: 12px;
+}
+
+
+
+.online_people #online_number{
+	height:40px;
+	width: 120px;
+
+ 
+}
+
+
+
+.none_a{
+	text-decoration:none ; 
+	color: #000000;
+}
+
+
+.clear {
+	position: relative;
+	clear: both;
+	width: 620;
+}
+
+.mainContainer{
+	width:97%;
+	padding-top:20px;
+	padding-left:20px;
+	padding-right:0px;
+
+}
+
+.footer {
+	position: relative;
+	left:0 ;
+	top: 0;	
+	width: auto;
+
+	text-align:center;
+	
+	margin:0;
+	padding-top: 3px;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-bottom: 20px;
+	margin-top: 5px;
+	font-size:12px;
+	
+	background-color: #E6EBEF;
+}
+.footer hr {
+	border:1px solid #FFF;
+}
+
+a{
+	text-decoration: none ; 
+	color: black;
+}

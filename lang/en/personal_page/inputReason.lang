@@ -1,0 +1,5 @@
+#/personal_page/inputReason.tpl
+community_apply = "Request community - enter reason for join"
+apply_join_community = "Request join the community"
+please_input_apply_reason = "Please enter reason for the request"
+join_community_describe = "To join the community forum, please describe your reason <b style='color:red;'>detaily</b>, send the request and approved by the course teacher to join."

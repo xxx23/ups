@@ -1,0 +1,167 @@
+/***
+
+
+FILE:   default.css
+DATE:   2006/11/23
+AUTHOR: zqq
+|---------------|
+|---+-----------|
+|	|			|
+| 	|	 		|
+|---+-----------|
+|---------------|
+樣式如上圖
+定義default的網頁樣式
+
+***/
+
+
+/* ie only styles */
+/* commented backslash hack v2 \*/ 
+* html body{height:100%;} 
+/* end hack */ 
+
+* html body {
+  	margin:110px 0;
+  	padding: 0;
+ 	overflow-y:hidden;
+	background-image: url("../images/bg.gif");
+}
+
+* html #top {
+	background-color:#0000FF;
+  	position: absolute;
+  	left: 50%;
+  	margin-left:-425px;
+  	top: 0;
+  	width:850px;
+  	padding: 0;
+  	height: 108px;
+ 	z-index:999;
+  	overflow:auto;
+	/*border:1px solid #000;*/
+}
+ 
+*html #function{
+	background-color:#6699FF;
+  	position: absolute;
+  	left: 50%;
+  	margin-left:-425px;
+  	width:850px;
+  	height: 20px;
+ 	z-index:999;
+  	overflow:auto;	
+} 
+ 
+* html #left {
+  	padding:0 10px;
+  	overflow:auto;
+  	height:100%;
+  	float:left;	
+  	width:200px;
+	/*border:1px solid #000;*/
+}
+* html #right {
+  	padding:0 10px;
+  	overflow:auto;
+  	height:100%;
+  	float:right;	
+  	width:650px;
+	/*border:1px solid #000;*/
+}
+
+* html #bottom {
+	background-color:#6699FF;
+  	position: absolute;
+  	/*bottom: 0;*/
+  	left: 50%;
+  	margin-left:-425px;
+  	width:850px;
+  	height: 40px;
+  	z-index:999;
+  	overflow:auto;
+	/*border:1px solid #000;*/
+}
+
+* html #login {
+	background-color:#FF9900;
+  	position: absolute;
+  	height: 230px;
+}
+
+
+/* mozilla styles below */
+html,body {
+  	margin: 0;
+  	padding: 0;
+  	height: 100%;	
+}
+ 
+html>body #top {
+	background-color:#CCFF66;
+	position: absolute;
+  	left: 0;
+  	top: 0;
+  	right: 0px;
+  	padding: 0;
+  	height: 100px;
+  	width:850px;	
+    /*border:1px solid #000;*/
+	margin:auto;
+}
+ 
+html>body #left {
+  	position: absolute;
+  	top: 110px;
+  	right:448px;
+  	left:0px;
+  	bottom:110px;
+  	padding:0;
+ 	overflow:hidden;
+ 	width:200px;
+	/*border:1px solid #000;*/
+	margin:auto;
+}
+ html>body #right {
+  	position: absolute;
+  	top: 110px;
+  	right:0px;
+  	left:200px;
+  	bottom:110px;
+  	padding:0;
+ 	overflow:hidden;
+ 	width:650px;
+	background:pink;
+	/*border:1px solid #000;*/
+	margin:auto;
+}
+html>body #bottom {
+	background-color:#99FFFF;
+  	position: absolute;
+  	bottom: 0;
+  	left: 0;
+  	right: 0px;
+  	height: 100px;
+	width:850px;	
+	/*border:1px solid #000;*/
+	margin:auto;
+}
+* html body{text-align:center}
+/* common styles */
+
+* html #wrapper{
+	width:850px;
+	text-align:left;
+    position:relative;
+	height:100%;
+	background:#ffffcc;
+	z-index:1;
+}
+
+iframe{width:100%;height:100%;} 
+
+
+
+/********
+以下定義字形
+********/

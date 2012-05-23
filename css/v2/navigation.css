@@ -1,0 +1,44 @@
+/* CSS Document */
+
+#navlist
+{
+	width: 95%;
+	color: #000066;
+	font-weight: normal;
+	list-style-position: inside;
+	border: 1px solid #99CC00;
+	margin: 0px;
+	padding: 0px;
+}
+#navlist li
+{
+	margin: 0px;
+	list-style-type: none;
+	color: #669900;
+	text-align: left;
+	text-indent: 10px;
+}
+#navlist ol
+{
+	list-style-type: none;
+	color: #006600;
+	background-color: #F0FFD0;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 30px;
+	padding: 2px;
+}
+#navlist a:link, #navlist a:visited
+{
+	color:#006600;
+	text-decoration:none;
+}
+#navlist a:hover
+{
+	color:#006600;
+	text-decoration:none;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #F0FFD0;
+}

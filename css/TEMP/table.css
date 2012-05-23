@@ -1,0 +1,73 @@
+.datatable {
+	border: 1px solid #CCCCCC;
+	border-collapse: collapse;
+	width: 100%;
+}
+.datatable tr {
+	background-color: #F4F4F4;
+}
+.datatable tr.tr2 {
+	background-color: #cee9ff;
+}
+.datatable tr.tr3 {
+	background-color: #FFFFFF;
+}
+.datatable td {
+	text-align: left;
+	padding: 0.3em;
+	vertical-align: top;
+	border-top-width: 0px;
+	border-right-width: 1px;
+	border-bottom-width: 0px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFFFFF;
+	border-right-color: #FFFFFF;
+	border-bottom-color: #FFFFFF;
+	border-left-color: #FFFFFF;
+}
+.datatable th {
+	font-weight: normal;
+	text-align: center;
+	padding: 0.3em;
+	vertical-align: top;
+	color: #2177BC;
+	background-image: url(../images/table_bg.gif);
+	background-position: bottom;
+	background-repeat: repeat-x;
+	background-color: #FFFFFF;
+	margin-right: 2px;
+	border-top-width: 0px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #2177BC;
+	border-right-color: #2177BC;
+	border-bottom-color: #2177BC;
+	border-left-color: #2177BC;
+}
+.datatable caption {
+	font-weight: normal;
+	font-size: 0.85em;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	background-color: #CCCCCC;
+}
+
+.datatable a:link {
+	color:#006699;
+}
+.datatable a:hover, .datatable a:active {
+	color: #FF6600; 
+	text-decoration: none;
+}
+.datatable a:visited {
+	color:#333333;
+}

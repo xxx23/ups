@@ -1,0 +1,65 @@
+********************
+*** Introduction ***
+********************
+This documentation explains how to use the Mysql mUltiuSEr system, MUSE for short.  (Yes, I
+randomly selected letters out of the words)
+
+MUSE allows you to use more then one MySql user to access the chat room database.  This is
+useful for getting around the max_questions resource that MySql 4 implemented to limit
+the number of queries each user account could run per hour.  You should read your webhosts
+Terms Of Service before using this, it may be illegal on some webhosts because it is
+meant to circumnavigate this limit.
+
+******************
+*** How To Use ***
+******************
+In order to use MUSE you will need to be able to create more then one MySql user account
+with permission to access the same database.  This guide does not cover creating MySql
+user accounts.  User accounts can be created using a control panel like vDeck or cPanel.
+Both of these panels allow you to create more then one MySql user account with permission
+to the same database.  You can use as many MySql user accounts as you want, for the sake
+of this guide I will assume you are using two, since that is probably as many as you'll
+ever need anyway.
+
+First you need to configure the config file.  Start your FTP program and download
+the config.php file off your webserver onto your harddrive.  Open it up, you should see
+the configuration values that you entered when you installed the chat room.  You will also
+see a set of several variables that are commented out.  (Any line starting with // is a 
+comment).  First we have to change the database type, change the $X7CHAT_CONFIG['DB_TYPE']
+from "mysql" to "mysql_muse".  Now, uncomment the following lines:  (DO NOT UNCOMMENT THE 
+LINE THAT SAYS "MUSE Support"!)
+	// $MUSE_DB['current'] = 1;
+	// $MUSE_DB['user_1'] = "";
+	// $MUSE_DB['pass_1'] = "";
+	// $MUSE_DB['user_2'] = "";
+	// $MUSE_DB['pass_2'] = "";
+So that it looks like this:
+	 $MUSE_DB['current'] = 1;
+	 $MUSE_DB['user_1'] = "";
+	 $MUSE_DB['pass_1'] = "";
+	 $MUSE_DB['user_2'] = "";
+	 $MUSE_DB['pass_2'] = "";
+Now, fill in the values for your MySql user accounts.  Username 1 goes in the user_1
+variable, the password for user account 1 goes in the pass_1 variable and so on.  If you
+need more then 2 users simply add more lines and increase the number like this:
+	 $MUSE_DB['current'] = 1;
+	 $MUSE_DB['user_1'] = "";
+	 $MUSE_DB['pass_1'] = "";
+	 $MUSE_DB['user_2'] = "";
+	 $MUSE_DB['pass_2'] = "";
+	 $MUSE_DB['user_3'] = "";
+	 $MUSE_DB['pass_3'] = "";
+	 $MUSE_DB['user_4'] = "";
+	 $MUSE_DB['pass_4'] = "";
+Leave the 'current' variable alone, this is for debugging only (but must be uncommented
+anyway)
+
+After you finish updating your config file save it and reupload it to your webserver.  Make
+sure you overwrite your old one.  Now visit your chat room and it should work fine.  If
+one user account exceeds its max_questions limit the other account will automatically kick
+in.
+
+************
+*** Help ***
+************
+If you need help please send an E-Mail to webmaster@x7chat.com

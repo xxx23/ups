@@ -1,0 +1,403 @@
+<?PHP
+	// This file contains all the text of the help files
+	
+	$DOC_VERSION = "U-1.0";
+	
+	$help['Main']['Main'] = "Welcome to the X7 Chat 2 Administrator documentation.  This guide should answer any questions you have about X7 Chat.  If you need additional help please visit the X7 Chat website.  If you are looking for Userend Documentation or other documentation please visit the X7 Chat site.<Br><Br>X7 Chat is free software that can be used on any site.  If you are interested in putting X7 Chat, you can download it for free at our site.<br><br>Errors in this documentation should be reported to webmaster@x7chat.com";
+	
+	$help['Settings']['Main'] = "The settings panel allows you to control many aspects of your chat rooms.  Settings are arranged under several catagories.";
+	$help['Settings']['General Settings'] = "
+		<B>Disable Chat</b><br>
+		When checked the chat room will be disabled and only those with permission may login.
+		<Br><Br>
+		<B>Allow Registration</b><br>
+		When unchecked this will prevent anyone from registering a new account.  Existing members and guests will still be allowed to enter the chat room.
+		<Br><Br>
+		<B>Log Bandwidth Usage</b><br>
+		Checking this setting will make the chat room keep a record of how much bandwidth is used.  The bandwidth logs can be viewed in the <a href=\"./index.php?s=Bandwidth&t=Main&help_file=admin\">Bandwidth</a> section of the admin panel.  This allows you to limit and record how much bandwidth each user uses.
+		<Br><Br>
+		<B>Disable Sounds</b><br>
+		This will disable all sounds.
+		<Br><Br>
+		<B>Site Name</b><br>
+		This setting allows you to specify a name for your chat room.
+		<Br><Br>
+		<B>Admin E-Mail</b><br>
+		This is the Administrator's or Webmaster's contact E-Mail address.
+		<Br><Br>
+		<B>Logout Page</b><br>
+		If this setting is left blank the default login page will be shown.  If you would like, you can fill in a complete URL (Starting with http://) and the chat room will send the user to that URL after logging them out.
+		<Br><Br>
+		<B>Max Characters in Status</b><br>
+		This allows you to limit the number of characters a user can put in their status messages.  (Messages that are too long will wreck the layout)
+		<Br><Br>
+		<B>Home Website URL</b><br>
+		Set this to your homepage, the chat room logo will be linked to this address.
+		<Br><Br>
+		<B>Max Characters in Username</b><br>
+		This allows you to place a limit on the length of usernames.  You may set this to zero for no limit.
+		<Br><Br>
+		<B>Max Characters in message</b><br>
+		This allows you to place a limit on the maximum number of characters that can be in a message.  You may set this to zero for no limit.
+		<Br><Br>
+		<b>Max offline messages</b><Br>
+		This allows you to place a limit on the maximum number of offline messages a user can have in their inbox.  You may set this to zero for no limit.
+		<Br><Br>
+		<b>Minimum Refresh Time</b><Br>
+		This allows you to set the lowest (fastest) refresh rate that a user can use.  This is measured in seconds and can be set to zero for no limit.  This value cannot be greater then the Maximum Refresh Time setting.
+		<Br><Br>
+		<b>Maximum Refresh Time</b><Br>
+		This allows you to set the highest (slowest) refresh rate that a user can use.  This is measured in seconds and can be set to zero for no limit.  This value cannot be less then the Minimum Refresh Time setting.
+		<Br><Br>
+		<b>Default Language</b><Br>
+		This allows you to choose the default language.  This langauge will be used if the user has not selected a different language, and it will be used on all pages where the user is not logged in.  The help files are only available in English.
+		<Br><Br>
+		<b>Default Theme</b><Br>
+		This allows you to change the default theme.  This theme will be used if the user has not selected a different theme, and it will be used on all pages where the user is not logged in.
+		<Br><Br>
+		<b>Cookie Time</b><Br>
+		This allows you to set the time that the cookie will last on the users computer.  This value is measured in seconds.
+		<Br><Br>
+		<b>Server Room Type</b><Br>
+		This setting allows you to turn X7 Chat into a single room chat room.  If you leave it set on Multiroom Mode then the chat room will function as normal and show the user the room list after they login.  If you selected a room name from the drop down list then the chat
+		will enter Single Room Mode.  In Single Room Mode the user will automatically enter the selected room when they login and they will not be able to switch rooms or create new rooms.  In Single Room Mode rooms will not expire as they usually do.  You cannot delete a room that is being used
+		in Single Room mode.
+		<Br><Br>
+	";
+	$help['Settings']['Logs'] = "
+		<b>Enable Logging</b><Br>
+		Checking this will allow logging of messages.  All users who have permission to will be allowed to log private messages and all room operators with permission will be allowed to log chat room conversations.
+		<Br><Br>
+		<b>Log Path</b><Br>
+		This is the path to the directory where logs are stored.  This directory must be writable by the script.
+		<br><Br>
+		<b>Max Room Log Size</b><Br>
+		This is the maximum size that a room log may be.  After a log reaches this size logging will stop.  This is measured in kilobytes.  (1024 kilobytes = 1 Megabyte)
+		<br><Br>
+		<b>Max User Log Size</b><Br>
+		This is the maximum size that a private message log may be.  After a log reaches this size logging will stop.  This is measured in kilobytes.  (1024 kilobytes = 1 Megabyte)
+		<br><Br>
+	";
+	$help['Settings']['Time and Date'] = "
+		<b>Time Format</b><Br>
+		This is the way that the time stamp will appear in front of messages.  Use the following letters to represent the current time:<Br>
+		<b>a</b>: am or pm (lowercase)<Br>
+		<b>A</b>: AM or PM (uppercase)<Br>
+		<b>g</b>: 12 Hour format (1 to 12)<Br>
+		<b>G</b>: 24 Hour format (1 to 24)<Br>
+		<b>h</b>: 12 Hour format (01 to 12)<Br>
+		<b>H</b>: 24 Hour format (01 to 24)<Br>
+		<b>i</b>: Minutes (01 to 59)<Br>
+		<b>s</b>: Seconds (00 to 59)<Br>
+		<b>U</b>: Unix timestamp
+		<br><Br>
+		<b>Date Format</b><Br>
+		This is the way that all dates will appear.  Use the following letters to represent the current date:<Br>
+		<b>a</b>: am or pm (lowercase)<Br>
+		<b>A</b>: AM or PM (uppercase)<Br>
+		<b>d</b>: Day of month (01 to 31)<Br>
+		<b>D</b>: Day of month (Mon to Sun)<Br>
+		<b>F</b>: Month (January to December)<Br>
+		<b>g</b>: 12 Hour format (1 to 12)<Br>
+		<b>G</b>: 24 Hour format (1 to 24)<Br>
+		<b>h</b>: 12 Hour format (01 to 12)<Br>
+		<b>H</b>: 24 Hour format (01 to 24)<Br>
+		<b>i</b>: Minutes (01 to 59)<Br>
+		<b>j</b>: Day of the month (1 to 31)<Br>
+		<b>l</b>: Day of the week (Monday to Sunday)<Br>
+		<b>m</b>: Month (01 to 12)<Br>
+		<b>M</b>: Month (Jan to Dec)<Br>
+		<b>n</b>: Month (1 to 12)<Br>
+		<b>s</b>: Seconds (00 to 59)<Br>
+		<b>U</b>: Unix timestamp<Br>
+		<b>y</b>: Year (05)<Br>
+		<b>Y</b>: Year (2005)
+		<br><Br>
+		<b>Full Date/Time Format</b><Br>
+		This is the way that the date and time will appear when both are shown.  Use the following letters to represent the current date:<Br>
+		<b>a</b>: am or pm (lowercase)<Br>
+		<b>A</b>: AM or PM (uppercase)<Br>
+		<b>d</b>: Day of month (01 to 31)<Br>
+		<b>D</b>: Day of month (Mon to Sun)<Br>
+		<b>F</b>: Month (January to December)<Br>
+		<b>g</b>: 12 Hour format (1 to 12)<Br>
+		<b>G</b>: 24 Hour format (1 to 24)<Br>
+		<b>h</b>: 12 Hour format (01 to 12)<Br>
+		<b>H</b>: 24 Hour format (01 to 24)<Br>
+		<b>i</b>: Minutes (01 to 59)<Br>
+		<b>j</b>: Day of the month (1 to 31)<Br>
+		<b>l</b>: Day of the week (Monday to Sunday)<Br>
+		<b>m</b>: Month (01 to 12)<Br>
+		<b>M</b>: Month (Jan to Dec)<Br>
+		<b>n</b>: Month (1 to 12)<Br>
+		<b>s</b>: Seconds (00 to 59)<Br>
+		<b>U</b>: Unix timestamp<Br>
+		<b>y</b>: Year (05)<Br>
+		<b>Y</b>: Year (2005)
+		<br><Br>
+		<b>Time offset (hours)</b><Br>
+		This allows you to compensate for time zone differences between your chat room and your server.  If some of the timestamps are several hours off you can use this to adjust them.  Enter a positive value (ex: 5) to add to the hours in a timestamp, or a negative value (ex: -5) to subtract from the hours in a timestamp.
+		<br><Br>
+		<b>Time offset (minutes)</b><Br>
+		This allows you to compensate for minor time zone differences between your chat room and your server.  If some of the timestamps are several minutes off you can use this to adjust them.  Enter a positive value (ex: 5) to add to the minutes in a timestamp, or a negative value (ex: -5) to subtract from the minutes in a timestamp.
+		<br><Br>
+	";
+	$help['Settings']['Expiration Times'] = "
+		<b>Max Idle Time</b><Br>
+		If a user does not communicate with the chat server for this many seconds they will be logged off.  As long as a user is still in the chat room they will stay online, even if they have not sent any messages.  This setting MUST be greater then the refresh rate or you will have major problems.
+		<br><Br>
+		<b>Message Expire Time</b><Br>
+		Messages will be deleted from the database after this many minutes.  This setting is simply in place to keep your database from becoming too large, although you can set this value to zero to disable message expiration it is not recommended.
+		<br><Br>
+		<b>Rooms Expire After</b><Br>
+		Rooms will automatically be deleted if they remain empty for this many minutes.  Rooms can be set to Never Expire by administrators with permission to, those rooms are never deleted.
+		<br><Br>
+		<b>Guest Accounts Expire After</b><Br>
+		When a user enters the chat room as a Guest the chat room creates a temporary account for them.  After a Guest account goes unused for this many minutes it will be deleted, so that another guest can use the same name later on.
+		<br><Br>
+	";
+	$help['Settings']['Styles and Messages'] = "
+		<b>Banner URL</b><Br>
+		This is the URL to the logo that will be displayed at the top of the chat room.
+		<br><Br>
+		<b>Background Image</b><Br>
+		This is the URL of the image you would like to be displayed in the background of the chat message window behind the messages that everyone sends.  This value sets the default for all rooms without a background image, background images can also be set individually for each room.  Leaving this blank will have the chat room display no background image.
+		<br><Br>
+		<b>Allow Custom Room Background</b><Br>
+		Checking this will allow each room to have a different background image.
+		<br><Br>
+		<b>Allow Custom Room Logos</b><Br>
+		Checking this will allow each chat room to have a different logo at the top.
+		<br><Br>
+		<b>Default Font</b><Br>
+		This is the default font that will be used to display messages.  It is recommended that you use a generic font like arial, times or helvetica so that the chat room will look at the same on all browsers.  User's who do not have the selected font installed with use a generic font like arial or times.
+		<br><Br>
+		<b>Default Size</b><Br>
+		This is the default size that will be used to display messages.
+		<br><Br>
+		<b>Default Color</b><Br>
+		This is the default color that will be used to display messages.
+		<br><Br>
+		<b>Minimum Font Size</b><Br>
+		This allows you to specify a minimum font size that the user can use.  If they send a message using a smaller font size it will automatically be shown at this font size instead.
+		<br><Br>
+		<b>Maximum Font Size</b><Br>
+		This allows you to specify a maximum font size that the user can use.  If they send a message using a larger font size it will automatically be shown at this font size instead.
+		<br><Br>
+		<b>Disable Smilies</b><Br>
+		Checking this will display all smilies (emoticons) in the chat room.  Instead of display the smiley image the chat room will simply display the smiley code.
+		<br><Br>
+		<b>Disable Message Styles</b><Br>
+		Checking this will prevent users from changing the font color, size, style and font.  It will display all messages using the system default styles.
+		<br><Br>
+		<b>Disable Auto-Linking</b><Br>
+		If a URL is posted to the chat room (http://site.com/ or www.site.com) the chat room will automatically convert it into a link that can be clicked.  Checking this disables automatic linking of URLs.
+		<br><Br>
+		<b>System Message Color</b><Br>
+		This is the color that system messages (enter/leave/kick/ban/ect) are shown in.
+		<br><Br>
+		<b>Allowed Fonts</b><br>
+		This is a list of fonts that the user will be allowed to select to send their messages with.  Enter the font names seperated by only a comma.  (ex: arial,helvetica,verdana,helvetica)
+		<br><br>";
+	$help['Settings']['Avatars'] = "
+		<b>Enable Avatar Uploads</b><Br>
+		Checking this box will allow users to upload their own Avatars.  Each user can only have one avatar uploaded at a time.
+		<br><Br>
+		<b>Auto-Resize Smaller Avatars</b><Br>
+		Check this if you would like the chat room to automatically enlarge avatars that are below the size limit.  Avatars that are above the size limit with always be resized.
+		<br><Br>
+		<b>Max Uploaded Avatar Size</b><Br>
+		This is the maximum size that a user's avatar may be.  This value is measured in bytes.  (There are 1024 bytes in 1 kilobyte.
+		<br><Br>
+		<b>Max Avatar Size</b><Br>
+		This is the maximum size that a user's avatar may be.  This value is in the format width x height (with no space, ex: 90x90).  These values are measured in pixels.
+		<br><Br>
+		<b>Upload Path</b><Br>
+		It is critical that this value is correct if you allow users to upload their own avatars.  This must be the absolute path to a writable directory where you want X7 Chat to store uploaded avatars.  Do not put a trailing slash on this path.  It is best to leave this as the value that the installer choose unless you know what you are doing.
+		<br><Br>
+		<b>Upload URL</b><Br>
+		It is critical that this value is correct if you allow users to upload their own avatars.  This must be the absolute URL to the directory specified above.  Do not put a trailing slash on this path.  It is best to leave this as the value that the installer choose unless you know what you are doing.
+		<br><Br>";
+	$help['Settings']['Login Page'] = "
+		<b>News</b><Br>
+		Enter a value into this field to enable the news display.  The News is shown on the login page.
+		<br><Br>
+		<b>Show Stats</b><Br>
+		This will enable the statics box on the login page.  This box shows the users who are currently online, the total number of rooms and the total number of registered users.
+		<br><Br>
+		<b>Show Event Calendar</b><Br>
+		This will enable the event calendar box on the login page.
+		<br><Br>
+		<b>Show Event Calendar</b><Br>
+		This allows you to choose which mode you want the Event Calendar to display in.  Selecting the monthly calendar option will show a monthly calendar with days that have events highlighted for users to click and view.  The Daily Calendar will list the events that are happening in the next 1-3 days.
+		<br><Br>
+		<b>Days to Show in Daily Calendar</b><Br>
+		This allows you to choose the number of days ahead that your daily event calendar will display.  This value must be between 1 and 3.
+		<br><Br>
+	";
+	$help['Settings']['User Agreement'] = "Leaving this blank will disable the user agreement.  If you enter text into this field then a User Agreement link will be shown on the room list page for users to click and read.";
+	$help['Settings']['Support Center'] = "
+		X7 Chat features special settings that allow you to set up X7 Chat for use as a technical support chat room or sales chat room.<Br><Br>
+		<b>Support Accounts</b><br>
+		These are the user accounts that are allowed to enter the Support Center and provide technical support using X7 Chat.  You must list these values seperate by a semi-colin (ex user1;user2;user3).
+		<Br><Br>
+		<B>Message to be displayed if support is unavailable</b><Br>
+		If the user clicks on a Live Support button and no support accounts are currently in the support center then they will be shown this message.  It is recommended that you put contact E-Mail or telephone information in this field.  You may use HTML.
+		<Br><Br>
+		<b>Support Available Image</b><br>
+		This is the URL to the image that will be displayed if a support account is currently in the Support Center waiting to chat with customers.  It is best to use a relative URL for this.
+		<br><Br>
+		<b>Support Unavailable Image</b><Br>
+		This is the URL to the image that will be displayed if a support account is not currently in the Support Center.  It is best to use a relative URL for this.
+		<br><Br>
+		<b>Entering the Support Center</b><br>
+		To enter the support center you must login with one of the Support Accounts listed above and click on the Support Center link on the room list page.  This will bring you to a simple webpage, you must leave this browser window open in order to stay in the Support Center.  If a user clicks on your Live Support button then a chat window will automatically open with that customer if the support center window is still open.  YOU MUST TURN OFF ALL POPUP BLOCKERS FOR THIS PAGE TO WORK!
+		<br><Br>
+		<B>Integrating with your website</b><br>
+		In order to make the support center useful you must add a Live Support button to your website.  You will find the HTML code that you must use on the Support Center page of the settings panel.  Simple paste this HTML code anywhere into your website and it will display the Live Support button.
+		<br><Br>
+	";
+	$help['Settings']['Advanced'] = "The GD library is used to display the Advanced color chooser.  If your server does not support GD then it will be disabled automatically and the simple color chooser will be shown.";
+	
+	$help['Themes']['Main'] = "
+		The themes section of the Admin Control Panel allows you to change the way that your chat room looks.
+	";
+	$help['Themes']['Creating'] = "
+		Before you can create a theme you need to CHMOD 777 the themes directory.  Next, select Create New Theme from the main theme page.  After selecting the Create New Theme option you will be able to fill in information about your theme and select the many
+		different colors that will make up your theme.<Br><Br>
+		After create a theme and assigning colors to it you can create custom images.  Start your FTP client and go to the X7 Chat themes directory.  Then find the directory that you new theme uses (the directory will have the same name as your theme).  In this directory you will find
+		many images that you can customize.  You can download the entire directory to your harddrive, edit the images, and then reupload them and overwrite the old ones.
+	";
+	$help['Themes']['Editing'] = "
+		Some themes can be edited using the theme editor.  In order to edit a theme you have to CHMOD 777 the theme directory and the files inside the theme's image directory.  Start your FTP client and go to the X7 Chat directory.  CHMOD 777 the themes directory and then enter it.  Now, find the directory of the theme you are going to edit and CHMOD 777 it.  Then, enter that directory and select all the files inside and CHMOD 777 them also.  Now you are ready to edit the theme, go back to the themes section of the admin panel and click edit next to the theme you wish to edit.<Br><Br>
+		Note: Not all themes can be edited.
+	";
+	$help['Themes']['Deleting'] = "
+		To delete a theme press the [Delete] button next to the theme that you wish to delete.  If the chat room is unable to delete the theme you will need to start your FTP program, go to the themes directory and manually delete the theme's folder.
+	";
+	$help['Themes']['Installing'] = "
+		Some themes come in special packages that the chat room can install for you.  Upload the .zip package that the theme came into the mods directory.  Now, visit the Themes section on your admin panel and the theme should be automatically detected.  Press the install link next to the theme you wish to install and the theme will be installed.  Before installing a theme you will need to CHMOD 777 the themes directory and the mods directory.
+	";
+	
+	$help['Word Filter']['Main'] = "
+		The word filter allows you to filter out words.  Server-level word filters apply to all users in all rooms.
+	";
+	
+	$help['Keywords']['Main'] = "Keywords are words that have special meaning.  Whenever a keyword is sent to a chat room it will automatically be linked.  You may enter the word and URL that you wish to link it to and then add it.<Br><br>For example, suppose you are running a support chat room.  You could add the keyword 'FAQ' with the URL http://yourcompany.com/faq.html.  Then, whenever someone asks a question that is on your FAQ, you can just say 'Go read our FAQ', and the word FAQ will automatically be linked to your FAQ.  This saves a lot of time for them and you, since they don't have to look for your FAQ and you don't have to type out the whole URL everytime.";
+	
+	$help['User Groups']['Main'] = "User groups provide an easy way to manage permissions for your chat room.";
+	$help['User Groups']['Default Groups'] = "There are three default groups that you must have, a Members group, a Guest group and an Administrators group.  Each of these groups can be defined on the main User Groups screen.  Each group has certain properties that they inherit when they are set as the default group.<Br><Br>
+	<b>New Members</B> - The new members group is the group that people automatically join when they register.<Br><br>
+	<b>Guest</b> - The guest group is the group that guests will be a member of when they enter the chat room.  All accounts in the guest group automatically expire.<Br><Br>
+	<b>Administrator Group</b> - The Administrator group is the group that has access to the Admin panel, this is the group that a user will be put into if you use the /admin command.<Br><Br>
+	When you change the default groups for each of these be careful of what you do.  For example, you do not want to accidentally set your Admin group to the Guest default or else all of your administrator accounts will expire instantly.  When you switch default groups members of the group are not changed, you must do this manually to avoid confusion.";
+	$help['User Groups']['Settings'] = "There are a lot of permission settings that you can assign to each group.  Here is a summary:<br><Br>
+	<b>Can Create Rooms</b><Br>
+	Checking this allows group members to create new rooms.
+	<br><Br>
+	<b>Can Create Private Rooms</b><Br>
+	Checking this allows group members to create private rooms.  Private rooms do not show up on the Room list.
+	<br><Br>
+	<b>Can Set Rooms to Never Expire</b><Br>
+	Checking this allows group members who are operators of a room to set the room to never expire.
+	<br><Br>
+	<b>Can Set Room to Moderated</b><Br>
+	Checking this allows group members who are operators of a room to set the room to moderated mode.  Only users with a voice will be able to send messages.
+	<br><Br>
+	<b>Can View IP</b><Br>
+	Checking this allows group members who are operators of a room to view the IP addresses of users inside the room.
+	<br><Br>
+	<b>Can Kick Users</b><Br>
+	Checking this allows group members who are operators of a room to kick users out of the room.
+	<br><Br>
+	<b>Cannot be banned or kicked</b><Br>
+	Checking this gives group members banning and kicking immunity.  They cannot be kicked or banned from any room.
+	<br><Br>
+	<b>Has operator status in all rooms</b><Br>
+	Checking this gives group members global operator status, they will be operators in every room and cannot be de-oped.
+	<br><Br>
+	<b>Has a voice in all rooms</b><Br>
+	Checking this gives group members global voice status, they will be able to talk into any moderated room and cannot be de-voiced.
+	<br><Br>
+	<b>Can see hidden E-Mail addresses</b><Br>
+	Checking this allows group members to view the E-Mail addresses of users who have chosen to hide their E-Mail address from the public.
+	<br><Br>
+	<b>Can set/delete keywords</b><Br>
+	Checking this allows group members who are operators of a room to use the keyword feature.
+	<br><Br>
+	<b>Can control room logging</b><Br>
+	Checking this allows group members who are operators of a room to start, and stop logging and view the log.
+	<br><Br>
+	<b>Can log private messages</b><Br>
+	Checking this allows group members to log their private messages.
+	<br><Br>
+	<b>Can set room backgrounds</b><Br>
+	Checking this allows group members who are operators of a room to set a custom room background image.
+	<br><Br>
+	<b>Can set room logos</b><Br>
+	Checking this allows group members who are operators of a room to set a custom room logo.
+	<br><Br>
+	<b>Can grant Administrator Access</b><Br>
+	Checking this allows group members to give people Administrator access.
+	<br><Br>
+	<b>Can send server messages</b><Br>
+	Checking this allows group members to send server messages.  Server messages go to all users on the entire server.
+	<br><Br>
+	<b>Can use the /mdeop command</b><Br>
+	Checking this allows group members who are operators of a room to use the mdeop command.  The mdeop command deops everyone in the room except for the sender of the command.
+	<br><Br>
+	<b>Can use the /mkick command</b><Br>
+	Checking this allows group members who are operators of a room to use the mkick command.  The mkick command kicks everyone from the room except for the sender of the command.
+	<br><Br>
+	<b>Can Access Admin Panel: *****</b><Br>
+	These options allow you to specify which sections of the admin panel members of this group are able to access.  Checking these boxes allows members to access that section, unchecked sections will be blocked.
+	<br><Br>
+	<b>Can access chat room when disabled</b><Br>
+	Checking this allows members of the group to enter the chat room even when it is disabled.
+	<br><Br>
+	<b>Become Invisible</b><Br>
+	Checking this allows members of the group to become invisible.  When invisible their names will not show up in the online list even when they are in the room.
+	<br><Br>
+	<b>See Invisible Users</b><Br>
+	Checking this allows members of the group to see users who are invisible.
+	<br><Br>
+	<b>Access Password Protected Rooms W/O Password</b><Br>
+	Checking this allows members of the group to enter password protected rooms without having to supply a password.
+	<br><Br>";
+	
+	$help['Manage Users']['Main'] = "The manage users section of the admin panel allows you to edit, delete and create user accounts.";
+	
+	$help['Manage Rooms']['Main'] = "The manage rooms section of the admin panel allows you to edit, delete and create rooms.  Clicking on the Edit button will launch the Room Control Panel for that room.";
+	
+	$help['Ban List']['Main'] = "The Ban List section of the admin panel allows you to manage who is banned from your chat room.  It also provides an IP Address lookup tool for finding the IP address of your members.<Br><Br>
+	You can ban a user by IP Address, Username or E-Mail Address.  You can choose to ban them forever or for a short period of time.";
+	
+	$help['Bandwidth']['Main'] = "The bandwidth logging feature of X7 Chat allows you to view and limit the amount of bandwidth that your users use.  If bandwidth logging is not enabled you will be given the option to enable it when you view this panel.<Br><br>
+	You can set the default bandwidth limit in megabytes.  Users who use more then this amount of bandwidth will not be able to chat until the next day or month depending on how you set it.<Br><br>
+	Below the default bandwidth settings are a list of all your users and the amount of bandwidth they have used.  You will be able to change the amount of bandwidth for certain users and view how much your chat room has used all together.";
+	
+	$help['Manage Logs']['Main'] = "The Manage Logs section of your admin panel displays a list of all rooms and whether they have logging enabled or not.  You can click Manage/View to launch the log section of the Room Control Panel for that room.";
+	
+	$help['Calendar']['Main'] = "The calendar section of the Admin Control Panel allows you to add, edit and delete events from your calendar.  When adding events you must use 24-hour (military) time format.";
+	
+	$help['Mass Mail']['Main'] = "The Mass Mail section allows you to send an E-Mail message to all of your members.";
+	
+	$help['Smilies']['Main'] = "The smiley panel allows you to add and delete smilies.";
+	$help['Smilies']['Mass Adding'] = "You can add a lot of smilies at one time but uploading them all to the smiley directory and then visiting the Smilies section of the admin panel.  The images that you uploaded will be displayed at the bottom of the page along with a box for you to enter the smiley code for them.  This allows you to add lots of smilies at once.";
+	
+	$help['Mods']['Main'] = "Some mods can be installed using a built in installer.  The Mods panel is used to install those mods that support it.  To install a supported mod, upload it to the mods directory and CHMOD 777 the mods directory.  Then visit the Mods section in the admin panel and click Install.";
+	
+	$help['Help for End Users']['Main'] = "Please visit the <a href=\"http://help.x7chat.com/enduser\">Enduser Documentation</a> section of the official X7 Chat site.";
+
+	$help['Help for Developers']['Main'] = "Please visit the <a href=\"http://help.x7chat.com/dev\">Developer Documentation</a> section of the official X7 Chat site.";
+	
+	$help['FAQ']['Main'] = "This is a collection of Frequently Asked Questions about X7 Chat 2.  Right now there are not any.";
+	$help['FAQ']['CHMOD'] = "CHMOD is a term for changing the permissions on a file.  In order for X7 Chat to be able to edit files on the server they must be writable.  On Unix servers this is done by running a CHMOD 777 command, on Windows servers you simply need to make the file writable.<Br><Br>
+	If you are unsure about how to CHMOD try searching google.  Your FTP client is used to CHMOD files, so search google for the name of your FTP client and the words CHMOD.";
+	
+	// These are words that are replaced with links
+	$word_reps['X7 Chat'] = "http://www.x7chat.com/";
+	$word_reps['X7 Group'] = "http://www.x7chat.com/";
+	$word_reps['webmaster@x7chat.com'] = "mailto: webmaster@x7chat.com";
+	$word_reps['CHMOD'] = "./index.php?help_file=admin&s=FAQ&t=CHMOD";
+?>

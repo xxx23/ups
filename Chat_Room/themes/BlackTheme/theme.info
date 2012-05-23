@@ -1,0 +1,16 @@
+<?PHP
+	// Theme Info File
+	// Created By X7 Chat Theme Creator
+
+	// ------------------ Theme Info ------------------ 
+	$author = "Politicitis";
+	$date = "010/24/2005";
+	$name = "Black";
+	$description = "An all black theme.";
+	$version = "1";
+	$copyright = "Copyright 2005 by Politicitis Political Roasting";
+	$website = "http://www.politicitis.com/";
+
+	// 1 For simple, 2 for advanced
+	$theme_type = 1;
+?>

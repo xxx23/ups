@@ -1,0 +1,30 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #FFFFFF;
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:80%;
+	line-height: 1.3em;
+}
+#header {
+	background-image: url(../../images/personal/logo_bg.jpg);
+	background-repeat: repeat-x;
+	background-position: 935px top;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #6DD3C8;
+}
+#nav {
+	position: absolute;
+	top: 101px;
+	left: 0px;
+	width: 200px;
+	padding: 10px;
+	background-color: #6DD3C8;
+}
+#content {
+	margin-left: 235px;
+	margin-right: 10px;
+	margin-top: 10px;
+}

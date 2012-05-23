@@ -1,0 +1,5 @@
+#/personal_page/inputReason.tpl
+community_apply = "社群申請-輸入加入理由"
+apply_join_community = "加入社群申請"
+please_input_apply_reason = "請輸入申請理由"
+join_community_describe = "如欲加入此社群討論版，請<b style='color:red;'>詳述</b>申請理由後送出申請，由該課程教師審核通過即可加入。"

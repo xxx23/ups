@@ -1,0 +1,4 @@
+#/personal_page/changeTemplate.tpl
+thumbnail = "縮圖"
+template_name = "樣板名稱"
+back_to_personal_page = "回到個人化首頁"

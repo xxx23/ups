@@ -1,0 +1,4 @@
+#/personal_page/processJoin.tpl
+teacher_community_area = "Teacher community area"
+join_describe = "Hello, you have applied successfully, please wait the main teacher of the course for reviewing! You can join the comunity after pass"
+back_to_teacher_community_area = "Back to teacher community area"

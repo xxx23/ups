@@ -1,0 +1,376 @@
+<?php
+/* id: textbook_func.inc 2007/5/8 v2.0 by hushpuppy Exp. */
+/* function: 與教材顯示相關的function整理 */
+
+/* function: 由資料庫中取出資料並連成javaxcript字串 */
+function buildTreeStructure($sql,$Content_cd,$frame) {
+    global $Begin_course_cd, $DB_CONN, $JAVASCRIPT_PATH, $WEBROOT;
+
+	$Personal_id = $_SESSION['personal_id'];
+	$result = $DB_CONN->query($sql);
+	if(PEAR::isError($result))	die($result->userinfo);
+
+ 	$t = "";
+	$r = "";
+	$disable_root_edit = "";
+  	while ($row = $result->fetchRow(DB_FETCHMODE_ASSOC)) {
+	if($row['menu_parentid'] == 0){
+	  $r .= "tree.setNodeCtxMenu(\"".$row['menu_id']."\",ctx2);\n";  
+	  $disable_root_edit .= 'tree.setEditablity("' . $row['menu_id']. '", false);' . "\n";
+	  //設定根節點disable menu，檔名取ctx2才不會有問題...@@
+	  $icon_path = $row['icon'];
+	}
+	else{
+	if(is_viewed($Content_cd, $Personal_id, $row['menu_id']) == 1){
+	  //$icon_path = "/script/nlstree/img/icon_open.gif";
+	  $icon_path = "/script/nlstree/img/mydocopen.gif";
+	}
+	else
+	  $icon_path = $row['icon'];
+	}
+
+	$tmp = "";
+	$icon_path = trim($icon_path);
+	if($icon_path[0] == '/')
+		$icon_path = substr($icon_path,1,strlen($icon_path)-1);
+	if(!empty($icon_path)){
+		$tmp = $WEBROOT . trim($icon_path);
+	}
+
+    $new_menu_id = intval($row['menu_id']) ;
+    $new_pmenu_id = intval($row['menu_parentid']) ; 
+/*
+   	$t .= "tree.add(\"" . $row['menu_id'] . "\", " .
+   	  "\"" . $row['menu_parentid'] . "\", " .
+      "\"" . $row['caption'] . "\", " .
+      "\"" . $row['url'] . "\", " .
+      "\"" . $tmp . "\", " .
+      $row['exp'] . ", " .
+   	  "false " .
+      ");\n";*/
+    
+    //joyce--------------0312
+    //把$frame加到url當參數
+    //來判斷樹建在哪
+
+    $t .= "tree.add(\"" . $row['menu_id'] . "\", " .
+      "\"" . $row['menu_parentid'] . "\", " .
+      "\"" . $row['caption'] . "\", " .
+      "\"" . $row['url'] . "&frame=".$frame."\", " .
+      "\"" . $tmp . "\", " .
+      $row['exp'] . ", " .
+      "false " .
+      ");\n";
+  
+    }
+	return $t.$r.$disable_root_edit;
+}
+
+function is_viewed($Content_cd, $Personal_id, $Menu_id){
+  global $DB_CONN;
+  $Begin_course_cd = $_SESSION['begin_course_cd'];
+  $sql = "select * from student_learning where 
+    begin_course_cd = '$Begin_course_cd' and 
+    content_cd = '$Content_cd' and
+    personal_id = '$Personal_id' and
+    menu_id = '$Menu_id'";
+  $result = $DB_CONN->query($sql);
+  if(PEAR::isError($result))      die($result->userinfo);
+  if($result->numRows() == 0)
+    return 0;
+  else
+    return 1;
+}
+
+//fnction: 傳入menu_id，將目前路徑存入session
+function assign_path($tmp_id, $smtpl)
+{
+  global $DB_CONN, $current_dir, $path;
+	$i = 0;
+  //取出node到root的file_name以及caption
+  while($tmp_id != 0)
+	{
+		$sql = "select * from class_content where menu_id = $tmp_id;";
+		//echo $sql;
+		$result = $DB_CONN->query($sql);
+		if(PEAR::isError($result))	die($result->getMessage());
+		$row = $result->fetchRow(DB_FETCHMODE_ASSOC);
+		$array[$i] = $row['file_name'];	
+		//echo $array[$i]."#<br>";
+		$array1[$i] = $row['caption'];
+		$tmp_id = $row['menu_parentid'];
+		$i++;
+	}
+//加強判斷是否教材節點直接指定到檔案的檢驗條件  ()  
+  if(preg_match("/\.(htm|html|swf|pdf|doc|docx|ppt|pptx|xls|xlsx|jpg|jpeg)$/i",$array[0]) == false ){
+       $rootName = $array[count($array)-1];
+       $tmp_path =  $path.$rootName."/";
+    for($k = count($array)-1 ; $k < 0 ; $k--)
+       $tmp_path = $tmp_path + $array[$k];
+}
+else
+{
+   $rootName = $array[count($array)-1];
+   $tmp_path =  $path.$rootName."/".$array[0];
+}
+//不是目錄(有指定到檔案)    
+if(!is_dir($tmp_path)){
+   $path = $tmp_path;
+   $dir_path = removetail($array[0]);
+   $pos = strrpos($dir_path ,"/");
+   $dir_name = substr($dir_path ,$pos+1);
+   $smtpl->assign("dir_name",$dir_name);
+}else{//指定到目錄
+	for($j = $i-1 ; $j >= 0 ; $j--){
+	      $path .= $array[$j] ."/";
+	      $path2 .= $array2[$j]."/";
+	}
+	$smtpl->assign("dir_name",$array[0]);
+}
+
+	//$path = str_replace(" ","\ ",$path);
+	//$smtpl->assign("test",$path);
+	for($j = $i ; $j >= 0 ; $j--){
+		if($i == $j || $j == 0)
+			$smtpl->append('content',$array1[$j]);
+		else
+			$smtpl->append('content',$array1[$j]." >>");
+	}
+	//$current_dir = $array[0];  
+	$_SESSION['current_path'] = $path;	//restore current path into session
+	//$smtpl->assign(test,$_SESSION['current_path']);
+	//return $path;
+}	
+//移除尾巴xxx.htm or xxx.html
+function removetail($path){
+   $tok = strtok($path, "/");
+   $k = 0;
+   while ($tok !== false) {
+      $tmp[$k++] = $tok;
+      $tok = strtok("/");
+  }
+   //最後接的檔案
+   //$file = $tmp[$k-1];
+for($k = 0 ; $k < count($tmp)-1 ; $k++)
+    $n_Path = $n_Path."/".$tmp[$k];
+return $n_Path;
+}
+/*function: 上傳檔案*/
+function multiupload($name, $FILE_PATH){
+	$c = count($_FILES[$name]['name']);
+	$tmp_name = $_FILES[$name]['name'];
+    for( $i = 0 ; $i < $c ; $i++){
+		$type = $_FILES[$name]['type'][$i];
+		if( $type == "application/x-php" || $type == "application/x-js"){
+			header("Location: ../alert.html");
+			return;
+		}
+    	$q_file = $_FILES[$name]['name'][$i];
+        if($q_file == "")
+        	continue;
+		//insertData($q_file);
+        FILE_upload($_FILES[$name]['tmp_name'][$i], $FILE_PATH, $q_file);
+    }
+}
+
+/*function: 顯示當前目錄下所有檔案*/
+function show_files($smtpl, $current_path)
+{
+	global $DB_CONN, $path, $smtpl;
+	//$smtpl->assign("test",$path);
+	$Content_cd = $_SESSION['content_cd'];
+
+//case 1: path是資料夾也存在,並判斷其中是否有index檔案    
+if(is_dir($path)){
+	$d = dir($path);
+
+    //先存起來其中所包含的檔案或目錄    
+	while( ($file_name = $d->read()) != false){
+		if (strcmp($file_name,".") == 0 || strcmp($file_name,"..") == 0)
+		  continue;
+		//echo $current_path."<br>".$file_name."<br>";
+		if(is_dir($current_path.$file_name))
+		  $row['dir'] = 1;
+		else
+		  $row['dir'] = 0;
+		$file_path = $path.$file_name;
+		$row['content_name'] = $file_name;
+		$row['file_name_encode'] = urlencode($file_name);
+		$row['file_size'] = filesize($file_path);
+		$row['file_time'] = date("F d Y H:i:s.", fileatime($file_path));
+		$smtpl->append("content2",$row);
+	}
+	
+	$file_path1 = $path."index.html";
+	$file_path2 = $path."index.htm";
+	$file_path3 = $path."index.swf";
+
+	$index_exist1 = false;
+	$index_exist2 = false;
+	$index_exist3 = false;
+
+	if(file_exists($file_path1))
+	  $index_exist1 = true;
+	if(file_exists($file_path2))
+      $index_exist2 = true;
+	if(file_exists($file_path3))
+      $index_exist3 = true;
+    
+    //index都不存在
+    if($index_exist1 == false && $index_exist2 == false && $index_exist3 == false)
+		$smtpl->assign("index_show",0);	//預覽時顯示檔案list
+    //有其中一個存在
+	else{
+	  if($index_exist1 == true){
+	    $handle = fopen($file_path1, "r");	//開啟index.html並將內容塞回textarea
+	    $smtpl->assign("index_show",1);	//預覽時顯示index.html
+	  }
+	  else if($index_exist2 == true){
+	    $handle = fopen($file_path2, "r");
+	    $smtpl->assign("index_show",2);	//預覽時顯示index.htm
+	  }
+	  else if($index_exist3 == true){
+	    $handle = fopen($file_path3, "r");
+	    $smtpl->assign("index_show",3);	//預覽時顯示index.swf
+	  }
+	  $index_content = fread($handle, 65535);
+	  $smtpl->assign("index_content",$index_content);
+	} 	
+
+//case 2 : 不是資料夾(有指定到檔案),且檔案存在
+   }else if(!is_dir($path) && file_exists($path)){
+    //用/切割path 
+    $tail_files = preg_split("/\//",$path); 
+    
+    $temp_file = $path;
+    //除去path尾巴的xxx.htm or xxx.html
+    $path = removetail($path);
+
+   $d = dir($path);
+	while( ($file_name = $d->read()) != false){
+		if (strcmp($file_name,".") == 0 || strcmp($file_name,"..") == 0)
+		  continue;
+		if(is_dir($path."/".$file_name))
+		  $row['dir'] = 1;
+		else
+		  $row['dir'] = 0;
+		$file_path = $path."/".$file_name;
+		$row['content_name'] = $file_name;
+		$row['file_name_encode'] = urlencode($file_name);
+		$row['file_size'] = filesize($file_path);
+		$row['file_time'] = date("F d Y H:i:s.", fileatime($file_path));
+		
+		$smtpl->append("content2",$row);
+	}
+    ######################################################################
+        $smtpl->assign("index_show",4);     //編輯顯示temp_file中的檔案
+	    $smtpl->assign("file",$tail_files[count($tail_files) - 1]);
+        $handle = fopen($temp_file, "r");
+	    $content = fread($handle, 65535);
+	    $smtpl->assign("index_content",$content);
+       
+    //當路徑不存在
+   }else if(!file_exists($path)){ 
+       //echo $path;
+       $smtpl->assign("index_show",5);  //此路徑不存在
+   }
+
+}
+
+function edit_index($Content_cd)
+{
+	global $smtpl, $path, $DB_CONN;
+	$content = $_POST['index_content'];
+	$content = stripslashes($content);
+	$content = "<html>".$content."</html>";
+	if(is_dir($path))
+	  $file_path = $path."index.html";
+	else{
+	  $file_path = $path;  
+	}
+
+	//判斷此路徑中是否已存在index.html
+	//開始寫檔
+	$handle = fopen($file_path,"w");
+	fwrite($handle,$content);
+}
+
+function delete_file($file_name)
+{
+	global $DB_CONN, $smtpl, $path;
+	
+	//$file_path = $path.$file_name;
+	
+	//$file_path = str_replace(" ","\ ",$file_path);
+	
+	//unlink($file_path);
+	//exec($cmd);
+
+	$tmp_path = getcwd();
+	
+	if(!is_dir($path)){
+	  $n_Path = removetail($path);
+	  chdir($n_Path);
+	}else{	
+	   chdir($path);
+	}
+	unlink($file_name);
+	chdir($tmp_path);
+}
+
+//根據begin_course_cd取出本課程所用教材的教師編號
+function textbook($Begin_course_cd)
+{
+  global $DB_CONN;
+  $sql = "select content_cd from class_content_current where begin_course_cd = '$Begin_course_cd'";
+  $content_cd = $DB_CONN->getOne($sql);
+  if(PEAR::isError($content_cd))  die($content_cd->userinfo);
+
+  $sql = "select teacher_cd from course_content where content_cd = '$content_cd'";
+  $teacher_cd = $DB_CONN->getOne($sql);
+  if(PEAR::isError($teacher_cd))  die($teacher_cd->userinfo);
+  
+  return $teacher_cd;
+}
+
+//丟入人員編號，傳回人員名稱
+function returnName($personal_id)
+{
+  global $DB_CONN;
+  $sql = "select personal_name from personal_basic where personal_id = '$personal_id'";
+  $personal_name = $DB_CONN->getOne($sql);
+  if(PEAR::isError($personal_name))  die($personal_name->userinfo);
+  return $personal_name;
+}
+
+//根據content_cd，傳回教材名稱
+function returnContentName($content_cd)
+{
+  global $DB_CONN;
+  $sql = "select content_name from course_content where content_cd = '$content_cd'";
+  $content_name = $DB_CONN->getOne($sql);
+  if(PEAR::isError($content_name))  die($content_name->userinfo);
+  return $content_name;
+}
+
+
+//根據content_cd，傳回教材目錄名稱
+function returnContentFileName($content_cd)
+{
+  global $DB_CONN;
+  $sql = "select file_name from class_content where content_cd = '$content_cd' and menu_parentid = '0'";
+  $content_name = $DB_CONN->getOne($sql);
+  if(PEAR::isError($content_name))  die($content_name->userinfo);
+  return $content_name;
+}
+
+function returnContent_cdRootMenuId($content_cd)
+{
+    $sql =" select menu_id from class_content where content_cd=$content_cd and menu_parentid=0 " ; 
+    $menu_id = db_getOne($sql) ; 
+    return $menu_id ; 
+}
+
+
+
+?>

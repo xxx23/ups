@@ -1,0 +1,7 @@
+assistant_function_hypothesis = '助教功能設定'
+line1 = '勾選功能項目，則系統選單會顯示該連結。'
+line2 = '取消勾選則不顯示該功能連結。'
+completion_hypothesis_assistant_authority = '已完成設定助教權限'
+clear_data = '清除資料'
+ok_send = '確定送出'
+returm_assistant_selete_modify = '返回助教查詢與修改'

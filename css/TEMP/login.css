@@ -1,0 +1,28 @@
+body.login {
+	margin: 0px;
+	padding: 10px;
+	background-color: #B7DB33;
+	line-height: 30px;
+	font-size: 12px;
+	background-image: url(../images/login_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px 80px;
+}
+.login form {
+	width: 170px;
+	text-align: right;
+}
+
+div.login {
+	border:5px solid #DAD5CF;
+	height: 170px;
+	width: 210px;
+	overflow: hidden;
+	line-height: 30px;
+}
+.login input {
+	border:1px solid #FF6600;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	width: 100px;
+}

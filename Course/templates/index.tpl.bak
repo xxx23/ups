@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="script/exam.js"></script>
+<link id="set_css" rel=stylesheet type="text/css" href="css/left.css">
+<link rel=stylesheet type="text/css" href="css/drag.css">
+
+<title></title>
+</head>
+
+<body>
+<!--div style="position:absolute;width=100%;height=10%;font-size:24px;left:40%;">這裡是放一張圖片</div-->
+<div class="main">
+<div class="information_side">
+<div class="information_block">
+<fieldset>
+<legend class="txtFormLegend">Hello</legend>
+<a href="">登出</a>/<a href="">回首頁</a>
+</fieldset>
+</div>
+<div class="information_block">
+<fieldset>
+<legend>課程選擇</legend>
+<select><option>電腦網路</option></select><br/>
+系統&nbsp;&nbsp;&nbsp;1人<br/>
+學生&nbsp;&nbsp;&nbsp;17人<br>
+</fieldset>
+</div>
+<div class="information_block">
+<fieldset>
+<legend>學習溫度計</legend>
+85% 未交作業：1
+</fieldset>
+</div>
+<div class="information_block">
+<fieldset>
+<legend>日曆</legend>
+2006-12-20
+</fieldset>
+</div>
+<div class="information_block">
+<fieldset>
+<legend>外觀設計</legend>
+<input type="button" value="Change style"/>
+</fieldset>
+</div>
+</div>
+<div class="main_side">
+<div class="main_block">
+<fieldset>
+<legend>選單</legend>
+<a style="cursor:hand;" onClick="return direction('../Examine/display_exams.php');">線上測驗</a>
+<a style="cursor:hand;" onClick="return direction('../Test_Bank/test_bank.php');">題庫總覧</a>
+<a style="cursor:hand;" onClick="return direction('../System_News/systemNews_courseShowList.php');">課程公告</a>
+<a style="cursor:hand;" onClick="return direction('./course_browser.php');">課程瀏覽</a> <!--強者朋憲　這邊讓我放一下 by zqq-->
+<a style="cursor:hand;" onClick="return hide();">隱藏選單</a>
+</fieldset>
+</div>
+<div class="main_block" id="main_block">
+</div>
+</div>
+</div>
+</body>
+</html>

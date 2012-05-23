@@ -1,0 +1,148 @@
+.datatable {
+	border-collapse: collapse;
+	font-size: 10pt;
+	border: 1px solid #B5CBD0;
+	margin-right: auto;
+	margin-left: auto;
+}
+.datatable tr {
+	background-color: #F4F4F4;
+}
+.datatable tr.tr2 {
+	background-color: #cee9ff;
+}
+.datatable tr.tr3 {
+	background-color: #FFFFFF;
+}
+.datatable td {
+	text-align: left;
+	padding: 0.3em;
+	vertical-align: top;
+	border-top-width: 1px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #B5CBD0;
+	border-right-color: #B5CBD0;
+	border-bottom-color: #B5CBD0;
+	border-left-color: #B5CBD0;
+}
+.datatable td.td2 {
+	background-color: #CEE9FF;
+}
+.datatable th {
+	font-weight: normal;
+	text-align: left;
+	padding: 0.3em;
+	vertical-align: middle;
+	color: #0068BD;
+	background-image: url(../images/table_bg.gif);
+	background-position: bottom;
+	background-repeat: repeat-x;
+	background-color: #FFFFFF;
+	margin-right: 2px;
+	border: 1px solid #B5CBD0;
+}
+.datatable th.ZtoA {
+	background-image: url(../images/ZtoA.gif);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	padding-left: 15px;
+}
+.datatable th.AtoZ {
+	background-image: url(../images/AtoZ.gif);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	padding-left: 15px;
+}
+.datatable caption {
+	font-weight: normal;
+	font-size: 0.85em;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	background-color: #F4F4F4;
+	color: #2177BC;
+}
+
+.datatable a:link {
+	color:#006699;
+}
+.datatable a:hover, .datatable a:active {
+	color: #FF6600; 
+	text-decoration: none;
+}
+.datatable a:visited {
+	color:#663366;
+}
+.datatable img {
+	border:0;
+}
+
+
+/* 兩側功能欄位用的table */
+.functable {
+	border-collapse: collapse;
+	font-size: 9pt;
+	border: 1px solid #999999;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.functable td {
+	text-align: left;
+	padding: 2px;
+	vertical-align: middle;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	background-color: #FFFFFF;
+	color: #000000;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+}
+.functable th {
+	font-weight: normal;
+	text-align: left;
+	padding: 2px;
+	vertical-align: middle;
+	color: #FFFFFF;
+	background-color: #999999;
+	border: 1px solid #CCCCCC;
+}
+.functable caption {
+	font-weight: bold;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	background-color: #666666;
+	color: #FFCC00;
+	text-align: left;
+	padding-right: 3px;
+	padding-left: 3px;
+}
+
+.functable th a:link, .functable th a:visited {
+	color:#FFFFFF;
+}
+.functable th a:hover, .functable th a:active {
+	color: #FFCC00; 
+	text-decoration: none;
+}
+.functable td a:link, .functable td a:visited {
+	color:#333333;
+}
+.functable td a:hover, .functable td a:active {
+	color: #993300; 
+	text-decoration: none;
+}

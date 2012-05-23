@@ -1,0 +1,16 @@
+<?PHP
+	// Theme Info File
+	// Created By X7 Chat Theme Creator
+
+	// ------------------ Theme Info ------------------ 
+	$author = "X7 Group";
+	$date = "04/16/2005";
+	$name = "Nadir";
+	$description = "A white/grey theme";
+	$version = "1";
+	$copyright = "Copyright 2005 by X7 Group";
+	$website = "";
+
+	// 1 For simple, 2 for advanced
+	$theme_type = 1;
+?>

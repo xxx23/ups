@@ -1,0 +1,4 @@
+unit_name="類別名稱"
+send="確認送出"
+modify_success="修改成功"
+returnToList="回列表"

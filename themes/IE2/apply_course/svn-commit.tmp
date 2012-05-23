@@ -1,0 +1,27 @@
+Apply_Coucrse 
+    - 開課帳號 管理申請等 
+
+(不知道為啥沒有一起commit上去)
+--This line, and those below, will be ignored--
+
+AM   apply_begincourse_account.tpl
+M    view_course.tpl
+AM   begin_course_list.tpl
+AM   stat_request1.tpl
+AM   login_page.tpl
+AM   stat_request2.tpl
+AM   verify_course_detail.tpl
+AM   login.tpl
+AM   apply_begincourse_account_verify.tpl
+D    nknu_mgm.tpl
+AM   yet_passed_course_list.tpl
+AM   view_course_detail.tpl
+AM   verify_passed_course_list.tpl
+AM   verify_course_list.tpl
+AM   apply_begincourse_account_list.tpl
+M    show_all_begin_course.tpl
+D    nknu_course_log.tpl
+AM   begin_course_passed_list.tpl
+M    begin_course.tpl
+M    add_teacher_to_course.tpl
+D    nknu_transfer_log.tpl

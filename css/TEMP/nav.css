@@ -1,0 +1,21 @@
+/* CSS Document */
+
+#navigation ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#navigation li {
+	text-align: center;
+}
+#navigation li a:link, #navigation li a:visited  {
+	display: block;
+	padding: 5px 5px 5px 0.5em;
+	background-color: #DCFBF6;
+	color: #5A9FA7;
+	text-decoration: none;
+	border: 1px dotted #5A9FA7;
+}
+#navigation li a:hover {
+	border: 1px solid #5A9FA7;
+}

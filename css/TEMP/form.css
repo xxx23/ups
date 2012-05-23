@@ -1,0 +1,80 @@
+/* CSS Document */
+
+
+fieldset {
+	background-color: #FFFFFF;
+	margin-bottom: 0.5em;
+	border: 1px solid #CCCCCC;
+}
+legend {
+	color: #2177BC;
+	font-weight: bold;
+}
+div.form {
+	background-color:#F4F4F4;
+	padding: 0.5em;
+	border: 1px solid #CCCCCC;
+}
+div.form table{
+	border-collapse: collapse;
+	margin-right: auto;
+	margin-left: auto;
+	width: 98%;
+}
+div.form th {
+	text-align:right;
+	vertical-align:top;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFFFFF;
+	border-right-color: #FFFFFF;
+	border-bottom-color: #F4F4F4;
+	border-left-color: #FFFFFF;
+	padding: 0.3em;
+}
+div.form td {
+	vertical-align:top;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #CEE9FF;
+	border-right-color: #CEE9FF;
+	border-bottom-color: #F4F4F4;
+	border-left-color: #CEE9FF;
+	padding: 0.3em;
+}
+div.form textarea {
+	background-image: url(../images/input_bg.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCCC;
+}
+
+span.required {
+    color: #FF6600;
+    font-size: 24px;
+    font-weight: bold;
+}
+.buttons {
+	background-color: #F4F4F4;
+
+}
+.buttons a {
+	float: left;
+	color: #2177BC;
+}
+.buttons input {
+    float: right;
+}

@@ -1,0 +1,33 @@
+/* CSS Document */
+
+.clmonth {
+	border-collapse: collapse;
+}
+.clmonth caption {
+	text-align: center;
+	font: bold 100% Georgia, "Times New Roman", Times, serif; 
+	padding-bottom: 4px;
+}
+.clmonth th {
+	border: 1px solid #AAAAAA;
+	border-bottom: none;
+	padding: 2px 4px 2px 4px;
+	background-color: #CCCCCC;
+	color: #3F3F3F;
+	font: 80% Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.clmonth td {
+	border: 1px solid #EAEAEA;
+	font: 80% Verdana, Geneva, Arial, Helvetica, sans-serif;
+	padding: 2px 2px 2px 2px;
+	vertical-align: top;
+}
+.clmonth td.previous, .clmonth td.next {
+	background-color: #F6F6F6;
+	color: #C6C6C6;
+}
+.clmonth td.active {
+	background-color: #B1CBE1;
+	color: #2B5070;
+	border: 2px solid #4682B4;
+}

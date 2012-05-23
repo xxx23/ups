@@ -1,0 +1,1926 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.7	//
+ACTIVATION_ERROR	lib/auth/md5.php	/^			$ACTIVATION_ERROR = 1;$/;"	v
+BW_CHECK	index.php	/^		$BW_CHECK = check_bandwidth($x7s->username);$/;"	v
+ClickedSelector	sources/frame.php	/^			function ClickedSelector(menu){$/;"	f
+ClickedSelector	sources/privatemessage.php	/^				function ClickedSelector(menu){$/;"	f
+DB_CONN	sources/loginout.php	/^		$DB_CONN = DB::connect($dsn, $options);$/;"	v
+DoClickSize	sources/frame.php	/^			function DoClickSize(in_font){$/;"	f
+DoClickSize	sources/privatemessage.php	/^				function DoClickSize(in_font){$/;"	f
+DoQuery	lib/db/mysql.php	/^		function DoQuery($query){$/;"	f
+DoQuery	lib/db/mysql_muse.php	/^		function DoQuery($query){$/;"	f
+Do_Fetch_Row	lib/db/mysql.php	/^		function Do_Fetch_Row($q){$/;"	f
+Do_Fetch_Row	lib/db/mysql_muse.php	/^		function Do_Fetch_Row($q){$/;"	f
+Key	lib/irc.php	/^		foreach($ops as $Key=>$val){$/;"	v
+Key	lib/xupdater.php	/^		foreach($news as $Key=>$val){$/;"	v
+PM_COUNT	sources/update.php	/^			$PM_COUNT = "-";$/;"	v
+PM_COUNT	sources/update.php	/^			$PM_COUNT = 0;$/;"	v
+URL	sources/register.php	/^				$URL = eregi_replace("step=1","step=act&act_code=$act_code","http:\/\/{$_SERVER["HTTP_HOST"]}{$_SERVER["REQUEST_URI"]}");$/;"	v
+X7CHATVERSION	config.php	/^	$X7CHATVERSION = "2.0.5";$/;"	v
+accounts	sources/loginout.php	/^			$accounts = 0;$/;"	v
+act_code	sources/register.php	/^					$act_code = $seed[rand(0,strlen($seed)-1)];$/;"	v
+act_code	sources/register.php	/^					$act_code = 1;$/;"	v
+activate_account	sources/register.php	/^	function activate_account(){$/;"	f
+add	lib/logs.php	/^		function add($user,$text){$/;"	f
+add	lib/output.php	/^		function add($text){$/;"	f
+add_event	lib/events.php	/^	function add_event($time,$event){$/;"	f
+add_filter	lib/filter.php	/^		function add_filter($type,$org,$rep){$/;"	f
+additional_m	lib/irc.php	/^				$additional_m = $math[1]*-1;$/;"	v
+additional_m	lib/irc.php	/^				$additional_m = $params[2];$/;"	v
+additional_m	lib/irc.php	/^				$additional_m = $params[3];$/;"	v
+additional_m	lib/irc.php	/^				$additional_m = 0;$/;"	v
+admincp_master	sources/admin.php	/^	function admincp_master(){$/;"	f
+agreement	sources/admin.php	/^					$agreement = eregi_replace("<br>","\\n",$x7c->settings['user_agreement']);$/;"	v
+alert_private_chat	lib/message.php	/^	function alert_private_chat($user,$message){$/;"	f
+alert_private_chat_you	lib/message.php	/^	function alert_private_chat_you($user,$message){$/;"	f
+alert_room	lib/message.php	/^	function alert_room($room,$message,$user=""){$/;"	f
+alert_user	lib/message.php	/^	function alert_user($user,$message){$/;"	f
+allowed_fonts	lib/message.php	/^		$allowed_fonts = explode(",",eregi_replace(" ","",$x7c->settings['style_allowed_fonts']));$/;"	v
+allowed_fonts	sources/info_box.php	/^			$allowed_fonts = explode(",",$x7c->settings['style_allowed_fonts']);$/;"	v
+allows	lib/irc.php	/^	\/\/ This function allows an op to start, stop or clear the logs$/;"	f
+apa1	sources/frame.php	/^			function apa1(){$/;"	f
+apa2	sources/frame.php	/^			function apa2(){$/;"	f
+apa3	sources/frame.php	/^			function apa3(){$/;"	f
+apa4	sources/frame.php	/^			function apa4(){$/;"	f
+apa5	sources/frame.php	/^			function apa5(){$/;"	f
+apa6	sources/frame.php	/^			function apa6(){$/;"	f
+arrow	sources/frame.php	/^			function arrow(){$/;"	f
+auth_cookie_encrypt	lib/auth/smf.php	/^	function auth_cookie_encrypt($data){$/;"	f
+auth_disable_guest	lib/auth/e107.php	/^	$auth_disable_guest = true;$/;"	v
+auth_disable_guest	lib/auth/invision1.php	/^	$auth_disable_guest = true;$/;"	v
+auth_disable_guest	lib/auth/invision2.php	/^	$auth_disable_guest = true;$/;"	v
+auth_disable_guest	lib/auth/joomla.php	/^	$auth_disable_guest = true;$/;"	v
+auth_disable_guest	lib/auth/mambo.php	/^	$auth_disable_guest = true;$/;"	v
+auth_disable_guest	lib/auth/mboard.php	/^	$auth_disable_guest = true;$/;"	v
+auth_disable_guest	lib/auth/md5.php	/^	$auth_disable_guest = false;$/;"	v
+auth_disable_guest	lib/auth/phpbb2.php	/^	$auth_disable_guest = true;$/;"	v
+auth_disable_guest	lib/auth/phpnuke.php	/^	$auth_disable_guest = true;$/;"	v
+auth_disable_guest	lib/auth/postnuke.php	/^	$auth_disable_guest = true;$/;"	v
+auth_disable_guest	lib/auth/punbb.php	/^$auth_disable_guest = true;$/;"	v
+auth_disable_guest	lib/auth/smf.php	/^	$auth_disable_guest = true;$/;"	v
+auth_disable_guest	lib/auth/vbulletin.php	/^	$auth_disable_guest = false;$/;"	v
+auth_disable_guest	lib/auth/xmb.php	/^	$auth_disable_guest = true;$/;"	v
+auth_disable_guest	lib/auth/xoops.php	/^	$auth_disable_guest = true;$/;"	v
+auth_disable_guest	lib/auth/yabbse.php	/^	$auth_disable_guest = true;$/;"	v
+auth_encrypt	lib/auth/e107.php	/^	function auth_encrypt($data){$/;"	f
+auth_encrypt	lib/auth/invision1.php	/^	function auth_encrypt($data){$/;"	f
+auth_encrypt	lib/auth/invision2.php	/^	function auth_encrypt($data){$/;"	f
+auth_encrypt	lib/auth/joomla.php	/^	function auth_encrypt($data){$/;"	f
+auth_encrypt	lib/auth/mambo.php	/^	function auth_encrypt($data){$/;"	f
+auth_encrypt	lib/auth/mboard.php	/^	function auth_encrypt($data){$/;"	f
+auth_encrypt	lib/auth/md5.php	/^	function auth_encrypt($data){$/;"	f
+auth_encrypt	lib/auth/phpbb2.php	/^	function auth_encrypt($data){$/;"	f
+auth_encrypt	lib/auth/phpnuke.php	/^	function auth_encrypt($data){$/;"	f
+auth_encrypt	lib/auth/postnuke.php	/^	function auth_encrypt($data){$/;"	f
+auth_encrypt	lib/auth/punbb.php	/^function auth_encrypt($data)$/;"	f
+auth_encrypt	lib/auth/smf.php	/^	function auth_encrypt($data){$/;"	f
+auth_encrypt	lib/auth/vbulletin.php	/^	function auth_encrypt($data){$/;"	f
+auth_encrypt	lib/auth/xmb.php	/^	function auth_encrypt($data){$/;"	f
+auth_encrypt	lib/auth/xoops.php	/^	function auth_encrypt($data){$/;"	f
+auth_encrypt	lib/auth/yabbse.php	/^	function auth_encrypt($data){$/;"	f
+auth_getpass	lib/auth/e107.php	/^	function auth_getpass($auth_ucookie){$/;"	f
+auth_getpass	lib/auth/invision1.php	/^	function auth_getpass($auth_ucookie){$/;"	f
+auth_getpass	lib/auth/invision2.php	/^	function auth_getpass($auth_ucookie){$/;"	f
+auth_getpass	lib/auth/joomla.php	/^	function auth_getpass($auth_ucookie){$/;"	f
+auth_getpass	lib/auth/mambo.php	/^	function auth_getpass($auth_ucookie){$/;"	f
+auth_getpass	lib/auth/mboard.php	/^	function auth_getpass($auth_ucookie){$/;"	f
+auth_getpass	lib/auth/md5.php	/^	function auth_getpass($auth_ucookie){$/;"	f
+auth_getpass	lib/auth/phpbb2.php	/^	function auth_getpass($auth_ucookie){$/;"	f
+auth_getpass	lib/auth/phpnuke.php	/^	function auth_getpass($auth_ucookie){$/;"	f
+auth_getpass	lib/auth/postnuke.php	/^	function auth_getpass($auth_ucookie){$/;"	f
+auth_getpass	lib/auth/punbb.php	/^function auth_getpass($auth_ucookie)$/;"	f
+auth_getpass	lib/auth/smf.php	/^	function auth_getpass($auth_ucookie){$/;"	f
+auth_getpass	lib/auth/vbulletin.php	/^	function auth_getpass($auth_ucookie){$/;"	f
+auth_getpass	lib/auth/xmb.php	/^	function auth_getpass($auth_ucookie){$/;"	f
+auth_getpass	lib/auth/xoops.php	/^	function auth_getpass($auth_ucookie){$/;"	f
+auth_getpass	lib/auth/yabbse.php	/^	function auth_getpass($auth_ucookie){$/;"	f
+auth_pcookie	lib/auth/e107.php	/^	$auth_pcookie = "X7C2P";$/;"	v
+auth_pcookie	lib/auth/invision1.php	/^	$auth_pcookie = "X7C2P";$/;"	v
+auth_pcookie	lib/auth/invision2.php	/^	$auth_pcookie = "X7C2P";$/;"	v
+auth_pcookie	lib/auth/joomla.php	/^	$auth_pcookie = "X7C2P";$/;"	v
+auth_pcookie	lib/auth/mambo.php	/^	$auth_pcookie = "X7C2P";$/;"	v
+auth_pcookie	lib/auth/mboard.php	/^	$auth_pcookie = "X7C2P";$/;"	v
+auth_pcookie	lib/auth/md5.php	/^	$auth_pcookie = "X7C2P";$/;"	v
+auth_pcookie	lib/auth/phpbb2.php	/^	$auth_pcookie = "X7C2P";$/;"	v
+auth_pcookie	lib/auth/phpnuke.php	/^	$auth_pcookie = "X7C2P";$/;"	v
+auth_pcookie	lib/auth/postnuke.php	/^	$auth_pcookie = "X7C2P";$/;"	v
+auth_pcookie	lib/auth/punbb.php	/^$auth_pcookie = "X7C2P";$/;"	v
+auth_pcookie	lib/auth/smf.php	/^	$auth_pcookie = "X7C2P";$/;"	v
+auth_pcookie	lib/auth/vbulletin.php	/^	$auth_pcookie = "X7C2P";$/;"	v
+auth_pcookie	lib/auth/xmb.php	/^	$auth_pcookie = "xmbpw";$/;"	v
+auth_pcookie	lib/auth/xoops.php	/^	$auth_pcookie = "X7C2P";$/;"	v
+auth_pcookie	lib/auth/yabbse.php	/^	$auth_pcookie = "X7C2P";$/;"	v
+auth_register_link	lib/auth/e107.php	/^	$auth_register_link = "..\/signup.php";$/;"	v
+auth_register_link	lib/auth/invision1.php	/^	$auth_register_link = "..\/index.php?act=Reg&code=00";$/;"	v
+auth_register_link	lib/auth/invision2.php	/^	$auth_register_link = "..\/index.php?act=Reg&CODE=00";$/;"	v
+auth_register_link	lib/auth/joomla.php	/^	$auth_register_link = "..\/index.php?option=com_registration&task=register";$/;"	v
+auth_register_link	lib/auth/mambo.php	/^	$auth_register_link = "..\/index.php?option=com_registration&task=register";$/;"	v
+auth_register_link	lib/auth/mboard.php	/^	$auth_register_link = "..\/index.php?a=register";$/;"	v
+auth_register_link	lib/auth/md5.php	/^	$auth_register_link = "";$/;"	v
+auth_register_link	lib/auth/phpbb2.php	/^	$auth_register_link = "..\/profile.php?mode=register";$/;"	v
+auth_register_link	lib/auth/phpnuke.php	/^	$auth_register_link = "..\/modules.php?name=Your_Account&op=new_user";$/;"	v
+auth_register_link	lib/auth/postnuke.php	/^	$auth_register_link = "..\/user.php?op=check_age&module=NS-NewUser";$/;"	v
+auth_register_link	lib/auth/punbb.php	/^$auth_register_link = "..\/register.php";$/;"	v
+auth_register_link	lib/auth/smf.php	/^	$auth_register_link = "..\/index.php?action=register";$/;"	v
+auth_register_link	lib/auth/vbulletin.php	/^	$auth_register_link = "..\/register.php";$/;"	v
+auth_register_link	lib/auth/xmb.php	/^	$auth_register_link = "..\/member.php?action=reg";$/;"	v
+auth_register_link	lib/auth/xoops.php	/^	$auth_register_link = "..\/register.php";$/;"	v
+auth_register_link	lib/auth/yabbse.php	/^	$auth_register_link = "..\/index.php?board=;action=register";$/;"	v
+auth_ucookie	lib/auth/e107.php	/^	$auth_ucookie = "X7C2U";$/;"	v
+auth_ucookie	lib/auth/invision1.php	/^	$auth_ucookie = "X7C2U";$/;"	v
+auth_ucookie	lib/auth/invision2.php	/^	$auth_ucookie = "X7C2U";$/;"	v
+auth_ucookie	lib/auth/joomla.php	/^	$auth_ucookie = "X7C2U";$/;"	v
+auth_ucookie	lib/auth/mambo.php	/^	$auth_ucookie = "X7C2U";$/;"	v
+auth_ucookie	lib/auth/mboard.php	/^	$auth_ucookie = "X7C2U";$/;"	v
+auth_ucookie	lib/auth/md5.php	/^	$auth_ucookie = "X7C2U";$/;"	v
+auth_ucookie	lib/auth/phpbb2.php	/^	$auth_ucookie = "X7C2U";$/;"	v
+auth_ucookie	lib/auth/phpnuke.php	/^	$auth_ucookie = "X7C2U";$/;"	v
+auth_ucookie	lib/auth/postnuke.php	/^	$auth_ucookie = "X7C2U";$/;"	v
+auth_ucookie	lib/auth/punbb.php	/^$auth_ucookie = "X7C2U";$/;"	v
+auth_ucookie	lib/auth/smf.php	/^	$auth_ucookie = "X7C2U";$/;"	v
+auth_ucookie	lib/auth/vbulletin.php	/^	$auth_ucookie = "X7C2U";$/;"	v
+auth_ucookie	lib/auth/xmb.php	/^	$auth_ucookie = "xmbuser";$/;"	v
+auth_ucookie	lib/auth/xoops.php	/^	$auth_ucookie = "X7C2U";$/;"	v
+auth_ucookie	lib/auth/yabbse.php	/^	$auth_ucookie = "X7C2U";$/;"	v
+author	sources/admin.php	/^							$author = $val['author'];$/;"	v
+author	sources/usercp.php	/^					$author = $val[1];$/;"	v
+author	sources/usercp.php	/^				$author = $msgs[$mid][1];$/;"	v
+autoparse_url	lib/message.php	/^	function autoparse_url($startbit,$url,$extrabit){$/;"	f
+avatar_code	sources/profile.php	/^				$avatar_code = "<img alt=\\"[** $txt[125] **]\\" src=\\"$profile[avatar]\\" width=\\"$width\\" height=\\"$height\\">";$/;"	v
+avatar_code	sources/profile.php	/^				$avatar_code = "<img alt=\\"[** $txt[125] **]\\" src=\\"$profile[avatar]\\">";$/;"	v
+avatar_code	sources/profile.php	/^			$avatar_code = "<img alt=\\"[** $txt[125] **]\\" src=\\"$profile[avatar]\\" width=\\"$width\\" height=\\"$height\\">";$/;"	v
+b	lib/color_picker.php	/^				$b = "0".$b;$/;"	v
+b	lib/color_picker.php	/^			$b = dechex($rgb['blue']);$/;"	v
+back_2_db	lib/online.php	/^		$back_2_db = implode(",",$user_online);$/;"	v
+background	sources/frame.php	/^			  $background = "background-attachment: fixed;background-image: url({$x7c->settings['background_image']});";$/;"	v
+background	sources/frame.php	/^			$background = "";$/;"	v
+background	sources/update.php	/^				$background = " style=\\"background-attachment: fixed;background-image: url($image);\\"";$/;"	v
+background	sources/update.php	/^				$background = "";$/;"	v
+ban_reason	index.php	/^			$ban_reason = $row[5];$/;"	v
+banid	lib/irc.php	/^		$banid = $banid[0];$/;"	v
+banid	lib/irc.php	/^		$banid = $db->Do_Fetch_Row($query); $/;"	v
+bans	index.php	/^	$bans = $x7p->bans_on_you;$/;"	v
+bans	sources/frame.php	/^  $bans = $x7p->bans_on_you;$/;"	v
+bans	sources/privatemessage.php	/^		$bans = $x7p->bans_on_you;$/;"	v
+bans	sources/update.php	/^		$bans = $x7p->bans_on_you;$/;"	v
+before_frame	index.php	/^			$before_frame = microtime_float()-$debug_start;$/;"	v
+bg_blue	online.php	/^			$bg_blue = $_GET['bg_blue'];$/;"	v
+bg_color	online.php	/^		$bg_color = imagecolorallocate($counter,$bg_red,$bg_green,$bg_blue);$/;"	v
+bg_green	online.php	/^			$bg_green = $_GET['bg_green'];$/;"	v
+bg_red	online.php	/^			$bg_red = $_GET['bg_red'];$/;"	v
+bg_red	online.php	/^		$bg_red = $bg_blue = $bg_green = 255;$/;"	v
+blue	online.php	/^			$blue = $_GET['blue'];$/;"	v
+body	help/index.php	/^						$body = eregi_replace(preg_quote("$hval"),"",$body);$/;"	v
+body	help/index.php	/^			$body = "Your search did not return any results.";$/;"	v
+body	help/index.php	/^		$body = "";$/;"	v
+body	help/index.php	/^		$body = eregi_replace("$key","<a href=\\"$val\\">$key<\/a>",$body);$/;"	v
+body	help/index.php	/^	$body = $help[$_GET['s']][$_GET['t']];$/;"	v
+body	help/mini.php	/^		$body = eregi_replace("$key","<a href=\\"$val\\">$key<\/a>",$body);$/;"	v
+body	help/mini.php	/^	$body = $mini[$_GET['q']];$/;"	v
+body	index.php	/^				$body = $txt[480];$/;"	v
+body	index.php	/^				$body = $txt[481];$/;"	v
+body	sources/admin.php	/^								$body = "$txt[559]<Br><Br><a href=\\"javascript: history.back();\\">$txt[77]<\/a>";$/;"	v
+body	sources/admin.php	/^								$body = "<div align=\\"center\\">$txt[394]<Br><Br>$txt[396]<Br><Br><a href=\\".\/index.php?act=adminpanel&cp_page=themes\\">$txt[77]<\/a><\/div>";$/;"	v
+body	sources/admin.php	/^								$body = "<div align=\\"center\\">$txt[395]<Br><Br><a href=\\".\/index.php?act=adminpanel&cp_page=themes\\">$txt[77]<\/a><\/div>";$/;"	v
+body	sources/admin.php	/^							$body = "<div align=\\"center\\">$txt[397]<Br><Br><a href=\\".\/index.php?act=adminpanel&cp_page=themes&theme_page=delete&theme=$_GET[theme]&confirmed=1\\">$txt[398]<\/a><Br><a href=\\".\/index.php?act=adminpanel&cp_page=themes\\">$txt[77]<\/a><\/div>";$/;"	v
+body	sources/admin.php	/^							$body = $txt[557]."<Br><Br><a href=\\"index.php?act=adminpanel&cp_page=themes\\">$txt[77]<\/a>";$/;"	v
+body	sources/admin.php	/^						$body = "$/;"	v
+body	sources/admin.php	/^						$body = "$txt[558]<br><Br><a href=\\"index.php?act=adminpanel&cp_page=themes\\">$txt[77]<\/a>";$/;"	v
+body	sources/admin.php	/^						$body = "$txt[594]<Br><Br><a href=\\"index.php?act=adminpanel&cp_page=rooms\\">$txt[77]<\/a>";$/;"	v
+body	sources/admin.php	/^						$body = "<Br>$/;"	v
+body	sources/admin.php	/^						$body = "<div align=\\"center\\">$txt[465]<Br>$/;"	v
+body	sources/admin.php	/^						$body = "<div align=\\"center\\">$txt[612]<Br><Br><a href=\\".\/index.php?act=adminpanel&cp_page=themes\\">$txt[77]<\/a><\/div>";$/;"	v
+body	sources/admin.php	/^						$body = $error."<Br><Br><div align=\\"center\\"><a href=\\"javascript: history.back()\\">$txt[77]<\/a><\/div>";$/;"	v
+body	sources/admin.php	/^						$body = $txt[343];$/;"	v
+body	sources/admin.php	/^					$body = "$txt[107] <b>$row[0]<\/b><Br><Br>";$/;"	v
+body	sources/admin.php	/^					$body = "$txt[239]<Br><Br>";$/;"	v
+body	sources/admin.php	/^					$body = "$txt[525]<Br><br>[<a href=\\"index.php?act=adminpanel&cp_page=themes&theme_page=creator{$edit}\\">$txt[398]<\/a>] [<a href=\\"index.php?act=adminpanel&cp_page=themes\\">$txt[77]<\/a>]";$/;"	v
+body	sources/admin.php	/^					$body = "$txt[571]<Br><br>";$/;"	v
+body	sources/admin.php	/^					$body = "$txt[574]<Br><br><div align=\\"center\\"><a href=\\"index.php?act=adminpanel&cp_page=mods\\">$txt[77]<\/div>";$/;"	v
+body	sources/admin.php	/^					$body = "$txt[576]<Br><br><div align=\\"center\\"><a href=\\"index.php?act=adminpanel&cp_page=mods\\">$txt[77]<\/div>";$/;"	v
+body	sources/admin.php	/^					$body = "<Br>$/;"	v
+body	sources/admin.php	/^					$body = "<Br>$txt[385]<Br><Br>$/;"	v
+body	sources/admin.php	/^					$body = "<Br><div align=\\"center\\">$txt[518]<Br><Br>$/;"	v
+body	sources/admin.php	/^					$body = "<Br><div align=\\"center\\">$txt[604]<Br><Br>$/;"	v
+body	sources/admin.php	/^					$body = "<div align=\\"center\\">$txt[26]<Br><a href=\\"javascript: history.back();\\">$txt[77]<\/a><\/div>";$/;"	v
+body	sources/admin.php	/^					$body = "<div align=\\"center\\">$txt[391]<Br>$/;"	v
+body	sources/admin.php	/^					$body = "<div align=\\"center\\">$txt[397]<Br><Br><a href=\\".\/index.php?act=adminpanel&cp_page=themes&theme_page=install&theme=$_GET[theme]\\">$txt[398]<\/a><br><a href=\\".\/index.php?act=adminpanel&cp_page=themes\\">$txt[77]<\/a><\/div>";$/;"	v
+body	sources/admin.php	/^					$body = "<div align=\\"center\\">$txt[402]<Br><Br>$txt[396]<Br><br><a href=\\".\/index.php?act=adminpanel&cp_page=themes\\">$txt[77]<\/a><\/div>";$/;"	v
+body	sources/admin.php	/^					$body = "<div align=\\"center\\">$txt[461]<Br>$/;"	v
+body	sources/admin.php	/^					$body = "<div align=\\"center\\">$txt[462]<Br><a href=\\"index.php?act=adminpanel&cp_page=users\\">$txt[77]<\/a><\/div>";$/;"	v
+body	sources/admin.php	/^					$body = "<div align=\\"center\\">$txt[463]<Br><a href=\\"index.php?act=adminpanel&cp_page=users\\">$txt[77]<\/a><\/div>";$/;"	v
+body	sources/admin.php	/^					$body = "<div align=\\"center\\">$txt[464]<Br><a href=\\"index.php?act=adminpanel&cp_page=users\\">$txt[77]<\/a><\/div>";$/;"	v
+body	sources/admin.php	/^					$body = "<div align=\\"center\\">$txt[466]<Br><a href=\\"index.php?act=adminpanel&cp_page=rooms\\">$txt[77]<\/a><\/div>";$/;"	v
+body	sources/admin.php	/^					$body = $txt[320];$/;"	v
+body	sources/admin.php	/^					$body = $txt[343];$/;"	v
+body	sources/admin.php	/^					$body = $txt[600]."<Br><br><a style=\\"cursor: pointer;cursor:hand;\\" onClick=\\"javascript: history.back();\\">[$txt[77]]<\/a>";$/;"	v
+body	sources/admin.php	/^				$body = "";$/;"	v
+body	sources/admin.php	/^				$body = "$/;"	v
+body	sources/admin.php	/^				$body = "$txt[162]<Br><Br>";$/;"	v
+body	sources/admin.php	/^				$body = "$txt[163]<Br><Br>";$/;"	v
+body	sources/admin.php	/^				$body = "$txt[167]<Br><Br>";$/;"	v
+body	sources/admin.php	/^				$body = "$txt[234]<br><Br>";$/;"	v
+body	sources/admin.php	/^				$body = "$txt[235]<Br><Br>";$/;"	v
+body	sources/admin.php	/^				$body = "$txt[424]<Br><Br><table border=\\"0\\" cellspacing=\\"0\\" cellpadding=\\"4\\" align=\\"center\\">$/;"	v
+body	sources/admin.php	/^				$body = "$txt[494]";$/;"	v
+body	sources/admin.php	/^				$body = "$txt[565]<br><br><A href=\\"index.php?act=adminpanel&cp_page=mods\\">$txt[398]<\/a>";$/;"	v
+body	sources/admin.php	/^				$body = "<Br>$/;"	v
+body	sources/admin.php	/^				$body = "<Br><div align=\\"center\\"><b>$txt[36]<\/b><Br>$/;"	v
+body	sources/admin.php	/^				$body = "<Br><div align=\\"center\\"><b>$txt[460]<\/b><\/div><Br>$/;"	v
+body	sources/admin.php	/^				$body = "<Br><div align=\\"center\\"><b>$txt[567]<\/b><Br>$/;"	v
+body	sources/admin.php	/^				$body = "<div align=\\"center\\">$/;"	v
+body	sources/admin.php	/^				$body = "<div align=\\"center\\"><Br>$txt[493]<Br><Br>$/;"	v
+body	sources/admin.php	/^				$body = "<div align=\\"center\\"><Br><Br>$/;"	v
+body	sources/admin.php	/^				$body = $error."<Br><Br><div align=\\"center\\"><a style=\\"cursor: pointer;cursor:hand;\\" onClick=\\"javascript: history.back();\\">[$txt[77]]<\/a><\/div>";$/;"	v
+body	sources/admin.php	/^				$body = $txt[319];$/;"	v
+body	sources/admin.php	/^				$body = $txt[469];$/;"	v
+body	sources/admin.php	/^				$body = $txt[470];$/;"	v
+body	sources/admin.php	/^				$body = $txt[484];$/;"	v
+body	sources/admin.php	/^				$body = $txt[485]."<Br><br>";$/;"	v
+body	sources/admin.php	/^				$body = eregi_replace("___page_counter___","$pages",$body);$/;"	v
+body	sources/admin.php	/^			$body = "";$/;"	v
+body	sources/admin.php	/^			$body = "$txt[498]<Br><Br>$/;"	v
+body	sources/admin.php	/^			$body = $txt[216];$/;"	v
+body	sources/admin.php	/^			$body = $txt[502];$/;"	v
+body	sources/admin.php	/^		$body = $txt[306]."<Br><Br><div align=\\"center\\"><a href=\\"http:\/\/x7chat.com\/download.php\\"><img border=\\"0\\" src=\\"http:\/\/x7chat.com\/rss\/updates.php?version=$X7CHATVERSION\\"><\/a><\/div>";$/;"	v
+body	sources/calendar.php	/^		$body = cal_threedays()."<Br><br>";$/;"	v
+body	sources/forgotpass.php	/^						$body = $txt[258]."<Br><Br><a href=\\"index.php\\">$txt[77]<\/a>";$/;"	v
+body	sources/forgotpass.php	/^						$body = $txt[260]."<Br><Br><a href=\\"index.php\\">$txt[77]<\/a>";$/;"	v
+body	sources/forgotpass.php	/^					$body = $txt[258]."<Br><Br><a href=\\"index.php\\">$txt[77]<\/a>";$/;"	v
+body	sources/forgotpass.php	/^					$body = $txt[259]."<Br><Br><a href=\\"index.php\\">$txt[77]<\/a>";$/;"	v
+body	sources/forgotpass.php	/^			$body = $txt[257]."<Br><Br><div align=\\"center\\">$/;"	v
+body	sources/forgotpass.php	/^			$body = $txt[261]."<Br><Br><a href=\\"index.php\\">$txt[77]<\/a>";$/;"	v
+body	sources/info_box.php	/^					$body = $txt[508];$/;"	v
+body	sources/info_box.php	/^					$body = $txt[509];$/;"	v
+body	sources/info_box.php	/^				$body = "$txt[507]";$/;"	v
+body	sources/info_box.php	/^			$body = "";$/;"	v
+body	sources/info_box.php	/^			$body = "$txt[57]<Br><Br>";$/;"	v
+body	sources/info_box.php	/^			$body = $txt[45];$/;"	v
+body	sources/info_box.php	/^			$body = color_form();$/;"	v
+body	sources/info_box.php	/^			$body = color_update();$/;"	v
+body	sources/loginout.php	/^			$body = "	$/;"	v
+body	sources/loginout.php	/^			$body = "";$/;"	v
+body	sources/loginout.php	/^		$body = "	<form action=\\"index.php\\" method=\\"post\\" name=\\"loginform\\">$/;"	v
+body	sources/memberlist.php	/^		$body = "<div align=\\"center\\">$/;"	v
+body	sources/newroom.php	/^				$body = "	<form action=\\"index.php?act=newroom2\\" method=\\"post\\" name=\\"newroomform\\">$/;"	v
+body	sources/newroom.php	/^			$body = $error."<Br><Br><a href=\\"index.php?act=newroom1\\">[$txt[77]]<\/a>";$/;"	v
+body	sources/newroom.php	/^			$body = $txt[75]."<Br><Br><a href=\\".\/index.php\\">[$txt[29]]<\/a>";$/;"	v
+body	sources/profile.php	/^		$body = "$/;"	v
+body	sources/register.php	/^				$body = $error."<Br><Br><div align=\\"center\\"><a style=\\"cursor: pointer;cursor:hand;\\" onClick=\\"javascript: history.back();\\">[$txt[77]]<\/a><\/div>";$/;"	v
+body	sources/register.php	/^				$body = $txt[28];$/;"	v
+body	sources/register.php	/^			$body = "	<form action=\\"index.php?act=register&step=1\\" method=\\"post\\" name=\\"registerform\\">$/;"	v
+body	sources/register.php	/^			$body = $txt[614];$/;"	v
+body	sources/register.php	/^			$body = $txt[615];$/;"	v
+body	sources/register.php	/^			$body = activate_account();$/;"	v
+body	sources/room_password.php	/^		$body = "<div align=\\"center\\">$/;"	v
+body	sources/roomcp.php	/^					$body = "";$/;"	v
+body	sources/roomcp.php	/^					$body = "$txt[167]<Br><Br>";$/;"	v
+body	sources/roomcp.php	/^					$body = "$txt[242].  <a href=\\"index.php?act=roomcp&cp_page=logs&subact=disable&room=$_GET[room]\\">[$txt[245]]<\/a><Br><Br>";$/;"	v
+body	sources/roomcp.php	/^					$body = "$txt[243].  <a href=\\"index.php?act=roomcp&cp_page=logs&subact=enable&room=$_GET[room]\\">[$txt[244]]<\/a><Br><Br>";$/;"	v
+body	sources/roomcp.php	/^					$body = $txt[239]."<Br><Br>";$/;"	v
+body	sources/roomcp.php	/^				$body = "";$/;"	v
+body	sources/roomcp.php	/^				$body = "$txt[162]<Br><Br>";$/;"	v
+body	sources/roomcp.php	/^				$body = "$txt[163]<Br><Br>";$/;"	v
+body	sources/roomcp.php	/^				$body = "$txt[234]<br><Br>";$/;"	v
+body	sources/roomcp.php	/^				$body = "$txt[235]<Br><Br>";$/;"	v
+body	sources/roomcp.php	/^				$body = "<Br><Br><form action=\\"index.php?act=roomcp&cp_page=settings&room=$_GET[room]\\" method=\\"post\\">$/;"	v
+body	sources/roomcp.php	/^				$body = $txt[105]."<Br><Br>";$/;"	v
+body	sources/roomcp.php	/^				$body = $txt[106]."<br><br>";$/;"	v
+body	sources/roomcp.php	/^				$body = $txt[111]."<Br><Br>";$/;"	v
+body	sources/roomcp.php	/^				$body = $txt[112]."<br><br>";$/;"	v
+body	sources/roomcp.php	/^				$body = $txt[113]."<Br><Br>";$/;"	v
+body	sources/roomcp.php	/^				$body = $txt[114]."<br><br>";$/;"	v
+body	sources/roomcp.php	/^				$body = $txt[210];$/;"	v
+body	sources/roomcp.php	/^				$body = $txt[216];$/;"	v
+body	sources/roomcp.php	/^		$body = $txt[217];$/;"	v
+body	sources/roomlist.php	/^			$body = "<div align=\\"center\\">$txt[386]<Br><Br><a href=\\".\/index.php\\">$txt[77]<\/a><\/div>";$/;"	v
+body	sources/roomlist.php	/^			$body = $txt[387];$/;"	v
+body	sources/roomlist.php	/^		$body = "$/;"	v
+body	sources/support.php	/^			$body = "<html><head><script language=\\"javascript\\" type=\\"text\/javascript\\">$script<\/script><\/head><body onLoad=\\"javascript: setTimeout('location.reload()','{$x7c->settings['refresh_rate']}');\\">&nbsp;<\/body>";$/;"	v
+body	sources/support.php	/^			$body = "<iframe src=\\".\/index.php?act=support_sit&update=1&room=$ranroom\\" width=\\"0\\" height=\\"0\\" style=\\"visibility: hidden;\\"><\/iframe>";$/;"	v
+body	sources/usercp.php	/^					$body = "$txt[242].  <a href=\\"index.php?act=userpanel&cp_page=logs&subact=disable\\">[$txt[245]]<\/a><Br><Br>";$/;"	v
+body	sources/usercp.php	/^					$body = "$txt[243].  <a href=\\"index.php?act=userpanel&cp_page=logs&subact=enable\\">[$txt[244]]<\/a><Br><Br>";$/;"	v
+body	sources/usercp.php	/^					$body = "<div align=\\"center\\">".$error."<Br><Br><a href=\\".\/index.php?act=userpanel&cp_page=profile\\">$txt[77]<\/a><\/div>";$/;"	v
+body	sources/usercp.php	/^					$body = $txt[184]."<Br><Br>";$/;"	v
+body	sources/usercp.php	/^					$body = $txt[188];$/;"	v
+body	sources/usercp.php	/^					$body = $txt[194];$/;"	v
+body	sources/usercp.php	/^					$body = $txt[195];$/;"	v
+body	sources/usercp.php	/^					$body = $txt[196];$/;"	v
+body	sources/usercp.php	/^					$body = $txt[197];$/;"	v
+body	sources/usercp.php	/^					$body = $txt[198];$/;"	v
+body	sources/usercp.php	/^					$body = $txt[610]."<Br><Br>";$/;"	v
+body	sources/usercp.php	/^				$body = "";$/;"	v
+body	sources/usercp.php	/^				$body = "$txt[146]: <i>";$/;"	v
+body	sources/usercp.php	/^				$body = "$txt[148]: <i>";$/;"	v
+body	sources/usercp.php	/^				$body = "$txt[162]<Br><Br>";$/;"	v
+body	sources/usercp.php	/^				$body = "$txt[163]<Br><Br>";$/;"	v
+body	sources/usercp.php	/^				$body = "$txt[171]<Br><Br>";$/;"	v
+body	sources/usercp.php	/^				$body = "$txt[177]<Br><br>";$/;"	v
+body	sources/usercp.php	/^				$body = "<Br>$/;"	v
+body	sources/usercp.php	/^				$body = "<br>$txt[193]<br><Br><div align=\\"center\\"><form action=\\"index.php?act=userpanel&cp_page=upload&uploaded=1\\" method=\\"post\\" enctype=\\"multipart\/form-data\\">$/;"	v
+body	sources/usercp.php	/^				$body = $txt[158]."<Br><Br>";$/;"	v
+body	sources/usercp.php	/^				$body = $txt[161]."<Br><Br>";$/;"	v
+body	sources/usercp.php	/^				$body = $txt[210];$/;"	v
+body	sources/usercp.php	/^				$body = $txt[216];$/;"	v
+body	sources/usercp.php	/^			$body = $txt[136];$/;"	v
+body	sources/usercp.php	/^		$body = $txt[136];$/;"	v
+body	sources/usr_action_box.php	/^				$body = $txt[108]."$/;"	v
+body	sources/usr_action_box.php	/^				$body = $txt[109];$/;"	v
+body	sources/usr_action_box.php	/^			$body = $txt[101];$/;"	v
+body	sources/usr_action_box.php	/^			$body = $txt[102];$/;"	v
+body	sources/usr_action_box.php	/^			$body = $txt[104];$/;"	v
+body	sources/usr_action_box.php	/^			$body = $txt[105];$/;"	v
+body	sources/usr_action_box.php	/^			$body = $txt[106];$/;"	v
+body	sources/usr_action_box.php	/^			$body = $txt[107].$ip;$/;"	v
+body	sources/usr_action_box.php	/^			$body = $txt[111];$/;"	v
+body	sources/usr_action_box.php	/^			$body = $txt[112];$/;"	v
+body	sources/usr_action_box.php	/^			$body = $txt[113];$/;"	v
+body	sources/usr_action_box.php	/^			$body = $txt[114];$/;"	v
+body_parsed	lib/message.php	/^		$body_parsed = parse_message($body);$/;"	v
+body_parsed	lib/message.php	/^		$body_parsed = parse_message($body,1);$/;"	v
+body_parsed	lib/message.php	/^		$body_parsed = parse_message($message,1);$/;"	v
+bw_cleanup	lib/bandwidth.php	/^	function bw_cleanup(){$/;"	f
+bw_first_time	lib/bandwidth.php	/^	function bw_first_time($user){$/;"	f
+cal_minimonth	lib/events.php	/^	function cal_minimonth(){$/;"	f
+cal_threedays	lib/events.php	/^	function cal_threedays(){$/;"	f
+calendar	sources/calendar.php	/^	function calendar(){$/;"	f
+cbody	sources/admin.php	/^			$cbody = "<div align=\\"center\\">$/;"	v
+cbody	sources/admin.php	/^			$cbody = $txt[216];$/;"	v
+cbody	sources/roomcp.php	/^		$cbody = "<div align=\\"center\\">$/;"	v
+cbody	sources/usercp.php	/^		$cbody = "<div align=\\"center\\">$/;"	v
+changeMsg	sources/frame.php	/^			function changeMsg(object){$/;"	f
+change_ops	sources/admin.php	/^					$change_ops = "";$/;"	v
+change_pass	lib/auth/e107.php	/^	function change_pass($user,$newpass){$/;"	f
+change_pass	lib/auth/invision1.php	/^	function change_pass($user,$newpass){$/;"	f
+change_pass	lib/auth/invision2.php	/^	function change_pass($user,$newpass){$/;"	f
+change_pass	lib/auth/joomla.php	/^	function change_pass($user,$newpass){$/;"	f
+change_pass	lib/auth/mambo.php	/^	function change_pass($user,$newpass){$/;"	f
+change_pass	lib/auth/mboard.php	/^	function change_pass($user,$newpass){$/;"	f
+change_pass	lib/auth/md5.php	/^	function change_pass($user,$newpass){$/;"	f
+change_pass	lib/auth/phpbb2.php	/^	function change_pass($user,$newpass){$/;"	f
+change_pass	lib/auth/phpnuke.php	/^	function change_pass($user,$newpass){$/;"	f
+change_pass	lib/auth/postnuke.php	/^	function change_pass($user,$newpass){$/;"	f
+change_pass	lib/auth/punbb.php	/^function change_pass($user,$newpass)$/;"	f
+change_pass	lib/auth/smf.php	/^	function change_pass($user,$newpass){$/;"	f
+change_pass	lib/auth/vbulletin.php	/^	function change_pass($user,$newpass){$/;"	f
+change_pass	lib/auth/xmb.php	/^	function change_pass($user,$newpass){$/;"	f
+change_pass	lib/auth/xoops.php	/^	function change_pass($user,$newpass){$/;"	f
+change_pass	lib/auth/yabbse.php	/^	function change_pass($user,$newpass){$/;"	f
+change_roomsetting	lib/rooms.php	/^	function change_roomsetting($room,$setting,$new_setting){$/;"	f
+change_users	sources/update.php	/^		$change_users = $lasttime[0];$/;"	v
+check_bandwidth	lib/bandwidth.php	/^	function check_bandwidth($user){$/;"	f
+check_font_color	lib/message.php	/^	function check_font_color($color,$text,$mode=1){$/;"	f
+check_font_family	lib/message.php	/^	function check_font_family($family,$text,$mode=1){$/;"	f
+check_font_size	lib/message.php	/^	function check_font_size($size,$text,$mode=1){$/;"	f
+check_page	sources/admin.php	/^					$check_page = "groups";$/;"	v
+check_page	sources/admin.php	/^				$check_page = $id;$/;"	v
+check_page	sources/admin.php	/^			$check_page = "groups";$/;"	v
+check_page	sources/admin.php	/^		$check_page = $_GET['cp_page'];$/;"	v
+check_password	sources/room_password.php	/^	function check_password($room,$password){$/;"	f
+checks	lib/xupdater.php	/^	\/\/ This function checks for uploaded mods, it assumes that it has$/;"	f
+checks	sources/roomlist.php	/^	\/\/ This function checks to see if a room with that name exists and if it does then it allows you to join it$/;"	f
+chkAll	sources/admin.php	/^						function chkAll(){$/;"	f
+cinfo	lib/auth/phpbb2.php	/^		$cinfo = $phpbbdb->Do_Fetch_Row($query);$/;"	v
+cinfo	lib/auth/xoops.php	/^		$cinfo = $xoopsdb->Do_Fetch_Row($q);$/;"	v
+clean_old_data	lib/online.php	/^	function clean_old_data(){$/;"	f
+cleanup_banned	lib/cleanup.php	/^	function cleanup_banned(){$/;"	f
+cleanup_events	lib/events.php	/^	function cleanup_events(){$/;"	f
+cleanup_events_ran	lib/events.php	/^			$cleanup_events_ran = 1;$/;"	v
+cleanup_guest_logs	lib/cleanup.php	/^	function cleanup_guest_logs($guest){$/;"	f
+cleanup_guests	lib/cleanup.php	/^	function cleanup_guests(){$/;"	f
+cleanup_messages	lib/cleanup.php	/^	function cleanup_messages(){$/;"	f
+cleanup_rooms	lib/cleanup.php	/^	function cleanup_rooms(){$/;"	f
+clear	lib/logs.php	/^		function clear($logfile=""){$/;"	f
+clearTheWay	sources/frame.php	/^			function clearTheWay(){$/;"	f
+closeMenu	sources/frame.php	/^			function closeMenu(menu){$/;"	f
+closeMenu	sources/privatemessage.php	/^				function closeMenu(menu){$/;"	f
+close_package	lib/xupdater.php	/^	function close_package($dirx){$/;"	f
+cname	lib/auth/phpbb2.php	/^	$cname = $phpbbdb->Do_Fetch_Row($query);$/;"	v
+color	lib/color_picker.php	/^				$color = "#".$_POST['custom_color'];$/;"	v
+color	lib/color_picker.php	/^				$color = "#00000";$/;"	v
+color	lib/color_picker.php	/^				$color = $_POST['custom_color'];$/;"	v
+color	lib/message.php	/^			$color = $x7c->settings['default_color'];$/;"	v
+color	lib/message.php	/^		$color = $x7c->settings['default_color'];$/;"	v
+color	lib/message.php	/^		$color = strtolower($color);$/;"	v
+color	online.php	/^		$color = imagecolorallocate($counter,$red,$green,$blue);$/;"	v
+color	sources/frame.php	/^    $color = $_GET['curcolor'];$/;"	v
+color	sources/frame.php	/^    $color = eregi_replace("<","&lt;",$color);$/;"	v
+color	sources/privatemessage.php	/^			$color = $_GET['curcolor'];$/;"	v
+color	sources/privatemessage.php	/^			$color = eregi_replace("<","&lt;",$color);$/;"	v
+color	sources/roomlist.php	/^		$color = "dark";$/;"	v
+color_form	lib/color_picker.php	/^	function color_form(){$/;"	f
+color_update	lib/color_picker.php	/^	function color_update(){$/;"	f
+compared	lib/online.php	/^		$compared = $return[2]+$return[3];$/;"	v
+contents	sources/roomcp.php	/^					$contents = $log->get_log_contents();$/;"	v
+contents	sources/usercp.php	/^					$contents = $log->get_log_contents("{$x7c->settings['logs_path']}\/$x7s->username\/$_GET[selected_log].log");$/;"	v
+converts	lib/security.php	/^	\/\/ This function converts incoming variables data into something that is safe for SQL queries$/;"	f
+converts	lib/security.php	/^	\/\/ This function converts incoming variables data into something that is safe for printing$/;"	f
+converts	lib/security.php	/^	\/\/ This function converts outgoing data into something that is url safe$/;"	f
+cookie	lib/auth/phpnuke.php	/^		$cookie = $HTTP_COOKIE_VARS['user'];$/;"	v
+cookie	lib/auth/phpnuke.php	/^		$cookie = base64_decode($cookie);$/;"	v
+cookie	lib/auth/phpnuke.php	/^		$cookie = explode(":", $cookie);$/;"	v
+cookie	lib/auth/smf.php	/^	$cookie = unserialize("$data");$/;"	v
+cookie	lib/auth/yabbse.php	/^	$cookie = @unserialize(stripslashes(eregi_replace("&quot;","\\"",$_COOKIE[$cookiename])));$/;"	v
+cookie_name	index.php	/^		$cookie_name = "rpw_".$x7c->room_data['id'];$/;"	v
+cookieprefix	lib/auth/vbulletin.php	/^		$cookieprefix =& $config['Misc']['cookieprefix'];$/;"	v
+coords	lib/color_picker.php	/^		$coords = eregi_replace("^\\?","",$_GET['coords']);$/;"	v
+coords	lib/color_picker.php	/^		$coords = explode(",",$coords);$/;"	v
+copyright	sources/admin.php	/^							$copyright = $val['copyright'];$/;"	v
+count_offline	lib/message.php	/^	function count_offline($user){$/;"	f
+counter	online.php	/^		$counter = imagecreate($size_x,$size_y);$/;"	v
+create	lib/logs.php	/^		function create(){$/;"	f
+create_room	lib/rooms.php	/^	function create_room($uid,$name,$type,$moded,$topic,$greet,$pass,$max,$exp){$/;"	f
+creates	lib/rooms.php	/^	\/\/ This function creates a new room$/;"	f
+css	lib/ssgen.php	/^		$css = " <style type=\\"text\/css\\">$/;"	v
+css	lib/ssgen.php	/^		$css = "<style type=\\"text\/css\\">$/;"	v
+css	lib/ssgen.php	/^		$css = eregi_replace("'","\\'",$css);$/;"	v
+css	lib/ssgen.php	/^		$css = eregi_replace("\\n","",$css);$/;"	v
+css	lib/ssgen.php	/^		$css = eregi_replace("\\r","",$css);$/;"	v
+cur	lib/bandwidth.php	/^			$cur = mktime(0,0,0,date("m"),0,date("Y"));$/;"	v
+cur	lib/bandwidth.php	/^			$cur = mktime(0,0,0,date("m"),date("d"),date("Y"));$/;"	v
+current_day	lib/events.php	/^		$current_day = 1;$/;"	v
+cvalue	lib/auth/phpbb2.php	/^		$cvalue = $_COOKIE["$cname[0]_sid"];$/;"	v
+cvalue	lib/auth/postnuke.php	/^		$cvalue = $_COOKIE["POSTNUKESID"];$/;"	v
+cvalue	lib/auth/xoops.php	/^		$cvalue = $_COOKIE["PHPSESSID"];$/;"	v
+data	index.php	/^				$data = "";$/;"	v
+data	lib/auth/mboard.php	/^		$data = str_replace('$', '', $data);$/;"	v
+data	lib/auth/punbb.php	/^        $data = bin2hex(mhash(MHASH_SHA1, $data));$/;"	v
+data	lib/auth/punbb.php	/^        $data = md5($data);$/;"	v
+data	lib/auth/punbb.php	/^        $data = sha1($data);$/;"	v
+data	lib/auth/smf.php	/^	$data = @stripslashes(stripslashes(eregi_replace("&quot;","\\"",$_COOKIE[$cookiename])));$/;"	v
+data	lib/auth/yabbse.php	/^			$data = yabben($data, "ys");$/;"	v
+data	lib/auth/yabbse.php	/^		$data = @yabben($data, strtolower($_COOKIE[$auth_ucookie]));$/;"	v
+data	lib/logs.php	/^				$data = array_chunk(file($logfile),$_GET['number_of_entries']);$/;"	v
+data	lib/logs.php	/^				$data = file($logfile);$/;"	v
+data	lib/output.php	/^				$data = get_data($theme_data_file,$skin);$/;"	v
+data	lib/security.php	/^		$data = eregi_replace("'","\\'",$data);$/;"	v
+data	lib/security.php	/^		$data = stripslashes($data);$/;"	v
+data	lib/theme_creator.php	/^		$data = "";$/;"	v
+data	lib/xupdater.php	/^		$data = eregi_replace("\\r\\n","\\n",$data);$/;"	v
+data	lib/xupdater.php	/^		$data = file($file);$/;"	v
+data	lib/xupdater.php	/^		$data = implode("",$data);$/;"	v
+data	sources/admin.php	/^				$data = eregi_replace("[\\r|\\n|']","",$data);$/;"	v
+data	sources/admin.php	/^				$data = explode(",",$data);$/;"	v
+data	sources/admin.php	/^				$data = implode("",file("{$x7c->settings['uploads_path']}\/filter_list.txt"));$/;"	v
+data	sources/admin.php	/^				$data = implode("",file("{$x7c->settings['uploads_path']}\/smile_list.txt"));$/;"	v
+data2	index.php	/^				$data2 = "";$/;"	v
+date	sources/admin.php	/^							$date = $val['date'];$/;"	v
+date	sources/admin.php	/^						$date = date("m\/d\/Y");$/;"	v
+date	sources/roomcp.php	/^						$date = date($x7c->settings['date_format_full'],$match[1]);$/;"	v
+date	sources/usercp.php	/^						$date = date($x7c->settings['date_format_full'],$match[1]);$/;"	v
+date_y	sources/admin.php	/^						$date_y = date("Y");$/;"	v
+day	lib/events.php	/^			$day = date("d",$val);$/;"	v
+day	sources/admin.php	/^					$day = date("d");$/;"	v
+day	sources/admin.php	/^					$day = date("d",$row[1]);$/;"	v
+day_name	lib/events.php	/^				$day_name = $txt[date("l",$val)];$/;"	v
+day_name	lib/events.php	/^				$day_name = date("l",$val);$/;"	v
+days_this_month	lib/events.php	/^		$days_this_month = date("t");$/;"	v
+db	index.php	/^	$db = new x7chat_db();$/;"	v
+db	lib/db/mysql.php	/^				$db = $X7CHAT_CONFIG['DB_NAME'];$/;"	v
+db	lib/db/mysql_muse.php	/^				$db = $X7CHAT_CONFIG['DB_NAME'];$/;"	v
+db	online.php	/^	$db = new x7chat_db();$/;"	v
+db	support.php	/^	$db = new x7chat_db();$/;"	v
+dbname	lib/auth/vbulletin.php	/^		$dbname =& $config['Database']['dbname'];$/;"	v
+dbpassword	lib/auth/vbulletin.php	/^		$dbpassword =& $config['MasterServer']['password'];$/;"	v
+dbusername	lib/auth/vbulletin.php	/^		$dbusername =& $config['MasterServer']['username'];$/;"	v
+debug_start	index.php	/^	$debug_start = microtime_float();$/;"	v
+def	sources/admin.php	/^							$def = load_styles("");$/;"	v
+def	sources/admin.php	/^							$def = load_styles($_GET['edit']);$/;"	v
+def	sources/admin.php	/^				$def = new profile_info($_GET['edit']);$/;"	v
+default_color	lib/message.php	/^			$default_color = $x7c->settings['sys_default_color'];$/;"	v
+default_font	lib/message.php	/^			$default_font = $x7c->settings['sys_default_font'];$/;"	v
+default_font	sources/update.php	/^		$default_font = $x7c->settings['sys_default_font'];$/;"	v
+default_size	lib/message.php	/^			$default_size = $x7c->settings['sys_default_size'];$/;"	v
+default_size	sources/update.php	/^		$default_size = $x7c->settings['sys_default_size'];$/;"	v
+delete	sources/admin.php	/^				$delete = array();$/;"	v
+deletes	lib/message.php	/^	\/\/ This function deletes an offline message$/;"	f
+description	sources/admin.php	/^							$description = $val['desc'];$/;"	v
+determines	lib/irc.php	/^	\/\/ This function determines what function to call$/;"	f
+determines	sources/privatemessage.php	/^	\/\/ to call this first function determines that$/;"	f
+df	sources/frame.php	/^			    $df = ereg_replace("$phps","\\"+jv{$phps}+\\"",$df);$/;"	v
+df	sources/frame.php	/^			    $df = ereg_replace("\\\\\\\\$phps","o_2R\\n08_f",$df);$/;"	v
+df	sources/frame.php	/^			    $df = ereg_replace("o_2R\\n08_f","$phps",$df);$/;"	v
+df	sources/frame.php	/^			  $df = $x7c->settings['date_format'];$/;"	v
+df	sources/privatemessage.php	/^												$df = ereg_replace("$phps","\\"+jv{$phps}+\\"",$df);$/;"	v
+df	sources/privatemessage.php	/^												$df = ereg_replace("\\\\\\\\$phps","o_2R\\n08_f",$df);$/;"	v
+df	sources/privatemessage.php	/^												$df = ereg_replace("o_2R\\n08_f","$phps",$df);$/;"	v
+df	sources/privatemessage.php	/^											$df = $x7c->settings['date_format'];$/;"	v
+dice_sides	lib/irc.php	/^			$dice_sides = $params[1];$/;"	v
+dice_sides	lib/irc.php	/^			$dice_sides = 6;$/;"	v
+dice_to_roll	lib/irc.php	/^			$dice_to_roll = $params[0];$/;"	v
+dice_to_roll	lib/irc.php	/^			$dice_to_roll = 1;$/;"	v
+dir	lib/logs.php	/^				$dir = dir("{$x7c->settings['logs_path']}\/$x7s->username");$/;"	v
+dir	lib/logs.php	/^			$dir = dir("{$x7c->settings['logs_path']}\/$x7s->username");$/;"	v
+dir	lib/upload.php	/^		$dir = dir($dirx);$/;"	v
+dir	lib/xupdater.php	/^		$dir = dir($dirx);$/;"	v
+diro	lib/cleanup.php	/^			$diro = dir("{$x7c->settings['logs_path']}\/$guest");$/;"	v
+displays	sources/memberlist.php	/^	\/\/ This function displays a list of all members$/;"	f
+doClickFont	sources/frame.php	/^			function doClickFont(font){$/;"	f
+doClickFont	sources/privatemessage.php	/^				function doClickFont(font){$/;"	f
+doDeSelect	sources/frame.php	/^			function doDeSelect(object){$/;"	f
+doDeSelect	sources/privatemessage.php	/^				function doDeSelect(object){$/;"	f
+doSelect	sources/frame.php	/^			function doSelect(object){$/;"	f
+doSelect	sources/privatemessage.php	/^				function doSelect(object){$/;"	f
+do_initial_refresh	sources/frame.php	/^			function do_initial_refresh(){$/;"	f
+do_refresh	sources/frame.php	/^			function do_refresh(){$/;"	f
+does	lib/irc.php	/^				\/\/ Error, that function does not exist!$/;"	f
+dologin	lib/auth.php	/^		function dologin(){$/;"	f
+dump_buffer	lib/output.php	/^		function dump_buffer($pretend=false){$/;"	f
+e107	lib/auth/e107.php	/^	$e107 = new x7chat_db($mySQLserver,$mySQLuser,$mySQLpassword,$mySQLdefaultdb);$/;"	v
+edit	sources/admin.php	/^								$edit = "";$/;"	v
+edit	sources/admin.php	/^								$edit = "<a href=\\".\/index.php?act=adminpanel&cp_page=themes&theme_page=creator&edit=$option\\">[$txt[459]]<\/a>";$/;"	v
+edit	sources/admin.php	/^						$edit = "";$/;"	v
+edit	sources/admin.php	/^						$edit = "&edit=$_GET[edit]";$/;"	v
+edit_file	lib/theme_creator.php	/^	function edit_file($theme){$/;"	f
+edit_user_setting_field	lib/load.php	/^		function edit_user_setting_field($new_settings,$hideemail){$/;"	f
+edit_user_settings	lib/load.php	/^		function edit_user_settings($setting,$newvalue){$/;"	f
+email	sources/usercp.php	/^				$email = $_POST['email'];$/;"	v
+enc	lib/auth/smf.php	/^			$enc = auth_cookie_encrypt($enc);$/;"	v
+enc	lib/auth/smf.php	/^		$enc = sha1(strtolower($_COOKIE['X7C2U']).$data);$/;"	v
+encode_roomname	sources/roomlist.php	/^			  $encode_roomname = urlencode($link_url); $/;"	v
+end	sources/admin.php	/^				$end = $_GET['start'] + 25;$/;"	v
+end	sources/admin.php	/^				$end = $_GET['start']+25;$/;"	v
+endon	sources/frame.php	/^    $endon = $row[4];$/;"	v
+endon	sources/frame.php	/^    $endon = -1;$/;"	v
+endon	sources/frame.php	/^  $endon = $_GET['startfrom'];$/;"	v
+endtags	lib/message.php	/^		$endtags = "[\/color][\/size][\/font]";$/;"	v
+endtags	sources/frame.php	/^    $endtags = "";$/;"	v
+endtags	sources/privatemessage.php	/^			$endtags = "";$/;"	v
+entry	sources/roomcp.php	/^						$entry = preg_replace("\/^(.+?);\\[(.+?)\\]\/","",$entry);$/;"	v
+entry	sources/usercp.php	/^						$entry = preg_replace("\/^(.+?);\\[(.+?)\\]\/","",$entry);$/;"	v
+error	sources/admin.php	/^						$error = $txt[344];$/;"	v
+error	sources/admin.php	/^					$error = $txt[23];$/;"	v
+error	sources/admin.php	/^					$error = $txt[25];$/;"	v
+error	sources/admin.php	/^					$error = $txt[26];$/;"	v
+error	sources/admin.php	/^					$error = $txt[27];$/;"	v
+error	sources/newroom.php	/^			$error = $txt[72];$/;"	v
+error	sources/newroom.php	/^			$error = $txt[73];$/;"	v
+error	sources/newroom.php	/^			$error = $txt[74];$/;"	v
+error	sources/newroom.php	/^			$error = $txt[76];$/;"	v
+error	sources/newroom.php	/^		$error = "";$/;"	v
+error	sources/register.php	/^				$error = $txt[23];$/;"	v
+error	sources/register.php	/^				$error = $txt[24];$/;"	v
+error	sources/register.php	/^				$error = $txt[25];$/;"	v
+error	sources/register.php	/^				$error = $txt[26];$/;"	v
+error	sources/register.php	/^				$error = $txt[27];$/;"	v
+error	sources/usercp.php	/^					$error = $txt[24]."<Br>";$/;"	v
+error	sources/usercp.php	/^				$error = "";$/;"	v
+event_day	lib/events.php	/^			$event_day = date("d",$row[1]);$/;"	v
+event_form	sources/admin.php	/^			function event_form($action,$default=""){$/;"	f
+event_time	lib/events.php	/^			$event_time = date($x7c->settings['date_format'],$row[1]);$/;"	v
+execi	sources/privatemessage.php	/^				function execi(){$/;"	f
+exists	lib/irc.php	/^				\/\/ The function exists, run it now$/;"	f
+exp	lib/bandwidth.php	/^			$exp = mktime(0,0,0,date("m"),0,date("Y"));$/;"	v
+exp	lib/bandwidth.php	/^			$exp = mktime(0,0,0,date("m"),date("d"),date("Y"));$/;"	v
+exp_time	lib/online.php	/^			$exp_time = time() - $x7c->settings['online_time'];$/;"	v
+exp_time	lib/online.php	/^		$exp_time = time() - $x7c->settings['online_time'];$/;"	v
+exp_time	sources/frame.php	/^  $exp_time = time() - $x7c->settings['online_time'];$/;"	v
+exp_time	support.php	/^	$exp_time = time()-30;$/;"	v
+expire	sources/roomlist.php	/^			$expire = $txt[265];$/;"	v
+expire	sources/roomlist.php	/^		$expire = ($x7c->settings['expire_rooms']\/60)." ".$txt[228];$/;"	v
+exptime	lib/cleanup.php	/^			$exptime = time()-$x7c->settings['expire_guests'];$/;"	v
+exptime	lib/cleanup.php	/^			$exptime = time()-$x7c->settings['expire_messages'];$/;"	v
+exptime	lib/cleanup.php	/^			$exptime = time()-$x7c->settings['expire_rooms'];$/;"	v
+exptime	lib/events.php	/^			$exptime = @mktime(0,0,0,date("m"),1,date("Y"))-1;$/;"	v
+exptime	online.php	/^		$exptime = time()-30;$/;"	v
+extra	lib/color_picker.php	/^				$extra = "";$/;"	v
+extra	lib/color_picker.php	/^				$extra = "opener.document.getElementById('{$field}d').innerHTML = '#$r$g$b';\\n$/;"	v
+extra	lib/color_picker.php	/^				$extra = "opener.document.getElementById('{$field}d').innerHTML = '$color';\\n$/;"	v
+extra	lib/color_picker.php	/^			$extra = "";$/;"	v
+extra	lib/color_picker.php	/^			$extra = "opener.document.getElementById('{$field}d').innerHTML = color;\\n$/;"	v
+extra	sources/privatemessage.php	/^					$extra = "";$/;"	v
+extra	sources/privatemessage.php	/^					$extra = "&support=1";$/;"	v
+extra	sources/privatemessage.php	/^			$extra = "";$/;"	v
+extra	sources/privatemessage.php	/^			$extra = $txt[596]."<Br>";$/;"	v
+fail	lib/xupdater.php	/^			$fail = 1;$/;"	v
+fail	lib/xupdater.php	/^			$fail = 2;$/;"	v
+failmsg	sources/loginout.php	/^			$failmsg = $txt[13];$/;"	v
+failmsg	sources/loginout.php	/^			$failmsg = $txt[1];$/;"	v
+failmsg	sources/loginout.php	/^			$failmsg = $txt[23];$/;"	v
+failmsg	sources/loginout.php	/^			$failmsg = $txt[613];$/;"	v
+family	lib/message.php	/^			$family = $x7c->settings['default_font'];$/;"	v
+fh	index.php	/^			$fh = fopen(".\/temp.txt","a");$/;"	v
+fh	lib/logs.php	/^				$fh = fopen($this->log_file,"a");$/;"	v
+fh	lib/logs.php	/^			$fh = fopen($this->log_file,"a");$/;"	v
+fh	lib/theme_creator.php	/^		$fh = fopen(".\/themes\/$theme\/theme.data","w");$/;"	v
+fh	lib/xupdater.php	/^		$fh = fopen($file,"w");$/;"	v
+fh	sources/admin.php	/^							$fh = fopen($val['file'],"w");$/;"	v
+fh	sources/admin.php	/^						$fh = fopen(".\/themes\/$_GET[do_edit]\/theme.info","w");$/;"	v
+fh	sources/admin.php	/^					$fh = fopen(".\/mods\/mod_data","w");$/;"	v
+fh	sources/admin.php	/^				$fh = fopen(".\/mods\/mod_data","w");$/;"	v
+field	lib/color_picker.php	/^				$field = "curcolor";$/;"	v
+field	lib/color_picker.php	/^				$field = $_GET['tofield'];$/;"	v
+field	lib/color_picker.php	/^			$field = "curcolor";$/;"	v
+field	lib/color_picker.php	/^			$field = $_GET['tofield'];$/;"	v
+file	sources/admin.php	/^					$file = eregi_replace("\/index\\.php","",$_SERVER['PHP_SELF']);$/;"	v
+filter_javascript	lib/filter.php	/^		function filter_javascript(){$/;"	f
+filter_text	lib/filter.php	/^		function filter_text($text){$/;"	f
+filters	lib/filter.php	/^		function filters($room=""){$/;"	f
+filters	lib/filter.php	/^	class filters {$/;"	c
+filters	sources/admin.php	/^			$filters = new filters();$/;"	v
+filters	sources/roomcp.php	/^				$filters = new filters($_GET['room']);$/;"	v
+filters	sources/roomcp.php	/^			$filters = new filters($_GET['room']);$/;"	v
+filters	sources/usercp.php	/^			$filters = new filters();$/;"	v
+first_day	lib/events.php	/^		$first_day = date("w",mktime(0,0,0,$this_month,1,$this_year));$/;"	v
+first_set	lib/events.php	/^					$first_set = 1;$/;"	v
+first_set	lib/events.php	/^		$first_set = 0;$/;"	v
+font	lib/message.php	/^		$font = $x7c->settings['default_font'];$/;"	v
+font	online.php	/^		$font = ".\/fonts\/font";$/;"	v
+font	sources/frame.php	/^    $font = $_GET['curfont'];$/;"	v
+font	sources/frame.php	/^    $font = eregi_replace("<","&lt;",$font);$/;"	v
+font	sources/privatemessage.php	/^			$font = $_GET['curfont'];$/;"	v
+font	sources/privatemessage.php	/^			$font = eregi_replace("<","&lt;",$font);$/;"	v
+font_size	online.php	/^			$font_size = $_GET['font_size'];$/;"	v
+font_size	online.php	/^		$font_size = "12";$/;"	v
+fontname	sources/info_box.php	/^				$fontname = trim($fontname);$/;"	v
+forgot_pass	sources/forgotpass.php	/^	function forgot_pass(){$/;"	f
+form	lib/color_picker.php	/^				$form = $_GET['toform'];$/;"	v
+form	lib/color_picker.php	/^				$form = 'chatIn';$/;"	v
+form	lib/color_picker.php	/^			$form = $_GET['toform'];$/;"	v
+form	lib/color_picker.php	/^			$form = 'chatIn';$/;"	v
+format_timestamp	lib/message.php	/^	function format_timestamp($time){$/;"	f
+format_timestamp	sources/frame.php	/^  function format_timestamp($time){$/;"	f
+fs1	lib/irc.php	/^				$fs1 = round($log->log_size\/1024,2);$/;"	v
+fs1	sources/roomcp.php	/^					$fs1 = round($log->log_size\/1024,2);$/;"	v
+fs1	sources/usercp.php	/^					$fs1 = round($log->log_size\/1024,2);$/;"	v
+fs2	sources/roomcp.php	/^					$fs2 = "($txt[248])";$/;"	v
+fs2	sources/roomcp.php	/^					$fs2 = round(($x7c->settings['max_log_room']-$log->log_size)\/1024,2);$/;"	v
+fs2	sources/usercp.php	/^					$fs2 = "($txt[248])";$/;"	v
+fs2	sources/usercp.php	/^					$fs2 = round(($x7c->settings['max_log_user']-$log->log_size)\/1024,2);$/;"	v
+g	lib/color_picker.php	/^				$g = "0".$g;$/;"	v
+g	lib/color_picker.php	/^			$g = dechex($rgb['green']);$/;"	v
+g_default_settings	lib/auth.php	/^	$g_default_settings = "default;default;{$x7c->settings['cookie_time']};default;default;default;0;0;0;0;5000;default;default;0;0";$/;"	v
+gen_chatinput	lib/ssgen.php	/^	function gen_chatinput($data,$skin){$/;"	f
+gen_css	lib/ssgen.php	/^	function gen_css($data,$skin){	$/;"	f
+gen_events	lib/ssgen.php	/^	function gen_events($data,$skin){$/;"	f
+gen_mini	lib/ssgen.php	/^	function gen_mini($data,$skin){$/;"	f
+gen_pm	lib/ssgen.php	/^	function gen_pm($data,$skin){$/;"	f
+gen_profile	lib/ssgen.php	/^	function gen_profile($data,$skin){$/;"	f
+gen_uc	lib/ssgen.php	/^	function gen_uc($data,$skin){$/;"	f
+gen_ucp	lib/ssgen.php	/^	function gen_ucp($data,$skin){$/;"	f
+generate_action_tab	lib/usercontrol.php	/^		function generate_action_tab(){$/;"	f
+generate_profile_tab	lib/usercontrol.php	/^		function generate_profile_tab(){$/;"	f
+get_bans_onyou	lib/ban.php	/^	function get_bans_onyou(){$/;"	f
+get_data	lib/ssgen.php	/^	function get_data($theme_data,$skin){$/;"	f
+get_filter_by_type	lib/filter.php	/^		function get_filter_by_type($type){$/;"	f
+get_id_by_username	lib/load.php	/^		function get_id_by_username($username){$/;"	f
+get_log_contents	lib/logs.php	/^		function get_log_contents($logfile=""){$/;"	f
+get_news	lib/xupdater.php	/^	function get_news(){$/;"	f
+get_offline_msgs	lib/message.php	/^	function get_offline_msgs(){$/;"	f
+get_online	lib/online.php	/^	function get_online($room="*"){$/;"	f
+get_pm_loglist	lib/logs.php	/^		function get_pm_loglist(){$/;"	f
+get_status	lib/status.php	/^	function get_status($user){$/;"	f
+get_uploaded_mods	lib/xupdater.php	/^	function get_uploaded_mods(){$/;"	f
+get_uploaded_themes	lib/xupdater.php	/^	function get_uploaded_themes(){$/;"	f
+get_user_by_id	lib/usercontrol.php	/^	function get_user_by_id($id){$/;"	f
+gets	lib/bandwidth.php	/^	\/\/ This function gets the current amount of bandwidth used by the user$/;"	f
+gets	lib/load.php	/^			\/\/ This function gets the permissions for a user$/;"	f
+gets	lib/load.php	/^	\/\/ This class gets and holds information on a user's profile$/;"	c
+gets	lib/message.php	/^	\/\/ This function gets a list of all offline messages$/;"	f
+gets	lib/usercontrol.php	/^	\/*\/\/ This function gets a username by its ID$/;"	f
+gets	lib/usercontrol.php	/^	\/\/ This function gets a username by its ID$/;"	f
+give_ops	lib/usercontrol.php	/^		function give_ops(){$/;"	f
+gives	lib/irc.php	/^	\/\/ This function gives them a link to send someone a Private Message$/;"	f
+green	online.php	/^			$green = $_GET['green'];$/;"	v
+group_options	sources/admin.php	/^					$group_options = "";$/;"	v
+handle_uploaded_avatar	lib/uploads.php	/^	function handle_uploaded_avatar(){$/;"	f
+handles	lib/auth.php	/^	\/\/ This class handles authentication$/;"	c
+handles	lib/db/mysql.php	/^		\/\/ This function handles running a query$/;"	f
+handles	lib/db/mysql.php	/^	\/\/ This class handles database communication$/;"	c
+handles	lib/db/mysql_muse.php	/^		\/\/ This function handles running a query$/;"	f
+handles	lib/db/mysql_muse.php	/^	\/\/ This class handles database communication$/;"	c
+handles	lib/filter.php	/^	\/\/ This class handles filters$/;"	c
+handles	lib/output.php	/^	\/\/ This class handles the loading and output of skins and data$/;"	c
+handles	lib/usercontrol.php	/^	\/\/ This class handles the Action tab, and certain user control functions$/;"	c
+head	help/index.php	/^		$head = "Search";$/;"	v
+head	help/index.php	/^	$head = eregi_replace("_"," ",$_GET['s'])." - ".eregi_replace("_"," ",$_GET['t']);$/;"	v
+head	help/mini.php	/^	$head = "X7 Chat 2 Quick Help";$/;"	v
+head	sources/admin.php	/^			$head = $txt[139];$/;"	v
+head	sources/admin.php	/^			$head = $txt[143];$/;"	v
+head	sources/admin.php	/^			$head = $txt[144];$/;"	v
+head	sources/admin.php	/^			$head = $txt[14];$/;"	v
+head	sources/admin.php	/^			$head = $txt[307];$/;"	v
+head	sources/admin.php	/^			$head = $txt[308];$/;"	v
+head	sources/admin.php	/^			$head = $txt[309];$/;"	v
+head	sources/admin.php	/^			$head = $txt[310];$/;"	v
+head	sources/admin.php	/^			$head = $txt[311];$/;"	v
+head	sources/admin.php	/^			$head = $txt[312];$/;"	v
+head	sources/admin.php	/^			$head = $txt[313];$/;"	v
+head	sources/admin.php	/^			$head = $txt[314];$/;"	v
+head	sources/admin.php	/^			$head = $txt[315];$/;"	v
+head	sources/admin.php	/^			$head = $txt[316];$/;"	v
+head	sources/admin.php	/^			$head = $txt[317];$/;"	v
+head	sources/admin.php	/^			$head = $txt[318];$/;"	v
+head	sources/admin.php	/^			$head = $txt[34];$/;"	v
+head	sources/admin.php	/^		$head = $txt[37];$/;"	v
+head	sources/roomcp.php	/^			$head = $txt[141];$/;"	v
+head	sources/roomcp.php	/^			$head = $txt[143];$/;"	v
+head	sources/roomcp.php	/^			$head = $txt[144];$/;"	v
+head	sources/roomcp.php	/^			$head = $txt[218];$/;"	v
+head	sources/roomcp.php	/^			$head = $txt[219];$/;"	v
+head	sources/roomcp.php	/^			$head = $txt[220];$/;"	v
+head	sources/roomcp.php	/^			$head = $txt[221];$/;"	v
+head	sources/roomcp.php	/^			$head = $txt[240];$/;"	v
+head	sources/roomcp.php	/^		$head = $txt[41];$/;"	v
+head	sources/usercp.php	/^			$head = $txt[135];$/;"	v
+head	sources/usercp.php	/^			$head = $txt[139];$/;"	v
+head	sources/usercp.php	/^			$head = $txt[140];$/;"	v
+head	sources/usercp.php	/^			$head = $txt[141];$/;"	v
+head	sources/usercp.php	/^			$head = $txt[142];$/;"	v
+head	sources/usercp.php	/^			$head = $txt[143];$/;"	v
+head	sources/usercp.php	/^			$head = $txt[192];$/;"	v
+head	sources/usercp.php	/^			$head = $txt[240];$/;"	v
+head	sources/usercp.php	/^			$head = $txt[85];$/;"	v
+head	sources/usercp.php	/^		$head = $txt[135];$/;"	v
+height	sources/profile.php	/^		$height = $temp[1];$/;"	v
+help	lib/irc.php	/^	\/\/ This function help with parameter parsing$/;"	f
+help_button	lib/output.php	/^		function help_button($subject){$/;"	f
+helps	lib/message.php	/^	\/\/ This function helps with auto-url parsing$/;"	f
+highlight	help/index.php	/^		$highlight = explode(" ",$q);$/;"	v
+hkey	help/index.php	/^				foreach($highlight as $hkey=>$hval){$/;"	v
+host	lib/db/mysql.php	/^				$host = $X7CHAT_CONFIG['DB_HOST'];$/;"	v
+host	lib/db/mysql_muse.php	/^				$host = $X7CHAT_CONFIG['DB_HOST'];$/;"	v
+hour	sources/admin.php	/^					$hour = date("H");$/;"	v
+hour	sources/admin.php	/^					$hour = date("H",$row[1]);$/;"	v
+html	sources/admin.php	/^					$html = "<a target=\\"_blank\\" href=\\"http:\/\/$_SERVER[SERVER_NAME]$file\/support.php\\"><img src=\\"http:\/\/$_SERVER[SERVER_NAME]$file\/support.php?img=1\\" border=\\"0\\"><\/a>";$/;"	v
+i	help/index.php	/^		$i = 0;$/;"	v
+i	lib/xupdater.php	/^		$i = 0;$/;"	v
+i	sources/admin.php	/^				$i = 0;$/;"	v
+ib2_member_login_key	lib/auth/invision2.php	/^		$ib2_member_login_key = $row[1];$/;"	v
+ib2_pash_hash	lib/auth/invision2.php	/^		$ib2_pash_hash = $row[1];$/;"	v
+ib2_salt	lib/auth/invision2.php	/^		$ib2_salt = $row[0];$/;"	v
+ibdb	lib/auth/invision1.php	/^	$ibdb = new x7chat_db($INFO['sql_host'],$INFO['sql_user'],$INFO['sql_pass'],$INFO['sql_database']);$/;"	v
+ibdb	lib/auth/invision2.php	/^	$ibdb = new x7chat_db($INFO['sql_host'],$INFO['sql_user'],$INFO['sql_pass'],$INFO['sql_database']);$/;"	v
+id	sources/admin.php	/^					$id = $row[0];$/;"	v
+id	sources/usercp.php	/^				foreach($msgs as $id=>$val){$/;"	v
+ignore	lib/usercontrol.php	/^		function ignore($ban_length=0){$/;"	f
+image	lib/color_picker.php	/^			$image = @imagecreatefrompng(".\/colors.png");$/;"	v
+image	sources/update.php	/^			$image = $x7c->settings['background_image'];$/;"	v
+image_info	sources/profile.php	/^		$image_info = @getimagesize($profile['avatar']);$/;"	v
+img	sources/usercp.php	/^						$img = "<img src=\\"{$print->image_path}new_mail.gif\\">";$/;"	v
+img	sources/usercp.php	/^						$img = "<img src=\\"{$print->image_path}old_mail.gif\\">";$/;"	v
+img	support.php	/^		$img = $settings['support_image_offline'];$/;"	v
+img	support.php	/^		$img = $settings['support_image_online'];$/;"	v
+index	lib/load.php	/^				$index = 0;$/;"	v
+index	lib/load.php	/^				$index = 10;$/;"	v
+index	lib/load.php	/^				$index = 11;$/;"	v
+index	lib/load.php	/^				$index = 12;$/;"	v
+index	lib/load.php	/^				$index = 13;$/;"	v
+index	lib/load.php	/^				$index = 1;$/;"	v
+index	lib/load.php	/^				$index = 2;$/;"	v
+index	lib/load.php	/^				$index = 3;$/;"	v
+index	lib/load.php	/^				$index = 4;$/;"	v
+index	lib/load.php	/^				$index = 5;$/;"	v
+index	lib/load.php	/^				$index = 6;$/;"	v
+index	lib/load.php	/^				$index = 7;$/;"	v
+index	lib/load.php	/^				$index = 8;$/;"	v
+index	lib/load.php	/^				$index = 9;$/;"	v
+info_window	lib/output.php	/^		function info_window($body){$/;"	f
+init_by_username	lib/auth/invision2.php	/^	function init_by_username($username){$/;"	f
+install_theme	lib/xupdater.php	/^	function install_theme($theme){$/;"	f
+installed	sources/admin.php	/^				$installed = array();$/;"	v
+installed_themes	sources/admin.php	/^				$installed_themes = array();$/;"	v
+invis	lib/online.php	/^			$invis = " AND invisible<>'1' ";$/;"	v
+invis	lib/online.php	/^			$invis = "";$/;"	v
+invis	sources/frame.php	/^    $invis = "";$/;"	v
+invis	sources/frame.php	/^    $invis = "AND invisible<>'1' ";$/;"	v
+invisy_switch	lib/online.php	/^	function invisy_switch($room){$/;"	f
+ip	lib/auth.php	/^						$ip = $_SERVER['REMOTE_ADDR'];$/;"	v
+ip	lib/auth/e107.php	/^				$ip = $_SERVER['REMOTE_ADDR'];$/;"	v
+ip	lib/auth/invision1.php	/^				$ip = $_SERVER['REMOTE_ADDR'];$/;"	v
+ip	lib/auth/invision2.php	/^				$ip = $_SERVER['REMOTE_ADDR'];$/;"	v
+ip	lib/auth/joomla.php	/^				$ip = $_SERVER['REMOTE_ADDR'];$/;"	v
+ip	lib/auth/mambo.php	/^				$ip = $_SERVER['REMOTE_ADDR'];$/;"	v
+ip	lib/auth/mboard.php	/^				$ip = $_SERVER['REMOTE_ADDR'];$/;"	v
+ip	lib/auth/phpbb2.php	/^				$ip = $_SERVER['REMOTE_ADDR'];$/;"	v
+ip	lib/auth/phpnuke.php	/^				$ip = $_SERVER['REMOTE_ADDR'];$/;"	v
+ip	lib/auth/postnuke.php	/^				$ip = $_SERVER['REMOTE_ADDR'];$/;"	v
+ip	lib/auth/punbb.php	/^            $ip = $_SERVER['REMOTE_ADDR'];$/;"	v
+ip	lib/auth/smf.php	/^				$ip = $_SERVER['REMOTE_ADDR'];$/;"	v
+ip	lib/auth/vbulletin.php	/^				$ip = $_SERVER['REMOTE_ADDR'];$/;"	v
+ip	lib/auth/xmb.php	/^				$ip = $_SERVER['REMOTE_ADDR'];$/;"	v
+ip	lib/auth/xoops.php	/^				$ip = $_SERVER['REMOTE_ADDR'];$/;"	v
+ip	lib/auth/yabbse.php	/^				$ip = $_SERVER['REMOTE_ADDR'];$/;"	v
+ip	lib/online.php	/^			$ip = $_SERVER['REMOTE_ADDR'];$/;"	v
+ip	sources/admin.php	/^					$ip = "";$/;"	v
+ip	sources/frame.php	/^    $ip = $_SERVER['REMOTE_ADDR'];$/;"	v
+ip	sources/register.php	/^				$ip = $_SERVER['REMOTE_ADDR'];$/;"	v
+ip	sources/support.php	/^				$ip = $_SERVER['REMOTE_ADDR'];$/;"	v
+ip	sources/usr_action_box.php	/^			$ip = $user_info->view_ip();$/;"	v
+ip_addr	lib/ban.php	/^		$ip_addr = explode(".",$_SERVER['REMOTE_ADDR']);$/;"	v
+irc_admin	lib/irc.php	/^	function irc_admin($params){$/;"	f
+irc_admincp	lib/irc.php	/^	function irc_admincp($params){$/;"	f
+irc_away	lib/irc.php	/^	function irc_away($params){$/;"	f
+irc_back	lib/irc.php	/^	function irc_back($params){$/;"	f
+irc_ban	lib/irc.php	/^	function irc_ban($params){$/;"	f
+irc_deadmin	lib/irc.php	/^	function irc_deadmin($params){$/;"	f
+irc_deop	lib/irc.php	/^	function irc_deop($params){$/;"	f
+irc_devoice	lib/irc.php	/^	function irc_devoice($params){$/;"	f
+irc_help	lib/irc.php	/^	function irc_help($params,$pm=0){$/;"	f
+irc_ignore	lib/irc.php	/^	function irc_ignore($params,$pm=0){$/;"	f
+irc_invisible	lib/irc.php	/^	function irc_invisible($params){$/;"	f
+irc_invite	lib/irc.php	/^	function irc_invite($params){$/;"	f
+irc_join	lib/irc.php	/^	function irc_join($params){$/;"	f
+irc_kick	lib/irc.php	/^	function irc_kick($params){$/;"	f
+irc_list	lib/irc.php	/^	function irc_list($params){$/;"	f
+irc_log	lib/irc.php	/^	function irc_log($params){$/;"	f
+irc_lsync	lib/irc.php	/^	function irc_lsync($params){$/;"	f
+irc_mdeop	lib/irc.php	/^	function irc_mdeop($params){$/;"	f
+irc_me	lib/irc.php	/^	function irc_me($params,$pm=0){$/;"	f
+irc_mkick	lib/irc.php	/^	function irc_mkick($params){$/;"	f
+irc_mode	lib/irc.php	/^	function irc_mode($params){$/;"	f
+irc_motd	lib/irc.php	/^	function irc_motd($params){$/;"	f
+irc_msg	lib/irc.php	/^	function irc_msg($params){$/;"	f
+irc_mute	lib/irc.php	/^	function irc_mute($params){$/;"	f
+irc_names	lib/irc.php	/^	function irc_names($params){$/;"	f
+irc_op	lib/irc.php	/^	function irc_op($params){$/;"	f
+irc_param_parsefw	lib/irc.php	/^	function irc_param_parsefw($string){$/;"	f
+irc_pm_away	lib/irc.php	/^	function irc_pm_away($params){$/;"	f
+irc_pm_back	lib/irc.php	/^	function irc_pm_back($params){$/;"	f
+irc_pm_help	lib/irc.php	/^	function irc_pm_help($params){$/;"	f
+irc_pm_ignore	lib/irc.php	/^	function irc_pm_ignore($params){$/;"	f
+irc_pm_me	lib/irc.php	/^	function irc_pm_me($params){$/;"	f
+irc_pm_roll	lib/irc.php	/^	function irc_pm_roll($params){$/;"	f
+irc_pm_unignore	lib/irc.php	/^	function irc_pm_unignore($params){$/;"	f
+irc_roll	lib/irc.php	/^	function irc_roll($params,$pm=0){$/;"	f
+irc_roomcp	lib/irc.php	/^	function irc_roomcp($params){$/;"	f
+irc_unban	lib/irc.php	/^	function irc_unban($params){$/;"	f
+irc_unignore	lib/irc.php	/^	function irc_unignore($params,$pm=0){$/;"	f
+irc_unmute	lib/irc.php	/^	function irc_unmute($params){$/;"	f
+irc_userip	lib/irc.php	/^	function irc_userip($params){$/;"	f
+irc_version	lib/irc.php	/^	function irc_version($params){$/;"	f
+irc_voice	lib/irc.php	/^	function irc_voice($params){$/;"	f
+irc_wallchan	lib/irc.php	/^	function irc_wallchan($params){$/;"	f
+irc_wallchop	lib/irc.php	/^	function irc_wallchop($params){$/;"	f
+is	lib/bandwidth.php	/^	\/\/ This function is called when a user registered to create a row for them $/;"	f
+is	lib/bandwidth.php	/^	\/\/ This function is used to update expired rows, they are not deleted simply reset to today$/;"	f
+is	lib/color_picker.php	/^		\/\/ This extra page function is needed if you use GD to update the$/;"	f
+is	lib/load.php	/^		\/\/ This function is run when the object is created, it loads system settings from the database$/;"	f
+is	lib/xupdater.php	/^	\/\/ The job of this function is to get information on the style mods current available$/;"	f
+is	sources/admin.php	/^			\/\/ This mini function is in charge of printing a form that allows you to add a new event or edit an old one$/;"	f
+join_other_room	sources/roomlist.php	/^	function join_other_room(){$/;"	f
+k_ipad	lib/auth/yabbse.php	/^		$k_ipad = $key ^ str_repeat(chr(0x36), 64);$/;"	v
+k_opad	lib/auth/yabbse.php	/^		$k_opad = $key ^ str_repeat(chr(0x5c), 64);$/;"	v
+key	help/index.php	/^		foreach($help as $key=>$val){$/;"	v
+key	help/index.php	/^		foreach($sr as $key=>$val){$/;"	v
+key	help/index.php	/^	foreach($help as $key=>$val){$/;"	v
+key	help/index.php	/^	foreach($word_reps as $key=>$val){$/;"	v
+key	help/mini.php	/^	foreach($word_reps as $key=>$val){$/;"	v
+key	index.php	/^	foreach($bans as $key=>$row){$/;"	v
+key	lib/auth/yabbse.php	/^			$key = pack('H*', md5($key));$/;"	v
+key	lib/auth/yabbse.php	/^		$key  = str_pad($key, 64, chr(0x00));$/;"	v
+key	lib/events.php	/^				foreach($events[$day] as $key=>$val){$/;"	v
+key	lib/events.php	/^		foreach($days as $key=>$val){$/;"	v
+key	lib/irc.php	/^		foreach($results as $key=>$val){$/;"	v
+key	lib/irc.php	/^		foreach($rooms as $key=>$val){$/;"	v
+key	lib/ssgen.php	/^		foreach($theme_data as $key=>$val){$/;"	v
+key	lib/theme_creator.php	/^		foreach($return as $key=>$val){$/;"	v
+key	lib/theme_creator.php	/^		foreach($theme_data as $key=>$val){$/;"	v
+key	lib/usercontrol.php	/^			$key = array_search("$their_id",$ops);$/;"	v
+key	lib/usercontrol.php	/^			$key = array_search("$their_id",$voiced);$/;"	v
+key	lib/usercontrol.php	/^			$key = array_search("-$their_id",$voiced);$/;"	v
+key	sources/admin.php	/^							$key = eregi_replace("^ug_","",$key);$/;"	v
+key	sources/admin.php	/^						foreach($uploaded_themes as $key=>$val){$/;"	v
+key	sources/admin.php	/^					foreach($CHMOD as $key=>$val){$/;"	v
+key	sources/admin.php	/^					foreach($DATABASE as $key=>$val){$/;"	v
+key	sources/admin.php	/^					foreach($FILE_SYSTEM as $key=>$val){$/;"	v
+key	sources/admin.php	/^					foreach($FIND_REPLACE as $key=>$val){$/;"	v
+key	sources/admin.php	/^					foreach($_POST as $key=>$val){$/;"	v
+key	sources/admin.php	/^					foreach($checkboxs as $key=>$val){$/;"	v
+key	sources/admin.php	/^					foreach($groups as $key=>$group){$/;"	v
+key	sources/admin.php	/^					foreach($mods_installed as $key=>$val){$/;"	v
+key	sources/admin.php	/^					foreach($news as $key=>$val){$/;"	v
+key	sources/admin.php	/^					foreach($uploaded_themes as $key=>$val){$/;"	v
+key	sources/admin.php	/^				foreach($_POST as $key=>$val){$/;"	v
+key	sources/admin.php	/^				foreach($data as $key=>$val){$/;"	v
+key	sources/admin.php	/^				foreach($delete as $key=>$val){$/;"	v
+key	sources/admin.php	/^				foreach($installed as $key=>$val){$/;"	v
+key	sources/admin.php	/^				foreach($mods as $key=>$val){$/;"	v
+key	sources/admin.php	/^				foreach($mods_installed as $key=>$val){$/;"	v
+key	sources/admin.php	/^				foreach($not_loaded as $key=>$val){$/;"	v
+key	sources/admin.php	/^			foreach($type4s as $key=>$val){$/;"	v
+key	sources/frame.php	/^  foreach($_GET['listhash'] as $key=>$val){$/;"	v
+key	sources/frame.php	/^  foreach($bans as $key=>$row){$/;"	v
+key	sources/memberlist.php	/^				foreach($online[$row[0]] as $key=>$val){$/;"	v
+key	sources/privatemessage.php	/^		foreach($bans as $key=>$row){$/;"	v
+key	sources/roomcp.php	/^				foreach($type4s as $key=>$val){$/;"	v
+key	sources/roomcp.php	/^			foreach($mute as $key=>$val){$/;"	v
+key	sources/roomcp.php	/^			foreach($ops as $key=>$val){$/;"	v
+key	sources/roomcp.php	/^			foreach($type4s as $key=>$val){$/;"	v
+key	sources/roomcp.php	/^			foreach($voice as $key=>$val){$/;"	v
+key	sources/update.php	/^			foreach($change_users as $key=>$val){$/;"	v
+key	sources/update.php	/^			foreach($users2 as $key=>$val){$/;"	v
+key	sources/update.php	/^			foreach($users3 as $key=>$val){$/;"	v
+key	sources/update.php	/^		foreach($bans as $key=>$row){$/;"	v
+key	sources/usercp.php	/^					foreach($logs as $key=>$user){$/;"	v
+key	sources/usercp.php	/^			foreach($type5s as $key=>$val){$/;"	v
+key	support.php	/^			foreach($supporters as $key=>$val){$/;"	v
+key	support.php	/^	foreach($personel as $key=>$val){$/;"	v
+key2	help/index.php	/^			foreach($val as $key2=>$val2){$/;"	v
+kick	lib/usercontrol.php	/^		function kick($reason){$/;"	f
+kicks	lib/irc.php	/^	\/\/ The mkick function kicks everyone in the room, except u$/;"	f
+kp	sources/frame.php	/^			function kp(evt){$/;"	f
+ky	sources/admin.php	/^				$ky = array_search($_GET['uninstall'],$mods_installed);$/;"	v
+language_iso	lang/arabic.php	/^$language_iso = "windows-1256";	\/\/ If you need help with this one e-mail webmaster@x7chat.com and i'll give you the correct value for your language$/;"	v
+language_iso	lang/croatian.php	/^$language_iso = "iso-8859-1";	\/\/ If you need help with this one e-mail webmaster@x7chat.com and i'll give you the correct value for your language$/;"	v
+language_iso	lang/czech.php	/^$language_iso = "iso-8859-1";	\/\/ If you need help with this one e-mail webmaster@x7chat.com and i'll give you the correct value for your language$/;"	v
+language_iso	lang/danish.php	/^$language_iso = "iso-8859-1";        \/\/ Hvis du har brug for hjжlp til den her sе skriv en email til webmaster@x7chat.com og jeg vil give dig det korrekte nummer.$/;"	v
+language_iso	lang/dutch.php	/^$language_iso = "iso-8859-1";	\/\/ If you need help with this one e-mail webmaster@x7chat.com and i'll give you the correct value for your language$/;"	v
+language_iso	lang/english.php	/^$language_iso = "utf-8";	$/;"	v
+language_iso	lang/espanol.php	/^$language_iso = "iso-8859-1";	\/\/ If you need help with this one e-mail webmaster@x7chat.com and i'll give you the correct value for your language$/;"	v
+language_iso	lang/farsi.php	/^$language_iso = "iso-8859-1";	\/\/ If you need help with this one e-mail webmaster@x7chat.com and i'll give you the correct value for your language$/;"	v
+language_iso	lang/finnish.php	/^$language_iso = "iso-8859-1";	\/\/ Jos tarvitset apua, lдhetд sдhkцpostia webmaster@x7chat.com niin annan kielellesi oikean arvon$/;"	v
+language_iso	lang/french.php	/^$language_iso = "iso-8859-1";	\/\/ If you need help with this one e-mail webmaster@x7chat.com and i'll give you the correct value for your language$/;"	v
+language_iso	lang/german.php	/^$language_iso = "iso-8859-1";	\/\/ If you need help with this one e-mail webmaster@x7chat.com and i'll give you the correct value for your language$/;"	v
+language_iso	lang/italian.php	/^$language_iso = "iso-8859-1";	\/\/ If you need help with this one e-mail webmaster@x7chat.com and i'll give you the correct value for your language$/;"	v
+language_iso	lang/magyar.php	/^$language_iso = "iso-8859-2";	\/\/ If you need help with this one e-mail webmaster@x7chat.com and i'll give you the correct value for your language$/;"	v
+language_iso	lang/portugues.php	/^$language_iso = "iso-8859-1";	\/\/ If you need help with this one e-mail webmaster@x7chat.com and i'll give you the correct value for your language$/;"	v
+language_iso	lang/portuguese.php	/^$language_iso = "iso-8859-1";	\/\/ If you need help with this one e-mail webmaster@x7chat.com and i'll give you the correct value for your language$/;"	v
+language_iso	lang/russian.php	/^$language_iso = "windows-1251";        \/\/ Если Вы нуждаетесь в справке по этому e-mail webmaster@novopolotsk.biz и я дам Вам правильное значение для вашего языка \/\/\/ (ничего не дам)$/;"	v
+language_iso	lang/svenska.php	/^$language_iso = "iso-8859-1";	\/\/ If you need help with this one e-mail webmaster@x7chat.com and i'll give you the correct value for your language$/;"	v
+language_iso	lang/turkish.php	/^$language_iso = "iso-8859-1";	\/\/ If you need help with this one e-mail webmaster@x7chat.com and i'll give you the correct value for your language$/;"	v
+lasttime	sources/update.php	/^			$lasttime = 1;$/;"	v
+lasttime	sources/update.php	/^		$lasttime = $lasttime[1];$/;"	v
+lasttime	sources/update.php	/^		$lasttime = return_last_time($_GET['room']);$/;"	v
+length	sources/admin.php	/^						$length = $txt[226];$/;"	v
+length	sources/admin.php	/^						$length = date("{$x7c->settings['date_format_full']}",$row[3]+$row[4]);$/;"	v
+length	sources/admin.php	/^					$length = $_POST['len_limited']*$_POST['len_period'];$/;"	v
+length	sources/admin.php	/^					$length = 0;$/;"	v
+length	sources/forgotpass.php	/^		$length = rand(5,8);$/;"	v
+length	sources/roomcp.php	/^						$length = $txt[226];$/;"	v
+length	sources/roomcp.php	/^						$length = date("{$x7c->settings['date_format_full']}",$row[3]+$row[4]);$/;"	v
+length	sources/roomcp.php	/^					$length = $_POST['len_limited']*$_POST['len_period'];$/;"	v
+length	sources/roomcp.php	/^					$length = 0;$/;"	v
+license_nr	lib/auth/vbulletin.php	/^	$license_nr = '';$/;"	v
+linenum	sources/roomcp.php	/^					foreach($contents as $linenum=>$entry){$/;"	v
+linenum	sources/usercp.php	/^					foreach($contents as $linenum=>$entry){$/;"	v
+link_url	sources/admin.php	/^					$link_url = $room_info[0];$/;"	v
+link_url	sources/roomlist.php	/^			$link_url = $room_info[0];$/;"	v
+list_2_add	sources/frame.php	/^      $list_2_add =& $ops;$/;"	v
+list_2_add	sources/frame.php	/^      $list_2_add =& $users;$/;"	v
+list_rooms	lib/rooms.php	/^	function list_rooms(){$/;"	f
+listhash	sources/frame.php	/^  $listhash = '';$/;"	v
+lng_dir	sources/admin.php	/^					$lng_dir = dir(".\/lang");$/;"	v
+lng_dir	sources/usercp.php	/^				$lng_dir = dir(".\/lang");$/;"	v
+load_skin	lib/output.php	/^		function load_skin($skin){$/;"	f
+load_skin	lib/output.php	/^	class load_skin {$/;"	c
+load_styles	lib/theme_creator.php	/^	function load_styles($theme){$/;"	f
+loaded	sources/admin.php	/^			$loaded = array();$/;"	v
+loads	lib/load.php	/^	\/\/ This class loads the server, room and permission variables$/;"	c
+lock	sources/admin.php	/^						$lock = "";$/;"	v
+lock	sources/admin.php	/^						$lock = "&nbsp;<img src=\\"$print->image_path\/key.gif\\">";$/;"	v
+lock	sources/roomlist.php	/^				$lock = "";$/;"	v
+lock	sources/roomlist.php	/^				$lock = "&nbsp;<img src=\\"$print->image_path\/key.gif\\">";$/;"	v
+log	lib/irc.php	/^				$log = new logs(1,$_GET['room']);$/;"	v
+log	lib/message.php	/^			$log = new logs(1,$room);$/;"	v
+log	lib/private_chat.php	/^			$log = new logs(2,$to);$/;"	v
+log	sources/admin.php	/^						$log = $txt[392];$/;"	v
+log	sources/admin.php	/^						$log = $txt[393];$/;"	v
+log	sources/privatemessage.php	/^					$log = new logs(2,$_GET['send_to']);$/;"	v
+log	sources/roomcp.php	/^				$log = new logs(1,$_GET['room']);$/;"	v
+log	sources/usercp.php	/^				$log = new logs(2,"");$/;"	v
+log_bw	lib/bandwidth.php	/^	function log_bw($used){$/;"	f
+logfile	lib/logs.php	/^				$logfile = $this->log_file;$/;"	v
+loginid	sources/loginout.php	/^		  $loginid="";$/;"	v
+loginid	sources/loginout.php	/^		$loginid = $row['login_id']; $/;"	v
+loginpass	sources/loginout.php	/^		  $loginpass="";$/;"	v
+loginpass	sources/loginout.php	/^		$loginpass = $row['pass'];  $/;"	v
+logs	lib/bandwidth.php	/^	\/\/ This function logs bandwidth$/;"	f
+logs	lib/logs.php	/^		function logs($logtype,$roomuser){$/;"	f
+logs	lib/logs.php	/^	class logs {$/;"	c
+logs	sources/usercp.php	/^					$logs = $log->get_pm_loglist();$/;"	v
+lt1	sources/update.php	/^			$lt1 = $lasttime-1;$/;"	v
+make_sql_safe	lib/security.php	/^	function make_sql_safe($data){$/;"	f
+mamdb	lib/auth/joomla.php	/^	$mamdb = new x7chat_db($mosConfig_host,$mosConfig_user,$mosConfig_password,$mosConfig_db);$/;"	v
+mamdb	lib/auth/mambo.php	/^	$mamdb = new x7chat_db($mosConfig_host,$mosConfig_user,$mosConfig_password,$mosConfig_db);$/;"	v
+marks	lib/message.php	/^	\/\/ This function marks a message as read$/;"	f
+mass_change_roomsettings	lib/rooms.php	/^	function mass_change_roomsettings($room,$new_settings){$/;"	f
+max	sources/admin.php	/^							$max = " ($txt[248])";$/;"	v
+max	sources/admin.php	/^							$max = " ($txt[55])";$/;"	v
+max	sources/admin.php	/^							$max = "";$/;"	v
+max_size	sources/frame.php	/^			$max_size = $x7c->settings['style_max_size'];$/;"	v
+max_size	sources/privatemessage.php	/^					$max_size = $x7c->settings['style_max_size'];$/;"	v
+maxchars	sources/usercp.php	/^			$maxchars = $x7c->settings['maxchars_status'];$/;"	v
+maxi	lib/events.php	/^			$maxi = $mini+86400;$/;"	v
+maxi	lib/events.php	/^		$maxi = max($days)+86400;$/;"	v
+maxi	lib/events.php	/^		$maxi = mktime(24,60,60,$this_month,$days_this_month,$this_year);$/;"	v
+maxi	sources/info_box.php	/^			$maxi = $_GET['day']+86400;$/;"	v
+maxlog	lib/irc.php	/^					$maxlog = $txt[248];$/;"	v
+maxlog	lib/irc.php	/^					$maxlog = round($x7c->settings['max_log_room']\/1024,2);$/;"	v
+mbdb	lib/auth/mboard.php	/^	$mbdb = new x7chat_db($set['db_host'],$set['db_user'],$set['db_pass'],$set['db_name']);$/;"	v
+mcboard_settings	lib/auth/mboard.php	/^	$mcboard_settings = unserialize($row[1]);$/;"	v
+member	lib/auth/vbulletin.php	/^		$member = $vbc->Do_Fetch_Row($result);$/;"	v
+memberlist	sources/memberlist.php	/^	function memberlist(){$/;"	f
+menu	help/index.php	/^	$menu = "";$/;"	v
+message	lib/message.php	/^				$message = "<span style=\\"color: $default_color;font-size: $default_size; font-family: $default_font;\\">".$message."<\/span>";$/;"	v
+message	lib/message.php	/^				$message = "<span style=\\"color: $sysmsg_color;font-size: $default_size; font-family: $default_font;\\">".$message."<\/span>";$/;"	v
+message	lib/message.php	/^				$message = preg_replace("\/\\[color=([^\\]]+)\\](.+?)\\[\\\/color\\]\/ie","check_font_color('$1','$2');",$message);$/;"	v
+message	lib/message.php	/^				$message = preg_replace("\/\\[font=([^\\]]+)\\](.+?)\\[\\\/font\\]\/ie","check_font_family('$1','$2');",$message);$/;"	v
+message	lib/message.php	/^				$message = preg_replace("\/\\[size=([^\\]]+)\\](.+?)\\[\\\/size\\]\/ie","check_font_size('$1','$2');",$message);$/;"	v
+message	lib/message.php	/^			$message = "<span style=\\"color: $store_color; font-size: $store_size; font-family: $store_font;\\">".$message;$/;"	v
+message	lib/message.php	/^			$message = eregi_replace("_u",$user,$message);$/;"	v
+message	lib/message.php	/^			$message = preg_replace("\/([^@\\]\\s]*)@(.+?)\\.(.+?)([\\s\\[])\/i","<a href=\\"mailto: $1@$2.$3\\">$1@$2.$3<\/a>$4",$message);$/;"	v
+message	lib/message.php	/^			$message = preg_replace("\/(http:\\\/\\\/(.+?)\\.[^ \\[\\"<]*)(.)\/ie","autoparse_url(\\"2\\",\\"$1\\",\\"$3\\");",$message);$/;"	v
+message	lib/message.php	/^			$message = preg_replace("\/(www\\.(.+?)\\.[^ \\[\\"<]*)(.)\/ie","autoparse_url(\\"1\\",\\"$1\\",\\"$3\\");",$message);$/;"	v
+message	lib/message.php	/^			$message = preg_replace("\/\\[\\\/color\\]\\[\\\/size\\]\\[\\\/font\\]$\/i","",$message);$/;"	v
+message	lib/message.php	/^			$message = preg_replace("\/\\[b\\](.+?)\\[\\\/b\\]\/i","<b>$1<\/b>",$message);$/;"	v
+message	lib/message.php	/^			$message = preg_replace("\/\\[color=([^\\]]+)\\](.+?)\\[\\\/color\\]\/i","$2",$message);$/;"	v
+message	lib/message.php	/^			$message = preg_replace("\/\\[font=([^\\]]+)\\](.+?)\\[\\\/font\\]\/i","$2",$message);$/;"	v
+message	lib/message.php	/^			$message = preg_replace("\/\\[i\\](.+?)\\[\\\/i\\]\/i","<i>$1<\/i>",$message);$/;"	v
+message	lib/message.php	/^			$message = preg_replace("\/\\[size=([^\\]]+)\\](.+?)\\[\\\/size\\]\/i","$2",$message);$/;"	v
+message	lib/message.php	/^			$message = preg_replace("\/\\[u\\](.+?)\\[\\\/u\\]\/i","<u>$1<\/u>",$message);$/;"	v
+message	lib/message.php	/^			$message = preg_replace("\/^$store_color\/i","",$message);$/;"	v
+message	lib/message.php	/^			$message = preg_replace("\/^$store_font\/i","",$message);$/;"	v
+message	lib/message.php	/^			$message = preg_replace("\/^$store_size\/i","",$message);$/;"	v
+message	lib/message.php	/^			$message = preg_replace("\/^\\[color=([^\\]]+)\\]\/ie","\\$store_color='$1';",$message);$/;"	v
+message	lib/message.php	/^			$message = preg_replace("\/^\\[font=([^\\]]+)\\]\/ie","\\$store_font='$1';",$message);$/;"	v
+message	lib/message.php	/^			$message = preg_replace("\/^\\[size=([^\\]]+)\\]\/ie","\\$store_size='$1';",$message);$/;"	v
+message	lib/message.php	/^			$message = remove_chattags($message);$/;"	v
+message	lib/message.php	/^		$message = $msg_filter->filter_text($message);$/;"	v
+message	lib/message.php	/^		$message = eregi_replace("\\\\\\\\n","<Br>",$message);$/;"	v
+message	lib/message.php	/^		$message = eregi_replace("\\n","<Br>",$message);$/;"	v
+message	lib/message.php	/^		$message = make_sql_safe($message);$/;"	v
+message	lib/message.php	/^		$message = preg_replace("\/\\[b\\](.+?)\\[\\\/b\\]\/i","$1",$message);$/;"	v
+message	lib/message.php	/^		$message = preg_replace("\/\\[i\\](.+?)\\[\\\/i\\]\/i","$1",$message);$/;"	v
+message	lib/message.php	/^		$message = preg_replace("\/\\[u\\](.+?)\\[\\\/u\\]\/i","$1",$message);$/;"	v
+message	sources/roomcp.php	/^						$message = $entry;$/;"	v
+message	sources/roomcp.php	/^						$message = parse_message($message);$/;"	v
+message	sources/usercp.php	/^						$message = $entry;$/;"	v
+message	sources/usercp.php	/^						$message = parse_message($message);$/;"	v
+messages	sources/privatemessage.php	/^			$messages = 1;$/;"	v
+messages	sources/privatemessage.php	/^		$messages = 0;$/;"	v
+messages	sources/update.php	/^				$messages = 1;$/;"	v
+messages	sources/update.php	/^		$messages = 0;	\/* Setting this to 0 means that the scrolling code isn't sent to save bandwidth	*\/$/;"	v
+microtime_float	index.php	/^	function microtime_float(){$/;"	f
+mid	sources/usercp.php	/^					$mid = $id;$/;"	v
+mid	sources/usercp.php	/^				$mid = $_GET['read'];$/;"	v
+min	sources/admin.php	/^					$min = date("i");$/;"	v
+min	sources/admin.php	/^					$min = date("i",$row[1]);$/;"	v
+mini	lib/events.php	/^		$mini = min($days);$/;"	v
+mini	lib/events.php	/^		$mini = mktime(0,0,0,$this_month,1,$this_year);$/;"	v
+mini	sources/info_box.php	/^			$mini = $_GET['day'];$/;"	v
+mini_page	sources/info_box.php	/^	function mini_page(){$/;"	f
+mod_add_after	lib/xupdater.php	/^	function mod_add_after($file,$text,$add){$/;"	f
+mod_add_before	lib/xupdater.php	/^	function mod_add_before($file,$text,$add){$/;"	f
+mod_remove	lib/xupdater.php	/^	function mod_remove($file,$text){$/;"	f
+mod_replace	lib/xupdater.php	/^	function mod_replace($file,$original,$new){$/;"	f
+mode	sources/admin.php	/^							$mode = "&do_create=1";$/;"	v
+mode	sources/admin.php	/^							$mode = "&do_edit=$_GET[edit]";$/;"	v
+mods	sources/admin.php	/^				$mods = get_uploaded_mods();$/;"	v
+mods_dir	lib/xupdater.php	/^		$mods_dir = dir(".\/mods");$/;"	v
+module_name	docs/install.phpnuke/index.php	/^   $module_name = basename(dirname(__FILE__));$/;"	v
+month	sources/admin.php	/^					$month = date("m");$/;"	v
+month	sources/admin.php	/^					$month = date("m",$row[1]);$/;"	v
+msgSent	sources/frame.php	/^			function msgSent(){$/;"	f
+msgSent	sources/privatemessage.php	/^				function msgSent(){$/;"	f
+msg_filter	lib/message.php	/^		$msg_filter = new filters(isset($_GET['room']) ? $_GET['room'] : '');$/;"	v
+msg_filter	sources/frame.php	/^			$msg_filter = new filters($_GET['room']);$/;"	v
+msg_filter	sources/privatemessage.php	/^						$msg_filter = new filters();$/;"	v
+msgbody	sources/usercp.php	/^					$msgbody = $nb[0];$/;"	v
+msgbody	sources/usercp.php	/^				$msgbody = $nb[0];$/;"	v
+msgbody	sources/usercp.php	/^				$msgbody = parse_message($msgbody);$/;"	v
+msgs	sources/usercp.php	/^			$msgs = get_offline_msgs();$/;"	v
+mute	lib/usercontrol.php	/^		function mute(){$/;"	f
+mute	sources/roomcp.php	/^				$mute = explode(";",$x7c->room_data['voiced']);$/;"	v
+mute	sources/roomcp.php	/^			$mute = explode(";",$x7c->room_data['voiced']);$/;"	v
+mute_id	sources/roomcp.php	/^				$mute_id = array_search("-{$uco->user_info->profile['id']}",$mute);$/;"	v
+mysql	sources/loginout.php	/^		$mysql = "SELECT * FROM register_basic WHERE personal_id = '$pid'";$/;"	v
+name	lib/security.php	/^		foreach($_COOKIE as $name=>$value){$/;"	v
+name	lib/security.php	/^		foreach($_GET as $name=>$value){$/;"	v
+name	lib/security.php	/^		foreach($_POST as $name=>$value){$/;"	v
+name	sources/admin.php	/^							$name = $val['name'];$/;"	v
+name	support.php	/^			$name = "User".rand(0,9).rand(100,999);$/;"	v
+nb	sources/usercp.php	/^					$nb = offline_msg_split($val[2]);$/;"	v
+nb	sources/usercp.php	/^				$nb = offline_msg_split($msgs[$mid][2]);$/;"	v
+new_ban	lib/ban.php	/^	function new_ban($user,$length,$reason,$room){$/;"	f
+new_ops	lib/usercontrol.php	/^			$new_ops = $x7c->room_data['ops'].";$their_id";$/;"	v
+new_password	sources/forgotpass.php	/^		$new_password = "";$/;"	v
+new_settings	sources/usercp.php	/^				$new_settings = "$_POST[language];$_POST[skin];$_POST[cookie_time];{$x7c->rawsettings[3]};{$x7c->rawsettings[4]};{$x7c->rawsettings[5]};$_POST[disable_styles];$_POST[disable_smiles];$_POST[disable_sounds];$_POST[disble_timestamp];$_POST[refresh_rate];$_POST[time_offset_hours];$_POST[time_offset_mins];$_POST[log_pms];$_POST[b_invisible]";$/;"	v
+new_status	lib/status.php	/^		$new_status = substr($new_status,0,$x7c->settings['maxchars_status']);$/;"	v
+newpass	lib/auth/e107.php	/^		$newpass = auth_encrypt($newpass);$/;"	v
+newpass	lib/auth/invision1.php	/^		$newpass = auth_encrypt($newpass);$/;"	v
+newpass	lib/auth/invision2.php	/^		$newpass = auth_encrypt($newpass);$/;"	v
+newpass	lib/auth/joomla.php	/^		$newpass = auth_encrypt($newpass);$/;"	v
+newpass	lib/auth/mambo.php	/^		$newpass = auth_encrypt($newpass);$/;"	v
+newpass	lib/auth/mboard.php	/^		$newpass = auth_encrypt($newpass);$/;"	v
+newpass	lib/auth/md5.php	/^		$newpass = auth_encrypt($newpass);$/;"	v
+newpass	lib/auth/phpbb2.php	/^		$newpass = auth_encrypt($newpass);$/;"	v
+newpass	lib/auth/phpnuke.php	/^		$newpass = auth_encrypt($newpass);$/;"	v
+newpass	lib/auth/postnuke.php	/^		$newpass = auth_encrypt($newpass);$/;"	v
+newpass	lib/auth/punbb.php	/^    $newpass = auth_encrypt($newpass);$/;"	v
+newpass	lib/auth/smf.php	/^		$newpass = auth_encrypt($newpass,strtolower($user));$/;"	v
+newpass	lib/auth/vbulletin.php	/^		$newpass = auth_encrypt($newpass);$/;"	v
+newpass	lib/auth/xmb.php	/^		$newpass = auth_encrypt($newpass);$/;"	v
+newpass	lib/auth/xoops.php	/^		$newpass = auth_encrypt($newpass);$/;"	v
+newpass	lib/auth/yabbse.php	/^		$newpass = auth_encrypt($newpass);$/;"	v
+newroom_creation	sources/newroom.php	/^	function newroom_creation(){$/;"	f
+newroom_form	sources/newroom.php	/^	function newroom_form(){$/;"	f
+news	lib/irc.php	/^			$news = $txt[294];$/;"	v
+news	lib/irc.php	/^			$news = $x7c->settings['news'];$/;"	v
+news	lib/xupdater.php	/^		$news = @file("http:\/\/x7chat.com\/rss\/x7cu.rss");$/;"	v
+news	lib/xupdater.php	/^		$news = @implode("",$news);$/;"	v
+news	lib/xupdater.php	/^		$news = preg_split("\/<news>\/",$news);$/;"	v
+news	sources/admin.php	/^				$news = get_news();$/;"	v
+newsettings	lib/load.php	/^				$newsettings = implode(";",$this->rawsettings);$/;"	v
+newsnum	lib/xupdater.php	/^		$newsnum = 0;$/;"	v
+no_repeat_check	sources/frame.php	/^  $no_repeat_check = array();$/;"	v
+noneed	lib/filter.php	/^			foreach($this->filter_array as $noneed=>$filter){$/;"	v
+noneed	sources/info_box.php	/^			foreach($allowed_fonts as $noneed=>$fontname){$/;"	v
+noneed	sources/info_box.php	/^			foreach($smilies as $noneed=>$filter){$/;"	v
+normal_window	lib/output.php	/^		function normal_window($head,$body){$/;"	f
+not_loaded	sources/admin.php	/^			$not_loaded = array();$/;"	v
+nuke_prefix	lib/auth/phpnuke.php	/^	$nuke_prefix = $prefix."_";$/;"	v
+nukedb	lib/auth/phpnuke.php	/^	$nukedb = new x7chat_db($dbhost,$dbuname,$dbpass,$dbname);$/;"	v
+nukedb	lib/auth/postnuke.php	/^	$nukedb = new x7chat_db($pnconfig['dbhost'],$pnconfig['dbuname'],$pnconfig['dbpass'],$pnconfig['dbname']);$/;"	v
+null	lib/online.php	/^				foreach($names as $null=>$name)$/;"	v
+number	online.php	/^		$number = 0;$/;"	v
+number	online.php	/^		$number = mysql_num_rows($query);$/;"	v
+number	online.php	/^		$number = strval($number);$/;"	v
+number	sources/usercp.php	/^					$number = $x7c->settings['max_offline_msgs']-$number;$/;"	v
+number	sources/usercp.php	/^					$number = count_offline($x7s->username);$/;"	v
+number_online	sources/loginout.php	/^			$number_online = count($people_online);$/;"	v
+of	lib/message.php	/^	\/\/ A seconardy function of this isi it parses the message styles$/;"	f
+off_time	lib/load.php	/^				$off_time = time()+(($this->settings['time_offset_hours']*3600)+($this->settings['time_offset_mins']*60));$/;"	v
+offline_delete	lib/message.php	/^	function offline_delete($mid){$/;"	f
+offline_markasread	lib/message.php	/^	function offline_markasread($mid){$/;"	f
+offline_msg_split	lib/message.php	/^	function offline_msg_split($body){$/;"	f
+offline_msgs	sources/frame.php	/^  $offline_msgs = 0;$/;"	v
+olddf	sources/frame.php	/^			    $olddf = $df;$/;"	v
+olddf	sources/privatemessage.php	/^												$olddf = $df;$/;"	v
+oldlisthash	sources/frame.php	/^  $oldlisthash = $_GET['listhash'];$/;"	v
+online	sources/memberlist.php	/^		$online = array();$/;"	v
+online	support.php	/^		$online = 0;$/;"	v
+online	support.php	/^		$online = 1;$/;"	v
+online_count	sources/roomlist.php	/^				$online_count = 0;$/;"	v
+online_count	sources/roomlist.php	/^				$online_count = count($online_count);$/;"	v
+online_count	sources/roomlist.php	/^			$online_count = get_online(make_sql_safe($link_url));$/;"	v
+openActionBox	sources/frame.php	/^			function openActionBox(){$/;"	f
+openProfileBox	sources/frame.php	/^			function openProfileBox(){$/;"	f
+open_package	lib/xupdater.php	/^	function open_package($package){$/;"	f
+ops	lib/irc.php	/^		$ops = explode(";",$x7c->room_data['ops']);$/;"	v
+ops	lib/load.php	/^			$ops = explode(";",$x7c->room_data['ops']);$/;"	v
+ops	lib/rooms.php	/^		$ops = "$uid";$/;"	v
+ops	lib/usercontrol.php	/^			$ops = explode(";",$x7c->room_data['ops']);$/;"	v
+ops	lib/usercontrol.php	/^			$ops = implode(";",$ops);$/;"	v
+ops	sources/frame.php	/^    $ops = preg_replace("\/;\/","74ce61f75c75b155ea7280778d6e8182",$ops);$/;"	v
+ops	sources/frame.php	/^    $ops = preg_replace("\/\\|\/","74ce61f75c75b155ea7280778d6e8181",$ops);$/;"	v
+ops	sources/frame.php	/^  $ops = '';$/;"	v
+ops	sources/roomcp.php	/^				$ops = explode(";",$x7c->room_data['ops']);$/;"	v
+ops	sources/roomcp.php	/^			$ops = explode(";",$x7c->room_data['ops']);$/;"	v
+ops_id	sources/roomcp.php	/^				$ops_id = array_search($uco->user_info->profile['id'],$ops);$/;"	v
+option	sources/admin.php	/^							$option = eregi_replace("\\.php","",$option);$/;"	v
+option	sources/usercp.php	/^						$option = eregi_replace("\\.php","",$option);$/;"	v
+order	sources/memberlist.php	/^				$order = " ORDER BY user_group ASC";$/;"	v
+order	sources/memberlist.php	/^				$order = " ORDER BY user_group DESC";$/;"	v
+order	sources/memberlist.php	/^				$order = " ORDER BY username ASC";$/;"	v
+order	sources/memberlist.php	/^				$order = " ORDER BY username DESC";$/;"	v
+order	sources/memberlist.php	/^		$order = "";$/;"	v
+original	lib/xupdater.php	/^		$original = preg_quote($original);$/;"	v
+output	lib/irc.php	/^		$output = "$txt[212]  ";$/;"	v
+page_count	sources/admin.php	/^				$page_count = ceil($i\/25);$/;"	v
+page_login	sources/loginout.php	/^	function page_login($failed=""){$/;"	f
+pages	sources/admin.php	/^					$pages = "<a href=\\".\/index.php?act=adminpanel&cp_page=bandwidth&start=$start\\">[$page_count]<\/a>".$pages;$/;"	v
+pages	sources/admin.php	/^					$pages = "<a href=\\".\/index.php?act=adminpanel&cp_page=users&start=$start\\">[$page_count]<\/a>".$pages;$/;"	v
+pages	sources/admin.php	/^				$pages = "";$/;"	v
+pages	sources/roomcp.php	/^					$pages = "";$/;"	v
+pages	sources/usercp.php	/^					$pages = "";$/;"	v
+params	lib/irc.php	/^			$params = $x7s->username;$/;"	v
+params	lib/irc.php	/^		$params = explode(" ",$params);$/;"	v
+params	lib/irc.php	/^		$params = irc_param_parsefw($params);$/;"	v
+params	lib/irc.php	/^		$params = strtolower($params);$/;"	v
+parse_includes	lib/security.php	/^ 	function parse_includes($name){$/;"	f
+parse_incoming	lib/security.php	/^	function parse_incoming(){$/;"	f
+parse_irc_command	lib/irc.php	/^	function parse_irc_command($command,$pm=0){$/;"	f
+parse_message	lib/message.php	/^	function parse_message($message,$sysmsg=0){$/;"	f
+parse_outgoing	lib/security.php	/^	function parse_outgoing($data){$/;"	f
+parsed_msg	sources/frame.php	/^    $parsed_msg = $starttags.$_GET['msg'].$endtags;$/;"	v
+parsed_msg	sources/privatemessage.php	/^			$parsed_msg = $starttags.$_GET['msg'].$endtags;$/;"	v
+password	lib/auth/e107.php	/^		$password = $e107->Do_Fetch_Row($query);$/;"	v
+password	lib/auth/invision1.php	/^		$password = $ibdb->Do_Fetch_Row($query);$/;"	v
+password	lib/auth/invision2.php	/^		$password = md5(md5($ib2_salt).md5($data));$/;"	v
+password	lib/auth/joomla.php	/^		$password = $mamdb->Do_Fetch_Row($query);$/;"	v
+password	lib/auth/mambo.php	/^		$password = $mamdb->Do_Fetch_Row($query);$/;"	v
+password	lib/auth/mboard.php	/^		$password = $mbdb->Do_Fetch_Row($query);$/;"	v
+password	lib/auth/md5.php	/^		$password = $db->Do_Fetch_Row($query);$/;"	v
+password	lib/auth/phpbb2.php	/^		$password = $phpbbdb->Do_Fetch_Row($query);$/;"	v
+password	lib/auth/phpnuke.php	/^		$password = $nukedb->Do_Fetch_Row($query);$/;"	v
+password	lib/auth/postnuke.php	/^		$password = $nukedb->Do_Fetch_Row($query);$/;"	v
+password	lib/auth/punbb.php	/^    $password = $pun_db->Do_Fetch_Row($query);$/;"	v
+password	lib/auth/smf.php	/^			$password = $smfdb->DoQuery("SELECT passwordSalt from {$db_prefix}members WHERE memberName='$_COOKIE[$auth_ucookie]'");$/;"	v
+password	lib/auth/smf.php	/^		$password = $smfdb->DoQuery("SELECT memberName,passwd,passwordSalt from {$db_prefix}members WHERE ID_MEMBER='$HTTP_COOKIE_VARS[smf_uc]'");$/;"	v
+password	lib/auth/smf.php	/^		$password = $smfdb->Do_Fetch_Row($password);$/;"	v
+password	lib/auth/smf.php	/^		$password = $smfdb->Do_Fetch_Row($query);$/;"	v
+password	lib/auth/vbulletin.php	/^		$password = $vbc->Do_Fetch_Row($q);$/;"	v
+password	lib/auth/xmb.php	/^		$password = $xmbdb->Do_Fetch_Row($query);$/;"	v
+password	lib/auth/xoops.php	/^		$password = $xoopsdb->Do_Fetch_Row($query);$/;"	v
+password	lib/auth/yabbse.php	/^		$password = $yabbsedb->Do_Fetch_Row($query);$/;"	v
+password_md5	lib/auth/vbulletin.php	/^		$password_md5 = md5 (md5($data) . $vb_salt);$/;"	v
+password_salt	lib/auth/smf.php	/^			$password_salt = $password_salt[0];$/;"	v
+password_salt	lib/auth/smf.php	/^			$password_salt = $smfdb->Do_Fetch_Row($password);$/;"	v
+password_salt	lib/auth/smf.php	/^		$password_salt = $password[1];$/;"	v
+password_salt	lib/auth/smf.php	/^		$password_salt = $password[2];$/;"	v
+people_online	sources/loginout.php	/^			$people_online = get_online();$/;"	v
+people_online	sources/loginout.php	/^			$people_online = implode(", ",$people_online);$/;"	v
+percent1	sources/roomcp.php	/^					$percent1 = $txt[248];$/;"	v
+percent1	sources/roomcp.php	/^					$percent1 = round($log->log_size\/$x7c->settings['max_log_room'],2)*100;$/;"	v
+percent1	sources/usercp.php	/^					$percent1 = $txt[248];$/;"	v
+percent1	sources/usercp.php	/^					$percent1 = round($log->log_size\/$x7c->settings['max_log_user'],2)*100;$/;"	v
+percent2	sources/roomcp.php	/^					$percent2 = $txt[248];$/;"	v
+percent2	sources/roomcp.php	/^					$percent2 = 100-$percent1."%";$/;"	v
+percent2	sources/usercp.php	/^					$percent2 = $txt[248];$/;"	v
+percent2	sources/usercp.php	/^					$percent2 = 100-$percent1."%";$/;"	v
+percentage	sources/usercp.php	/^					$percentage = ($number\/$x7c->settings['max_offline_msgs'])*100;$/;"	v
+perm_error	sources/admin.php	/^			$perm_error = 1;$/;"	v
+permissions	lib/load.php	/^		function permissions($user,$profile_object=null){$/;"	f
+person_error	sources/usercp.php	/^					$person_error = false;$/;"	v
+person_error	sources/usercp.php	/^					$person_error = true;$/;"	v
+personel	support.php	/^	$personel = explode(";",$settings['support_personel']);$/;"	v
+phpbbdb	lib/auth/phpbb2.php	/^	$phpbbdb = new x7chat_db($dbhost,$dbuser,$dbpasswd,$dbname);$/;"	v
+phpbbname	lib/auth/phpbb2.php	/^				$phpbbname = $phpbbdb->Do_Fetch_Row($query);$/;"	v
+phps	sources/frame.php	/^			  foreach($dc as $phps=>$js){$/;"	v
+phps	sources/privatemessage.php	/^											foreach($dc as $phps=>$js){$/;"	v
+pid	sources/loginout.php	/^		$pid=$_GET['pid'];$/;"	v
+pm_base_frame	sources/privatemessage.php	/^	function pm_base_frame(){$/;"	f
+pm_etime	sources/frame.php	/^  $pm_etime = time()-4*($x7c->settings['refresh_rate']\/1000);$/;"	v
+pm_null_frame	sources/privatemessage.php	/^	function pm_null_frame(){$/;"	f
+pm_send_frame	sources/privatemessage.php	/^	function pm_send_frame(){$/;"	f
+pm_time	sources/frame.php	/^  $pm_time = time()-2*($x7c->settings['refresh_rate']\/1000);$/;"	v
+pm_time	sources/support.php	/^			$pm_time = time()-2*($x7c->settings['refresh_rate']\/1000);$/;"	v
+pm_time	sources/update.php	/^			$pm_time = time()-2*($x7c->settings['refresh_rate']\/1000);$/;"	v
+pm_update_frame	sources/privatemessage.php	/^	function pm_update_frame(){$/;"	f
+pm_whatshouldicall	sources/privatemessage.php	/^	function pm_whatshouldicall(){$/;"	f
+pms_found	sources/update.php	/^			$pms_found = 0;$/;"	v
+pn_prefix	lib/auth/postnuke.php	/^	$pn_prefix = $pnconfig['prefix']."_";$/;"	v
+pnukename	lib/auth/postnuke.php	/^		$pnukename = $nukedb->Do_Fetch_Row($q);$/;"	v
+pref	lib/auth/e107.php	/^	$pref = unserialize($row[0]);$/;"	v
+prefix	config.php	/^	$prefix = "lchat_";$/;"	v
+prefix	lib/auth/phpnuke.php	/^	$prefix = $temp_prefix;$/;"	v
+prefix	lib/auth/postnuke.php	/^	$prefix = $save_the_prefixs;$/;"	v
+prevent_cleanup	lib/cleanup.php	/^	function prevent_cleanup(){$/;"	f
+print	index.php	/^	$print = new load_skin($x7c->settings['default_skin']);$/;"	v
+printlink	sources/admin.php	/^			function printlink($id,$txt){$/;"	f
+private_msgs	sources/frame.php	/^  $private_msgs = 0;$/;"	v
+profile	sources/profile.php	/^		$profile = $profile->profile;$/;"	v
+profile	sources/profile.php	/^		$profile = new profile_info($user);$/;"	v
+profile_info	lib/load.php	/^		function profile_info($user){$/;"	f
+profile_info	lib/load.php	/^	class profile_info {$/;"	c
+pun_db	lib/auth/punbb.php	/^$pun_db = new x7chat_db($db_host,$db_username,$db_password,$db_name);$/;"	v
+pun_user	lib/auth/punbb.php	/^    $pun_user = $pun_db->Do_Fetch_Row($result);$/;"	v
+pw	lib/auth.php	/^						$pw = parse_outgoing($_POST['password']);$/;"	v
+pw	lib/auth.php	/^				$pw = parse_outgoing($_POST['password']);$/;"	v
+pword	lib/db/mysql.php	/^				$pword = $X7CHAT_CONFIG['DB_PASSWORD'];$/;"	v
+pword	lib/db/mysql_muse.php	/^				$pword = $MUSE_DB["pass_{$MUSE_DB['current']}"];$/;"	v
+q	help/index.php	/^		$q = $_POST['q'];$/;"	v
+q	lib/auth/invision1.php	/^		$q = $ibdb->DoQuery("SELECT name FROM {$INFO['sql_tbl_prefix']}members WHERE id='$_COOKIE[member_id]'");$/;"	v
+q	lib/auth/invision2.php	/^		$q = $ibdb->DoQuery("SELECT id FROM {$INFO['sql_tbl_prefix']}members WHERE name='$username'");$/;"	v
+q	lib/auth/invision2.php	/^		$q = $ibdb->DoQuery("SELECT name,member_login_key FROM {$INFO['sql_tbl_prefix']}members WHERE id='$uid'");$/;"	v
+q	lib/auth/postnuke.php	/^		$q = $nukedb->DoQuery("SELECT pn_uid FROM {$pn_prefix}session_info WHERE pn_sessid='$cvalue'");$/;"	v
+q	lib/auth/postnuke.php	/^		$q = $nukedb->DoQuery("SELECT pn_uname,pn_pass FROM {$pn_prefix}users WHERE pn_uid='$suid[0]'");$/;"	v
+q	lib/auth/vbulletin.php	/^		$q = $vbc->DoQuery("SELECT password, usergroupid FROM {$tableprefix}user WHERE username='".addslashes($_COOKIE[$auth_ucookie])."'");$/;"	v
+q	lib/auth/xoops.php	/^			$q = $xoopsdb->DoQuery("SELECT uname,pass FROM {$table_prefix}users WHERE uid='$suid'");$/;"	v
+q	lib/auth/xoops.php	/^		$q = $xoopsdb->DoQuery("SELECT sess_data FROM {$table_prefix}session WHERE sess_id='$cvalue'");$/;"	v
+q	lib/db/mysql.php	/^			$q = mysql_query($query,$this->con);	\/\/ Run the query$/;"	v
+q	lib/db/mysql_muse.php	/^			$q = mysql_query($query,$this->con);	\/\/ Run the query$/;"	v
+q	lib/load.php	/^			$q = $db->DoQuery("SELECT ignored_user FROM {$prefix}muted WHERE user='$x7s->username'");$/;"	v
+qitu	sources/frame.php	/^  $qitu = array();$/;"	v
+query	lib/auth.php	/^					$query = $db->DoQuery("SELECT * FROM {$prefix}users WHERE username='$_POST[username]'");$/;"	v
+query	lib/auth/e107.php	/^			$query = $db->DoQuery("SELECT * FROM {$prefix}users WHERE username='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/e107.php	/^		$query = $e107->DoQuery("SELECT user_name,user_password FROM {$mySQLprefix}user WHERE user_id='$uid'");$/;"	v
+query	lib/auth/e107.php	/^		$query = $e107->DoQuery("SELECT user_password FROM {$mySQLprefix}user WHERE user_name='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/e107.php	/^	$query = $e107->doQuery("SELECT e107_value FROM {$mySQLprefix}core WHERE e107_name='pref'");$/;"	v
+query	lib/auth/invision1.php	/^			$query = $db->DoQuery("SELECT * FROM {$prefix}users WHERE username='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/invision1.php	/^		$query = $ibdb->DoQuery("SELECT password FROM {$INFO['sql_tbl_prefix']}members WHERE name='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/invision1.php	/^		$query = $ibdb->DoQuery("UPDATE {$INFO['sql_tbl_prefix']}members SET password='$newpass' WHERE name='$user'");$/;"	v
+query	lib/auth/invision2.php	/^			$query = $db->DoQuery("SELECT * FROM {$prefix}users WHERE username='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/invision2.php	/^		$query = $ibdb->DoQuery("SELECT converge_pass_salt,converge_pass_hash FROM {$INFO['sql_tbl_prefix']}members_converge WHERE converge_id='$uid'");$/;"	v
+query	lib/auth/invision2.php	/^		$query = $ibdb->DoQuery("UPDATE {$INFO['sql_tbl_prefix']}members_converge SET converge_pass_hash='$newpass' WHERE converge_id='$uid'");$/;"	v
+query	lib/auth/joomla.php	/^			$query = $db->DoQuery("SELECT * FROM {$prefix}users WHERE username='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/joomla.php	/^			$query = $mamdb->DoQuery("SELECT username,password FROM {$mosConfig_dbprefix}users WHERE id='$row[0]'");$/;"	v
+query	lib/auth/joomla.php	/^		$query = $mamdb->DoQuery("SELECT password FROM {$mosConfig_dbprefix}users WHERE username='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/joomla.php	/^		$query = $mamdb->DoQuery("SELECT userid FROM {$mosConfig_dbprefix}session WHERE session_id='{$_COOKIE[$session_cookie_name]}'");$/;"	v
+query	lib/auth/joomla.php	/^		$query = $mamdb->DoQuery("UPDATE {$mosConfig_dbprefix}users SET password='$newpass' WHERE username='$user'");$/;"	v
+query	lib/auth/mambo.php	/^			$query = $db->DoQuery("SELECT * FROM {$prefix}users WHERE username='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/mambo.php	/^			$query = $mamdb->DoQuery("SELECT username,password FROM {$mosConfig_dbprefix}users WHERE id='$row[0]'");$/;"	v
+query	lib/auth/mambo.php	/^		$query = $mamdb->DoQuery("SELECT password FROM {$mosConfig_dbprefix}users WHERE username='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/mambo.php	/^		$query = $mamdb->DoQuery("SELECT userid FROM {$mosConfig_dbprefix}session WHERE session_id='{$_COOKIE[$session_cookie_name]}'");$/;"	v
+query	lib/auth/mambo.php	/^		$query = $mamdb->DoQuery("UPDATE {$mosConfig_dbprefix}users SET password='$newpass' WHERE username='$user'");$/;"	v
+query	lib/auth/mboard.php	/^			$query = $db->DoQuery("SELECT * FROM {$prefix}users WHERE username='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/mboard.php	/^		$query = $mbdb->DoQuery("SELECT user_name FROM {$tablepre}users WHERE user_id='".$_COOKIE[$mcboard_settings['cookie_prefix']."user"]."'");$/;"	v
+query	lib/auth/mboard.php	/^		$query = $mbdb->DoQuery("SELECT user_password FROM {$tablepre}users WHERE user_name='$user'");$/;"	v
+query	lib/auth/mboard.php	/^		$query = $mbdb->DoQuery("UPDATE {$tablepre}users SET user_password='$newpass' WHERE user_name='$user'");$/;"	v
+query	lib/auth/mboard.php	/^	$query = $mbdb->DoQuery("SELECT * FROM {$tablepre}settings");$/;"	v
+query	lib/auth/md5.php	/^		$query = $db->DoQuery("SELECT password,activated FROM {$prefix}users WHERE username='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/phpbb2.php	/^				$query = $phpbbdb->DoQuery("SELECT username,user_password FROM {$table_prefix}users WHERE user_id='$suid'");$/;"	v
+query	lib/auth/phpbb2.php	/^			$query = $db->DoQuery("SELECT * FROM {$prefix}users WHERE username='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/phpbb2.php	/^		$query = $phpbbdb->DoQuery("SELECT session_user_id,session_logged_in FROM {$table_prefix}sessions WHERE session_id='$cvalue'");$/;"	v
+query	lib/auth/phpbb2.php	/^		$query = $phpbbdb->DoQuery("SELECT user_password FROM {$table_prefix}users WHERE username='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/phpbb2.php	/^		$query = $phpbbdb->DoQuery("UPDATE {$table_prefix}users SET user_password='$newpass' WHERE username='$user'");$/;"	v
+query	lib/auth/phpbb2.php	/^	$query = $phpbbdb->DoQuery("SELECT config_value FROM {$table_prefix}config WHERE config_name='cookie_name'");$/;"	v
+query	lib/auth/phpnuke.php	/^			$query = $db->DoQuery("SELECT * FROM {$prefix}users WHERE username='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/phpnuke.php	/^		$query = $nukedb->DoQuery("SELECT user_password FROM {$nuke_prefix}users WHERE username='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/phpnuke.php	/^		$query = $nukedb->DoQuery("UPDATE {$nuke_prefix}users SET user_password='$newpass' WHERE username='$user'");$/;"	v
+query	lib/auth/postnuke.php	/^			$query = $db->DoQuery("SELECT * FROM {$prefix}users WHERE username='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/postnuke.php	/^		$query = $nukedb->DoQuery("SELECT pn_pass FROM {$pn_prefix}users WHERE pn_uname='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/postnuke.php	/^		$query = $nukedb->DoQuery("UPDATE {$pn_prefix}users SET pn_pass='$newpass' WHERE pn_uname='$user'");$/;"	v
+query	lib/auth/punbb.php	/^        $query = $db->DoQuery("SELECT * FROM {$prefix}users WHERE username='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/punbb.php	/^    $query = $pun_db->DoQuery("SELECT password FROM {$db_prefix}users WHERE username='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/punbb.php	/^    $query = $pun_db->DoQuery("UPDATE {$db_prefix}users SET password='$newpass' WHERE username='$user'");$/;"	v
+query	lib/auth/smf.php	/^			$query = $db->DoQuery("SELECT * FROM {$prefix}users WHERE username='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/smf.php	/^		$query = $smfdb->DoQuery("SELECT passwd,passwordSalt FROM {$db_prefix}members WHERE memberName='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/smf.php	/^		$query = $smfdb->DoQuery("UPDATE {$db_prefix}members SET passwd='$newpass' WHERE memberName='$user'");$/;"	v
+query	lib/auth/vbulletin.php	/^			$query = $db->DoQuery("SELECT * FROM {$prefix}users WHERE username='".addslashes($_COOKIE[$auth_ucookie])."'");$/;"	v
+query	lib/auth/xmb.php	/^			$query = $db->DoQuery("SELECT * FROM {$prefix}users WHERE username='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/xmb.php	/^		$query = $xmbdb->DoQuery("SELECT password FROM {$tablepre}members WHERE username='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/xmb.php	/^		$query = $xmbdb->DoQuery("UPDATE {$tablepre}members SET password='$newpass' WHERE username='$user'");$/;"	v
+query	lib/auth/xoops.php	/^			$query = $db->DoQuery("SELECT * FROM {$prefix}users WHERE username='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/xoops.php	/^		$query = $xoopsdb->DoQuery("SELECT pass FROM {$table_prefix}users WHERE uname='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/xoops.php	/^		$query = $xoopsdb->DoQuery("UPDATE {$table_prefix}users SET pass='$newpass' WHERE uname='$user'");$/;"	v
+query	lib/auth/yabbse.php	/^			$query = $db->DoQuery("SELECT * FROM {$prefix}users WHERE username='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/yabbse.php	/^		$query = $yabbsedb->DoQuery("SELECT passwd FROM {$db_prefix}members WHERE memberName='$_COOKIE[$auth_ucookie]'");$/;"	v
+query	lib/auth/yabbse.php	/^		$query = $yabbsedb->DoQuery("UPDATE {$db_prefix}members SET passwd='$newpass' WHERE memberName='$user'");$/;"	v
+query	lib/ban.php	/^			$query = $db->DoQuery("SELECT user_ip_email FROM {$prefix}banned WHERE id='$id'");$/;"	v
+query	lib/ban.php	/^		$query = $db->DoQuery("SELECT * FROM {$prefix}banned WHERE user_ip_email='$ip[0]' OR user_ip_email='$ip[1]' OR user_ip_email='$ip[2]' OR user_ip_email='$ip[3]'{$xu}{$xp}");	$/;"	v
+query	lib/bandwidth.php	/^		$query = $db->DoQuery("SELECT used,max FROM {$prefix}bandwidth WHERE user='$x7s->username'");$/;"	v
+query	lib/events.php	/^		$query = $db->DoQuery("SELECT * FROM {$prefix}events WHERE timestamp<'$maxi' AND timestamp>'$mini' ORDER BY timestamp ASC");$/;"	v
+query	lib/filter.php	/^				$query = $db->DoQuery("SELECT text,replacement,type,id FROM {$prefix}filter WHERE room='$room' AND type='4'");$/;"	v
+query	lib/filter.php	/^				$query = $db->DoQuery("SELECT text,replacement,type,id FROM {$prefix}filter WHERE type='2' ORDER BY text DESC");$/;"	v
+query	lib/filter.php	/^				$query = $db->DoQuery("SELECT text,replacement,type,id FROM {$prefix}filter WHERE type='3'");$/;"	v
+query	lib/filter.php	/^			$query = $db->DoQuery("SELECT text,replacement,type,id FROM {$prefix}filter WHERE room='$x7s->username' AND type='5'");$/;"	v
+query	lib/filter.php	/^			$query = $db->DoQuery("SELECT text,replacement,type,id FROM {$prefix}filter WHERE type='1'");$/;"	v
+query	lib/irc.php	/^			$query = $db->DoQuery("SELECT name FROM {$prefix}online WHERE room='$_GET[room]'");$/;"	v
+query	lib/irc.php	/^		$query = $db->DoQuery("SELECT * FROM {$prefix}rooms WHERE name='$params'");$/;"	v
+query	lib/irc.php	/^		$query = $db->DoQuery("SELECT id FROM {$prefix}banned WHERE room='{$x7c->room_data['id']}' AND user_ip_email='$params'");	$/;"	v
+query	lib/load.php	/^				$query = $db->DoQuery("SELECT * FROM {$prefix}online WHERE name='$x7s->username' AND room='$_GET[room]'");$/;"	v
+query	lib/load.php	/^				$query = $db->DoQuery("SELECT id,username,user_group FROM {$prefix}users");$/;"	v
+query	lib/load.php	/^				$query = $db->DoQuery("SELECT name,type,moderated,topic,greeting,password,maxusers,ops,voiced,id,time,logged,background,logo FROM {$prefix}rooms WHERE name='$room'");$/;"	v
+query	lib/load.php	/^				$query = $db->DoQuery("SELECT userx.*,permissionx.*$/;"	v
+query	lib/load.php	/^				$query = $db->DoQuery("SELECT userx.*,roomx.*,permissionx.*$/;"	v
+query	lib/load.php	/^			$query = $db->DoQuery("SELECT * FROM {$prefix}permissions");$/;"	v
+query	lib/load.php	/^			$query = $db->DoQuery("SELECT * FROM {$prefix}settings");$/;"	v
+query	lib/load.php	/^			$query = $db->DoQuery("SELECT email,avatar,name,location,hobbies,bio,status,user_group,id,hideemail,gender,settings,password FROM {$prefix}users WHERE username='$user'");$/;"	v
+query	lib/message.php	/^		$query = $db->DoQuery("SELECT * FROM {$prefix}messages WHERE room='$user' AND type='6'");$/;"	v
+query	lib/message.php	/^		$query = $db->DoQuery("SELECT id,user,body,time FROM {$prefix}messages WHERE type='6' AND room='$x7s->username' ORDER BY id DESC");$/;"	v
+query	lib/online.php	/^			$query = $db->DoQuery("SELECT DISTINCT name,room FROM {$prefix}online WHERE time>'$exp_time'{$invis}ORDER by name ASC");$/;"	v
+query	lib/online.php	/^		$query = $db->DoQuery("DELETE FROM {$prefix}online WHERE time<'$exp_time'");$/;"	v
+query	lib/online.php	/^		$query = $db->DoQuery("SELECT * FROM {$prefix}online WHERE name='$x7s->username' AND room='$room'");$/;"	v
+query	lib/rooms.php	/^		$query = $db->DoQuery("SELECT name,topic,password,maxusers,logged FROM {$prefix}rooms WHERE type='1'");$/;"	v
+query	lib/status.php	/^		$query = $db->DoQuery("SELECT status FROM {$prefix}users WHERE username='$user'");$/;"	v
+query	lib/usercontrol.php	/^			$query = $db->DoQuery("SELECT * FROM {$prefix}muted WHERE ignored_user='$this->user' AND user='$x7s->username'");$/;"	v
+query	lib/usercontrol.php	/^			$query = $db->DoQuery("SELECT id,username FROM {$prefix}users");$/;"	v
+query	lib/usercontrol.php	/^			$query = $db->DoQuery("SELECT ip FROM {$prefix}online WHERE name='$this->user' AND room='$_GET[room]'");$/;"	v
+query	lib/usercontrol.php	/^		$query = $db->DoQuery("SELECT username FROM {$prefix}users WHERE id='$id'");$/;"	v
+query	online.php	/^		$query = $db->DoQuery("SELECT DISTINCT name FROM {$prefix}online WHERE invisible<>'1' AND time>'$exptime'");$/;"	v
+query	sources/admin.php	/^					$query = $db->DoQuery("SELECT * FROM {$prefix}events WHERE id='$_GET[edit]'");$/;"	v
+query	sources/admin.php	/^					$query = $db->DoQuery("SELECT * FROM {$prefix}rooms");$/;"	v
+query	sources/admin.php	/^					$query = $db->DoQuery("SELECT * FROM {$prefix}users WHERE user_group='$_GET[delete]'");$/;"	v
+query	sources/admin.php	/^					$query = $db->DoQuery("SELECT id FROM {$prefix}rooms WHERE name='$_GET[delete]'");$/;"	v
+query	sources/admin.php	/^					$query = $db->DoQuery("SELECT id,max FROM {$prefix}bandwidth");$/;"	v
+query	sources/admin.php	/^					$query = $db->DoQuery("SELECT usergroup FROM {$prefix}permissions");$/;"	v
+query	sources/admin.php	/^					$query = $db->DoQuery("SELECT username FROM {$prefix}users WHERE user_group='$_GET[view]'");$/;"	v
+query	sources/admin.php	/^				$query = $db->DoQuery("SELECT * FROM {$prefix}banned WHERE room='*'");$/;"	v
+query	sources/admin.php	/^				$query = $db->DoQuery("SELECT * FROM {$prefix}permissions WHERE usergroup='$_GET[edit]'");$/;"	v
+query	sources/admin.php	/^				$query = $db->DoQuery("SELECT * FROM {$prefix}settings");$/;"	v
+query	sources/admin.php	/^				$query = $db->DoQuery("SELECT * FROM {$prefix}users ORDER BY username ASC");$/;"	v
+query	sources/admin.php	/^				$query = $db->DoQuery("SELECT * FROM {$prefix}users WHERE username='$_POST[username]'");$/;"	v
+query	sources/admin.php	/^				$query = $db->DoQuery("SELECT email FROM {$prefix}users WHERE email<>''");$/;"	v
+query	sources/admin.php	/^				$query = $db->DoQuery("SELECT ip FROM {$prefix}users WHERE username='$_POST[user]'");$/;"	v
+query	sources/admin.php	/^				$query = $db->DoQuery("SELECT name,topic,password,maxusers,logged FROM {$prefix}rooms");$/;"	v
+query	sources/admin.php	/^				$query = $db->DoQuery("SELECT user,used,max,id FROM {$prefix}bandwidth ORDER BY user ASC");$/;"	v
+query	sources/admin.php	/^				$query = $db->DoQuery("SELECT username FROM {$prefix}users");$/;"	v
+query	sources/admin.php	/^			$query = $db->DoQuery("SELECT * FROM {$prefix}events");$/;"	v
+query	sources/forgotpass.php	/^				$query = $db->DoQuery("SELECT username,email FROM {$prefix}users WHERE email='$_POST[look4]'");$/;"	v
+query	sources/forgotpass.php	/^				$query = $db->DoQuery("SELECT username,email FROM {$prefix}users WHERE username='$_POST[look4]'");$/;"	v
+query	sources/frame.php	/^    $query = eregi_replace("'","\\\\'",$query);$/;"	v
+query	sources/frame.php	/^    $query = eregi_replace("[\\n\\r]","",$query);$/;"	v
+query	sources/frame.php	/^  $query = $db->DoQuery("SELECT o.*,u.id FROM {$prefix}online o, {$prefix}users u WHERE o.room='$_GET[room]' AND u.username=o.name {$invis}ORDER BY o.name ASC");$/;"	v
+query	sources/frame.php	/^  $query = $db->DoQuery("SELECT user,type,body_parsed,time,id FROM {$prefix}messages WHERE$/;"	v
+query	sources/info_box.php	/^			$query = $db->DoQuery("SELECT * FROM {$prefix}events WHERE timestamp>$mini AND timestamp<$maxi");$/;"	v
+query	sources/loginout.php	/^			$query = $db->DoQuery("SELECT id FROM {$prefix}rooms WHERE type='1'");$/;"	v
+query	sources/loginout.php	/^			$query = $db->DoQuery("SELECT id FROM {$prefix}users WHERE  user_group<>'{$x7c->settings['usergroup_guest']}'");$/;"	v
+query	sources/memberlist.php	/^		$query = $db->DoQuery("SELECT username,user_group FROM {$prefix}users{$order}");$/;"	v
+query	sources/newroom.php	/^		$query = $db->DoQuery("SELECT name FROM {$prefix}rooms WHERE name='$_POST[roomname]'");$/;"	v
+query	sources/privatemessage.php	/^		$query = $db->DoQuery("SELECT user,body,time,type FROM {$prefix}messages WHERE room='$x7s->username:0' AND user='$_GET[send_to]' AND (type='5' OR type='7') ORDER BY time ASC");$/;"	v
+query	sources/register.php	/^			$query = $db->DoQuery("SELECT * FROM {$prefix}users WHERE username='$_POST[username]'");$/;"	v
+query	sources/register.php	/^		$query = $db->DoQuery("SELECT * FROM {$prefix}users WHERE activated='$_GET[act_code]'");$/;"	v
+query	sources/roomcp.php	/^				$query = $db->DoQuery("SELECT * FROM {$prefix}banned WHERE room='{$x7c->room_data['id']}'");$/;"	v
+query	sources/roomlist.php	/^		$query = $db->DoQuery("SELECT * FROM {$prefix}rooms WHERE name='$_POST[rname]'");$/;"	v
+query	sources/support.php	/^			$query = $db->DoQuery("SELECT * FROM {$prefix}online WHERE name='$x7s->username' AND room='support;'");$/;"	v
+query	sources/support.php	/^			$query = $db->DoQuery("SELECT user FROM {$prefix}messages WHERE type='5' AND room='$x7s->username:0' AND time<'$pm_time' ORDER BY time ASC");$/;"	v
+query	sources/update.php	/^				$query = eregi_replace("'","\\\\'",$query);$/;"	v
+query	sources/update.php	/^				$query = eregi_replace("\\n","",$query);$/;"	v
+query	sources/update.php	/^				$query = eregi_replace("\\r","",$query);$/;"	v
+query	sources/update.php	/^			$query = $db->DoQuery("SELECT user,type,body,time FROM {$prefix}messages WHERE $/;"	v
+query	sources/usercp.php	/^				$query = $db->DoQuery("SELECT * FROM {$prefix}users WHERE username='$_GET[to]'");$/;"	v
+query	sources/usercp.php	/^			$query = $db->DoQuery("SELECT ignored_user FROM {$prefix}muted WHERE user='$x7s->username'");$/;"	v
+query	support.php	/^			$query = $db->DoQuery("SELECT user FROM {$prefix}messages WHERE $queryx");$/;"	v
+query	support.php	/^	$query = $db->DoQuery("SELECT name FROM {$prefix}online WHERE room='support;' AND ($queryx) AND time>'$exp_time'");$/;"	v
+query	support.php	/^	$query = $db->DoQuery("SELECT variable,setting FROM {$prefix}settings WHERE variable='support_personel' OR variable='support_image_online' OR variable='support_image_offline' OR variable='support_message' OR variable='default_lang'");$/;"	v
+query2	sources/admin.php	/^				$query2 = $db->DoQuery("SELECT user FROM {$prefix}bandwidth");$/;"	v
+query2	sources/memberlist.php	/^		$query2 = $db->DoQuery("SELECT name,room,invisible FROM {$prefix}online");$/;"	v
+query2	sources/privatemessage.php	/^		$query2 = $db->DoQuery("UPDATE {$prefix}messages SET room='$x7s->username:1' WHERE room='$x7s->username:0' AND user='$_GET[send_to]' AND (type='5' OR type='7')");$/;"	v
+queryx	support.php	/^			$queryx = "user=''";$/;"	v
+queryx	support.php	/^	$queryx = "name=''";$/;"	v
+r	lib/color_picker.php	/^				$r = "0".$r;$/;"	v
+r	lib/color_picker.php	/^			$r = dechex($rgb['red']);$/;"	v
+rand	sources/forgotpass.php	/^			$rand = rand(0,61);$/;"	v
+ranroom	sources/support.php	/^			$ranroom = "General Chat";$/;"	v
+rate	sources/update.php	/^			$rate = ($x7c->settings['refresh_rate']*3)-1;$/;"	v
+rc	lib/events.php	/^				$rc = 0;	$/;"	v
+rc	lib/events.php	/^		$rc = 0;$/;"	v
+reads	sources/frame.php	/^			\/\/ This function reads key presses$/;"	f
+red	online.php	/^			$red = $_GET['red'];$/;"	v
+red	online.php	/^		$red = $blue = $green = 0;$/;"	v
+refreshplus5	sources/update.php	/^		$refreshplus5 = ($x7c->settings['refresh_rate']\/1000)+5;$/;"	v
+register_user	sources/register.php	/^	function register_user(){$/;"	f
+reload	lib/filter.php	/^		function reload(){$/;"	f
+remove_ban	lib/ban.php	/^	function remove_ban($id,$room){$/;"	f
+remove_chattags	lib/message.php	/^	function remove_chattags($message){$/;"	f
+remove_file	lib/upload.php	/^	function remove_file($dirx){$/;"	f
+remove_old_guest_logs	lib/auth.php	/^						$remove_old_guest_logs = 1;$/;"	v
+remove_other_avatars	lib/uploads.php	/^	function remove_other_avatars(){$/;"	f
+remove_room_filter	lib/filter.php	/^		function remove_room_filter($fid){$/;"	f
+remove_server_filter	lib/filter.php	/^		function remove_server_filter($fid){$/;"	f
+remove_server_keyword	lib/filter.php	/^		function remove_server_keyword($fid){$/;"	f
+remove_smiley	lib/filter.php	/^		function remove_smiley($fid){$/;"	f
+remove_user_filter	lib/filter.php	/^		function remove_user_filter($fid){$/;"	f
+removes	lib/uploads.php	/^	\/\/ This function removes a users other avatars$/;"	f
+replybody	sources/usercp.php	/^				$replybody = eregi_replace("<br>","\\n",$replybody);$/;"	v
+replybody	sources/usercp.php	/^				$replybody = remove_chattags($msgbody);$/;"	v
+requestReady_channel1	sources/frame.php	/^			function requestReady_channel1(){$/;"	f
+res	sources/loginout.php	/^		$res = $DB_CONN->query($mysql);$/;"	v
+restoreText	sources/frame.php	/^			function restoreText(torestore){$/;"	f
+result	index.php	/^		$result = check_password($_GET['room'],$_COOKIE[$cookie_name]);$/;"	v
+result	lib/auth/punbb.php	/^    $result = $pun_db->DoQuery('SELECT u.id, u.username, u.password FROM '.$db_prefix.'users AS u WHERE u.id='.intval($cookie['user_id']));$/;"	v
+result	lib/auth/vbulletin.php	/^		$result = $vbc->DoQuery("SELECT salt FROM {$tableprefix}user WHERE username='".addslashes(htmlspecialchars($username))."'");$/;"	v
+result	lib/auth/vbulletin.php	/^		$result = $vbc->DoQuery("SELECT userid, username, usergroupid, password, salt FROM {$tableprefix}user WHERE userid='".intval($_COOKIE[$cookieprefix.'userid'])."'");$/;"	v
+return	lib/ban.php	/^		$return = array();$/;"	v
+return	lib/events.php	/^		$return = "$print->ss_events$/;"	v
+return	lib/filter.php	/^			$return = array();$/;"	v
+return	lib/logs.php	/^			$return = array();$/;"	v
+return	lib/message.php	/^		$return = array();$/;"	v
+return	lib/online.php	/^			$return = array();$/;"	v
+return	lib/online.php	/^		$return = array();$/;"	v
+return	lib/rooms.php	/^		$return = array();$/;"	v
+return	lib/theme_creator.php	/^		$return = array("background_color_1" => "",$/;"	v
+return	lib/theme_creator.php	/^		$return = array("background_color_1" => "$data[BGColor1]",$/;"	v
+return	lib/theme_creator.php	/^		$return = array("background_color_1" => "BGColor1",$/;"	v
+return	lib/xupdater.php	/^			$return = "nonews";$/;"	v
+return	lib/xupdater.php	/^		$return = array();$/;"	v
+return_last_time	lib/online.php	/^	function return_last_time($room){$/;"	f
+returned	sources/usercp.php	/^				$returned = handle_uploaded_avatar();$/;"	v
+returns	lib/irc.php	/^	\/\/ This function returns a two element array.  The first element is $/;"	f
+returns	lib/rooms.php	/^	\/\/ This function returns a list of all rooms$/;"	f
+rgb	lib/color_picker.php	/^			$rgb = imagecolorat($image,$coords[0],$coords[1]);$/;"	v
+rgb	lib/color_picker.php	/^			$rgb = imagecolorsforindex($image,$rgb); $/;"	v
+rollOver	sources/frame.php	/^			function rollOver(obj,over){$/;"	f
+room	lib/filter.php	/^				$room = $this->room_name;$/;"	v
+room_id	lib/usercontrol.php	/^			$room_id = $x7c->room_data['id'];$/;"	v
+room_info	lib/load.php	/^		function room_info($room){$/;"	f
+room_list_page	sources/roomlist.php	/^	function room_list_page(){$/;"	f
+room_ops	sources/frame.php	/^  $room_ops = explode(";",$x7c->room_data['ops']);$/;"	v
+roomcp_master	sources/roomcp.php	/^	function roomcp_master(){$/;"	f
+roomlist	lib/irc.php	/^		$roomlist = "";$/;"	v
+roomlogin_screen	sources/room_password.php	/^	function roomlogin_screen($room){$/;"	f
+roomname	lib/online.php	/^			foreach($querydb['get_online_1'] as $roomname=>$names){$/;"	v
+rooms	lib/irc.php	/^		$rooms = list_rooms();$/;"	v
+rooms	sources/admin.php	/^				$rooms = array();$/;"	v
+rooms	sources/admin.php	/^				$rooms = list_rooms();$/;"	v
+rooms	sources/loginout.php	/^			$rooms = 0;$/;"	v
+rooms	sources/memberlist.php	/^				$rooms = substr($rooms,0,strlen($rooms)-2);$/;"	v
+rooms	sources/memberlist.php	/^			$rooms = "";$/;"	v
+rooms	sources/roomlist.php	/^		$rooms = list_rooms();$/;"	v
+row	lib/auth.php	/^					$row = $db->Do_Fetch_Row($query);$/;"	v
+row	lib/auth/e107.php	/^			$row = $db->Do_Fetch_Row($query);$/;"	v
+row	lib/auth/e107.php	/^		$row = $e107->Do_Fetch_row($query);$/;"	v
+row	lib/auth/e107.php	/^	$row = $e107->Do_Fetch_row($query);$/;"	v
+row	lib/auth/invision1.php	/^			$row = $db->Do_Fetch_Row($query);$/;"	v
+row	lib/auth/invision1.php	/^		$row = $ibdb->Do_Fetch_Row($q);$/;"	v
+row	lib/auth/invision2.php	/^			$row = $db->Do_Fetch_Row($query);$/;"	v
+row	lib/auth/invision2.php	/^		$row = $ibdb->Do_Fetch_Row($q);$/;"	v
+row	lib/auth/invision2.php	/^		$row = $ibdb->Do_Fetch_Row($query);$/;"	v
+row	lib/auth/joomla.php	/^			$row = $db->Do_Fetch_Row($query);$/;"	v
+row	lib/auth/joomla.php	/^			$row = $mamdb->Do_Fetch_Row($query);$/;"	v
+row	lib/auth/joomla.php	/^		$row = $mamdb->Do_Fetch_Row($query);$/;"	v
+row	lib/auth/mambo.php	/^			$row = $db->Do_Fetch_Row($query);$/;"	v
+row	lib/auth/mambo.php	/^			$row = $mamdb->Do_Fetch_Row($query);$/;"	v
+row	lib/auth/mambo.php	/^		$row = $mamdb->Do_Fetch_Row($query);$/;"	v
+row	lib/auth/mboard.php	/^			$row = $db->Do_Fetch_Row($query);$/;"	v
+row	lib/auth/mboard.php	/^		$row = $mbdb->Do_Fetch_Row($query);$/;"	v
+row	lib/auth/mboard.php	/^	$row = mysql_fetch_row($query);$/;"	v
+row	lib/auth/phpbb2.php	/^			$row = $db->Do_Fetch_Row($query);$/;"	v
+row	lib/auth/phpnuke.php	/^			$row = $db->Do_Fetch_Row($query);$/;"	v
+row	lib/auth/postnuke.php	/^			$row = $db->Do_Fetch_Row($query);$/;"	v
+row	lib/auth/punbb.php	/^        $row = $db->Do_Fetch_Row($query);$/;"	v
+row	lib/auth/smf.php	/^			$row = $db->Do_Fetch_Row($query);$/;"	v
+row	lib/auth/vbulletin.php	/^			$row = $db->Do_Fetch_Row($query);$/;"	v
+row	lib/auth/xmb.php	/^			$row = $db->Do_Fetch_Row($query);$/;"	v
+row	lib/auth/xoops.php	/^			$row = $db->Do_Fetch_Row($query);$/;"	v
+row	lib/auth/yabbse.php	/^			$row = $db->Do_Fetch_Row($query);$/;"	v
+row	lib/ban.php	/^			$row = $db->Do_Fetch_Row($query);$/;"	v
+row	lib/bandwidth.php	/^		$row = $db->Do_Fetch_Row($query);$/;"	v
+row	lib/db/mysql.php	/^			$row = mysql_fetch_row($q);	\/\/ Get the row$/;"	v
+row	lib/db/mysql_muse.php	/^			$row = mysql_fetch_row($q);	\/\/ Get the row$/;"	v
+row	lib/irc.php	/^		$row = $db->Do_Fetch_Row($query);$/;"	v
+row	lib/load.php	/^				$row = $db->Do_Fetch_Row($query);$/;"	v
+row	lib/load.php	/^			$row = $db->Do_Fetch_Row($query);$/;"	v
+row	lib/load.php	/^			$row = $querydb['permissions_1'][$user_group];$/;"	v
+row	lib/online.php	/^		$row = $db->Do_Fetch_Row($query);$/;"	v
+row	lib/status.php	/^		$row = $db->Do_Fetch_Row($query);$/;"	v
+row	lib/usercontrol.php	/^			$row = $db->Do_Fetch_Row($query);$/;"	v
+row	lib/usercontrol.php	/^		$row = $db->Do_Fetch_Row($query);$/;"	v
+row	sources/admin.php	/^					$row = $db->Do_Fetch_Row($query);$/;"	v
+row	sources/admin.php	/^				$row = $db->Do_Fetch_Row($query);$/;"	v
+row	sources/forgotpass.php	/^				$row = $db->Do_Fetch_Row($query);$/;"	v
+row	sources/loginout.php	/^		$row = $res->fetchRow(DB_FETCHMODE_ASSOC);$/;"	v
+row	sources/newroom.php	/^		$row = $db->Do_Fetch_Row($query);$/;"	v
+row	sources/register.php	/^			$row = $db->Do_Fetch_Row($query);$/;"	v
+row	sources/register.php	/^		$row = $db->Do_Fetch_row($query);$/;"	v
+row	sources/roomlist.php	/^		$row = $db->Do_Fetch_Row($query);$/;"	v
+row	sources/support.php	/^			$row = $db->Do_Fetch_Row($query);$/;"	v
+row	sources/usercp.php	/^				$row = $db->Do_Fetch_Row($query);$/;"	v
+save_the_prefixs	lib/auth/postnuke.php	/^	$save_the_prefixs = $prefix;$/;"	v
+script	lib/filter.php	/^			$script = "";$/;"	v
+script	sources/frame.php	/^			  $script = "";$/;"	v
+script	sources/privatemessage.php	/^											$script = "";$/;"	v
+script	sources/privatemessage.php	/^					$script = "alert('$txt[117]')\\n$/;"	v
+script	sources/privatemessage.php	/^		$script = "";$/;"	v
+script	sources/support.php	/^					$script = "window.open('index.php?act=pm&send_to=$row[0]','','location=no,menubar=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width={$x7c->settings['tweak_window_large_width']},height={$x7c->settings['tweak_window_large_height']}');\\r\\n";$/;"	v
+script	sources/support.php	/^			$script = "";$/;"	v
+script	sources/update.php	/^					$script = "alert('$txt[115]')\\n$/;"	v
+script	sources/update.php	/^					$script = "alert('$txt[116]')\\n$/;"	v
+script	sources/update.php	/^					$script = "alert('$txt[117]')\\n$/;"	v
+script	sources/update.php	/^			$script = "";$/;"	v
+script	sources/update.php	/^			$script = "window.parent.location='index.php?act=overload'\\n";$/;"	v
+script	sources/usr_action_box.php	/^		$script = "$/;"	v
+scroll_screen	sources/update.php	/^			function scroll_screen(){\\r\\n$/;"	f
+seed	sources/register.php	/^					$seed = "abcdefghijklmnoparstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ";$/;"	v
+send_global_message	lib/message.php	/^	function send_global_message($body){$/;"	f
+send_message	lib/message.php	/^	function send_message($body,$room){$/;"	f
+send_offline_msg	lib/message.php	/^	function send_offline_msg($to,$subject,$msg){$/;"	f
+send_pm	lib/private_chat.php	/^	function send_pm($msg,$to){$/;"	f
+sender	sources/roomcp.php	/^						$sender = $match[2];$/;"	v
+sender	sources/usercp.php	/^						$sender = $match[2];$/;"	v
+sends	lib/irc.php	/^	\/\/ This IRC function sends a message to all room operators$/;"	f
+sends	lib/message.php	/^	\/\/ This function sends an offline message$/;"	f
+servername	lib/auth/vbulletin.php	/^		$servername =& $config['MasterServer']['servername'];$/;"	v
+session	lib/auth.php	/^		function session(){$/;"	f
+session	lib/auth.php	/^	class session {$/;"	c
+session_cookie_name	lib/auth/joomla.php	/^	$session_cookie_name = md5("site".$mosConfig_live_site);$/;"	v
+session_cookie_name	lib/auth/mambo.php	/^	$session_cookie_name = "sessioncookie";$/;"	v
+sessions	support.php	/^			$sessions = array_flip($sessions);$/;"	v
+set_status	lib/status.php	/^	function set_status($new_status){$/;"	f
+setting	lib/rooms.php	/^		$db->DoQuery("UPDATE {$prefix}rooms SET $setting='$new_setting' WHERE name='$room'");$/;"	v
+settings	lib/load.php	/^			$settings = explode(";",$x7p->profile['settings']);$/;"	v
+settings	lib/load.php	/^		function settings(){$/;"	f
+settings	lib/load.php	/^	class settings {$/;"	c
+settings	sources/admin.php	/^					$settings = $g_default_settings; \/\/ This is defined in lib\/auth.php$/;"	v
+settings	sources/register.php	/^				$settings = $g_default_settings; \/\/ This is defined in lib\/auth.php$/;"	v
+shell	lib/upload.php	/^		$shell = exec("unzip .\/uploads\/$file_name -d .\/uploads\/temp");$/;"	v
+shell	lib/xupdater.php	/^				$shell = exec("unzip .\/mods\/$match[0] mod.info -d .\/mods\/temp");$/;"	v
+shell	lib/xupdater.php	/^				$shell = exec("unzip .\/mods\/$match[0] theme.info -d .\/mods\/temp");$/;"	v
+shell	lib/xupdater.php	/^		$shell = exec("unzip -o .\/mods\/x7cs_$theme.zip -d .\/themes\/$theme");$/;"	v
+shell	lib/xupdater.php	/^		$shell = exec("unzip .\/mods\/$package -d .\/mods\/temp");$/;"	v
+site_name	lib/output.php	/^			$site_name = $x7c->settings['site_name'];$/;"	v
+size	lib/message.php	/^			$size = $x7c->settings['style_max_size'];$/;"	v
+size	lib/message.php	/^			$size = $x7c->settings['style_min_size'];$/;"	v
+size	lib/message.php	/^		$size = $x7c->settings['default_size'];$/;"	v
+size	lib/message.php	/^		$size = eregi_replace("[A-z ]","",$size);$/;"	v
+size	sources/frame.php	/^    $size = eregi_replace(" Pt","pt",$_GET['cursize']);$/;"	v
+size	sources/frame.php	/^    $size = eregi_replace("<","&lt;",$size);$/;"	v
+size	sources/privatemessage.php	/^			$size = eregi_replace(" Pt","pt",$_GET['cursize']);$/;"	v
+size	sources/privatemessage.php	/^			$size = eregi_replace("<","&lt;",$size);$/;"	v
+size_x	online.php	/^			$size_x = $_GET['size_x'];$/;"	v
+size_x	online.php	/^			$size_x = strlen($number)*intval($font_size);$/;"	v
+size_x	online.php	/^		$size_x = "auto";$/;"	v
+size_y	online.php	/^			$size_y = $_GET['size_y'];$/;"	v
+size_y	online.php	/^			$size_y = intval($font_size)+2;$/;"	v
+size_y	online.php	/^		$size_y = "auto";$/;"	v
+skin	lib/output.php	/^			$skin = $x7c->settings['default_skin'];$/;"	v
+skin_dir	sources/admin.php	/^							$skin_dir = dir(".\/themes\/$_GET[theme]");$/;"	v
+skin_dir	sources/admin.php	/^					$skin_dir = dir(".\/themes");$/;"	v
+skin_dir	sources/admin.php	/^				$skin_dir = dir(".\/themes");$/;"	v
+skin_dir	sources/usercp.php	/^				$skin_dir = dir(".\/themes");$/;"	v
+slcted	sources/admin.php	/^								$slcted = " SELECTED=\\"true\\"";$/;"	v
+slcted	sources/admin.php	/^								$slcted = "";$/;"	v
+slcted	sources/usercp.php	/^							$slcted = " SELECTED";$/;"	v
+slcted	sources/usercp.php	/^							$slcted = "";$/;"	v
+smfdb	lib/auth/smf.php	/^	$smfdb = new x7chat_db($db_server,$db_user,$db_passwd,$db_name);$/;"	v
+smile	sources/info_box.php	/^			$smile = new filters("");$/;"	v
+smilies	sources/info_box.php	/^			$smilies = $smile->get_filter_by_type("2");$/;"	v
+smilies_dir	sources/admin.php	/^			$smilies_dir = dir(".\/smilies");$/;"	v
+snd_reminder	sources/forgotpass.php	/^	function snd_reminder($user,$email){$/;"	f
+sort_order_1	sources/memberlist.php	/^				$sort_order_1 = 2;$/;"	v
+sort_order_1	sources/memberlist.php	/^		$sort_order_1 = 1;$/;"	v
+sort_order_2	sources/memberlist.php	/^				$sort_order_2 = 4;$/;"	v
+sort_order_2	sources/memberlist.php	/^		$sort_order_2 = 3;$/;"	v
+sound_play	sources/privatemessage.php	/^				$sound_play = 1;$/;"	v
+sound_play	sources/update.php	/^				$sound_play = 1;$/;"	v
+sound_play	sources/update.php	/^		$sound_play = 0;$/;"	v
+sr	help/index.php	/^		$sr = array();$/;"	v
+sr	help/index.php	/^		$sr = array_reverse($sr);$/;"	v
+start	sources/admin.php	/^					$start = $page_count*25-25;$/;"	v
+starttags	lib/message.php	/^		$starttags = "[color=$color][size=$size][font=$font]";$/;"	v
+starttags	sources/frame.php	/^    $starttags = "";$/;"	v
+starttags	sources/privatemessage.php	/^			$starttags = "";$/;"	v
+status	sources/frame.php	/^    $status = $ui['status'];$/;"	v
+store_color	lib/message.php	/^			$store_color = "";$/;"	v
+store_color	lib/message.php	/^			$store_color = check_font_color($store_color,"",0);$/;"	v
+store_font	lib/message.php	/^			$store_font = "";$/;"	v
+store_font	lib/message.php	/^			$store_font = check_font_family($store_font,"",0);$/;"	v
+store_size	lib/message.php	/^			$store_size = "";$/;"	v
+store_size	lib/message.php	/^			$store_size = check_font_size($store_size,"",0);$/;"	v
+string	lib/irc.php	/^		$string = explode(" ",$string);$/;"	v
+strip_outgoing	lib/security.php	/^	function strip_outgoing($value){$/;"	f
+strip_sql	lib/security.php	/^	function strip_sql($value){$/;"	f
+styleClicked	sources/frame.php	/^			function styleClicked(object,name){$/;"	f
+styleClicked	sources/privatemessage.php	/^				function styleClicked(object,name){$/;"	f
+styleOut	sources/frame.php	/^			function styleOut(object,name){$/;"	f
+styleOut	sources/privatemessage.php	/^				function styleOut(object,name){$/;"	f
+styleOver	sources/frame.php	/^			function styleOver(object,name){$/;"	f
+styleOver	sources/privatemessage.php	/^				function styleOver(object,name){$/;"	f
+styles_off	lib/message.php	/^			$styles_off = 1;$/;"	v
+styles_off	lib/message.php	/^		$styles_off = $x7c->settings['disable_styles'];$/;"	v
+subject	sources/usercp.php	/^					$subject = $nb[1];$/;"	v
+subject	sources/usercp.php	/^				$subject = $nb[1];$/;"	v
+suid	lib/auth/phpbb2.php	/^			$suid = $cinfo[0];$/;"	v
+suid	lib/auth/postnuke.php	/^		$suid = $nukedb->Do_Fetch_Row($q);$/;"	v
+suid	lib/auth/xoops.php	/^			$suid = unserialize($match[0]);$/;"	v
+support_mainpage	sources/support.php	/^	function support_mainpage(){$/;"	f
+supporters	sources/roomlist.php	/^		$supporters= explode(";",$x7c->settings['support_personel']);$/;"	v
+supporters	sources/support.php	/^		$supporters= explode(";",$x7c->settings['support_personel']);$/;"	v
+supporters	support.php	/^	$supporters = array();$/;"	v
+sysmsg_color	lib/message.php	/^			$sysmsg_color = $x7c->settings['system_message_color'];$/;"	v
+sysmsg_color	sources/update.php	/^		$sysmsg_color = $x7c->settings['system_message_color'];$/;"	v
+table_prefix	lib/auth/xoops.php	/^	$table_prefix = XOOPS_DB_PREFIX."_";$/;"	v
+tablepre	lib/auth/mboard.php	/^	$tablepre = $set['prefix'];$/;"	v
+tableprefix	lib/auth/vbulletin.php	/^		$tableprefix =& $config['Database']['tableprefix'];$/;"	v
+take_ops	lib/usercontrol.php	/^		function take_ops(){$/;"	f
+takes	lib/irc.php	/^	\/\/ irc_yourcommandname and have the code inside.  Each function takes one argument$/;"	f
+temp	lib/auth.php	/^			$temp = new session();$/;"	v
+temp	lib/load.php	/^			$temp = $row[21]+$row[22]+$row[23]+$row[24]+$row[25]+$row[26]+$row[27]+$row[28]+$row[29]+$row[30]+$row[31]+$row[32]+$row[33]+$row[37]+$row[38];$/;"	v
+temp	sources/admin.php	/^					$temp = explode(":",$val);$/;"	v
+temp	sources/admin.php	/^				foreach($rooms as $temp=>$room_info){$/;"	v
+temp	sources/profile.php	/^		$temp = explode("x",$x7c->settings['avatar_size_px']);$/;"	v
+temp	sources/roomlist.php	/^		foreach($rooms as $temp=>$room_info){$/;"	v
+temp	support.php	/^			$temp = array_keys($sessions);$/;"	v
+temp	support.php	/^		$temp = $row[0];$/;"	v
+temp	support.php	/^	$temp = "";$/;"	v
+temp_prefix	lib/auth/phpnuke.php	/^	$temp_prefix = $prefix;$/;"	v
+text	lib/filter.php	/^				$text = preg_replace("\/$filter[0]\/i","$filter[1]",$text);$/;"	v
+text	lib/logs.php	/^				$text = eregi_replace("\\\\\\\\'","'",$text);$/;"	v
+their_id	lib/usercontrol.php	/^			$their_id = $this->user_info->profile['id'];$/;"	v
+thelp	sources/admin.php	/^					$thelp = $print->help_button("time_date");$/;"	v
+thelp	sources/roomlist.php	/^		$thelp = $print->help_button("room_expire");$/;"	v
+theme	lib/xupdater.php	/^		$theme = eregi_replace("\\.zip$","",$theme);$/;"	v
+theme	lib/xupdater.php	/^		$theme = eregi_replace("^x7cs_","",$theme);$/;"	v
+theme_c	lib/output.php	/^				$theme_c = "";$/;"	v
+theme_c	lib/output.php	/^				$theme_c = "<Br>Theme by $theme_info[author], ".$theme_info['copyright'];$/;"	v
+theme_data	lib/theme_creator.php	/^		$theme_data = explode(";",implode("",$theme_data));$/;"	v
+theme_data	lib/theme_creator.php	/^		$theme_data = file(".\/themes\/$theme\/theme.data");$/;"	v
+theme_data_file	lib/output.php	/^				$theme_data_file = explode(";",eregi_replace("\\r","",implode("",$theme_data_file)));$/;"	v
+theme_data_file	lib/output.php	/^				$theme_data_file = file(".\/themes\/$skin\/theme.data");$/;"	v
+theme_info	lib/output.php	/^			$theme_info = $this->theme_info($this->this_skin);$/;"	v
+theme_info	lib/output.php	/^		function theme_info($skin){$/;"	f
+theme_page	sources/admin.php	/^				$theme_page = "main";$/;"	v
+theme_page	sources/admin.php	/^				$theme_page = $_GET['theme_page'];$/;"	v
+theme_ss	lib/output.php	/^				$theme_ss = eregi_replace("url\\(","url(.\/themes\/$skin\/",$theme_ss);$/;"	v
+theme_ss	lib/output.php	/^				$theme_ss = file(".\/themes\/$skin\/$style_sheet");$/;"	v
+theme_ss	lib/output.php	/^				$theme_ss = implode("",$theme_ss);$/;"	v
+theme_ss_chatinput	lib/output.php	/^				$theme_ss_chatinput = eregi_replace("url\\(","url(.\/themes\/$skin\/",$theme_ss_chatinput);$/;"	v
+theme_ss_chatinput	lib/output.php	/^				$theme_ss_chatinput = file(".\/themes\/$skin\/$style_sheet_chatinput");$/;"	v
+theme_ss_chatinput	lib/output.php	/^				$theme_ss_chatinput = implode("",$theme_ss_chatinput);$/;"	v
+theme_ss_events	lib/output.php	/^				$theme_ss_events = eregi_replace("url\\(","url(.\/themes\/$skin\/",$theme_ss_events);$/;"	v
+theme_ss_events	lib/output.php	/^				$theme_ss_events = file(".\/themes\/$skin\/$style_sheet_events");$/;"	v
+theme_ss_events	lib/output.php	/^				$theme_ss_events = implode("",$theme_ss_events);$/;"	v
+theme_ss_mini	lib/output.php	/^				$theme_ss_mini = eregi_replace("'","\\'",$theme_ss_mini);$/;"	v
+theme_ss_mini	lib/output.php	/^				$theme_ss_mini = eregi_replace("\\n","",$theme_ss_mini);$/;"	v
+theme_ss_mini	lib/output.php	/^				$theme_ss_mini = eregi_replace("\\r","",$theme_ss_mini);$/;"	v
+theme_ss_mini	lib/output.php	/^				$theme_ss_mini = eregi_replace("url\\(","url(.\/themes\/$skin\/",$theme_ss_mini);$/;"	v
+theme_ss_mini	lib/output.php	/^				$theme_ss_mini = file(".\/themes\/$skin\/$style_sheet_mini");$/;"	v
+theme_ss_mini	lib/output.php	/^				$theme_ss_mini = implode("",$theme_ss_mini);$/;"	v
+theme_ss_pm	lib/output.php	/^				$theme_ss_pm = eregi_replace("url\\(","url(.\/themes\/$skin\/",$theme_ss_pm);$/;"	v
+theme_ss_pm	lib/output.php	/^				$theme_ss_pm = file(".\/themes\/$skin\/$style_sheet_pm");$/;"	v
+theme_ss_pm	lib/output.php	/^				$theme_ss_pm = implode("",$theme_ss_pm);$/;"	v
+theme_ss_profile	lib/output.php	/^				$theme_ss_profile = eregi_replace("url\\(","url(.\/themes\/$skin\/",$theme_ss_profile);$/;"	v
+theme_ss_profile	lib/output.php	/^				$theme_ss_profile = file(".\/themes\/$skin\/$style_sheet_profile");$/;"	v
+theme_ss_profile	lib/output.php	/^				$theme_ss_profile = implode("",$theme_ss_profile);$/;"	v
+theme_ss_uc	lib/output.php	/^				$theme_ss_uc = eregi_replace("url\\(","url(.\/themes\/$skin\/",$theme_ss_uc);$/;"	v
+theme_ss_uc	lib/output.php	/^				$theme_ss_uc = file(".\/themes\/$skin\/$style_sheet_uc");$/;"	v
+theme_ss_uc	lib/output.php	/^				$theme_ss_uc = implode("",$theme_ss_uc);$/;"	v
+theme_ss_ucp	lib/output.php	/^				$theme_ss_ucp = eregi_replace("url\\(","url(.\/themes\/$skin\/",$theme_ss_ucp);$/;"	v
+theme_ss_ucp	lib/output.php	/^				$theme_ss_ucp = file(".\/themes\/$skin\/$style_sheet_ucp");$/;"	v
+theme_ss_ucp	lib/output.php	/^				$theme_ss_ucp = implode("",$theme_ss_ucp);$/;"	v
+theme_wt	lib/output.php	/^			$theme_wt = eregi_replace("<X>",$txt[133],$theme_wt);$/;"	v
+theme_wt	lib/output.php	/^			$theme_wt = eregi_replace("<x7chat_body>",$body,$theme_wt);$/;"	v
+theme_wt	lib/output.php	/^			$theme_wt = eregi_replace("<x7chat_header>",$head,$theme_wt);$/;"	v
+theme_wt	lib/output.php	/^			$theme_wt = file(".\/themes\/$skin\/info_box.tpl");$/;"	v
+theme_wt	lib/output.php	/^			$theme_wt = file(".\/themes\/$skin\/window.tpl");$/;"	v
+theme_wt	lib/output.php	/^			$theme_wt = implode("",$theme_wt);$/;"	v
+this_month	lib/events.php	/^			$this_month = $txt[$this_month];$/;"	v
+this_month	lib/events.php	/^		$this_month = date("F");$/;"	v
+this_month	lib/events.php	/^		$this_month = date("m");$/;"	v
+this_month_name	lib/events.php	/^			$this_month_name = $txt[$this_month_name];$/;"	v
+this_month_name	lib/events.php	/^		$this_month_name = date("F");$/;"	v
+this_rand	lib/irc.php	/^			$this_rand = rand(1,$dice_sides);$/;"	v
+this_year	lib/events.php	/^		$this_year = date("Y");$/;"	v
+time	lib/auth.php	/^						$time = time();$/;"	v
+time	lib/auth/e107.php	/^				$time = time();$/;"	v
+time	lib/auth/invision1.php	/^				$time = time();$/;"	v
+time	lib/auth/invision2.php	/^				$time = time();$/;"	v
+time	lib/auth/joomla.php	/^				$time = time();$/;"	v
+time	lib/auth/mambo.php	/^				$time = time();$/;"	v
+time	lib/auth/mboard.php	/^				$time = time();$/;"	v
+time	lib/auth/phpbb2.php	/^				$time = time();$/;"	v
+time	lib/auth/phpnuke.php	/^				$time = time();$/;"	v
+time	lib/auth/postnuke.php	/^				$time = time();$/;"	v
+time	lib/auth/punbb.php	/^            $time = time();$/;"	v
+time	lib/auth/smf.php	/^				$time = time();$/;"	v
+time	lib/auth/vbulletin.php	/^				$time = time();$/;"	v
+time	lib/auth/xmb.php	/^				$time = time();$/;"	v
+time	lib/auth/xoops.php	/^				$time = time();$/;"	v
+time	lib/auth/yabbse.php	/^				$time = time();$/;"	v
+time	lib/ban.php	/^		$time = time();$/;"	v
+time	lib/cleanup.php	/^		$time = time();$/;"	v
+time	lib/events.php	/^				$time = mktime(0,0,0,$this_month,$current_day,$this_year);$/;"	v
+time	lib/logs.php	/^				$time = time();$/;"	v
+time	lib/message.php	/^		$time = $time+(($x7c->settings['time_offset_hours']*3600)+($x7c->settings['time_offset_mins']*60));$/;"	v
+time	lib/message.php	/^		$time = time();$/;"	v
+time	lib/online.php	/^		$time = time();$/;"	v
+time	lib/private_chat.php	/^		$time = time();$/;"	v
+time	lib/rooms.php	/^			$time = 0;$/;"	v
+time	lib/rooms.php	/^			$time = time();$/;"	v
+time	lib/usercontrol.php	/^			$time = time();$/;"	v
+time	sources/admin.php	/^					$time = time();$/;"	v
+time	sources/admin.php	/^				$time = mktime($_GET['hour'],$_GET['min'],0,$_GET['month'],$_GET['day'],$_GET['year']);$/;"	v
+time	sources/admin.php	/^				$time = mktime(0,0,0,date("m",$row[1]),date("d",$row[1]),date("Y",$row[1]));$/;"	v
+time	sources/frame.php	/^    $time = $time+(($x7c->settings['time_offset_hours']*3600)+($x7c->settings['time_offset_mins']*60));$/;"	v
+time	sources/frame.php	/^    $time = time();$/;"	v
+time	sources/register.php	/^				$time = time();$/;"	v
+time	sources/support.php	/^				$time = time();$/;"	v
+time	sources/update.php	/^		$time = time();$/;"	v
+time	support.php	/^			$time = time();$/;"	v
+time1	sources/update.php	/^			$time1 = time()-1;$/;"	v
+timestamp	sources/frame.php	/^	  $timestamp = "";$/;"	v
+timestamp	sources/frame.php	/^	  $timestamp = format_timestamp($row[3]);$/;"	v
+timestamp	sources/privatemessage.php	/^				$timestamp = "";$/;"	v
+timestamp	sources/privatemessage.php	/^				$timestamp = format_timestamp($row[2]);$/;"	v
+timestamp	sources/update.php	/^							$timestamp = "";$/;"	v
+timestamp	sources/update.php	/^							$timestamp = format_timestamp($row[3]);$/;"	v
+title	help/index.php	/^			foreach($val as $title=>$body){$/;"	v
+title	sources/loginout.php	/^			$title = $txt[0];$/;"	v
+title	sources/loginout.php	/^			$title = $txt[14];$/;"	v
+to	lib/message.php	/^	\/\/ SInce the subject is stored in the body field we need a function to split the body and subject$/;"	f
+to	sources/frame.php	/^			  \/\/ The following is a bunch of javascript that emulates the PHP's date() function to a small extent$/;"	f
+to	sources/privatemessage.php	/^										\/\/ The following is a bunch of javascript that emulates the PHP's date() function to a small extent$/;"	f
+to	support.php	/^			$to = $sessions[$temp[0]];$/;"	v
+to_send	index.php	/^			$to_send = $x7c->settings['logout_page'];$/;"	v
+today	lib/events.php	/^		$today = date("m;d;Y");$/;"	v
+today	lib/events.php	/^		$today = explode(";",$today);$/;"	v
+toout	sources/frame.php	/^	$toout = "$row[2]";$/;"	v
+toout	sources/frame.php	/^	$toout = "<span class=\\"other_persons\\"><a class=\\"other_persons\\" onClick=\\"javascript: window.open(\\'index.php?act=pm&send_to=$row[0]\\',\\'Pm$row[0]\\',\\'location=no,menubar=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width={$x7c->settings['tweak_window_large_width']},height={$x7c->settings['tweak_window_large_height']}\\');\\">$row[0]<\/a>$timestamp:<\/span> $row[2]";$/;"	v
+toout	sources/frame.php	/^	$toout = preg_replace("\/;\/","74ce61f75c75b155ea7280778d6e8182",$toout);$/;"	v
+toout	sources/frame.php	/^	$toout = preg_replace("\/\\|\/","74ce61f75c75b155ea7280778d6e8181",$toout);$/;"	v
+total	lib/message.php	/^		$total = 0;$/;"	v
+total	sources/admin.php	/^				$total = 0;$/;"	v
+total	sources/frame.php	/^  $total = 0;$/;"	v
+total_us	lib/online.php	/^		$total_us = count($user_online);$/;"	v
+tto	sources/frame.php	/^      $tto = "openActionBox();";$/;"	v
+tto	sources/frame.php	/^      $tto = "openProfileBox();";$/;"	v
+type4s	sources/admin.php	/^			$type4s = $filters->get_filter_by_type(1);$/;"	v
+type4s	sources/admin.php	/^			$type4s = $filters->get_filter_by_type(2);$/;"	v
+type4s	sources/admin.php	/^			$type4s = $filters->get_filter_by_type(3);$/;"	v
+type4s	sources/roomcp.php	/^				$type4s = $filters->get_filter_by_type(4);$/;"	v
+type4s	sources/roomcp.php	/^			$type4s = $filters->get_filter_by_type(4);$/;"	v
+type5s	sources/usercp.php	/^			$type5s = $filters->get_filter_by_type(5);$/;"	v
+type_options	sources/newroom.php	/^				$type_options = "<option value=\\"1\\">$txt[68]<\/option>";$/;"	v
+type_options	sources/roomcp.php	/^				$type_options = "<option value=\\"1\\"$def[public]>$txt[68]<\/option>";$/;"	v
+u_online	lib/irc.php	/^		$u_online = implode(", ",get_online($_GET['room']));$/;"	v
+uc	lib/irc.php	/^			$uc = new user_control($params);$/;"	v
+uc	lib/irc.php	/^			$uc = new user_control($params[0]);$/;"	v
+uc	lib/irc.php	/^			$uc = new user_control($user[0]);$/;"	v
+uc	lib/irc.php	/^		$uc = new user_control($params);$/;"	v
+uco	sources/roomcp.php	/^				$uco = new user_control($_GET['revoke']);$/;"	v
+uco	sources/roomcp.php	/^				$uco = new user_control($_POST['add']);$/;"	v
+ug	sources/frame.php	/^    $ug = $ui['group'];$/;"	v
+ui	sources/frame.php	/^    $ui = $user_info->generate_profile_tab();$/;"	v
+uid	lib/auth/invision2.php	/^		$uid = $row[0];$/;"	v
+uid	lib/auth/invision2.php	/^		$uid = intval($_COOKIE['member_id']);$/;"	v
+un	lib/auth.php	/^						$un = parse_outgoing($_POST['username']);$/;"	v
+un	lib/auth.php	/^				$un = parse_outgoing($_POST['username']);$/;"	v
+uname	lib/db/mysql.php	/^				$uname = $X7CHAT_CONFIG['DB_USERNAME'];$/;"	v
+uname	lib/db/mysql_muse.php	/^				$uname = $MUSE_DB["user_{$MUSE_DB['current']}"];$/;"	v
+unignore	lib/usercontrol.php	/^		function unignore(){$/;"	f
+unmute	lib/usercontrol.php	/^		function unmute(){$/;"	f
+unvoice	lib/usercontrol.php	/^		function unvoice(){$/;"	f
+unzip_file	lib/upload.php	/^	function unzip_file($file_name){$/;"	f
+update_color	lib/color_picker.php	/^				function update_color(color){$/;"	f
+update_pass	sources/usercp.php	/^					$update_pass = "";$/;"	v
+update_setting	sources/admin.php	/^	function update_setting($setting,$newval){$/;"	f
+upload_file	lib/upload.php	/^	function upload_file($incoming,$filename=""){$/;"	f
+uploaded_themes	sources/admin.php	/^					$uploaded_themes = get_uploaded_themes();$/;"	v
+uploaded_themes	sources/admin.php	/^				$uploaded_themes = get_uploaded_themes();$/;"	v
+url	lib/message.php	/^				$url = "<a href=\\"$url\\" target=\\"_blank\\">$url<\/a>$extrabit";$/;"	v
+url	lib/message.php	/^				$url = "<a href=\\"http:\/\/$url\\" target=\\"_blank\\">$url<\/a>$extrabit";$/;"	v
+url	lib/message.php	/^				$url = $url.$extrabit;$/;"	v
+used	index.php	/^				$used = ob_get_length();$/;"	v
+used	sources/admin.php	/^						$used = round(($row[1]\/1048576),1);$/;"	v
+user	lib/auth/mboard.php	/^		$user = eregi_replace(" ","",$_COOKIE[$auth_ucookie]);$/;"	v
+user	lib/auth/mboard.php	/^		$user = eregi_replace(" ","",$user);$/;"	v
+user	lib/irc.php	/^			$user = get_user_by_id($val);$/;"	v
+user	lib/irc.php	/^		$user = irc_param_parsefw($params);$/;"	v
+user_action	sources/frame.php	/^    $user_action = $user_info->generate_action_tab();$/;"	v
+user_control	lib/usercontrol.php	/^		function user_control($user){$/;"	f
+user_control	lib/usercontrol.php	/^	class user_control{$/;"	c
+user_data	lib/load.php	/^				$user_data = $profile_object;$/;"	v
+user_data	lib/load.php	/^				$user_data = new profile_info($user);$/;"	v
+user_group	lib/load.php	/^			$user_group = @$user_data->profile['user_group'];$/;"	v
+user_info	sources/frame.php	/^    $user_info = new user_control($_GET['user']);$/;"	v
+user_info	sources/usr_action_box.php	/^		$user_info = new user_control($_GET['user']);$/;"	v
+user_online	lib/online.php	/^		$user_online = get_online($room);$/;"	v
+usercp_master	sources/usercp.php	/^	function usercp_master(){$/;"	f
+userinfo	sources/usercp.php	/^				$userinfo = new user_control($_GET['add']);$/;"	v
+userinfo	sources/usercp.php	/^				$userinfo = new user_control($_GET['remove']);$/;"	v
+username	lib/auth/yabbse.php	/^		$username = $yabbsedb->DoQuery("SELECT memberName,passwd from {$db_prefix}members WHERE ID_MEMBER='$yabbse_uc'");$/;"	v
+username	lib/auth/yabbse.php	/^		$username = $yabbsedb->Do_Fetch_Row($username);$/;"	v
+username	sources/roomcp.php	/^					$username = get_user_by_id($val);$/;"	v
+username	sources/roomcp.php	/^				$username = get_user_by_id($val);$/;"	v
+users	sources/frame.php	/^    $users = preg_replace("\/;\/","74ce61f75c75b155ea7280778d6e8182",$users);$/;"	v
+users	sources/frame.php	/^    $users = preg_replace("\/\\|\/","74ce61f75c75b155ea7280778d6e8181",$users);$/;"	v
+users	sources/frame.php	/^  $users = '';$/;"	v
+users	sources/update.php	/^			$users = "";$/;"	v
+users2	sources/update.php	/^		$users2 = $lasttime[2];$/;"	v
+users3	sources/update.php	/^		$users3 = $lasttime[3];$/;"	v
+usersettings	lib/load.php	/^		function usersettings(){$/;"	f
+usr_action_window	sources/usr_action_box.php	/^	function usr_action_window(){$/;"	f
+val	lib/xupdater.php	/^			$val = eregi_replace("_;","&#59",$val);$/;"	v
+val	lib/xupdater.php	/^			$val = explode(";",$val);$/;"	v
+val	sources/admin.php	/^								$val = "-1";$/;"	v
+val	sources/admin.php	/^						$val = eregi_replace("\\{prefix\\}",$prefix,$val);$/;"	v
+val	sources/admin.php	/^						if(eregi("^ug_",$key) && $val == 1){$/;"	v
+val	sources/roomcp.php	/^					$val = $val*-1;$/;"	v
+valid_colors	lib/message.php	/^		$valid_colors = explode(",",strtolower("AliceBlue,AntiqueWhite,Aqua,Aquamarine,Azure,Beige,Bisque,Black,BlanchedAlmond,Blue,BlueViolet,Brown,BurlyWood,CadetBlue,Chartreuse,Chocolate,Coral,$/;"	v
+value	lib/security.php	/^				$value = addslashes($value);$/;"	v
+value	lib/security.php	/^			$value = @urldecode($value);$/;"	v
+value	lib/security.php	/^			$value = preg_replace("\/'\/i","&#039;",$value);$/;"	v
+value	lib/security.php	/^			$value = preg_replace("\/<\/i","&lt;",$value);$/;"	v
+value	lib/security.php	/^			$value = preg_replace("\/>\/i","&gt;",$value);$/;"	v
+value	lib/security.php	/^			$value = preg_replace("\/\\"\/i","&quot;",$value);$/;"	v
+value	lib/security.php	/^			$value = urldecode($value);$/;"	v
+value	lib/security.php	/^		$value = eregi_replace("'","\\'",$value);$/;"	v
+value	lib/security.php	/^		$value = urldecode($value);$/;"	v
+values	sources/forgotpass.php	/^		$values = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";$/;"	v
+vb_init	lib/auth/vbulletin.php	/^	function vb_init($username){$/;"	f
+vb_salt	lib/auth/vbulletin.php	/^				$vb_salt = $member[4];$/;"	v
+vb_salt	lib/auth/vbulletin.php	/^			$vb_salt = vb_init($_COOKIE[$auth_ucookie]);$/;"	v
+vbc	lib/auth/vbulletin.php	/^	$vbc = new x7chat_db($servername,$dbusername,$dbpassword,$dbname);$/;"	v
+version	sources/admin.php	/^							$version = $val['version'];$/;"	v
+view_ip	lib/usercontrol.php	/^		function view_ip(){$/;"	f
+view_profile	sources/profile.php	/^	function view_profile($user){$/;"	f
+voice	lib/rooms.php	/^		$voice = "$uid";$/;"	v
+voice	lib/usercontrol.php	/^		function voice(){$/;"	f
+voice	sources/roomcp.php	/^				$voice = explode(";",$x7c->room_data['voiced']);$/;"	v
+voice	sources/roomcp.php	/^			$voice = explode(";",$x7c->room_data['voiced']);$/;"	v
+voice_id	sources/roomcp.php	/^				$voice_id = array_search($uco->user_info->profile['id'],$voice);$/;"	v
+voiced	lib/load.php	/^				$voiced = explode(";",$x7c->room_data['voiced']);$/;"	v
+voiced	lib/usercontrol.php	/^			$voiced = $x7c->room_data['voiced'];$/;"	v
+voiced	lib/usercontrol.php	/^			$voiced = explode(";",$voiced);$/;"	v
+voiced	lib/usercontrol.php	/^			$voiced = implode(";",$voiced);$/;"	v
+website	sources/admin.php	/^							$website = $val['website'];$/;"	v
+whatsmyclass	sources/roomcp.php	/^		function whatsmyclass($id){$/;"	f
+whatsmyclass	sources/usercp.php	/^		function whatsmyclass($id){$/;"	f
+width	lib/events.php	/^			$width = "245";$/;"	v
+width	lib/events.php	/^			$width = "322";$/;"	v
+width	lib/events.php	/^			$width = "400";$/;"	v
+width	sources/profile.php	/^		$width = $temp[0];$/;"	v
+width_percent	lib/events.php	/^		$width_percent = round((1\/($x7c->settings['events_3day_number']+1))*100)."%";$/;"	v
+will	lib/usercontrol.php	/^		var $user;	\/\/ Stores the username of the person this class will operate on$/;"	c
+will	lib/xupdater.php	/^	\/\/ This function will install a theme$/;"	f
+wreck_hell	sources/admin.php	/^	\/\/ I almost called this function wreck_hell() because its used so much$/;"	f
+x	sources/roomcp.php	/^			$x = $_GET['cp_page'];$/;"	v
+x	sources/usercp.php	/^			$x = $_GET['cp_page'];$/;"	v
+x7c	index.php	/^	$x7c = new settings();$/;"	v
+x7chat_db	lib/db/mysql.php	/^		function x7chat_db($host="",$uname="",$pword="",$db="",$die=1){$/;"	f
+x7chat_db	lib/db/mysql.php	/^	class x7chat_db {$/;"	c
+x7chat_db	lib/db/mysql_muse.php	/^		function x7chat_db($host="",$uname="",$pword="",$db="",$die=1){$/;"	f
+x7chat_db	lib/db/mysql_muse.php	/^	class x7chat_db {$/;"	c
+x7p	index.php	/^		$x7p = new profile_info($x7s->username);$/;"	v
+x7s	index.php	/^	$x7s = new session();$/;"	v
+xmbdb	lib/auth/xmb.php	/^	$xmbdb = new x7chat_db($dbhost,$dbuser,$dbpw,$dbname);$/;"	v
+xoopsdb	lib/auth/xoops.php	/^	$xoopsdb = new x7chat_db(XOOPS_DB_HOST,XOOPS_DB_USER,XOOPS_DB_PASS,XOOPS_DB_NAME);$/;"	v
+xoopsname	lib/auth/xoops.php	/^			$xoopsname = $xoopsdb->Do_Fetch_Row($q);$/;"	v
+xp	lib/ban.php	/^				$xp = " OR user_ip_email='{$x7p->profile['email']}'";$/;"	v
+xu	lib/ban.php	/^			$xu = " OR user_ip_email='$x7s->username'";$/;"	v
+xu	lib/ban.php	/^		$xu = ""; $xp = "";$/;"	v
+yabben	lib/auth/yabbse.php	/^	function yabben($data, $key){$/;"	f
+yabbse_uc	lib/auth/yabbse.php	/^		$yabbse_uc = $username[0];$/;"	v
+yabbse_uc	lib/auth/yabbse.php	/^	$yabbse_uc = $cookie[0];$/;"	v
+yabbse_up	lib/auth/yabbse.php	/^	$yabbse_up = $cookie[1];$/;"	v
+yabbsedb	lib/auth/yabbse.php	/^	$yabbsedb = new x7chat_db($db_server,$db_user,$db_passwd,$db_name);$/;"	v
+year	sources/admin.php	/^					$year = date("Y");$/;"	v
+year	sources/admin.php	/^					$year = date("Y",$row[1]);$/;"	v
+your_record	sources/frame.php	/^      $your_record = $row;$/;"	v
+your_record	sources/frame.php	/^  $your_record = array();$/;"	v

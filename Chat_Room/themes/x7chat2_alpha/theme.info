@@ -1,0 +1,16 @@
+<?PHP
+	// Theme Info File
+	// Created By X7 Chat Theme Creator
+
+	// ------------------ Theme Info ------------------ 
+	$author = "X7 Group";
+	$date = "08/22/2005";
+	$name = "X7Chat 2 Alpha";
+	$description = "This theme was used during the Alpha testing stage of X7 Chat 2.";
+	$version = "1.0";
+	$copyright = "Copyright 2005 by X7 Group";
+	$website = "";
+
+	// 1 For simple, 2 for advanced
+	$theme_type = 1;
+?>

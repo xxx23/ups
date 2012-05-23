@@ -1,0 +1,9 @@
+
+waiting_passed = "待審課程列表"
+passed_course = "已審核通過課程列表"
+number = "課程編號"
+unit = "開課單位"
+name = "開課名稱"
+teacher = "授課教師"
+material = "教材名稱"
+no_course = "目前沒有課程。"

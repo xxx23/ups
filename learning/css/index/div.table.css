@@ -1,0 +1,48 @@
+.table/**//*div table container*/
+{
+
+
+
+/**//*width:770px;*/
+}
+.row div/**//*div row cell*/
+{
+display:inline;
+width:240px;
+border-top:1px solid  #C1BBAB;
+border-left:1px solid #C1BBAB;
+}
+.header div/**//*div header cell*/
+{
+display:inline;
+width:240px;
+border-top:1px solid  #C1BBAB;
+border-left:1px solid #C1BBAB;
+text-align:center;
+background-color:#E0DDD5;
+}
+.lastcell/**//*last cell*/
+{
+border-right:1px solid #C1BBAB;
+}
+.header/**//*div table hearder*/
+{
+font:bold;
+color:navy;
+}
+.grid_rw1clr div/**//*cell in grid_rw1clr*/
+{
+    background-color: #FFFFFF;
+}
+.grid_rw2clr div/**//*cell in grid_rw1clr*/
+{
+    background-color: #F9F8F6;
+}
+.row
+{
+font:normal 12px;
+}
+.lastrow div/**//*cell in last row*/
+{
+border-bottom:1px solid #C1BBAB;
+}

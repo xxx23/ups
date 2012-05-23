@@ -1,0 +1,16 @@
+#/course_admin/course_property.tpl
+
+set_course_attribute = "課程性質設定頁面"
+manage_course_attribute = "課程性質管理"
+edit_course_attribute = "課程性質修改"
+course_attri_origin = "原始課程性質"
+course_attri_after_edit = "修改後課程性質"
+type = "類"
+submit = "送出"
+control_course_attri_page = "課程性質控制頁面"
+course_attri_number = "課程性質序號"
+course_attri_name = "課程性質名稱"
+drop = "刪除"
+modify = "修改"
+check_drop = "您確認要刪除此性質嗎？"
+add_course_attribute = "新增課程性質"

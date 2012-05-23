@@ -1,0 +1,7 @@
+#/personal_page/select_course_result.tpl
+select_course_result = "選課結果"
+check_pass = "審核通過"
+no = "無"
+checking = "審核中"
+check_not_pass = "審核未通過"
+not_pass_reason = "未通過原因"

@@ -1,0 +1,6 @@
+#/discuss_area/artibleListBackup.tpl
+discuss_title_existed = "現有的討論主題"
+post_day = "張貼日"
+nearest_reply_day = "最近回覆日"
+watch_times = "點閱次"
+reply_times = "回覆次數"

@@ -1,0 +1,53 @@
+/* CSS Document */
+
+.v1main {
+	background-color: #FFFFFF;
+	font-size: 10pt;
+	border: 1px solid #999999;
+}
+.v1sub {
+	color: #333333;
+	background-color: #BFBFFF;
+	background-image: url(../images/table_bg.gif);
+	margin: 0.1em;
+	line-height: 1.5em;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #999999;
+	border-right-color: #999999;
+	border-bottom-color: #999999;
+	border-left-color: #999999;
+}
+
+.v1sub div a:hover
+{
+	background-image: url(../images/table_bg.gif);
+}
+
+.v1sub a:link, .v1sub a:visited {
+	display: block;
+	color: #333333;
+	text-decoration: none;
+}
+
+.v1sub a:hover {
+	background-color: #CFCFCF;
+	color: #000000;
+}
+
+.v1arrow {
+	width: 10%;
+	color: #BFBFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	float: right;
+	padding-right: 1em;
+	padding-left: 0.2em;
+	font-size: 10pt;
+}
+

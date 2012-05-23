@@ -1,0 +1,6 @@
+#/discuss_area/subscribeDiscussAreaList.tpl
+personal_subscribe_article_list = "個人訂閱文章列表"
+discuss_area_name = "討論區名稱"
+subject = "主旨"
+belong_course = "所屬課程"
+want_to_delete_subscribe_this_discuss_area = "確定要刪除訂閱此討論區嗎?"

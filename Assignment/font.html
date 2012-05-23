@@ -1,0 +1,109 @@
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<script language="JavaScript">
+function dump( o )
+{
+	str = '';
+	for( i in o )
+	{
+		if( o[i] == '' ) continue;
+		str += i +':' + o[i] + '\n';
+	}
+	alert( str );
+}
+
+function adjustText( string, type, size, c )
+{
+	with(_shape.style)
+	{
+		fontSize = size;
+		fontStyle = 'normal';
+		fontWeight= 'normal';
+		if( type == '1' )
+			fontStyle = 'italic';
+		else if( type == '2' )
+			fontWeight = 'bold';
+		else if( type == '3' )
+		{
+			fontStyle = 'italic';
+			fontWeight= 'bold';
+		}
+		color = c;
+	}
+}
+
+function adjust()
+{
+	adjustText( _shape.value, type.value, fontsize.value, fontColor.value );
+	_shape.focus();
+}
+
+function font_onload()
+{
+	adjust();
+	window.returnValue = '';
+}
+
+function OnOK()
+{
+	var re = /TEXTAREA/gi;
+	var nl = /[\x0a\x0d]+/gi;
+	var str = _shape.outerHTML.replace( nl, '<br>' );
+	window.returnValue = str.replace( re, 'SPAN' );
+	window.close();
+}
+
+function OnCancel()
+{
+	window.returnValue = "";
+	window.close();
+}
+
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+
+<body onload="font_onload();">
+
+<table align="center" border="1" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" cellspacing="0" cellpadding="2">
+	<tr>
+		<td bgcolor="#000080" bordercolor="#000080" style="font-family: 標楷體; font-size: 14pt">
+			<p align="center"><font color="#FFFFFF">插入文字</font></p>
+		</td>
+	</tr>
+	<tr>
+		<td bordercolor="#000080" style="font-family: 新細明體; font-size: 12pt">
+			樣式<select size=" 1" id="type" onchange="adjust();">
+				<option selected value="0">一般</option>
+				<option value="1">斜體</option>
+				<option value="2">粗體</option>
+				<option value="3">粗斜體</option>
+				大小 
+			</select>大小<select size="1" id="size" onchange="adjust();" name="fontsize">
+				<option value="9pt">9pt</option>
+				<option selected value="12pt">12pt</option>
+				<option value="14pt">14pt</option>
+				<option value="18pt">18pt</option>
+				<option value="20pt">20pt</option>
+				<option value="24pt">24pt</option>
+				<option value="36pt">36pt</option>
+				<option value="48pt">48pt</option>
+			</select>顏色<select name="fontColor" size="1" onchange="adjust();">
+				<option selected value="red" style="background:red">紅色</option>
+				<option value="black" style="background:black">黑色</option>
+				<option value="yellow" style="background:yellow">黃色</option>
+				<option value="blue" style="background:blue">藍色</option>
+				<option value="green" style="background:green">綠色</option>
+				&nbsp; 
+			</select>
+			<input type="button" value=" 確定 " name="ok" onclick="OnOK();">
+			<input type="button" value=" 取消 " name="cancel" onclick="OnCancel();"><br>
+		</td>
+	</tr>
+</table>
+<center><textarea rows="5" id="_shape" cols="40"></textarea></center>
+
+</body>
+
+</html>

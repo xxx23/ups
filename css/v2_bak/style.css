@@ -1,0 +1,118 @@
+/* CSS Document */
+html, body, #contents {
+	min-height: 100%;
+	width: 100%;
+	height: 100%;
+}
+html>body, html>body #contents {
+	height: auto;
+}
+body {
+	background-color: #FFFFFF;
+	margin: 0;
+	padding: 0;
+	color: #333333;
+	font-size: medium;
+	letter-spacing: 0.1em;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	line-height: 1.2em;
+}
+#header {
+	height: 100px;
+	background-image: url(../../images/logo_bg.jpg);
+	background-repeat: repeat-x;
+	background-position: 937px 0px;
+	background-color: #DCFBF6;
+	margin-bottom: 2px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #669900;
+}
+#nav {
+	position: absolute;
+	top: 103px;
+	left: 1px;
+	width: 200px;
+}
+#contents {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#content {
+	margin-left: 205px;
+	margin-right: 1px;
+	margin-bottom: 0px;
+}
+.area {
+	padding: 0.2em;
+	margin-bottom: 1px;
+	border: 1px solid #669900;
+	list-style-position: inside;
+	list-style-type: none;
+	
+}
+.area_title {
+	font-size: small;
+	font-weight: normal;
+	color: #FFFFFF;
+	background-color: #669900;
+	padding: 0.2em;
+	border: 1px solid #669900;
+
+}
+.area2 {
+	background-color: #FFFFFF;
+	padding: 1em;
+	margin-bottom: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #669900;
+	border-bottom-color: #669900;
+	border-left-color: #669900;	
+}
+.area2 a:link {
+	color:#0066FF;
+	text-decoration: underline;
+	padding-bottom: 0.1em;
+}
+.area2 a:visited {	color:#666600; }
+.area2 a:hover {	
+	color:#669900;
+	text-decoration:none;
+}
+
+.area2_title {
+	font-size: small;
+	font-weight: normal;
+	color: #FFFFFF;
+	background-color: #669900;
+	padding: 1em;
+	border: 1px solid #0033CC;
+
+}
+#footer {
+	position: absolute;
+	bottom: -2px;
+	width: 100%;
+	color: #669900;
+	font-size: small;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #669900;
+	text-align: center;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	background-color: #FFFFFF;
+}
+img {
+	vertical-align: middle;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+}

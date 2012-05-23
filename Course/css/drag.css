@@ -1,0 +1,32 @@
+li{
+	width:inherit;
+	padding:inherit;
+	max-height:inherit;
+}
+
+ul.sortablelist {
+	list-style-image:none;
+	list-style-type:none;
+	margin-top:1px;
+	margin:0px;
+	padding:0px;
+	width:inherit;
+}
+
+ul.sortable li {
+	list-style-image:none;
+	list-style-type:none;
+	padding:0px;
+	margin:0px;
+	height:40%;
+	width:inherit;
+}
+
+.bar {
+	/*border:1px solid #E8A400;*/
+	background-color:#99FFFF;
+
+	/*border:1px solid #0066FF;*/
+	color:#0033FF;
+	cursor: move;
+}

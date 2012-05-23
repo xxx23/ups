@@ -1,0 +1,79 @@
+/* CSS Document */
+
+body.cal {
+	 text-align:center;
+	 margin:0;
+	 padding:0;
+}
+.select {
+	text-align: center;
+	padding-bottom: 4px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color:#769CAD;
+}
+.select a {
+	text-decoration:none;
+	font-weight: bolder;
+	color: #769CAD;
+}
+.to {
+	border: 1px solid #A0BBC6;
+	text-decoration:none;
+	color:#769CAD;
+	font-size:80%;
+	font-weight: bold;
+	line-height: 1.5em;
+	margin: 5px;
+	float: right;
+	padding-top: 0px;
+	padding-right: 2px;
+	padding-bottom: 0px;
+	padding-left: 2px;
+	cursor:pointer;
+}
+.clmonth {
+	border-collapse: collapse;
+	background-color: #FFFFFF;
+}
+.clmonth caption {
+	text-align: center;
+	padding-bottom: 4px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	font-weight: bold;
+}
+.clmonth th {
+	border: 1px solid #AAAAAA;
+	border-bottom: none;
+	background-color: #CCCCCC;
+	color: #3F3F3F;
+	font: 80% Verdana, Geneva, Arial, Helvetica, sans-serif;
+	padding-top: 2px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+	padding-left: 4px;
+}
+.clmonth td {
+	border: 1px solid #EAEAEA;
+	font: 80% Verdana, Geneva, Arial, Helvetica, sans-serif;
+	padding: 1px;
+	vertical-align: top;
+}
+.clmonth td.previous, .clmonth td.next {
+	background-color: #F6F6F6;
+	color: #C6C6C6;
+}
+.clmonth td.active {
+	background-color: #B1CBE1;
+	color: #2B5070;
+	border: 2px solid #4682B4;
+}
+.clmonth a:link, .clmonth a:visited {
+	color:#2B5070;
+	text-decoration: none;
+}
+.clmonth a:hover, .clmonth a:active {
+	color:#990000;
+	text-decoration: none;
+}

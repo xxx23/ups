@@ -1,0 +1,6 @@
+teacher_correction = '教師批閱題目'
+score = '分'
+grade = '得分：'
+reset = '清除資料'
+submit = '確定送出'
+back_to_previous_page = '返回上一頁'

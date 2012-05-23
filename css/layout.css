@@ -1,0 +1,184 @@
+/* CSS Document */
+
+html {margin: 0; padding: 0;}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Palatino Linotype", Georgia, "Times New Roman", Times, serif;
+	font-size:smaller;
+	color:#333;
+	background-color: #FFFFFF;
+}
+
+/*******************************************************************************
+Positioning rules
+*******************************************************************************/
+#head {
+	background-color:#3AA0EA;
+	background-image: url(../images/index-2_r1_c9.jpg);
+	background-repeat: repeat-x;
+}
+#wrapper {
+	left: 237px;
+	float:left;
+	height: 176px;
+	background-image: url(../images/wrapper_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	width: 757px;
+}
+#txt {
+
+	font-size: 12px;
+	line-height: 1.4;
+	color: #333333;
+}
+#nav {
+	background-image: url(../images/index-2_r2_c33.jpg);
+	background-repeat: repeat-x;
+	position: absolute;
+	text-align: left;
+	float: left;
+	width: 100%;
+}
+
+#footer {
+	position: static;
+	bottom: 0px;
+	z-index: 100;
+}
+
+#user-info {
+	float:left;
+	left: 0px;
+	background-image: url(../images/index-2_r2_c1-1.jpg);
+	font-size: 12px;
+	color: #FFFFFF;
+	background-repeat: no-repeat;
+	height: 176px;
+	width: 237px;
+	text-align: center;
+	vertical-align: middle;
+	margin: 0px;
+	padding-top: 50px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+#user-info a:link, #user-info a:visited {
+	color: #FFFF99;
+	text-decoration: underline;
+}
+#user-info a:hover, #user-info a:active {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+/*
+h1, h2 {
+	font-size: 22px;
+	margin: 0;
+	color: #040;  The header and footer have backgrounds, to cover the 2-tone body BG 
+	border-top: 4px solid #000;
+	border-bottom: 5px solid #000;
+	padding-top: 3px;
+	padding-right: 0;
+	padding-bottom: 3px;
+	padding-left: 1em;
+}
+
+h2 {background-color: #638; }
+*/
+div#columns {
+}
+div#columnleft {
+	position: relative;
+	left: 25px;
+	color: #333;
+	top: 180px;
+	width: 210px;
+	float: left;
+	border: 0px solid #CCCCCC;
+	padding-bottom: 200px;
+}
+
+div#columnleft-close {  /*use when function close*/
+	position: absolute;
+	left: 25px;
+	color: #333;
+	top: 260px;
+	border: 1px solid #FFFFFF;
+	width: 10px;
+	overflow: hidden;
+	clear: left;
+}
+div#columnmiddle { /*normal state*/
+	background-color: #FFFFFF;
+	margin-top: 180px;
+	margin-right: 250px;
+	margin-bottom: 0;
+	margin-left: 250px;
+	height: 100%;
+}
+div#columnmiddle1 { /*normal state*/
+	background-color: #FFFFFF;
+	margin-top: 45px;
+	margin-right: 250px;
+	margin-bottom: 0;
+	margin-left: 250px;
+	height: 100%;
+}
+div#columnmiddle-close-left { /*left function close state*/
+	background-color: #FFFFFF; 
+	margin-top: 180px;
+	margin-right: 240px;
+	margin-bottom: 0;
+	margin-left: 40px;
+}
+div#columnmiddle-close-right { /*right function close state*/
+	background-color: #FFFFFF; 
+	margin-top: 180px;
+	margin-right: 40px;
+	margin-bottom: 0;
+	margin-left: 240px;
+}
+div#columnmiddle-close-all { /*both left and rightfunction are close state*/
+	background-color: #FFFFFF; 
+	margin-top: 180px;
+	margin-right: 40px;
+	margin-bottom: 0;
+	margin-left: 40px;
+}
+
+div#columnright {
+	position: relative;
+	right: 25px;
+	color: #333;
+	top: 180px;
+	width: 210px;
+	float: right;
+	overflow: visible;
+	padding-bottom: 200px;
+	border: 0px solid #CCCCCC;
+}
+div#columnright-close {  /*use when function close*/
+	position: absolute;
+	right: 25px;
+	color: #333;
+	top: 260px;
+	border: 0px solid #ffffff;
+	width: 10px;
+	overflow: hidden;
+	clear: right;
+}
+/*.content {
+position: relative;
+top:10px;
+}*/
+/*iframe {
+	top: 0px;
+	border: 0;
+	width: 100%;
+	height:100%;
+	overflow: visible;
+}*/

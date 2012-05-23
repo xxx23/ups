@@ -1,0 +1,36 @@
+/* CSS Document */
+
+.function {
+	margin: 3px;
+	border: 1px solid #CCCCCC;	
+}
+.function-head {
+	text-align: center;
+}
+
+.function-content {
+	text-align: center;
+	background-color: #E6E6E6;
+}
+
+.function-bottom {
+	text-align: center;
+}
+
+.controlbar {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: #F4F4F4;
+}
+
+.float-right {
+	float:right;
+	border: 1px solid #CCCCCC;
+}
+.float-left {
+	float:left;
+	border: 1px solid #CCCCCC;
+}
+.float-hidden {
+	visibility: hidden;
+}

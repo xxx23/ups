@@ -1,0 +1,52 @@
+/* CSS Document */
+
+#navlist
+{
+	width: 95%;
+	color: #0066FF;
+	font-weight: normal;
+	margin: 0px;
+	padding: 1px;
+}
+
+#navlist li
+{
+	margin: 0px;
+	text-align: left;
+	border-bottom-width: 0px;
+	border-bottom-style: solid;
+	list-style-type: none;
+	display: inline;
+	padding-right: 1px;
+	padding-bottom: 1em;
+	padding-left: 1px;
+	border-bottom-color: #FFFFFF;
+	padding-top: 1em;
+}
+
+#navlist li a
+{
+	text-decoration: none;
+	padding-left: 2em;
+	padding-right: 2em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	line-height: 34px;
+}
+
+#navlist li a:link, #navlist li a:visited {
+	color: #0066FF;
+	text-decoration: none;
+	background-image: url(../../images/L2/0.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#navlist li a:hover
+{
+	color: #003366;
+	background-image: url(../../images/L2/0b.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	border-bottom-color: #003366;
+}

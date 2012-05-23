@@ -1,0 +1,86 @@
+/* CSS Document */
+
+body {
+	margin: 0;
+	background-color: #FFFFFF;
+	text-align: center;
+	font-size: 10pt;
+	color: #000000;
+	padding-top: 15px;
+	padding-right: 5px;
+	padding-bottom: 15px;
+	padding-left: 5px;
+}
+
+body.indx {
+	margin: 0;
+	padding: 0;
+	background-color: #FFFFFF;
+	text-align: left;
+	font-size: 10pt;
+	color: #000000;
+}
+.top {
+	overflow: hidden;
+	width: 100%;
+	background-color: #FFFFFF;
+	height: 160px;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+.mymenu {
+	background-image: url(../../images/personal/menu_bg.jpg);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	text-align: left;
+	padding-left: 5px;
+}
+.mymenu img {
+	border:0;
+	margin:0;
+	padding:0;
+}
+.mycalendar {
+}
+.change_mode {
+}
+.admin_menu {
+	background-image: url(../images/admin_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	padding-bottom: 50px;
+}
+.inner {
+	margin: 0px;
+	padding: 0px;
+}
+.left {
+	width:200px;
+	background-color: #FFFFFF;
+	border: 0px solid #999933;
+	float: left;
+}
+.left img {
+	border:0;
+	margin:0;
+	padding:0;
+}
+.personal_info {
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	font-weight: bold;
+	color: #000000;
+}
+.right {
+	background-color: #FFFFFF;
+	border: 0px solid #FF0000;
+	text-align: center;
+	width: 100%;
+}
+.right iframe {
+	width: 90%;
+	padding: 0px;
+	border: 1px solid #CCCCCC;
+	margin: 10px;
+}

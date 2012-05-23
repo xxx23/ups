@@ -1,0 +1,70 @@
+.datatable {
+	border-collapse: collapse;
+	width: 100%;
+	border-top-width: 10px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #EBA9AA;
+	border-right-color: #EBA9AA;
+	border-bottom-color: #EBA9AA;
+	border-left-color: #EBA9AA;
+}
+.datatable tr {
+	background-color: #EBA9AA;
+}
+.datatable tr.detail, .datatable tr.detail td{
+	background-color: #F4F4F4;
+	border-top-width: 0;
+	border-right-width: 0;
+	border-bottom-width: 1px;
+	border-left-width: 0;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+	color: #666666;
+}
+.datatable tr.tr2 {
+	background-color: #FCEFEF;
+}
+.datatable tr.tr3 {
+	background-color: #FFFFFF;
+}
+.datatable td {
+	text-align: left;
+	padding: 0.3em;
+	vertical-align: top;
+	border: 1px solid #E8E8E8;
+}
+.datatable th {
+	font-weight: normal;
+	text-align: center;
+	padding: 0.3em;
+	vertical-align: top;
+	color: #666666;
+	background-color: #EBA9AA;
+	margin-right: 2px;
+}
+.datatable th a:link, .datatable th a:visited  {
+	color:#666666;
+	font-weight:normal;
+	text-decoration:underline;
+}
+.datatable th a:hover, .datatable th a:active {
+	color: #000000; 
+	text-decoration: none;
+}
+.datatable a:link {
+	text-decoration:underline;
+	color: #990000;
+}
+.datatable a:hover {
+	text-decoration:none;
+}
+.datatable a:visited {
+	color:#000000;
+	text-decoration:underline;
+}

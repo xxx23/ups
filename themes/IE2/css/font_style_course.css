@@ -1,0 +1,243 @@
+/* CSS Document */
+
+.name {
+	color:#000000;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 5px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.display_style {
+	float:right;
+}
+.admin_li {
+	list-style-type: none;
+	list-style-position: inside;
+	line-height: 1.2em;
+	background-color: #FFFFFF;
+	margin-top: 5px;
+	margin-right: 15px;
+	margin-bottom: 5px;
+	margin-left: 15px;
+	text-indent: 5px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+}
+.admin_li li {
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #CCCCCC;
+	padding: 0px;
+	list-style-position: inside;
+	text-indent: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+}
+.admin_li li.cate {
+	color: #0000CC;
+	list-style-position: inside;
+	text-indent: 0px;
+	background-color: #F4F4F4;
+	font-weight: bold;
+	margin-top: 0px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+	padding: 0px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	border-top-width: 5px;
+	border-top-style: solid;
+	border-top-color: #F4F4F4;
+}
+.admin_li a {
+	text-decoration: none;
+	color: #333333;
+}
+.admin_li a:hover {
+	text-decoration: none;
+	font-weight: bold;
+}
+.personal_info a {
+	text-decoration:none;
+	float: right;
+	color:#FF0000;
+	font-weight: bold;
+	margin: 2px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 3px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #F4F4F4;
+	border-right-color: #F4F4F4;
+	border-bottom-color: #E1E1E1;
+	border-left-color: #F4F4F4;
+	padding-top: 2px;
+	padding-right: 5px;
+	padding-bottom: 2px;
+	padding-left: 5px;
+}
+/*h1 {
+	font-size: 12pt;
+	line-height: 46px;
+	font-weight: 600;
+	color: #2177BC;
+	background-image: url(../../../images/item.jpg);
+	background-repeat: no-repeat;
+	background-position: left center;
+	text-indent: 35px;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	text-align: left;
+}
+ */
+h1{
+   text-align:left;
+   color: #000;
+   background-image: url(../images/apply_course/itemcourse.jpg);
+   background-repeat: no-repeat;
+   background-position: left center;
+   text-indent:20px;
+   font-size:10pt;
+   margin:0px;
+   padding: 20px 15px 15px 15px;
+}
+
+h2 {
+	font-size: 10pt;
+	font-weight: 800;
+	color: #000000;
+	background-image: url(../images/apply_course/itemh2.jpg);
+	background-repeat: no-repeat;
+	background-position: left center;
+	text-indent: 30px;
+	padding-top: 10px
+    text-align: left;
+	line-height: 34px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-left: 35px;
+}
+h3 {
+}
+.datatable {
+    text-align:center;
+    border-collapse: collapse;
+	font-size: 10pt;
+	color:#555555;
+	border-top-width: 0px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-color: #E1AD9B;
+	width:90%;
+}
+.datatable td {
+	text-align: left;
+	vertical-align: middle;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: dashed;
+	border-left-style: solid;
+	border-color: #E1AD9B;
+	padding-top: 0.2em;
+	padding-right: 0.5em;
+	padding-bottom: 0.2em;
+	padding-left: 13px;
+}
+.datatable th {
+    text-align:center;
+    font-weight: 800;
+    color:#333333;
+	vertical-align: middle;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #E1AD9B;
+	border-right-color: #E1AD9B;
+	border-bottom-color: #E1AD9B;
+	border-left-color: #E1AD9B;
+	background-image: url(../images/apply_course/th_bg.png);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	margin: 0px;
+	height: 40px;
+	padding-top: 0em;
+	padding-right: 0.5em;
+	padding-bottom: 0em;
+	padding-left: 0em;
+}
+.datatable th img {padding:0; margin:0;
+/*add by aeil*/
+position:relative;
+float:left;
+}
+.al-left {
+	text-align: right;
+}
+.fl-rgt {
+	float: right;
+}
+.intro {
+	color: #663300;
+	background-color: #FFFFCC;
+	margin-top: 5px;
+	margin-right: 20px;
+	margin-bottom: 5px;
+	margin-left: 20px;
+	padding: 5px;
+	text-align: left;
+	font-size: 10pt;
+}
+.imp {
+	font-weight: bold;
+	color: #339933;
+}
+hr {
+	color: #0A9BD0;
+	height: 1px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+ul.ul1 {
+	text-align: left;
+	list-style-image: url(../images/icon/li1.gif);
+}
+
+.searchbar{
+text-align:center;
+background:#eee;
+border-style:dashed;
+border-width:2px;
+border-color:#ccc;
+}

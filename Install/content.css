@@ -1,0 +1,85 @@
+/* CSS Document */
+
+#position {
+	color:#5599FF;
+	float:left;
+}
+#mode-control {
+	color:#666666;
+	float:right;
+}
+.tab {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+	padding-bottom: 0.2em;
+	margin-bottom: 0.5em;
+}
+h1 {
+	color: #2177BC;
+	background-image: url(../images/h2_bg.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	text-indent: 20px;
+	font-size: 12pt;
+	margin: 0px;
+	padding: 15px;
+}
+.address {
+	color:#5599FF;
+	text-align:left;
+	margin: 0px;
+	padding: 0px;
+}
+.intro {
+	width: 90%;
+	margin-left: auto;
+	margin-top: 0em;
+	background-color: #F4F4F4;
+	padding-top: 0.5em;
+	padding-right: 1em;
+	padding-bottom: 0.5em;
+	padding-left: 1em;
+	margin-right: auto;
+}
+.imp {
+	font-weight: bold;
+	color: #FF6600;
+}
+body {
+	font-size: 10pt;
+	margin:0;
+	padding:0;
+}
+
+a:link {
+	color: #5599FF;
+}
+a:visited {
+	color: #2177BC;
+}
+a:hover, a:active {
+	color:#FF6600;
+	text-decoration:none;
+}
+.al-left {
+	text-align: right;
+	padding-right: 1em;
+}
+input.btn {
+	color: #0068BD;
+	background-repeat: repeat-x;
+	background-position: bottom;
+	border: 1px outset #CEE9FF;
+	background-image: url(../images/table_bg.gif);
+	background-color: #FFFFFF;
+}
+img {
+	border:0;
+}
+
+div.upload{
+	position: absolute;
+	text-align: center;
+	background-color: #5599FF;
+}

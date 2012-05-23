@@ -1,0 +1,111 @@
+///////////////////////////////////////////////////////////////
+//                                                           //
+//     X7 Chat Installation Instructions - Version 2.0.0     //
+//                                                           //
+///////////////////////////////////////////////////////////////
+
+*********************
+*****  Contents *****
+*********************
+	1) Requirements
+	2) Pre-Install
+	3) Installation Instructions
+	4) Post-Install
+	
+
+*********************
+***  Requirements ***
+*********************
+	It is recommend that you use an FTP client for uploading and changing
+	permissions on files and directories.  For assistance in obtaining and
+	using an FTP client please visit http://help.x7chat.com.
+
+	X7 Chat requires that you have a properly configured HTTP server which
+	supports PHP Version 4.2.2* or higher.  X7 Chat also requires some type 
+	of database server.  X7 Chat provides built in support for the following
+	database servers:
+		- MySql 3.23.54* or higher;
+		
+	Additional modules may be available at http://x7chat.com that will allow
+	you to use different database servers.  Instructions for installing 
+	these should come with them.
+		
+	If you are unable to find a module for your database, you may also 
+	program your own  database module for X7 Chat to use.  Intermediate to 
+	advanced knowledge of PHP is required to do this.  Support is not 
+	provided, but documentation is available at http://help.x7chat.com under
+	the developer section.
+	
+	
+	* X7 Chat may function properly with some lower versions but Tech 
+	  Support will not be provided to people who do not meet these system 
+	  requirements.
+
+*********************
+***  Pre-Install ****
+*********************
+	X7 Chat will automatically detect Postnuke and configure itself to use the same
+	database as Postnuke.  If you are an experienced user you may configure X7 Chat to
+	use a different database during installation.  Creating a database beforehand
+	is not necessary.
+	
+*********************
+***  Installation ***
+*********************
+	Follow these steps to install X7 Chat:
+	
+		Step 1) Upload all of the files and directories included with this 
+		download to your webserver.  You should put them in a new directory
+		on your server.  This new directory *MUST* be directly inside the Postnuke 
+		directory.  After uploading you need to be able to access the chat room by 
+		going to http://yoursite.com/Postnukedirectory/x7chatdirectory/install.php.  
+		Everything should be uploaded in BINARY mode**.
+		
+		WARNING: X7 Chat should NOT be placed into the Postnuke modules directory,
+		placing X7 Chat in the modules directory will cause integration to fail.
+		
+		Step 2) CHMOD 777* the following files and directorys:
+					- /logs/
+					- /mods/
+					- /uploads/
+					- /config.php
+					
+		Step 3) Visit http://yourwebsite.com/Postnukedirectory/x7chatdirectory/install.php.
+		Of course you must replace "yourwebsite.com" with the actual address of
+		your site, "/Postnukedirectory" with the actual path to your board.  And
+		"x7chatdirectory" with the actual path to the X7 Chat directory.
+		The install.php file will guide you through the rest of the installation 
+		process.  While running the installation file it will automatically configure 
+		itself to integrate with Postnuke, leave the default settings on step 1 in order 
+		for this integration to work properly.
+		
+		Step 4) Follow these directions to add a link to the chat room on your Postnuke.
+			1) Enter your postnuke Admin panel and click the Blocks button.
+			2) Click "Edit" next to the "Main Menu" block.
+			3) At the bottom you will find empty boxes to allow you to add a new
+			link to the main menu.  Into the first box put "Chat" or another
+			appropriate name.  Into the second box put "./x7chat", but replace 
+			"x7chat" with the actual name of the directory that you installed X7 Chat
+			in.  Into the last box put a description.  When you have filled out
+			all three boxes press the Commit Changes button at the bottom.
+		
+		Assistance) If you need assistance with these instructions please
+		visit http://help.x7chat.com.
+		
+		* If using a Windows server then the file needs to be made
+		writeable by everyone.  After installation set the file so it is
+		no longer writeable to everyone.
+		
+		** This is usually the default setting for FTP programs.  If you don't
+		know how to change it then chances are its already on BINARY.  Images and 
+		sound files that are included with X7 Chat will not work unless they
+		are uploaded in BINARY mode.
+		
+*********************
+***  Post-Install ***
+*********************
+	After installation you MUST deleted the install.php file.  If you do not
+	anybody can get administrator access.
+	
+	For added security you may change the permissions on config.php to their
+	former values.

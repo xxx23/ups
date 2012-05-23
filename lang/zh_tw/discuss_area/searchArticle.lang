@@ -1,0 +1,10 @@
+#/discuss_area/searchArticle.tpl
+search_discuss_area_article = "搜尋討論區文章"
+search_string = "搜尋字串"
+can_enter_multiple_query_string_split_by_space = "可輸入多個查詢字(以空白鍵隔開)"
+search_target = "搜尋目標"
+article_title = "文章標題"
+author = "作者"
+article_content = "文章內容"
+start_search = "開始搜尋"
+re_enter = "重新輸入"

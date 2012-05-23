@@ -1,0 +1,89 @@
+.datatable {
+	border: 1px solid #669900;
+	border-collapse: collapse;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+.datatable td {
+	text-align: left;
+	padding: 0.2em;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #669900;
+	border-bottom-color: #669900;
+	vertical-align: top;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: dotted;
+	border-left-style: dotted;
+	border-right-color: #669900;
+	border-left-color: #669900;
+}
+.datatable th {
+	background-color: #669900;
+	font-weight: normal;
+	text-align: left;
+	padding: 0.2em;
+	color: #FFFFFF;
+	vertical-align: top;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: dotted;
+	border-bottom-style: solid;
+	border-left-style: dotted;
+	border-top-color: #669900;
+	border-right-color: #669900;
+	border-bottom-color: #669900;
+	border-left-color: #669900;
+}
+.datatable caption {
+	background-color: #CCCCCC;
+	color: #0033FF;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	border: 1px solid #789AC6;
+}
+.datatable tr:hover, .datatable tr.hilite {
+	background-color: #E8F1E0;
+	color: #000000;
+}
+.datatable tr.test {
+	background-color: #E8F1E0;
+}
+.inner {
+	padding-right: 1.5em;
+	padding-left: 1.5em;
+}
+
+.w-table {
+	border: 1px solid #669900;
+	border-collapse: collapse;
+	width: 95%;
+	margin-right: auto;
+	margin-left: auto;
+}
+.w-table td {
+	text-align: left;
+	border: 1px solid #669900;
+	vertical-align: top;
+	padding: 0.2em;
+}
+.w-table th {
+	font-weight: normal;
+	text-align: left;
+	padding: 0.2em;
+	border: 1px solid #669900;
+	vertical-align: top;
+	background-color: #E8F1E0;
+	color: #666600;
+}
+.w-table tr.test {
+	background-color: #E8F1E0;
+	padding: 0.2em;
+}

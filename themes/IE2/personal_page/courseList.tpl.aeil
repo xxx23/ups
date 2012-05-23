@@ -1,0 +1,256 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>課程列表</title>
+<link href="{$tpl_path}/css/font_style.css" rel="stylesheet" type="text/css" />
+<link href="{$tpl_path}/css/table.css" rel="stylesheet" type="text/css" />
+<link href="{$tpl_path}/css/form.css" rel="stylesheet" type="text/css" />
+<link href="{$tpl_path}/css/tabs.css" rel="stylesheet" type="text/css" />
+<link href="{$tpl_path}/css/content.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript"><!--
+{literal}
+function checkBeginCourse(begin_course_cd){
+	if(confirm("是否確認[開課]"))
+		window.location="../Course/course_manage.php?begin_course_cd="+ begin_course_cd ;
+	else
+		alert("放棄確認");
+}
+
+function send_form(obj)
+{
+	var myForm=document.forms['guest_course_list'];
+	myForm.action = 'courseList.php';
+	myForm.method = 'POST';
+	myForm.submit();
+	return;
+}
+
+function courseEndRemind()
+{
+{/literal}
+	{if $alert_msg != NULL}
+		alert("{$alert_msg}");
+	{/if}
+{literal}
+}
+{/literal}
+--></script>
+</head>
+<body bgcolor="#FFFFFF" style="text-align:center;" onload="courseEndRemind()">
+{if $role_cd != 4}
+{if $role_cd == 3}
+<h1>我的課表</h1>
+{else}
+<h1>課程列表</h1>
+{/if}
+<table class="datatable">
+<tr>
+	{if $role_cd != 4}
+	<th style="text-align:center;" width="9%">課程編號</th>
+	{/if}
+	<th style="text-align:center;" width="14%">子類別</th>
+	<th style="text-align:center;">課程名稱</th>
+	<th style="text-align:center;" width="10%">課程屬性</th>
+	<th style="text-align:center;" width="10%">認證時數</th>
+	<th style="text-align:center;" width="10%">課程時數</th>
+    {if $role_cd  != 1}
+    <th style="text-align:center;" width="10%">授課教師</th>
+    {/if}
+	{if $role_cd == 1}
+    <th style="text-align:center;">課程期間</th>
+    {else}
+    <th style="text-align:center;">修課期間</th>
+    {/if}
+	{if $role_cd != 4 && $role_cd != 1} <!-- guest visit -->
+	<th style="text-align:center;" width="5%">退選</th>
+	{/if}
+	{if $role_cd == '1' && 1 != 1}
+	<th style="text-align:center;">是否開放旁聽</th>
+	{/if}
+</tr>
+<!-------------------------------課程列表----------------------------------->
+{section name=counter loop=$courseList}
+<tr>
+	{if $role_cd != 4}
+	<td style="text-align:center;">
+  		{$courseList[counter].inner_course_cd}
+	</td>
+	{/if}
+	<td style="text-align:center;">
+		{$courseList[counter].unit_name}
+	</td>
+	<td>
+	<a href="courseList_intoClass.php?begin_course_cd={$courseList[counter].begin_course_cd}" target="_top">{$courseList[counter].begin_course_name}</a>
+	</td>
+	<td style="text-align:center;">
+		{if $courseList[counter].attribute == 0 } 自學 {else} 教導 {/if}
+	</td>
+	<td style="text-align:center;">
+		{$courseList[counter].certify}小時
+	</td>
+    <td style="text-align:center;">
+        {$courseList[counter].criteria_content_hour}
+    </td>
+    {if $role_cd != 1}
+	<td style="text-align:center;">
+		{if $courseList[counter].attribute == 1}
+		{section name=num loop=$courseList[counter].personal_id}
+			<a href="{$webroot}Learner_Profile/queryTeacher.php?p={$courseList[counter].personal_id[num]}" target="_blank">{$courseList[counter].personal_name[num]}</a><br/>
+		{/section}<center>
+		{else}---{/if}</center>
+	</td>
+    {/if}
+    
+    <!-- 設定修課期間 -->
+    {if $courseList[counter].attribute == 1}
+	<td style="text-align:center;">
+		{$courseList[counter].course_period}
+	</td>
+    {else}
+    <td style="text-align:center;">
+		{$courseList[counter].course_period}
+    </td>
+    {/if}
+
+	{if $role_cd != 4 && $role_cd != 1}
+	<td style="text-align:center;">
+		{if $courseList[counter].is_allow_drop == 1}
+		<a href="./courseList.php?action=drop&begin_course_cd={$courseList[counter].begin_course_cd}" onclick="return confirm('您確定要退選此課程？')"><img src="../images/257.gif" alt="退選"></a>
+		{else $courseList[counter].is_allow_drop == 0 }
+		選課時間已過
+		{/if}
+	</td>
+	{/if}
+	{if $role_cd == '1' && 1 != 1}
+	<td style="text-align:center;">
+		<a href='./courseList.php?action=select&course_cd={$courseList[counter].course_cd}&need_validate_select={$courseList[counter].need_validate_select}'>{$courseList[counter].select}</a>
+	</td>
+	{/if}
+</tr>
+{/section}
+</table>
+<br/>
+{if $role_cd == '3'}
+<hr width="100%" style="color: #fff; background-color: #fff; border: 1px dotted #6699FF; border-style: none none dotted;">
+
+<!--<input type="button" value="觀看所有課程" onClick="javascript:location.href='../Course_Admin/stu_show_all_course.php'" /> -->
+{/if}
+{if $role_cd == '1' && $num != 0}
+<hr width="100%" style="color: #fff; background-color: #fff; border: 1px dotted #6699FF; border-style: none none dotted;">
+
+<h2>新進課程</h2>
+<p class="intro">
+操作說明：<br />
+<span class="imp">新進課程</span>：剛開設尚未做設定的課程。<br />
+按下確認，可以輸入<span class="imp">課程大綱</span>與<span class="imp">課程進度</span>。
+</p>
+<table class="datatable">
+	<tr>
+		<th><img src="{$tpl_path}/images/th_head.png" alt="" width="12" height="54" align="absmiddle"/>課程編號</th><th><img src="{$tpl_path}/images/th_head.png" alt="" width="12" height="54" align="absmiddle"/>開課單位</th><th>開課名稱</th><th>授課教師</th><th>開課確認</th>
+	</tr>
+	{foreach from=$new_course_data item=course}
+	<tr>
+		<td>{$course.inner_course_cd}</td><td>{$course.unit_name}</td><td>{$course.begin_course_name}</td>
+		<td>{$course.personal_name}</td>
+		<!--<td><a href="{$course.code_path}?begin_course_cd={$course.begin_course_cd}" >確認</a></td>-->
+		<td><input class="btn" type="button" name="checkButton" value="確認" onClick="checkBeginCourse({$course.begin_course_cd});"></td>
+	</tr>	
+	{foreachelse}
+	<tr><td colspan="5" style="text-align:center;">目前沒有課程需要確認</td></tr>
+	{/foreach}
+</table>
+{/if}
+{if $role_cd != 4}
+<div class="button001"><a href="{$WEBROOT}Weboffice/my_reservation_list.php">預約會議清單</a></div><br/>
+{/if}
+<br/>
+{if $role_cd == '1'}
+<h1>我的教材</h1>
+
+<p align="left"><span>教師個人教材管理頁面，包含教材之新增、修改、刪除、進入編輯、匯出等功能。</span>
+<div class="button001" style="float:left;"><a href="{$WEBROOT}Teaching_Material/textbook_manage_personal.php">按此進入</a></div><br/>
+
+</p>
+<br/>
+
+<h1>我的課程大綱</h1>
+<p align="left"><span>教師課程管理頁面，包含課程大綱及選課須知之新增、修改、刪除、進入編輯等功能。</span>
+</span><div class="button001" style="float:left;"><a href="{$WEBROOT}Course/course_manage_personal.php">按此進入</a></div>
+</p>
+{/if}
+{elseif $role_cd == 4}
+<H1>課程總覽</H1>
+<div class="describe"> 小提示：觀看全部課程，或選擇課程性質看該性質所有課程。<br>
+也可進入&quot;課程搜尋&quot;，搜尋您想找的課程。</div>
+<form id="guest_course_list" name="guest_course_list" method="post" action="courseList.php">
+<div class="searchbar" style="margin:auto auto" ><span>
+<form id="guest_course_list"  name="guest_course_list" method="post" action="courseList.php">
+      <input type="hidden" value="{$or_type}" name="or_type">
+      </input>
+      <input type="hidden" value="{$or_sub_type}" name="or_sub_type">
+      </input>
+      <div class="searchlist"><select id="coursetype" name="coursetype" onChange="send_form(this);">
+	    <option value="0" {if $coursetype eq 0} selected {/if}>(全部課程)</option>
+	    <option value="1" {if $coursetype eq 1} selected {/if}>依身份類別</option>
+	    <option value="2" {if $coursetype eq 2} selected {/if}>依課程性質</option>
+      </select>
+  　{if $coursetype != 0}
+  <select id="sub_coursetype" name="sub_coursetype" onChange="send_form(this);">
+    
+	{section name=counter loop=$all}
+		
+    <option value="{$all[counter].number}" {if $sub_coursetype eq $all[counter].number}selected{/if}>{$all[counter].type_name}</option>
+    
+	{/section}
+
+  </select>
+  {/if}</div>
+  一共{$all_course_number}筆
+  <select name="page_number" length="30" onChange="send_form(this);">
+    
+    {section name=counter loop=$total_page_index}
+        
+    <option value="{$total_page_index[counter].count}" {if $page_number eq $total_page_index[counter].count}selected{/if}>{$total_page_index[counter].index}</option>
+    
+    {/section}
+
+  </select>
+  / {$total_page_number}
+  {if $before_current_page_yes == 1}
+  <a href="courseList.php?coursetype={$coursetype}&sub_coursetype={$sub_coursetype}&p={$awaypage}&or_type={$coursetype}&or_sub_type={$sub_coursetype}">上一頁</a>
+  {/if}
+  {if $after_current_page_yes == 1}
+  <a href="courseList.php?coursetype={$coursetype}&sub_coursetype={$sub_coursetype}&p={$nextpage}&or_type={$coursetype}&or_sub_type={$sub_coursetype}">下一頁</a>
+  {/if}
+  <div class="button001"><a href="./courseSearch.php">課程搜尋</a></div>
+</form></div>
+<br/>
+<hr width="90%" style="color: #fff; background-color: #fff; border: 1px dotted #6699FF; border-style: none none dotted;">
+<br/>
+<table class="datatable" style="width:90%">
+<tr>
+    {if $coursetype != 0}
+    <th width="12%" style="text-align:center;">{if $coursetype eq 1}子類別{elseif $coursetype eq 2}課程性質{/if}</th>
+    {/if}
+	<th style="text-align:center;">課程名稱</th>
+	<th width="12%" style="text-align:center;">課程屬性</th>
+	<th width="12%" style="text-align:center;">認證時數</th>
+	<th width="12%" style="text-align:center;">授課教師</th>
+	<th width="12%" style="text-align:center;">修課期間</th>
+</tr>
+{section name=counter loop=$all_course}
+<tr>
+        {if $coursetype != 0}
+        <td style="text-align:center;">{$all_course[counter].begin_unit_name}</td>
+        {/if}
+        <td><a href="courseList_intoClass.php?begin_course_cd={$all_course[counter].begin_course_cd}" target="_top">{$all_course[counter].begin_course_name}</a></td>
+        <td style="text-align:center;">{if $all_course[counter].attribute == 0}自學{elseif $all_course[counter].attribute == 1}教導{/if}</td>
+        <td style="text-align:center;">{$all_course[counter].certify}</td>
+        <td style="text-align:center;">{if $all_course[counter].attribute == 0} --- {elseif $all_course[counter].attribute == 1}{/if}</td>
+        <td style="text-align:center;">---</td>
+</tr>
+{/section}
+</table>
+{/if}
+</body>
+</html>

@@ -1,0 +1,66 @@
+ul#tabnav {
+	list-style-type: none;
+	padding-left: 0px;
+	padding-bottom: 33px;
+	font-size: medium;
+	font-weight: normal;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #669900;
+	letter-spacing: 0.2em;
+	margin: 0;
+}
+ul#tabnav li {
+	float: left;
+	background-color: #669900;
+	color: #FFFFFF;
+	border: 1px solid #669900;
+	margin-right: 1px;
+	margin-top: 1px;
+	background-image: url(../../images/small/pic1g.gif);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	padding-top: 6px;
+	padding-right: 10px;
+	padding-bottom: 6px;
+	padding-left: 20px;
+}
+ul#tabnav a:link, ul#tabnav a:visited {
+	display: block;
+	color: #FFFFFF;
+	background-color: transparent;
+	text-decoration: none;
+}
+ul#tabnav a:hover {
+	color: #ECFF00;
+}
+body#news li.news, body#course li.course, body#articles li.articles, body#buy li.buy {
+	color: #669900;
+	background-color: #FFFFFF;
+	font-weight: bold;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #FFFFFF;
+}
+body#news li.news a:link, body#news li.news a:visited,
+body#contact li.contact a:link, body#contact li.contact a:visited,
+body#articles li.articles a:link, body#articles li.articles a:visited,
+body#buy li.buy a:link, body#buy li.buy a:visited {
+	color: #000000;
+	background-color: #669900;
+}
+body#tabA li.tabA, body#tabB li.tabB, body#tabC li.tabC, body#tabD li.tabD {
+	color: #669900;
+	background-color: #FFFFFF;
+	font-weight: bold;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #FFFFFF;
+}
+body#tabA li.tabA a:link, body#tabA li.tabA a:visited,
+body#tabB li.tabB a:link, body#tabB li.tabB a:visited,
+body#tabC li.tabC a:link, body#tabC li.tabC a:visited,
+body#tabD li.tabD a:link, body#tabD li.tabD a:visited {
+	color: #000000;
+	background-color: #669900;
+}

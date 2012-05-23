@@ -1,0 +1,176 @@
+/***
+
+
+FILE:   default.css
+DATE:   2006/11/23
+AUTHOR: zqq
+MODIFY: 2006/12/27 seven
+
+|---------------|
+|---+-----------|
+|	|			|
+| 	|	 		|
+|---+-----------|
+|---------------|
+樣式如上圖
+定義default的網頁樣式
+
+***/
+
+
+/* ie only styles */
+/* commented backslash hack v2 \*/ 
+* html body{height:100%;} 
+/* end hack */ 
+
+* html body {
+	overflow-y:hidden;
+	background-color: #DCFBF6;
+	font-family: "新細明體", Georgia;
+	font-size: medium;
+	color: #000000;
+}
+
+* html #top {
+	position: absolute;
+	width:100%;
+	padding: 0;
+	height: 100px;
+	z-index:999;
+	overflow:auto;
+	background-image: url(../images/logo_bg.jpg);
+	background-repeat: repeat-x;
+	background-position: 937px;	/*border:1px solid #000;*/
+	margin: 0px;
+	top: 0px;
+}
+ 
+*html #function{
+	background-color:#AED2DC;
+	position: absolute;
+	left: 0px;
+	width:200px;
+	height: 300px;
+	z-index:999;
+	overflow:auto;
+	margin: 0px;
+	top: 200px;
+	background-image: url(../images/menu1_bg.jpg);
+} 
+ 
+* html #left {
+	padding:0;
+	overflow:auto;
+	height:100%;
+	float:left;
+	width:200px;
+	background-color: #D2F8F3;	/*border:1px solid #000;*/
+}
+* html #right {
+	padding:0;
+	overflow:auto;
+	height:100%;
+	float:right;
+	position: absolute;
+	left: 0px;	/*border:1px solid #000;*/
+}
+
+* html #bottom {
+	background-color:#DCFBF6;
+	position: absolute;
+	width:100%;
+	height: 40px;
+	z-index:999;
+	overflow:auto;
+	bottom: 0px;	/*border:1px solid #000;*/
+	color:#666666;
+	font-size: small;
+}
+
+* html #login {
+	background-color:#D1F9F3;
+	position: absolute;
+	height: 200px;
+	width: 200px;
+	left: 0px;
+	top: 100px;
+}
+
+
+/* mozilla styles below */
+html,body {
+  	margin: 0;
+  	padding: 0;
+  	height: 100%;	
+}
+ 
+html>body #top {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0px;
+	padding: 0;
+	height: 100px;
+	width:100%;
+	/*border:1px solid #000;*/
+	margin:auto;
+	background-image: url(../images/logo_bg.jpg);
+	background-repeat: repeat-x;
+	background-position: 935px;
+}
+ 
+html>body #left {
+	position: absolute;
+	top: 100px;
+	left:0px;
+	bottom:40px;
+	padding:0;
+	overflow:hidden;
+	width:200px;
+	/*border:1px solid #000;*/
+	margin:auto;
+	background-color: #D1F9F3;
+}
+ html>body #right {
+  	position: absolute;
+  	top: 110px;
+  	right:0px;
+  	left:200px;
+  	bottom:110px;
+  	padding:0;
+ 	overflow:hidden;
+ 	width:650px;
+	background:pink;
+	/*border:1px solid #000;*/
+	margin:auto;
+}
+html>body #bottom {
+	background-color:#DCFBF6;
+  	position: absolute;
+  	bottom: 0;
+  	left: 0;
+  	right: 0px;
+  	height: 40px;
+	width:100%;	
+	/*border:1px solid #000;*/
+	margin:auto;
+}
+* html body{text-align:center}
+/* common styles */
+
+* html #wrapper{
+	width:850px;
+	text-align:left;
+    position:relative;
+	height:100%;
+	background:#ffffcc;
+	z-index:1;
+}
+
+iframe{width:100%;height:100%;} 
+
+
+
+/********
+以下定義字形
+********/

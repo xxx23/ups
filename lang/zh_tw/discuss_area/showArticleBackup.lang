@@ -1,0 +1,4 @@
+#/discuss_area/showArticleBackup.tpl
+article_content = "文章內容"
+back_to_article_browse = "回[文章一覽]"
+related_discuss_article = "相關討論文章"

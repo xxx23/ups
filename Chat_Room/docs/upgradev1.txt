@@ -1,0 +1,60 @@
+///////////////////////////////////////////////////////////////
+//                                                           //
+//     X7 Chat Upgrade Instructions - Version 2.0.0          //
+//                                                           //
+///////////////////////////////////////////////////////////////
+
+*********************
+*****  Contents *****
+*********************
+	1) Information
+	2) Pre-Upgrade
+	3) Upgrade Instructions
+	4) Post-Upgrade
+	
+*********************
+***  Information  ***
+*********************
+	Use these instructions to upgrade from a X7 Chat 1.3.6 to X7 Chat 2.
+	
+	You cannot upgrade from an X7 Chat version older than 1.3.6, please
+	download X7 Chat 1.3.6 from the site and upgrade to that before
+	upgrading to X7 Chat 2 using these instructions.
+	
+	Note: This upgrade script is more of an import script to import your
+	data from Version 1 to Version 2.  If you need any help understanding
+	the process please send us an E-Mail or post on the forum.
+	
+	It is highly recommended that you make a backup of your database first.
+	
+*********************
+***  Pre-Upgrade ****
+*********************
+	Open your X7 Chat 1.3.6 config.php file and write down the values of
+	$SERVER['TBL_PREFIX'] and $SERVER['AUTH'].
+	
+	Delete the old files from X7 Chat 1.3.6 including config.php.
+	
+	Upload the new files from X7 Chat 2.0.0 and follow the directions in
+	install.txt to install X7 Chat 2.0.0.  We simply need a blank installation
+	of Version 2 to set up the Version 2 database for the upgrade script.
+	Running the Version 2 installer is the fastest way to do this.
+	
+	IMPORTANT NOTICE
+	DO NOT USE THE SAME TABLE PREFIX WHEN YOU ARE INSTALLING VERSION 2.  YOU
+	MUST NOT OVERWRITE THE VERSION 1 DATABASE ENTRIES, SO MAKE SURE YOU CHOOSE
+	A DIFFERENT TABLE PREFIX.
+	
+*****************************
+***  Upgrade Instructions ***
+*****************************
+	Visit http://yoursite.com/x7chat/upgradev1.php in your browser and follow
+	the instructions.  If the Auth variable that you wrote down from the
+	1.3.6 config file is 'plain', then you should check the box that says
+	"convert passwords to MD5", otherwise do not check the box.
+	
+*********************
+***  Post-Upgrade ***
+*********************
+	After upgrading you MUST deleted the install.php and upgradev1.php files.
+	If you do not anybody can get administrator access.

@@ -1,0 +1,10 @@
+#/discuss_area/newArticle.tpl
+post_new_article = "發表新文章"
+reply_article = "回覆文章"
+please_enter = "請輸入"
+title = "標題"
+file_extension_name = "檔案的副檔名"
+discuss_area = "討論區"
+post_article = "發表文章"
+attach_file = "附加檔案"
+clear_data = "清除資料"

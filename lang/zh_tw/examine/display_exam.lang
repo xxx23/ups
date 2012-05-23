@@ -1,0 +1,9 @@
+modify_exam_question = '修改測驗題目'
+exam_name = '測驗名稱：'
+exam_question_list = '測驗題目列表'
+question_number = '題號'
+question_type = '題型'
+question_content = '題目內容'
+percentage = '配分'
+back_to_exam_list = '返回線上測驗列表'
+

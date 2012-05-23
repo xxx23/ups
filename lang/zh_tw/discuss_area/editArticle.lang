@@ -1,0 +1,10 @@
+#/discuss_area/editArticle.tpl
+post_new_article = "發表新文章"
+reply_article = "回覆文章"
+please_input = "請輸入"
+title = "標題"
+filename_extension = "檔案的副檔名"
+edit_article = "修改文章"
+discuss_area = "討論區"
+post_article = "發表文章"
+page_up = "回上一頁"

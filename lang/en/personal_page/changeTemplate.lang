@@ -1,0 +1,4 @@
+#/personal_page/changeTemplate.tpl
+thumbnail = "Thumbnail"
+template_name = "Template Name"
+back_to_personal_page = "Back to personal page"

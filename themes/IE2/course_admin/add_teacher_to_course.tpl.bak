@@ -1,0 +1,290 @@
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>新增教師到開課</title>
+
+<link href="{$tpl_path}/css/table_news.css" rel="stylesheet" type="text/css">
+<link href="{$tpl_path}/css/font_style.css" rel="stylesheet" type="text/css" />
+<link href="{$tpl_path}/css/content.css" rel="stylesheet" type="text/css" />
+<link href="{$tpl_path}/css/table.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+
+
+<body class="ifr" >
+
+<!-- 標題 -->
+
+<h1>課程的資料</h1>
+
+<!-- 內容說明 -->
+
+<div>
+
+<br />
+
+{if $attribute == 1}
+
+操作說明：<br />
+
+	<font color="#FF0000">1. 先填好下列欄位，填好按送出。</font><br />
+
+	<font color="#FF0000">2. 送出之後可以選擇授課教師。</font><br />
+
+	<font color="#FF0000">注意；每一門課只有一個主要的填寫者。</font><br />
+
+	<br />
+
+{/if}
+
+{if $attribute == 0}
+
+	<div class="searchbar" style="margin-left:50px;width:85%;" ><strong><font color="#003399" align="center"> 自學式課程開課成功 !! </font></strong></div><br />
+
+{/if}
+
+</div>
+
+<!--功能部分 -->
+
+<div class="searchbar" style="margin-left:50px;width:85%;padding:20px;" ><table class="datatable" style="width:80%;margin-left:25px;">
+
+<tr >
+
+	<th width="30%" height="30">課程名稱</th>
+	<td height="30" valign="middle" bgcolor="#FFFFFF">{$begin_course_name}</td>
+
+</tr>
+
+<tr>
+
+	<th height="30">開課單位</th>
+	<td height="30" valign="middle" bgcolor="#FFFFFF">{$begin_unit_cd}</td>
+
+</tr>
+
+<tr>
+
+	<th height="30">對應內部課程號</th>
+	<td height="30" valign="middle" bgcolor="#FFFFFF">{$inner_course_cd}</td>
+
+</tr>
+
+<tr>
+
+	<th height="30">課程性質</th>
+	<td height="30" valign="middle" bgcolor="#FFFFFF">{$property_name}</td>
+
+<tr>
+
+{if $attribute == 0} <!-- 表示是自學式的課程 -->
+
+<tr>
+
+	<th height="30">修課期限</th>
+	<td height="30" valign="middle" bgcolor="#FFFFFF">{$month}</td>
+
+</tr>
+
+<!--
+
+<tr>
+
+	<th><img src="{$tpl_path}/images/th_head.png" alt="" width="12" height="54" align="absmiddle"/>課程時數</th><td>{$take_hour}小時</td>
+
+</tr>
+
+-->
+
+<tr>
+
+	<th height="30">認証時數</th>
+	<td height="30" valign="middle" bgcolor="#FFFFFF">{$certify}小時</td>
+
+</tr>
+
+<!--
+
+<tr>
+
+	<th><img src="{$tpl_path}/images/th_head.png" alt="" width="12" height="54" align="absmiddle"/>學習費用</th><td>{$charge}元</td>
+
+</tr>
+
+-->
+
+<tr>
+
+	<th height="30">評量標準(總分)</th>
+	<td height="30" valign="middle" bgcolor="#FFFFFF">{$criteria_total}分</td>
+
+</tr>
+
+<tr>
+
+	<th height="30">教材閱讀時數</th>
+	<td height="30" valign="middle" bgcolor="#FFFFFF">{$criteria_content_hour}</td>
+
+</tr>
+
+{/if}
+
+{if $attribute == 1} <!-- 表示是教導式的課程 -->
+
+<tr>
+
+	<th height="30">開課開始日期</th>
+	<td height="30" valign="middle" bgcolor="#FFFFFF">{$d_course_begin}</td>
+
+</tr>
+
+<tr>
+
+	<th height="30">開課結束日期</th>
+	<td height="30" valign="middle" bgcolor="#FFFFFF">{$d_course_end}</td>
+
+</tr>
+
+<tr>
+
+	<th height="30">開課公開日期</th>
+	<td height="30" valign="middle" bgcolor="#FFFFFF">{$d_public_day}</td>
+
+</tr>
+
+<tr>
+
+	<th height="30">選課開始日期</th>
+	<td height="30" valign="middle" bgcolor="#FFFFFF">{$d_select_begin}</td>
+
+</tr>
+
+<tr>
+
+	<th height="30">選課結束日期</th>
+	<td height="30" valign="middle" bgcolor="#FFFFFF">{$d_select_end}</td>
+
+</tr>
+
+<tr>
+
+	<th height="30">開課所屬的學年</th>
+	<td height="30" valign="middle" bgcolor="#FFFFFF">{$course_year}</td>
+
+</tr>
+
+<tr>
+
+	<th height="30">開課所屬的學期</th>
+	<td height="30" valign="middle" bgcolor="#FFFFFF">{$course_session}</td>
+
+</tr>
+
+{/if}
+</table></div>
+
+<hr width="100%" style="color: #fff; background-color: #fff; border: 1px dotted #6699FF; border-style: none none dotted;">
+
+<form action="./begin_course_mail.php" method="get">
+
+<h2>授課教師</h2>
+
+<table class="datatable">
+
+<input type="hidden" name="begin_course_cd" value="{$begin_course_cd}" />
+
+<tr>
+
+	<th><div align="center">人員編號</div></th>
+
+	<th><div align="center">帳號</div></th>
+
+	<th><div align="center">教師名稱</div></th>
+
+	<th><div align="center">是否為主要填寫者</div></th>
+
+	<th><div align="center">刪除</div></th>
+
+</tr>
+
+{foreach from=$teacher_data item=teacher}
+
+<tr>
+
+	<input type="hidden" name="personal_id[]" value="{$teacher.personal_id}" />
+
+	<td><div align="center">{$teacher.personal_id}</div></td>
+
+	<td><div align="center">{$teacher.login_id}</div></td>
+
+	<td><div align="center">{$teacher.personal_name}</div></td>
+
+	<td><div align="center">{$teacher.course_master}</div></td>
+
+	<td><div align="center"><a href="./add_teacher_to_course.php?action=deleteTeacher&teacher_cd={$teacher.personal_id}&course_cd={$course_cd}&begin_course_cd={$begin_course_cd}">刪除</a></div></td>
+
+</tr>
+
+{/foreach}
+
+<tr>
+
+	<td colspan="5">
+
+	<p class="al-left"> <input type="submit" value="寄發開課通知信" /></p>
+
+	</td>
+
+</tr>
+
+</table>
+
+</form>
+
+<div class="intro">
+
+  <ol>
+
+    <li><div id="message" style="color:#0000FF">{$message}</div></li>
+
+    <li><div id="err_message" style="color:#FF0000;">{$err_message}</div></li>
+
+  </ol>
+
+</div>
+
+<form method="post" action="add_teacher_to_course.php?action=addTeacher">
+
+<input type="hidden" name="course_cd" value="{$course_cd}" />
+
+<input type="hidden" name="begin_course_cd" value="{$begin_course_cd}" />
+
+<h2>加入授課教師</h2>
+
+選擇：<br />
+
+	<select name="teacher_cd">
+
+	{html_options values=$teacher_ids selected=$teacher_id output=$teacher_names}
+
+	</select><br />
+
+是否為主要填寫者：
+
+	{html_radios name="course_master" values=$course_master_ids checked=$course_master_id output=$course_master_names separator=" "}
+
+	<br />
+
+	<input type="submit" value="確定送出">
+
+</form>
+
+</body>
+
+</html>
+

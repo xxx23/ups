@@ -1,0 +1,10 @@
+#/discuss_area/message.tpl
+collect_to_digest = "收至精華區"
+collect_successfully = "收藏成功"
+back_to_discuss_area = "返回討論區"
+add_discuss_area = "新增討論區"
+add_successfully = "新增成功"
+continue_add_discuss_area = "繼續 新增討論區"
+add_community_discuss_area = "新增社群討論區"
+continue_add_community_discuss_area = "繼續 新增社群討論區"
+back_to_community_discuss_area_list = "回社群討論區列表"

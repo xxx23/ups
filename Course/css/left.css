@@ -1,0 +1,39 @@
+body{
+width:100%;
+margin:0px;
+padding:0px;
+}
+
+.main{
+	width:100%;
+	padding:0px;
+	margin:0px;
+}
+
+.information_side{
+	position:relative;
+	width:170px;
+	height:inherit;
+	
+}
+
+.information_block{
+	position:relative;
+	width:inherit;
+}
+
+.main_side{
+	position:relative;
+	width:170px;
+	height:inherit;
+	
+}
+
+.main_block{
+	position:absolute;
+	width:ingerit;
+	height:inherit;
+	float:left;
+	text-align:left;
+
+}

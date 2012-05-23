@@ -1,0 +1,4 @@
+student_answer_page = '學生填答結果'
+student_id = '學生帳號'
+student_name = '學生姓名'
+no_student_choose = '此選項無學生選取'

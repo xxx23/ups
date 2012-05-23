@@ -1,0 +1,369 @@
+body
+{
+background:url(../images/apply_course/bg.jpg) repeat-x #fff;
+padding:0;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:10px;
+margin:0px auto auto auto;
+color:#000;
+}
+.clear{
+clear:both;
+}
+span.orange{
+color:#eb6821;
+}
+p{
+text-align:justify;
+padding:0px;
+margin:0px;
+}
+p.middle_text{
+line-height:13px;
+}
+h2{
+font-size:14px;
+font-weight:900;
+padding:10px 0 10px 0;
+margin:0px;
+color:#25aae1;
+}
+h2 a{
+font-size:14px;
+font-weight:normal;
+padding:10px 0 10px 0;
+margin:0px;
+color:#25aae1;
+text-decoration:none;
+}
+h3{
+font-size:15px;
+font-weight:normal;
+padding:10px 0 10px 0;
+margin:0px;
+color:#25aae1;
+}
+#big_container{
+width:1000px;
+}
+#main_container{
+width:880px;
+height:600px;
+margin:auto;
+padding:0px;
+}
+#main_container2{
+width:1000px;
+/*height:auto;*/
+margin:auto;
+padding:0px;
+background:#ccc;
+}
+
+#left_content{
+float:left;
+width:170px;
+height:400px;
+background:url(../images/apply_course/lf_bg.gif) repeat-x;
+background-color:#FDDE73;
+padding:0;
+
+}
+
+#header{
+width:1024x;
+height:138px;
+margin:auto;
+background:url(../images/apply_course/header_bg.jpg) repeat-x;
+}
+#header2{
+width:1024x;
+height:120px;
+margin:auto;
+background:url(../images/apply_course/header_bg.jpg) repeat-x;
+}
+#logo{
+padding:38px 0 0 30px;
+float:left;
+}
+.top_phone{
+width:280px;
+height:89px;
+float:right;
+color:#FFFFFF;
+padding:10px 0 0 0;
+}
+.phone_text{
+width:170px;
+height:90px;
+border:dotted 1px #FAE9C5;
+font-size:12px;
+font-weight:bold;
+float:left;
+padding:8px 0 0 10px;
+}
+img.left{
+float:left;
+}
+span.black{
+color:#000000;
+font-size:14px;
+}
+#center_big_box{
+width:825px;
+height:240px;
+clear:both;
+margin:10px auto;
+background-color:#3a3535;
+}
+#center_big_box.home{
+background:url(../images/apply_course/home_arrow.gif) no-repeat bottom left #3a3535;
+}
+#center_big_box.services{
+background:url(../images/apply_course/services.gif) no-repeat bottom left #3a3535;
+}
+#center_big_box.clients{
+background:url(../images/apply_course/clients_icon.gif) no-repeat bottom left #3a3535;
+}
+/*---------------- menu tab----------------------*/
+#menu_tab{
+width:480px;
+height:37px;
+float:right;
+font-family:Arial, Helvetica, sans-serif;
+padding:0px;
+}
+ul.menu {
+list-style-type:none; display:block; width: auto; 
+margin: auto; padding:0px; background:none;}
+
+ul.menu li {
+display:inline;
+font-size:11px;
+font-weight:bold;
+line-height:26px;
+}
+
+a.nav:link, a.nav:visited {
+display:block; float:left; padding:0px; margin:0;width:71px; height:37px; margin:0px 4px 0px 4px; text-align:center; color:#FFFFFF;
+text-decoration:none;}
+
+a.nav_selected:link, a.nav_selected:visited {
+display:block; float:left; padding:0px; margin:0;width: 71px;margin:0px 4px 0px 4px;text-align:center; height:37px;
+text-decoration:none; color: #d34124; background:url(../images/apply_course/bt_bg.gif) no-repeat center;}
+
+a.nav:hover {
+color: #d34124; text-decoration:none;background:url(../images/apply_course/bt_bg.gif) no-repeat center;}
+
+
+/*------------------main_content-------------------*/
+#main_content{
+width:880px;
+height:auto;
+padding:0 0 25px 0px;
+background:url(../images/apply_course/center_bg.gif) repeat-x top #FFFFFF;
+}
+#main_content2{
+float:right;
+width:815px;
+/*height:450px;*/
+padding:0 0 0 15px;
+background-color:#FFFFFF;
+}
+.box{
+width:260px;
+height:129px;
+float:left;
+margin:20px 10px 15px 19px;
+_margin:20px 10px 15px 13px;
+background:url(../images/apply_course/box_bg.gif) no-repeat center;
+}
+.box_text{
+line-height:18px;
+font-size:12px;
+width:150px;
+float:left;
+}
+img.left_img{
+float:left;
+padding:10px 0 0 0;
+}
+.box_subtitle{
+padding:10px 10px 10px 15px;
+float:left;
+}
+.middle_box_text{
+float:left;
+width:250px;
+color:#FFFFFF;
+padding:0 0 0 20px;
+}
+.middle_box_content{
+clear:both;
+padding:10px 0 0 240px;
+}
+.middle_box_content_contact{
+clear:both;
+padding:0 0 0 20px;
+}
+a.read_more{
+display:block;
+width:127px;
+height:26px;
+float:right;
+margin:5px 0 0 0;
+text-align:center;
+text-decoration:none;
+color:#FFFFFF;
+line-height:26px;
+background:url(../images/apply_course/read_more_bg.gif) no-repeat center;
+}
+.bottom_content{
+}
+.left_box{
+float:left;
+padding:0 0 0 30px;
+}
+.left_img_box{
+clear:both;
+float:left;
+padding:0 15px 20px 0;
+}
+.left_text_content{
+width:330px;
+float:left;
+}
+.left_text_content_services{
+width:220px;
+float:left;
+}
+.partners_box{
+background-color:#e7e6e1;
+margin:2px 0 0 0;
+}
+img.partners_image{
+padding:2px 0 2px 20px;
+}
+/*--------list---------*/
+ul.list{
+padding:0px;
+margin:0px;
+list-style:none;
+}
+ul.list li{
+padding:8px 0 8px 0;
+margin:0px;
+list-style:none;
+}
+ul.list li a{
+background:url(../images/apply_course/list_arrow.gif) no-repeat left;
+text-decoration:none;
+color:#fff;
+padding:0 0 0 25px;
+}
+/*---------------register_form------------------*/
+.contact_form{
+width:355px;
+float:left;
+padding:0px 0 0 5px;
+}
+.form_row{
+width:335px;
+clear:both;
+padding:10px 0 10px 0;
+_padding:5px 0 5px 0;
+color:#a53d17;
+}
+label.contact{
+width:75px;
+float:left;
+font-size:12px;
+text-align:right;
+padding:4px 5px 0 0;
+color:#fff;
+}
+input.contact_input{
+width:253px;
+height:18px;
+background-color:#857c7c;
+color:#FFFFFF;
+border:1px #857c7c solid;
+float:left;
+}
+textarea.contact_textarea{
+width:253px;
+height:50px;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+color:#FFFFFF;
+background-color:#857c7c;
+border:1px #857c7c solid;
+float:left;
+}
+.contact_info{
+width:380px;
+float:left;
+padding:0 0 0 20px;
+color:#FFFFFF;
+}
+p.adress{
+float:left;
+padding:10px 0 0 15px;
+line-height:13px;
+}
+/*---------------footer----------------*/
+#footer{
+width:880px;
+height:70px;
+color:#d94923;
+background-color:#e7e6e1;
+}
+#footer2{
+width:1000px;
+height:70px;
+color:#d94923;
+background-color:#e7e6e1;
+}
+.left_footer{
+font-size:12px;
+float:left;
+width:600px;
+padding:25px 0 0 10px;
+}
+.right_footer{
+float:right;
+padding:25px 10px 0 0;
+}
+.right_footer a{
+padding:0 0 0 7px;
+text-decoration:none;
+color:#6699FF;
+}
+.right_footer a:hover{
+text-decoration:underline;
+}
+dl{
+padding-top:20px
+}
+dt{
+background:url(../images/apply_course/icon1a.png) 18px no-repeat;
+padding:15px 0 10px 45px;
+font-size:15px;
+font-weight:bold;
+color:#6699CC;
+}
+dd{
+background:url(../images/apply_course/arrow_203.gif) no-repeat;
+font-weight:bold;
+padding:2px 0 2px 10px;
+font-size:12px;
+line-hight:50px;
+}
+dd a{
+color:#333333;
+text-decoration:none;
+}
+dd a:hover{
+color:#336699;
+text-decoration:underline;
+}

@@ -1,0 +1,78 @@
+.datatable {
+	border-collapse: collapse;
+	width: 80%;
+	font-size: 10pt;
+	border: 1px solid #B5CBD0;
+	margin-right: auto;
+	margin-left: auto;
+}
+.datatable tr {
+	background-color: #F2F7FF;
+}
+.datatable tr.tr2 {
+	background-color: #cee9ff;
+}
+.datatable tr.tr3 {
+	background-color: #FFFFFF;
+}
+.datatable td {
+	color:#516A82;
+	text-align: left;
+	padding: 0.3em;
+	vertical-align: top;
+	border-top-width: 1px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #B5CBD0;
+	border-right-color: #B5CBD0;
+	border-bottom-color: #B5CBD0;
+	border-left-color: #B5CBD0;
+}
+.datatable th {
+	font-weight: normal;
+	text-align: center;
+	padding: 0.3em;
+	vertical-align: top;
+	color: #516A82;
+	background-image: url(../images/table_bg.gif);
+	background-position: bottom;
+	background-repeat: repeat-x;
+	background-color: #FFFFFF;
+	margin-right: 2px;
+	border: 1px solid #B5CBD0;
+}
+.datatable th.ZtoA {
+	background-image: url(../images/ZtoA.gif);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	padding-left: 15px;
+}
+.datatable th.AtoZ {
+	background-image: url(../images/AtoZ.gif);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	padding-left: 15px;
+}
+.datatable caption {
+	font-weight: normal;
+	font-size: 0.85em;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	background-color: #CCCCCC;
+}
+
+.datatable a:link {
+	color:#516A82;
+}
+.datatable a:hover, .datatable a:active {
+	color: #92B2C0; 
+	/*text-decoration: none;*/
+}
+.datatable a:visited {
+	color:#516A82;
+}

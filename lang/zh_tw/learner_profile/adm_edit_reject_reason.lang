@@ -1,0 +1,6 @@
+view_id = '觀看帳號'
+edit_reason_of_reject = '編輯不核准原因'
+explain = '說明'
+reason_of_reject = '不核准原因'
+ok = '確認'
+return = '返回'

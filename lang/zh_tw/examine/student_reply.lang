@@ -1,0 +1,7 @@
+student_answer_page = '學生作答情形'
+correct_answer = '正確解答為：'
+person = '人'
+no = '非'
+yes = '是'
+student_answer = '學生的回答為：'
+back_to_student_list = '返回學生列表'

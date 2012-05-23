@@ -1,0 +1,7 @@
+#/personal_page/select_course_result.tpl
+select_course_result = "Course Enrolment Result"
+check_pass = "Approved"
+no = "No"
+checking = "Pending"
+check_not_pass = "Fail"
+not_pass_reason = "Reason for fail"

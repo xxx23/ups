@@ -1,0 +1,8 @@
+#themes/IE2/discuss_area/groupDiscussAreaList.tpl
+delete_warn = "這將會刪除你所選的所有討論區"
+teacher_community_discuss_area_list = "教師社群討論區列表"
+teacher_community_discuss_area_name = "教師社群討論區名稱"
+teacher_community_discuss_area_subject = "教師社群討論區主旨"
+action_select = "選擇的動作"
+delete_teacher_community_discuss_area = "刪除教師社群討論區"
+output_backup = "輸出備份"

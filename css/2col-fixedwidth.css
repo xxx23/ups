@@ -1,0 +1,106 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	text-align: center;
+	font-size: 10pt;
+	color: #333333;
+	line-height: 30px;
+}
+#wrapper {
+	position: relative;
+	text-align: left;
+	width: 1041px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(../images/logo.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+#content {
+	margin-left: 310px;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #FFFFFF;
+	background-image: url(../images/content_bg.jpg);
+	background-repeat: repeat-y;
+	background-position: right;
+}
+#content p {
+	font-size: 80%;
+	line-height: 1.8em;
+	text-indent: 2em;
+	margin: 0px;
+	padding: 0px;
+}
+#content h1 {
+	font: normal 180% Georgia, "Times New Roman", Times, serif;
+	color: #B51032;
+	background-color: transparent;
+}
+#content h2 {
+	font-size: 120%;
+	color: #940D1E;
+	background-color: transparent;
+	border-bottom: 1px dotted #FF9006;
+}
+#navigation {
+	position: absolute;
+	top: 126px;
+	width: 310px;
+	right: 731px;
+	background-image: url(../images/counter.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+	text-align: right;
+	background-color: #FFFFFF;
+}
+#navigation ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+#navigation li {
+	width: 180px;
+	border-bottom: 1px solid #ED9F9F;
+	margin: 0;
+	padding: 0;
+	font-size: 80%;
+	vertical-align: bottom; /* Removes unwanted margin in IE */
+}
+#navigation a:link, #navigation a:visited {
+	display: block;
+	padding: 5px 5px 5px 0.5em;
+	border-left: 12px solid #722100;
+	border-right: 1px solid #722100;
+	background-color: #B51032;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+#navigation a:hover {
+	background-color: #722100;
+	color: #FFFFFF;
+}
+#navigation ul.subnav {
+	margin-left: 12px;
+}
+#navigation ul.subnav li {
+	border-bottom: 1px solid #722100;
+	width: 168px;
+}
+#footer {
+	padding: 0 0 10px 255px;
+	font-size: 70%;
+	color: #AAAAAA;
+	background-color: transparent;
+}

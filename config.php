@@ -14,8 +14,8 @@
 	$DB_TYPE = "mysql";
 	$DB_HOST = "localhost";
 	$DB_NAME = "elearning";
-	$DB_USERNAME = "elearning";
-	$DB_USERPASSWORD = "elearning";
+	$DB_USERNAME = "hsng";
+	$DB_USERPASSWORD = "hsng@root";
 
 //CSS
 	$CSS_PATH = "css/";
@@ -57,7 +57,7 @@
 	$MAIL_ADMIN_EMAIL = "";
 	$MAIL_ADMIN_EMAIL_NICK = "[教育部-教學平台管理者]";
 
-	$USE_MYSQL = false;
+	$USE_MYSQL = true;
 	$USE_MONGODB = false;
 
 	set_include_path( get_include_path() . PATH_SEPARATOR . $HOME_PATH.$LIBRARY_PATH."Smarty". PATH_SEPARATOR . $HOME_PATH.$LIBRARY_PATH."PearDB");

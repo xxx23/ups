@@ -1,3 +1,2 @@
 Install/
-templates_c/
-
+*.tpl.php

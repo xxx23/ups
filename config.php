@@ -57,6 +57,9 @@
 	$MAIL_ADMIN_EMAIL = "";
 	$MAIL_ADMIN_EMAIL_NICK = "[教育部-教學平台管理者]";
 
+	$USE_MYSQL = false;
+	$USE_MONGODB = false;
+
 	set_include_path( get_include_path() . PATH_SEPARATOR . $HOME_PATH.$LIBRARY_PATH."Smarty". PATH_SEPARATOR . $HOME_PATH.$LIBRARY_PATH."PearDB");
 	//Pear DB library
 	require_once("DB.php");
@@ -74,13 +77,31 @@
 	    'debug'       => 2,
 	    'portability' => DB_PORTABILITY_ALL,
 	);
-	
-	$DB_CONN = DB::connect($dsn, $options);
-	if (PEAR::isError($DB_CONN))	die($DB_CONN->getMessage());
 
-	//appended by puppy for avoiding encoding problem
-	if ($DB_TYPE == "mysql")
-	      $DB_CONN->query("SET NAMES 'utf8'");
+	if($USE_MYSQL)
+	{
+		$DB_CONN = DB::connect($dsn, $options);
+		if (PEAR::isError($DB_CONN))	die($DB_CONN->getMessage());
+
+		//appended by puppy for avoiding encoding problem
+		if ($DB_TYPE == "mysql")
+			  $DB_CONN->query("SET NAMES 'utf8'");
+	}
+	else if($USE_MONGODB)
+	{
+		try 
+		{
+			$m = new Mongo(); // connect
+			$db = $m->selectDB($DB_NAME);
+			$db->authenticate("hsng", "hsng@root");
+		}
+		catch(MongoConnectionException $e) 
+		{
+			echo '<p>Couldn\'t connect to mongodb, is the "mongo" process running?</p>';
+			exit();
+		}
+	}
+	
 		    
 	//Smarty library
 	require_once("Smarty.class.php");

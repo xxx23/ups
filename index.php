@@ -62,10 +62,7 @@
 		else
 		{
 			$p_today++;
-			// TODO use mongo query
-			//$popularity_noip->update(array("date" => $date), array())
-			$Q2 = "update popularity_noip set num = '$p_today' where date = '$date'";
-			$res = db_query($Q2);
+			$popularity_noip->update(array("date" => $date), array('$set' => array("num" => $p_today)));
 		}
 
 		//本月人氣

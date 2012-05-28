@@ -57,8 +57,8 @@
 	$MAIL_ADMIN_EMAIL = "";
 	$MAIL_ADMIN_EMAIL_NICK = "[教育部-教學平台管理者]";
 
-	$USE_MYSQL = true;
-	$USE_MONGODB = false;
+	$USE_MYSQL = false;
+	$USE_MONGODB = !$USE_MYSQL;
 
 	set_include_path( get_include_path() . PATH_SEPARATOR . $HOME_PATH.$LIBRARY_PATH."Smarty". PATH_SEPARATOR . $HOME_PATH.$LIBRARY_PATH."PearDB");
 	//Pear DB library

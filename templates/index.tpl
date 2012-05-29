@@ -185,7 +185,7 @@ _gaq.push(['_trackPageview']);
 
 		<div class="contentContainer">
        
-		 <iframe name="main_info" style="border:none;" onload="ResizeIframe(this);" frameborder="no" src="mix_news_popCourse.php" height="2000" scrolling="no"></iframe>
+		 <!--<iframe name="main_info" style="border:none;" onload="ResizeIframe(this);" frameborder="no" src="mix_news_popCourse.php" height="2000" scrolling="no"></iframe>-->
       </div>
 
  <div class="rightContainer"><img src="{$webroot}images/index/right_top.gif" border="0" />

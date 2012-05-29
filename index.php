@@ -20,11 +20,8 @@
 
 	if($USE_MYSQL)
 	{
-		$Q1 = "select * from popularity_noip where date = '$date'";
-		$result = mysql_db_query ($DB_NAME, $Q1);
-		$row = mysql_fetch_array ($result);
-		$p_today = $row["num"];
-
+		$Q1 = "select num from popularity_noip where date = '$date'";
+		$p_today = db_getOne($Q1);
 
 		// 1. lock version
 		$Q2 = "INSERT INTO popularity_noip (date, num) VALUES ('$date', '1') ON DUPLICATE KEY UPDATE num=num+1";

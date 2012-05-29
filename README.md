@@ -1,5 +1,5 @@
 # Research #
 
 ## TODO ##
-1. Modify mysql query with lock
+1. Implement login
 

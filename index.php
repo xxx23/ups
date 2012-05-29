@@ -25,19 +25,27 @@
 		$row = mysql_fetch_array ($result);
 		$p_today = $row["num"];
 
-		//本日人氣
-		if($p_today == 0)
-		{
-			$Q2 = "insert into popularity_noip (date, num) values ('$date', '1')";
-			$res = db_query($Q2);
-			$p_today++;
-		}
-		else
-		{
-			$p_today++;
-			$Q2 = "update popularity_noip set num = '$p_today' where date = '$date'";
-			$res = db_query($Q2);
-		}
+
+		// 1. lock version
+		$Q2 = "INSERT INTO popularity_noip (date, num) VALUES ('$date', '1') ON DUPLICATE KEY UPDATE num=num+1";
+		db_query($Q2);
+
+		// 2. without lock version
+		// //本日人氣
+		// if($p_today == 0)
+		// {
+		// 	$Q2 = "insert into popularity_noip (date, num) values ('$date', '1')";
+		// 	$res = db_query($Q2);
+		// 	$p_today++;
+		// }
+		// else
+		// {
+		// 	$p_today++;
+		// 	$Q2 = "update popularity_noip set num = '$p_today' where date = '$date'";
+		// 	$res = db_query($Q2);
+		// }
+
+		///////////////////////////////////
 
 		//本月人氣
 		$Q3 = "SELECT SUM(num) from popularity_noip where date like '$month%'";

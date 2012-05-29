@@ -50,30 +50,55 @@
 	}
 	else if($USE_MONGODB)
 	{
+		// 1. lock version
 		$popularity_noip = $db->popularity_noip;
-		$row = $popularity_noip->findOne(array("date" => $date));
-		$p_today = $row["num"];
 
-		if($p_today == 0)
-		{
-			$popularity_noip->insert(array("date" => $date, "num" => "1"));
-			$p_today++;
-		}
-		else
-		{
-			$p_today++;
-			$popularity_noip->update(array("date" => $date), array('$set' => array("num" => $p_today)));
-		}
+		$row = $popularity_noip->findOne(array('date' => $date));
+		$p_today = $row['num'];
+
+		$p = $popularity_noip->update(array('date' => $date), array('$inc' => array('num' => 1)), true);
+
+
+		// 2. without lock version
+		// $row = $popularity_noip->findOne(array('date' => $date));
+		// $p_today = $row['num'];
+		// if($p_today == 0)
+		// {
+		// 	$popularity_noip->insert(array('date' => $date, 'num' => '1'));
+		// 	$p_today++;
+		// }
+		// else
+		// {
+		// 	$p_today++;
+		// 	$popularity_noip->update(array('date' => $date), array('$set' => array('num' => $p_today)));
+		// }
+
+		//////////////////
+
+		$map = new MongoCode('function(){emit("total", this.num);}');
+		$reduce = new MongoCode('function(key, values){var sum = 0; values.forEach(function(value){sum+=value;});return sum;}');
 
 		//本月人氣
-		// TODO use mongo query
-		$Q3 = "SELECT SUM(num) from popularity_noip where date like '$month%'";
-		$p_month = db_getOne($Q3);
+		$query = new MongoRegex("/^$month/");
+		$Q3 = array(
+			'mapreduce' => 'popularity_noip',
+			'map' => $map,
+			'reduce' => $reduce,
+			'query' => array('date' => $query),
+			'out' => array('inline' => '1'),
+		);
+		$p = $db->command($Q3);
+		$p_month = $p['results'][0]['value'];
 
-		//總人氣
-		// TODO use mongo query
-		$Q4 = "SELECT sum(num) FROM popularity_noip";
-		$p_total = db_getOne($Q4);
+		// //總人氣
+		$Q4 = array(
+			'mapreduce' => 'popularity_noip',
+			'map' => $map,
+			'reduce' => $reduce,
+			'out' => array('inline' => '1'),
+		);
+		$p = $db->command($Q4);
+		$p_total = $p['results'][0]['value'];
 	}
 
     $tpl = new Smarty();

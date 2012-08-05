@@ -1,15 +1,12 @@
 <?php 
 //System Begin Time
-	// ini_set('display_errors',1);
-	// error_reporting(E_ALL);
-
 	$SYSTEM_BEGIN_YEAR = "2012";
-	$SYSTEM_BEGIN_MONTH = "05";
-	$SYSTEM_BEGIN_DAY = "24";
+	$SYSTEM_BEGIN_MONTH = "08";
+	$SYSTEM_BEGIN_DAY = "03";
 
 //Web Server Setting
-	$HOST = "140.123.230.140";
-	$HOMEURL = "http://140.123.230.140/";
+	$HOST = "10.1.1.76";
+	$HOMEURL = "http://10.1.1.76/";
 	$WEBROOT = "/";
 	$HOME_PATH = "/var/www/";
 
@@ -44,7 +41,7 @@
 	$WWW_GID = "33";
 
 //FTP setting
-	$FTP_IP = "140.123.230.140";
+	$FTP_IP = "10.1.1.76";
 	$FTP_PORT = "21";
 	$MAX_UPLOAD_SIZE = "128";
 
@@ -60,51 +57,42 @@
 	$MAIL_ADMIN_EMAIL = "";
 	$MAIL_ADMIN_EMAIL_NICK = "[教育部-教學平台管理者]";
 
-	$USE_MYSQL = true;
-	$USE_MONGODB = !$USE_MYSQL;
-
-	set_include_path( get_include_path() . PATH_SEPARATOR . $HOME_PATH.$LIBRARY_PATH."Smarty". PATH_SEPARATOR . $HOME_PATH.$LIBRARY_PATH."PearDB");
-	//Pear DB library
-	require_once("DB.php");
-	
-	//connect to database
-	$dsn = array(
-	    'phptype'  => $DB_TYPE,
-	    'username' => $DB_USERNAME,
-	    'password' => $DB_USERPASSWORD,
-	    'hostspec' => $DB_HOST,
-	    'database' => $DB_NAME
-	);
-
-	$options = array(
-	    'debug'       => 2,
-	    'portability' => DB_PORTABILITY_ALL,
-	);
+	$USE_MYSQL = false;
+	$USE_MONGO = !$USE_MYSQL;
 
 	if($USE_MYSQL)
 	{
+		set_include_path( get_include_path() . PATH_SEPARATOR . $HOME_PATH.$LIBRARY_PATH."Smarty". PATH_SEPARATOR . $HOME_PATH.$LIBRARY_PATH."PearDB");
+		//Pear DB library
+		require_once("DB.php");
+		
+		//connect to database
+		$dsn = array(
+		    'phptype'  => $DB_TYPE,
+		    'username' => $DB_USERNAME,
+		    'password' => $DB_USERPASSWORD,
+		    'hostspec' => $DB_HOST,
+		    'database' => $DB_NAME
+		);
+
+		$options = array(
+		    'debug'       => 2,
+		    'portability' => DB_PORTABILITY_ALL,
+		);
+		
 		$DB_CONN = DB::connect($dsn, $options);
 		if (PEAR::isError($DB_CONN))	die($DB_CONN->getMessage());
 
 		//appended by puppy for avoiding encoding problem
 		if ($DB_TYPE == "mysql")
-			  $DB_CONN->query("SET NAMES 'utf8'");
+		      $DB_CONN->query("SET NAMES 'utf8'");
 	}
-	else if($USE_MONGODB)
+	else if($USE_MONGO)
 	{
-		try 
-		{
-			$m = new Mongo(); // connect
-			$db = $m->selectDB($DB_NAME);
-			$db->authenticate("hsng", "hsng@root");
-		}
-		catch(MongoConnectionException $e) 
-		{
-			echo '<p>Couldn\'t connect to mongodb, is the "mongo" process running?</p>';
-			exit();
-		}
+		$m = new Mongo("mongodb://localhost:27017");
+		$db = $m->elearning;
+		$db->authenticate($DB_USERNAME, $DB_USERPASSWORD);
 	}
-	
 		    
 	//Smarty library
 	require_once("Smarty.class.php");

@@ -60,9 +60,10 @@
 	$USE_MYSQL = false;
 	$USE_MONGO = !$USE_MYSQL;
 
+	set_include_path( get_include_path() . PATH_SEPARATOR . $HOME_PATH.$LIBRARY_PATH."Smarty". PATH_SEPARATOR . $HOME_PATH.$LIBRARY_PATH."PearDB");
+
 	if($USE_MYSQL)
 	{
-		set_include_path( get_include_path() . PATH_SEPARATOR . $HOME_PATH.$LIBRARY_PATH."Smarty". PATH_SEPARATOR . $HOME_PATH.$LIBRARY_PATH."PearDB");
 		//Pear DB library
 		require_once("DB.php");
 		

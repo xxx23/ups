@@ -10,7 +10,7 @@
 		return ;
 	}
 
-	include("config.php");
+	require_once("config.php");
 
     //只要有人連到首頁 計數器+1
     

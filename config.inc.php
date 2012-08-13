@@ -15,7 +15,7 @@
 	$DB_HOST = "localhost";
 	$DB_NAME = "elearning";
 	$DB_USERNAME = "hsng";
-	$DB_USERPASSWORD = "hsng@root";
+	$DB_USERPASSWORD = "ringline";
 
 //CSS
 	$CSS_PATH = "css/";
@@ -58,7 +58,7 @@
 	$MAIL_ADMIN_EMAIL_NICK = "[教育部-教學平台管理者]";
 
 	$USE_MYSQL = false;
-	$USE_MONGO = !$USE_MYSQL;
+	$USE_MONGODB = !$USE_MYSQL;
 
 	set_include_path( get_include_path() . PATH_SEPARATOR . $HOME_PATH.$LIBRARY_PATH."Smarty". PATH_SEPARATOR . $HOME_PATH.$LIBRARY_PATH."PearDB");
 
@@ -88,11 +88,13 @@
 		if ($DB_TYPE == "mysql")
 		      $DB_CONN->query("SET NAMES 'utf8'");
 	}
-	else if($USE_MONGO)
+	else if($USE_MONGODB)
 	{
-		$m = new Mongo("mongodb://localhost:27017");
-		$db = $m->elearning;
-		$db->authenticate($DB_USERNAME, $DB_USERPASSWORD);
+		$m = new Mongo("mongodb://${DB_USERNAME}:${DB_USERPASSWORD}@localhost/elearning");
+
+		// $m = new Mongo("mongodb://localhost:27017");
+		 $db = $m->elearning;
+		// $db->authenticate($DB_USERNAME, $DB_USERPASSWORD);
 	}
 		    
 	//Smarty library

@@ -152,20 +152,20 @@ AUTHOR: 14_不太想玩
 			// die();
 			$login_log->insert(array('pid' => $pid, 'l_t' => new MongoDate(), 'ip' => $ip));
 		}
-		$res = db_query("LOCK TABLES `login_statistic` WRITE");
-		$date = getdate();
-		$sql = "SELECT count FROM `login_statistic` WHERE `which_month`='$date[year]/$date[mon]/1 00:00:00'";
-		$res = db_query($sql);
-		if($res->numRows($res) > 0)
-		{
-			$data = $res->fetchRow();
-			$sql = "UPDATE `login_statistic` SET `count` = ".($data[0]+1) ." WHERE `which_month` = '$date[year]/$date[mon]/1 00:00:00'";
-		}
-		else
-		{
-			$sql = "INSERT INTO `login_statistic` (`which_month`, `count`) VALUES ('$date[year]/$date[mon]/1', '1');";
-		}
-		$res = db_query($sql);
-		$res = db_query("UNLOCK TABLES");
+		// $res = db_query("LOCK TABLES `login_statistic` WRITE");
+		// $date = getdate();
+		// $sql = "SELECT count FROM `login_statistic` WHERE `which_month`='$date[year]/$date[mon]/1 00:00:00'";
+		// $res = db_query($sql);
+		// if($res->numRows($res) > 0)
+		// {
+		// 	$data = $res->fetchRow();
+		// 	$sql = "UPDATE `login_statistic` SET `count` = ".($data[0]+1) ." WHERE `which_month` = '$date[year]/$date[mon]/1 00:00:00'";
+		// }
+		// else
+		// {
+		// 	$sql = "INSERT INTO `login_statistic` (`which_month`, `count`) VALUES ('$date[year]/$date[mon]/1', '1');";
+		// }
+		// $res = db_query($sql);
+		// $res = db_query("UNLOCK TABLES");
 	}
 ?>

@@ -243,17 +243,33 @@ function getTop(obj){
 }
 
 function init(){
-	var url = "../Online/online.php";
-	//var target = $('online');
-	//target.style.cursor = "pointer";
-	//target.onclick = function (){window.open(url);};
+	// var url = "../Online/online.php";
+	var url = "../Online/online2.php";
 	var ajax = new Ajax.Request(url,
 	{
 		method: "POST",
 		parameters: "",
-		onComplete: compiler_online
+		// onComplete: compiler_online
+		onComplete: read_online
 	});
 
+}
+
+
+function read_online(obj)
+{
+	var body = obj.responseText;
+	var list = body.split(",");
+
+	var sysPersons =  document.getElementById('sysPersons');
+	var classPersons = document.getElementById('classPersons');
+	sysPersons.innerHTML = list[0];
+	classPersons.innerHTML = list[1];
+	setTimeout("init()","60000");
+	if(hasmsg)
+	{
+		window.open('../Online/messager.php?action=receive','','resizable=1,scrollbars=1,width=350,height=290');
+	}
 }
 
 /* 分析從online.php來的訊息，找出系統人數跟同學人數 */
@@ -294,7 +310,7 @@ function changeCourse(select_node)
     }
 
     if( select_node.options[select_node.options.selectedIndex].value == -2) {
-        window.location= '../Personal_Page/index.php?aim=courseList.php';
+        window.location= jumpURL;
     }else {
         window.location = change_course_url + select_node.options[select_node.options.selectedIndex].value ;
     }

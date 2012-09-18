@@ -126,7 +126,7 @@ AUTHOR: 14_不太想玩
 	}
 	function loginLog($pid,$ip,$MAX_LOGIN_LOG_LENGTH)
 	{
-		global $DB_CONN,$MAX_LOGIN_LOG_LENGTH;
+		global $DB_CONN,$MAX_LOGIN_LOG_LENGTH, $USE_MYSQL, $USE_MONGODB, $db;
         /*$sql = "SELECT COUNT(*) as count FROM `login_log`";
         $count = db_getOne($sql);
 		if($count > $MAX_LOGIN_LOG_LENGTH)
@@ -135,8 +135,23 @@ AUTHOR: 14_不太想玩
 			$res = $DB_CONN->query($sql);
 			if (PEAR::isError($res))	die($res->getMessage());
         }*/
-		$sql = "INSERT INTO `login_log` (`pid`, `login_time`, ` ip`) VALUES ('".$pid."', CURRENT_TIMESTAMP, '".$ip."');";
-		$res = db_query($sql);
+		if($USE_MYSQL)
+		{
+			$sql = "INSERT INTO `login_log` (`pid`, `login_time`, ` ip`) VALUES ('".$pid."', CURRENT_TIMESTAMP, '".$ip."');";
+			$res = db_query($sql);
+		}
+		else if($USE_MONGODB)
+		{
+			$login_log = $db->login_log;
+			$cursor = $login_log->find(array(), array('l_t' => 1));
+			// foreach($cursor as $doc)
+			// {
+			// 	var_dump(date('Y-M-d h:i:s', $doc['l_t']->sec));
+			// }
+
+			// die();
+			$login_log->insert(array('pid' => $pid, 'l_t' => new MongoDate(), 'ip' => $ip));
+		}
 		$res = db_query("LOCK TABLES `login_statistic` WRITE");
 		$date = getdate();
 		$sql = "SELECT count FROM `login_statistic` WHERE `which_month`='$date[year]/$date[mon]/1 00:00:00'";

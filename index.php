@@ -61,7 +61,7 @@
 		$row = $popularity_noip->findOne(array('date' => $date));
 		$p_today = $row['num'];
 
-		$p = $popularity_noip->update(array('date' => $date), array('$inc' => array('num' => 1)), true);
+		$p = $popularity_noip->update(array('date' => $date), array('$inc' => array('num' => 1)), array('upsert' => true));
 
 
 		// 2. without lock version

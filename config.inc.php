@@ -57,6 +57,8 @@
 	$MAIL_ADMIN_EMAIL = "";
 	$MAIL_ADMIN_EMAIL_NICK = "[教育部-教學平台管理者]";
 
+	$UPS_ONLY = true;
+
 	$USE_MYSQL = false;
 	$USE_MONGODB = !$USE_MYSQL;
 
@@ -90,10 +92,37 @@
 	}
 	else if($USE_MONGODB)
 	{
+
+		//Pear DB library
+		require_once("DB.php");
+		
+		//connect to database
+		$dsn = array(
+		    'phptype'  => $DB_TYPE,
+		    'username' => $DB_USERNAME,
+		    'password' => $DB_USERPASSWORD,
+		    'hostspec' => $DB_HOST,
+		    'database' => $DB_NAME
+		);
+
+		$options = array(
+		    'debug'       => 2,
+		    'portability' => DB_PORTABILITY_ALL,
+		);
+		
+		$DB_CONN = DB::connect($dsn, $options);
+		if (PEAR::isError($DB_CONN))	die($DB_CONN->getMessage());
+
+		//appended by puppy for avoiding encoding problem
+		if ($DB_TYPE == "mysql")
+		      $DB_CONN->query("SET NAMES 'utf8'");
+
+		////////////////////////////////////////////////
+
 		$m = new Mongo("mongodb://${DB_USERNAME}:${DB_USERPASSWORD}@localhost/elearning");
 
 		// $m = new Mongo("mongodb://localhost:27017");
-		 $db = $m->elearning;
+		$db = $m->elearning;
 		// $db->authenticate($DB_USERNAME, $DB_USERPASSWORD);
 	}
 		    

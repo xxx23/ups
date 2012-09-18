@@ -90,6 +90,7 @@ if( !empty($all_news) ) {
 
 
 //=====================================================================
+$RELEATED_PATH = '../';
 $IMAGE_PATH = $RELEATED_PATH . $IMAGE_PATH;
 $CSS_PATH = $RELEATED_PATH . $CSS_PATH;
 $absoluteURL = $HOMEURL . "System_News/";

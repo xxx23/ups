@@ -2,4 +2,4 @@ config.php
 Install/
 *.tpl.php
 *.swp
-
+Teaching_Material/scorm/nccudata/*

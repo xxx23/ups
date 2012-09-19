@@ -7,6 +7,8 @@
     $guest = optional_param('guest', 0, PARAM_INT);
     $begin_course_cd = required_param("begin_course_cd",PARAM_INT);    
 
+	global $USE_MYSQL, $USE_MONGODB, $db;
+
     //使用訪客進入相關成果課程
     if($guest == 1)
     {
@@ -55,18 +57,36 @@
             $ip = $REMOTE_ADDR;		
         //-------------------------------------------------------
         /** 登入後會將這個user 記在 online_number **/
-        if( isset($_SESSION['online_cd ']) ){ //同一個來源
-            $sql = "UPDATE online_number SET status='重新登入中', idle='".date('U')."' WHERE online_cd='".$_SESSION['online_cd ']."'";
-            $res = db_query($sql);
-        }
-        else{ 
-            $sql = "INSERT INTO online_number (personal_id, host, time, idle, status) VALUES ('".$personal_id."','".$ip."','".date("U")."','".date("U")."','登入系統中')";
-            $res = db_query($sql);
-            $sql = "SELECT online_cd FROM online_number WHERE personal_id='".$personal_id."' and host='".$ip."'";
-            $online_cd = db_getOne($sql);
-            $_SESSION['online_cd'] = $online_cd;						
-        }
-        //echo $sql;	
+		if($USE_MYSQL)
+		{
+			if( isset($_SESSION['online_cd ']) )
+			{ //同一個來源
+				$sql = "UPDATE online_number SET status='重新登入中', idle='".date('U')."' WHERE online_cd='".$_SESSION['online_cd ']."'";
+				$res = db_query($sql);
+			}
+			else
+			{ 
+				$sql = "INSERT INTO online_number (personal_id, host, time, idle, status) VALUES ('".$personal_id."','".$ip."','".date("U")."','".date("U")."','登入系統中')";
+				$res = db_query($sql);
+				$sql = "SELECT online_cd FROM online_number WHERE personal_id='".$personal_id."' and host='".$ip."'";
+				$online_cd = db_getOne($sql);
+				$_SESSION['online_cd'] = $online_cd;						
+			}
+		}
+		else if($USE_MONGODB)
+		{
+			$online_number = $db->online_number;
+			if( isset($_SESSION['online_cd ']) )
+			{ //同一個來源
+				$online_number->update(array('_id' => new MongoId($_SESSION['online_cd'])), array('$set' => array('status' => '重新登入中', 'idle' => new MongoDate())));
+			}
+			else
+			{ 
+				$mid = new MongoId();
+				$online_number->insert(array('_id' => $mid, 'pid' => $personal_id, 'h' => $ip, 't' => new MongoDate(), 'idle' => new MongoDate(), 'status' => '登入系統'));
+				$_SESSION['online_cd'] = $mid;
+			}
+		}
         //--------------------------------------------------------
         $_SESSION['personal_ip'] = $ip;	
 

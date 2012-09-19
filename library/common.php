@@ -379,20 +379,31 @@
      *
      * @param status_now 現在使用者的狀態
 	 */	
-	function update_status ( $status_now ) {
-
-		$status_now = addslashes( $status_now );
+	function update_status ( $status_now ) 
+	{
+		global $USE_MONGODB, $USE_MYSQL, $db;
+		// $status_now = addslashes( $status_now );
 		//問卷
-		//¥ý§PÂ_¬O§_¦b
-		$sql = "SELECT online_cd FROM online_number WHERE personal_id='".$_SESSION['personal_id']."' and host='".$_SESSION['personal_ip']."'";
-
-		$res = db_query($sql);
-		$count = $res->numRows();		
-		if($count != 0){
-			$row_online = $res->fetchRow(DB_FETCHMODE_ASSOC);
-			$sql = "UPDATE online_number SET status='". $status_now  ."' WHERE online_cd='".$row_online['online_cd']."'";
+		if($USE_MYSQL)
+		{
+			$sql = "UPDATE online_number SET status='". $status_now  ."' WHERE online_cd='".$_SESSION['online_cd']."'";
 			$res = db_query($sql);
-		}							
+		}
+		else if($USE_MONGODB)
+		{
+			$online_number = $db->online_number;
+			$online_number->update(array('_id' => new MongoId($_SESSION['online_cd'])), array('$set' => array('ss' => $status_now)));
+		}
+		// $sql = "SELECT online_cd FROM online_number WHERE personal_id='".$_SESSION['personal_id']."' and host='".$_SESSION['personal_ip']."'";
+
+		// $res = db_query($sql);
+		// $count = $res->numRows();		
+		// if($count != 0)
+		// {
+		// 	$row_online = $res->fetchRow(DB_FETCHMODE_ASSOC);
+		// 	$sql = "UPDATE online_number SET status='". $status_now  ."' WHERE online_cd='".$row_online['online_cd']."'";
+		// 	$res = db_query($sql);
+		// }							
 	}
 
     //function content by rja

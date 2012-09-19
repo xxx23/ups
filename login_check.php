@@ -14,7 +14,7 @@ AUTHOR: 14_不太想玩
     $login_id = trim($login_id);
     $password = trim($password);
 
-	global $DB_CONN, $HOME_PATH;
+	global $DB_CONN, $HOME_PATH, $USE_MYSQL, $USE_MONGODB, $db;
 	/*modify by lunsrot at 2007/08/08
 	 *修改內容：讓使用者登入時若發生無法登入時應給予適當說明
      */
@@ -60,16 +60,34 @@ AUTHOR: 14_不太想玩
 		/**紀錄每個登入者的log**/
         loginLog($personal_id,$ip,$MAX_LOGIN_LOG_LENGTH);
 		/** 登入後會將這個user 記在 online_number **/
-		if( isset($_SESSION['online_cd ']) ){ //同一個來源
-			$sql = "UPDATE online_number SET status='重新登入中', idle='".date('U')."' WHERE online_cd='".$_SESSION['online_cd ']."'";
-			$res = db_query($sql);
+		if($USE_MYSQL)
+		{
+			if( isset($_SESSION['online_cd ']) ){ //同一個來源
+				$sql = "UPDATE online_number SET status='重新登入中', idle='".date('U')."' WHERE online_cd='".$_SESSION['online_cd ']."'";
+				$res = db_query($sql);
+			}
+			else{ 
+				$sql = "INSERT INTO online_number (personal_id, host, time, idle, status) VALUES ('".$personal_id."','".$ip."','".date("U")."','".date("U")."','登入系統中')";
+				$res = db_query($sql);
+				$sql = "SELECT online_cd FROM online_number WHERE personal_id='".$personal_id."' and host='".$ip."'";
+				$online_cd = db_getOne($sql);
+				$_SESSION['online_cd'] = $online_cd;						
+			}
 		}
-		else{ 
-			$sql = "INSERT INTO online_number (personal_id, host, time, idle, status) VALUES ('".$personal_id."','".$ip."','".date("U")."','".date("U")."','登入系統中')";
-			$res = db_query($sql);
-			$sql = "SELECT online_cd FROM online_number WHERE personal_id='".$personal_id."' and host='".$ip."'";
-			$online_cd = db_getOne($sql);
-			$_SESSION['online_cd'] = $online_cd;						
+		else if($USE_MONGODB)
+		{
+
+			$online_number = $db->online_number;
+			if( isset($_SESSION['online_cd ']) )
+			{ //同一個來源
+				$online_number->update(array('_id' => new MongoId($_SESSION['online_cd'])), array('$set' => array('ss' => '重新登入中', 'idle' => new MongoDate())));
+			}
+			else
+			{ 
+				$mid = new MongoId();
+				$online_number->insert(array('_id' => $mid, 'pid' => $personal_id, 'h' => $ip, 't' => new MongoDate(), 'idle' => new MongoDate(), 'ss' => '登入系統'));
+				$_SESSION['online_cd'] = $mid;
+			}
 		}
 
 		//--------------------------------------------------------

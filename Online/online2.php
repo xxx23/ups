@@ -11,37 +11,73 @@
 	//開啟session
 	session_start();	
 
+	global $USE_MONGODB, $USE_MYSQL, $db;
+
 	if(isset($_SESSION['begin_course_cd']))
 		$begin_course_cd = $_SESSION['begin_course_cd'];
 	
 	//先查詢是否在 online_number
-	$sql = "SELECT COUNT(*) FROM online_number WHERE online_cd='".$_SESSION['online_cd']."'";
-	$isHave = db_getOne($sql);
+	if($USE_MYSQL)
+	{
+		$sql = "SELECT COUNT(*) FROM online_number WHERE online_cd='".$_SESSION['online_cd']."'";
+		$isHave = db_getOne($sql);
+	}
+	else if($USE_MONGODB)
+	{
+		$online_number = $db->online_number;
+		$isHave = $online_number->count();
+	}
 
 	// 如果已經在裏面的話 就更新資料
-	if($isHave){
-		$sql = "UPDATE online_number SET begin_course_cd='".$_SESSION['begin_course_cd']."', status='觀看公告' WHERE online_cd='".$_SESSION['online_cd']."'";
-		$res = db_query($sql);
-	}
-	else{
-
-		$sql = "INSERT INTO online_number (personal_id, host, time, idle, status, begin_course_cd) 
-				VALUES ('".$_SESSION['personal_id']."','".$_SESSION['personal_ip']."','".date('U')."','".date('U')."','觀看公告','".$_SESSION['begin_course_cd']."')";
-        //add by aeil
-        if(!is_null($_SESSION['personal_id']) || !empty($_SESSION['personal_id']))
+	if($isHave)
+	{
+		if($USE_MYSQL)
 		{
-          $res = db_query($sql);
+			$sql = "UPDATE online_number SET begin_course_cd='".$_SESSION['begin_course_cd']."', status='觀看公告' WHERE online_cd='".$_SESSION['online_cd']."'";
+			$res = db_query($sql);
 		}
-		$sql = "SELECT online_cd FROM online_number WHERE personal_id='".$_SESSION['personal_id']."' and host='".$_SESSION['personal_ip']."'";
-		$online_cd = db_getOne($sql);
-		$_SESSION['online_cd'] = 	$online_cd;			
+		else if($USE_MONGODB)
+		{
+			$online_number->update(array('_id' => new MongoId($_SESSION['online_cd'])), array('$set' => array('bcd' => $_SESSION['begin_course_cd'], 'ss' => '觀看公告')));
+		}
+	}
+	else
+	{
+		if($USE_MYSQL)
+		{
+			$sql = "INSERT INTO online_number (personal_id, host, time, idle, status, begin_course_cd) 
+					VALUES ('".$_SESSION['personal_id']."','".$_SESSION['personal_ip']."','".date('U')."','".date('U')."','觀看公告','".$_SESSION['begin_course_cd']."')";
+			//add by aeil
+			if(!is_null($_SESSION['personal_id']) || !empty($_SESSION['personal_id']))
+			{
+			  $res = db_query($sql);
+			}
+			$sql = "SELECT online_cd FROM online_number WHERE personal_id='".$_SESSION['personal_id']."' and host='".$_SESSION['personal_ip']."'";
+			$online_cd = db_getOne($sql);
+			$_SESSION['online_cd'] =	 $online_cd;			
+		}
+		else if($USE_MONGODB)
+		{
+			$mid = new MongoId();
+			$online_number->insert(array('_id' => $mid, 'pid' => $personal_id, 'h' => $ip, 't' => new MongoDate(), 'idle' => new MongoDate(), 'ss' => '觀看公告', 'bcd' => $_SESSION['begin_course_cd']));
+			$_SESSION['online_cd'] = $mid;
+		}
 	}	
 	//刪除 idle過久的
 	// 這邊query寫法感覺可以再改進 by carlcarl
     $refreshmin = 10; //
     $refreshsec = $refreshmin * 60;
-	$sql = "DELETE from online_number WHERE time < (" . date("U") . " - $refreshsec)";
-	$res = db_query($sql);
+	if($USE_MYSQL)
+	{
+		$sql = "DELETE from online_number WHERE time < (" . date("U") . " - $refreshsec)";
+		$res = db_query($sql);
+	}
+	else if($USE_MONGODB)
+	{
+		$d = new MongoDate();
+		$d->sec -= $refreshsec;
+		$online_number->remove(array('t' => array('$lt' => $d)));
+	}
 
 //------------- display	---------------------
 	//查出系統上的人數 與 姓名 狀態
@@ -50,13 +86,21 @@
 	$course_num = 0;			
 	$friend_num = 0;			
 
-
-	$sql = "SELECT COUNT(*) FROM online_number";
-	$system_num = db_getOne($sql);
-
-	$sql = "SELECT COUNT(*) FROM online_number WHERE begin_course_cd = " .  
-		$_SESSION['begin_course_cd'] . " AND online_cd <> " . $_SESSION['online_cd'];
-	$course_num = db_getOne($sql);
+	if($USE_MYSQL)
+	{
+		$sql = "SELECT COUNT(*) FROM online_number";
+		$system_num = db_getOne($sql);
+	
+		$sql = "SELECT COUNT(*) FROM online_number WHERE begin_course_cd = " .  
+			$_SESSION['begin_course_cd'] . " AND online_cd <> " . $_SESSION['online_cd'];
+		$course_num = db_getOne($sql);
+	}
+	else if($USE_MONGODB)
+	{
+		$system_num = $online_number->count();
+		// $course_num = $online_number->aggregate(array('$project' => array(), '$match' => array('bcd' => $_SESSION['begin_course_cd'], '_id' => array('$ne' => new MongoId($_SESSION['online_cd'])))));
+		$course_num = $online_number->find(array('bcd' => $_SESSION['begin_course_cd'], '_id' => array('$ne' => new MongoId($_SESSION['online_cd']))))->count();
+	}
 
     //--update add by q110185
         update_course_tracking();

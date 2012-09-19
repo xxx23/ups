@@ -12,7 +12,7 @@ function role_visibility($role, $like, $lvl, $stop, $begin_course_cd,$attribute)
 	if($lvl >= $stop)
 		return ;
 
-	if( $_SESSION['lang'] != 'zh_tw' && !empty($_SESSION['lang']) ) {//預設為中文，不是則找相對的語言
+	if(!empty($_SESSION['lang']) &&  $_SESSION['lang'] != 'zh_tw') {//預設為中文，不是則找相對的語言
 		if($role != $ASSISTENT)
 			$sql = "select A.menu_id, C.menu_name, B.menu_link from `menu_role` A, `lrtmenu_` B , lrtmenu_lang C where A.menu_id=B.menu_id AND B.menu_id=C.menu_id AND C.lang='{$_SESSION['lang']}' and A.role_cd=$role and A.is_used='y' and B.menu_level=$lvl ";
 		else

@@ -14,7 +14,7 @@ if($USE_MYSQL)
 else if($USE_MONGODB)
 {
 	$online_number = $db->online_number;
-	$online_number->remove(array('pid' => $_SESSION['personal_id'], 'h' => $_SESSION['personal_ip']));
+	$online_number->remove(array('pid' => intval($_SESSION['personal_id']), 'h' => $_SESSION['personal_ip']));
 }
 //------------------------------------------------------
 

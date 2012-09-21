@@ -392,7 +392,7 @@
 		else if($USE_MONGODB)
 		{
 			$online_number = $db->online_number;
-			$online_number->update(array('_id' => new MongoId($_SESSION['online_cd'])), array('$set' => array('ss' => $status_now)));
+			$online_number->update(array('_id' => new MongoId($_SESSION['online_cd'])), array('$set' => array('ss' => $status_now, 'idle' => new MongoDate())));
 		}
 		// $sql = "SELECT online_cd FROM online_number WHERE personal_id='".$_SESSION['personal_id']."' and host='".$_SESSION['personal_ip']."'";
 

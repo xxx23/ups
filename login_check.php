@@ -85,7 +85,7 @@ AUTHOR: 14_不太想玩
 			else
 			{ 
 				$mid = new MongoId();
-				$online_number->insert(array('_id' => $mid, 'pid' => $personal_id, 'h' => $ip, 't' => new MongoDate(), 'idle' => new MongoDate(), 'ss' => '登入系統'));
+				$online_number->insert(array('_id' => $mid, 'pid' => intval($personal_id), 'h' => $ip, 't' => new MongoDate(), 'idle' => new MongoDate(), 'ss' => '登入系統'));
 				$_SESSION['online_cd'] = $mid;
 			}
 		}

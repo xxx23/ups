@@ -25,7 +25,7 @@
 	else if($USE_MONGODB)
 	{
 		$online_number = $db->online_number;
-		$isHave = $online_number->count();
+		$isHave = $online_number->count(array('_id' => new MongoId($_SESSION['online_cd'])));
 	}
 
 	// 如果已經在裏面的話 就更新資料
@@ -33,12 +33,12 @@
 	{
 		if($USE_MYSQL)
 		{
-			$sql = "UPDATE online_number SET begin_course_cd='".$_SESSION['begin_course_cd']."', status='觀看公告' WHERE online_cd='".$_SESSION['online_cd']."'";
+			$sql = "UPDATE online_number SET begin_course_cd='".$_SESSION['begin_course_cd']."', status='觀看公告', idle='" . date('U')."' WHERE online_cd='".$_SESSION['online_cd']."'";
 			$res = db_query($sql);
 		}
 		else if($USE_MONGODB)
 		{
-			$online_number->update(array('_id' => new MongoId($_SESSION['online_cd'])), array('$set' => array('bcd' => $_SESSION['begin_course_cd'], 'ss' => '觀看公告')));
+			$online_number->update(array('_id' => new MongoId($_SESSION['online_cd'])), array('$set' => array('bcd' => intval($_SESSION['begin_course_cd']), 'idle' => new MongoDate, 'ss' => '觀看公告')));
 		}
 	}
 	else
@@ -50,7 +50,7 @@
 			//add by aeil
 			if(!is_null($_SESSION['personal_id']) || !empty($_SESSION['personal_id']))
 			{
-			  $res = db_query($sql);
+				$res = db_query($sql);
 			}
 			$sql = "SELECT online_cd FROM online_number WHERE personal_id='".$_SESSION['personal_id']."' and host='".$_SESSION['personal_ip']."'";
 			$online_cd = db_getOne($sql);
@@ -59,7 +59,7 @@
 		else if($USE_MONGODB)
 		{
 			$mid = new MongoId();
-			$online_number->insert(array('_id' => $mid, 'pid' => $personal_id, 'h' => $ip, 't' => new MongoDate(), 'idle' => new MongoDate(), 'ss' => '觀看公告', 'bcd' => $_SESSION['begin_course_cd']));
+			$online_number->insert(array('_id' => $mid, 'pid' => intval($_SESSION['personal_id']), 'h' => $_SESSION['personal_ip'], 't' => new MongoDate(), 'idle' => new MongoDate(), 'ss' => '觀看公告', 'bcd' => intval($_SESSION['begin_course_cd'])));
 			$_SESSION['online_cd'] = $mid;
 		}
 	}	
@@ -69,14 +69,14 @@
     $refreshsec = $refreshmin * 60;
 	if($USE_MYSQL)
 	{
-		$sql = "DELETE from online_number WHERE time < (" . date("U") . " - $refreshsec)";
+		$sql = "DELETE from online_number WHERE idle < (" . date("U") . " - $refreshsec)";
 		$res = db_query($sql);
 	}
 	else if($USE_MONGODB)
 	{
 		$d = new MongoDate();
 		$d->sec -= $refreshsec;
-		$online_number->remove(array('t' => array('$lt' => $d)));
+		$online_number->remove(array('idle' => array('$lt' => $d)));
 	}
 
 //------------- display	---------------------
@@ -98,8 +98,7 @@
 	else if($USE_MONGODB)
 	{
 		$system_num = $online_number->count();
-		// $course_num = $online_number->aggregate(array('$project' => array(), '$match' => array('bcd' => $_SESSION['begin_course_cd'], '_id' => array('$ne' => new MongoId($_SESSION['online_cd'])))));
-		$course_num = $online_number->find(array('bcd' => $_SESSION['begin_course_cd'], '_id' => array('$ne' => new MongoId($_SESSION['online_cd']))))->count();
+		$course_num = $online_number->count(array('bcd' => intval($_SESSION['begin_course_cd']), '_id' => array('$ne' => new MongoId($_SESSION['online_cd']))));
 	}
 
     //--update add by q110185

@@ -12,9 +12,6 @@ require_once("../Learning_Tracking/time_output_format.php");
 
 //checkMenu("/Learning_Tracking/showAllStudentCourseUseLog.php");
 
-//$Begin_course_cd = $_SESSION['begin_course_cd'];
-//$Personal_id = $_GET['personal_id'];
-
 //取得課程cd
 $Begin_course_cd = $_GET['begin_course_cd'];
 
@@ -64,9 +61,6 @@ function buildTreeStructure($Content_cd, $Begin_course_cd) {
  	$t = "";
 	$r = "";
   	while ($row = $result->fetchRow(DB_FETCHMODE_ASSOC)) {
-//echo "<pre>";		
-//var_dump($row);
-//echo "</per>";
 	$status_str = learning_status_str($Content_cd,$row['menu_id'], $Begin_course_cd);
 	if($row['menu_parentid'] == 0){
 		$r .= "tree.setNodeCtxMenu(".$row['menu_id'].",ctx2);\n";  //設定根節點disable menu，檔名取ctx2才不會有問題...@@
@@ -91,44 +85,59 @@ function buildTreeStructure($Content_cd, $Begin_course_cd) {
     	}
 	}
 	
-	/*if(empty($t))
-		$t = "tree.add(1, 0, \"目前沒有任何資料\", \"\", \"\", true);";
-	*/
 	return $t.$r;
 }
 
 function learning_status_str($Content_cd,$Menu_id, $Begin_course_cd)
 {
-
-	//$sql = "select * from student_learning 
-	//	where begin_course_cd = '$Begin_course_cd' and personal_id = '$Personal_id' and menu_id = '$Menu_id'";
-	$sql = "select SUM(event_happen_number) AS event_happen_number_sum,
-				   SUM(TIME_TO_SEC(event_hold_time)) AS event_hold_time_sum
-			from student_learning 
-			where begin_course_cd = '$Begin_course_cd' and content_cd='".$Content_cd."' and menu_id = '$Menu_id'";
-	//echo $sql;
-	$result = db_query($sql);
-	
-	//print_r($result);
-	//print $result->numRows();
-	if($result->numRows())
+	global $USE_MYSQL, $USE_MONGODB, $db;
+	if($USE_MYSQL)
 	{
-		$row = $result->fetchRow(DB_FETCHMODE_ASSOC);
-		//print $row['event_happen_number'];
-		//print_r($row);
-		$total_happen_num = ($row['event_happen_number_sum'])?$row['event_happen_number_sum']:0;
-		$total_hold_time =  ($row['event_hold_time_sum'])? $row['event_hold_time_sum']:0;
-		if($total_happen_num==0 && $total_hold_time==0)
-			$str = "------- [未曾點閱]";
-		else{
-		  $total_hold_time = time_output_format($total_hold_time);
-		  
-		  $str = "------- [ 點閱".$total_happen_num. "次  |  停留總時間：" . $total_hold_time. " ]";//------[ 首次登入時間：".$row['event_occur_time'] . "  |  上次登入時間：". $row['event_last_time']. " ]";
-			
+		$sql = "select SUM(event_happen_number) AS event_happen_number_sum,
+					   SUM(TIME_TO_SEC(event_hold_time)) AS event_hold_time_sum
+				from student_learning 
+				where begin_course_cd = '$Begin_course_cd' and content_cd='".$Content_cd."' and menu_id = '$Menu_id'";
+		$result = db_query($sql);
+		if($result->numRows())
+		{
+			$row = $result->fetchRow(DB_FETCHMODE_ASSOC);
+			$total_happen_num = ($row['event_happen_number_sum'])?$row['event_happen_number_sum']:0;
+			$total_hold_time =  ($row['event_hold_time_sum'])? $row['event_hold_time_sum']:0;
+			if($total_happen_num==0 && $total_hold_time==0)
+				$str = "------- [未曾點閱]";
+			else{
+				$total_hold_time = time_output_format($total_hold_time);
+
+				$str = "------- [ 點閱".$total_happen_num. "次  |  停留總時間：" . $total_hold_time. " ]";//------[ 首次登入時間：".$row['event_occur_time'] . "  |  上次登入時間：". $row['event_last_time']. " ]";
+
+			}
+			return $str;
 		}
-		return $str;
+		else
+			return "------- [未曾點閱]";
 	}
-	else
-		return "------- [未曾點閱]";
+	else if($USE_MONGODB)
+	{
+		$res = $db->command(array('aggregate' => 'student_learning', 'pipeline' => array(array('$match' => array('bcd' => intval($Begin_course_cd), 'ccd' => intval($Content_cd), 'mid' => intval($Menu_id))), array('$group' => array('_id' => '$pid', 'event_happen_number_sum' => array('$sum' => '$ehn'), 'event_hold_time_sum' => array('$sum' => '$eht'))))));
+		$c = count($res['result']);
+
+		if($c)
+		{
+			$row = $res['result'][0];
+			$total_happen_num = ($row['event_happen_number_sum'])?$row['event_happen_number_sum']:0;
+			$total_hold_time =  ($row['event_hold_time_sum'])? $row['event_hold_time_sum']:0;
+			if($total_happen_num==0 && $total_hold_time==0)
+				$str = "------- [未曾點閱]";
+			else{
+				$total_hold_time = time_output_format($total_hold_time);
+
+				$str = "------- [ 點閱".$total_happen_num. "次  |  停留總時間：" . $total_hold_time. " ]";//------[ 首次登入時間：".$row['event_occur_time'] . "  |  上次登入時間：". $row['event_last_time']. " ]";
+
+			}
+			return $str;
+		}
+		else
+			return "------- [未曾點閱]";
+	}
 }
 ?>

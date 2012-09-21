@@ -17,8 +17,6 @@ require_once("../session.php");
 $Personal_id = $_GET['personal_id'];
 $Begin_course_cd = $_GET['begin_course_cd'];
 
-$sql = "select * from student_learning where begin_course_cd = '$Begin_course_cd' and personal_id = '$Personal_id' order by seq asc;";
-
 //取得本課程所用的教材編號
 $sql = "select content_cd from class_content_current where begin_course_cd = '$Begin_course_cd'";
 $Content_cd = db_getOne($sql);
@@ -103,20 +101,35 @@ function buildTreeStructure($Content_cd, $Personal_id, $Begin_course_cd) {
 
 function learning_status_str($Menu_id, $Personal_id, $Begin_course_cd)
 {
-	$sql = "select * from student_learning 
-		where begin_course_cd = '$Begin_course_cd' and personal_id = '$Personal_id' and menu_id = '$Menu_id'";
-	$result = db_query($sql);
-	 
-	//print_r($result);
-	//print $result->numRows();
-	if($result->numRows() == 0) 
-		return "[未曾點閱]";
-	else{
-		$row = $result->fetchRow(DB_FETCHMODE_ASSOC);
-		//print $row['event_happen_number'];
-		//print_r($row);
-		$str = "------- [ 點閱".$row['event_happen_number']. "次  |  停留總時間：" .$row['event_hold_time']. " ]------[ 首次登入時間：".$row['event_occur_time'] . "  |  上次登入時間：". $row['event_last_time']. " ]";
-		return $str;
+	global $USE_MYSQL, $USE_MONGODB, $db;
+	if($USE_MYSQL)
+	{
+		$sql = "select * from student_learning 
+			where begin_course_cd = '$Begin_course_cd' and personal_id = '$Personal_id' and menu_id = '$Menu_id'";
+		$result = db_query($sql);
+		 
+		if($result->numRows() == 0) 
+			return "[未曾點閱]";
+		else
+		{
+			$row = $result->fetchRow(DB_FETCHMODE_ASSOC);
+			$str = "------- [ 點閱".$row['event_happen_number']. "次  |  停留總時間：" .$row['event_hold_time']. " ]------[ 首次登入時間：".$row['event_occur_time'] . "  |  上次登入時間：". $row['event_last_time']. " ]";
+			return $str;
+		}
+	}
+	else if($USE_MONGODB)
+	{
+		$student_learning = $db->student_learning;
+		$result = $student_learning->findOne(array('bcd' => intval($Begin_course_cd), 'pid' => intval($Personal_id), 'mid' => intval($Menu_id)));
+
+		if($result == NULL) 
+			return "[未曾點閱]";
+		else
+		{
+			$row = $result;
+			$str = "------- [ 點閱".$row['event_happen_number']. "次  |  停留總時間：" .$row['event_hold_time']. " ]------[ 首次登入時間：".$row['event_occur_time'] . "  |  上次登入時間：". $row['event_last_time']. " ]";
+			return $str;
+		}
 	}
 }
 ?>

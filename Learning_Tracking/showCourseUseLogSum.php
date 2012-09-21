@@ -13,6 +13,8 @@
 
 	$begin_course_cd = $_SESSION['begin_course_cd'];		//取得課程代碼
 
+	global $USE_MYSQL, $USE_MONGODB, $db;
+
 	$tpl = new Smarty;
 	$tpl->assign("cssPath", $CSS_PATH);
 	$tpl->assign("imagePath", $IMAGE_PATH);
@@ -88,36 +90,49 @@
 		}
 	}
 	
-	$sql = "SELECT 
+	if($USE_MYSQL)
+	{
+		$sql = "SELECT 
 			sum(A.event_happen_number) as event_hp_time,
-			sum(TIME_TO_SEC(A.event_hold_time)) as event_hold_time  
-		FROM 
-			student_learning A 
-		WHERE 
-			A.begin_course_cd = '$begin_course_cd' AND
-	       		A.content_cd = '".get_Content_cd($begin_course_cd)."'
-			";
-	//ech $sql;
-	
-	$res = db_query($sql);
-	$resultNum = $res->numRows();
+				sum(TIME_TO_SEC(A.event_hold_time)) as event_hold_time  
+				FROM 
+				student_learning A 
+				WHERE 
+				A.begin_course_cd = '$begin_course_cd' AND
+				A.content_cd = '".get_Content_cd($begin_course_cd)."'
+				";
 
-	//echo '<br/>'.$resultNum.'<br/>';
-  	  
-	if($resultNum > 0)
-	{
-		$res->fetchInto($row, DB_FETCHMODE_ASSOC);
-		
-		//var_dump($row);
+		$res = db_query($sql);
+		$resultNum = $res->numRows();
 
-		$ReadText=$row['event_hp_time'] ? $row['event_hp_time']:0;
-		$ReadTextTime = time_output_format($row['event_hold_time'] ? $row['event_hold_time'] : 0);	
-
+		if($resultNum > 0)
+		{
+			$res->fetchInto($row, DB_FETCHMODE_ASSOC);
+			$ReadText=$row['event_hp_time'] ? $row['event_hp_time']:0;
+			$ReadTextTime = time_output_format($row['event_hold_time'] ? $row['event_hold_time'] : 0);	
+		}
+		else
+		{
+			$ReadText = "0";
+			$ReadTextTime = "0.0 秒";
+		}
 	}
-	else
+	else if($USE_MONGODB)
 	{
-		$ReadText = "0";
-		$ReadTextTime = "0.0 秒";
+		$res = $db->command(array('aggregate' => 'student_learning', 'pipeline' => array(array('$match' => array('bcd' => intval($begin_course_cd), 'ccd' => intval(get_Content_cd($begin_course_cd)))), array('$group' => array('_id' => array('b' => '$bcd', 'c' => '$bcd'), 'event_hp_time' => array('$sum' => '$ehn'), 'event_hold_time' => array('$sum' => '$eht'))))));
+		$resultNum = count($res);
+
+		if($resultNum > 0)
+		{
+			$row = $res['result'][0];
+			$ReadText=$row['event_hp_time'] ? $row['event_hp_time']:0;
+			$ReadTextTime = time_output_format($row['event_hold_time'] ? $row['event_hold_time'] : 0);	
+		}
+		else
+		{
+			$ReadText = "0";
+			$ReadTextTime = "0.0 秒";
+		}
 	}
 	$LoginCourseTime=time_output_format($LoginCourseTime);
 	$tpl->assign("DisscussAreaPost", $DisscussAreaPost);

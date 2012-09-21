@@ -16,6 +16,8 @@
 	$student_id = $_GET['student_id'];		//取得學生personal_id
     if(isset($student_id) == false)	$student_id = $_SESSION['personal_id'];;
 
+	global $USE_MYSQL, $USE_MONGODB, $db;
+
 	$tpl = new Smarty;
 	$tpl->assign("cssPath", $CSS_PATH);
 	$tpl->assign("imagePath", $IMAGE_PATH);
@@ -133,32 +135,51 @@
 	}
 
 	//5.取得 觀看教材次數 以及 時數
-	$sql = "SELECT 
-				sum(A.event_happen_number) as event_hp_time,
+	if($USE_MYSQL)
+	{
+		$sql = "SELECT 
+			sum(A.event_happen_number) as event_hp_time,
 				sum(TIME_TO_SEC(A.event_hold_time)) as event_hold_time  
-			FROM 
+				FROM 
 				student_learning A 
-			WHERE 
+				WHERE 
 				A.begin_course_cd = '$begin_course_cd' AND 
 				A.content_cd = '".get_Content_cd($begin_course_cd)."' AND 
 				A.personal_id = '$student_id'
-			";
-	$res = db_query($sql);
-	$resultNum = $res->numRows();
-	
-	if($resultNum > 0)
-	{
-		$res->fetchInto($row, DB_FETCHMODE_ASSOC);
-		$tpl->assign("ReadText", $row['event_hp_time']);	
-        $ReadTextTime = time_output_format($row['event_hold_time']);
-        //intval(intval($row['event_hold_time'])/3600) .':' .intval((intval($row['event_hold_time'])%3600)/60) .' (H:M)';
+				";
+		$res = db_query($sql);
+		$resultNum = $res->numRows();
 
-		$tpl->assign("ReadTextTime", $ReadTextTime);
+		if($resultNum > 0)
+		{
+			$res->fetchInto($row, DB_FETCHMODE_ASSOC);
+			$tpl->assign("ReadText", $row['event_hp_time']);	
+			$ReadTextTime = time_output_format($row['event_hold_time']);
+
+			$tpl->assign("ReadTextTime", $ReadTextTime);
+		}
+		else
+		{
+			$tpl->assign("ReadText", "0");
+			$tpl->assign("ReadTextTime",  "0秒");
+		}
 	}
-	else
+	else if($USE_MONGODB)
 	{
-		$tpl->assign("ReadText", "0");
-		$tpl->assign("ReadTextTime",  "0秒");
+		$res = $db->command(array('aggregate' => 'student_learning', 'pipeline' => array(array('$match' => array('bcd' => intval($begin_course_cd), 'ccd' => intval(get_Content_cd($begin_course_cd)), 'pid' => intval($student_id))), array('$group' => array('_id' => '$pid', 'event_hp_time' => array('$sum' => '$ehn'), 'event_hold_time' => array('$sum' => '$eht'))))));
+		$resultNum = count($res['result']);
+
+		if($resultNum > 0)
+		{
+			$row = $res['result'][0];
+			$ReadTextTime = time_output_format($row['event_hold_time']);
+			$tpl->assign("ReadTextTime", $ReadTextTime);
+		}
+		else
+		{
+			$tpl->assign("ReadText", "0");
+			$tpl->assign("ReadTextTime",  "0秒");
+		}
 	}
 
 	//輸出教材學習追蹤

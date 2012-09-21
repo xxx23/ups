@@ -62,19 +62,27 @@ function buildTreeStructure($sql,$Content_cd) {
 }
 
 function is_viewed($Content_cd, $Personal_id, $Menu_id){
-  global $DB_CONN;
-  $Begin_course_cd = $_SESSION['begin_course_cd'];
-  $sql = "select * from student_learning where
-    begin_course_cd = '$Begin_course_cd' and
-    content_cd = '$Content_cd' and
-    personal_id = '$Personal_id' and
-    menu_id = '$Menu_id'";
-  $result = $DB_CONN->query($sql);
-  if(PEAR::isError($result))      die($result->userinfo);
-  if($result->numRows() == 0)
-    return 0;
-  else
-    return 1;
+	global $DB_CONN, $USE_MYSQL, $USE_MONGODB, $db;
+	$Begin_course_cd = $_SESSION['begin_course_cd'];
+	if($USE_MYSQL)
+	{
+		$sql = "select count(*) from student_learning where
+			begin_course_cd = '$Begin_course_cd' and
+			content_cd = '$Content_cd' and
+			personal_id = '$Personal_id' and
+			menu_id = '$Menu_id'";
+		$result = db_getOne($sql);
+	}
+	else if($USE_MONGODB)
+	{
+		$student_learning = $db->student_learning;
+		$result = $student_learning->count(array('bcd' => intval($Begin_course_cd), 'ccd' => intval($Content_cd), 'pid' => intval($Personal_id), 'mid' => intval($Menu_id)));
+	}
+
+	if($result == 0)
+		return 0;
+	else
+		return 1;
 }
 
 ?>

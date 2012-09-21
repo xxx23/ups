@@ -16,6 +16,8 @@ $Content_cd = $_GET['content_cd'];
 $Begin_course_cd = $_SESSION['begin_course_cd'];
 $Frame = $_GET['frame'];
 
+global $USE_MYSQL, $USE_MONGODB, $db;
+
 $smtpl = new Smarty;
 //取得這一門課所使用的教材它的老師的id
 $Teacher_cd = textbook($Begin_course_cd);
@@ -49,24 +51,39 @@ $smtpl->assign("Personal_id", $Personal_id);
 $smtpl->assign("Frame",$Frame);
 
 //--------0308 joyce edit-------
-$sql = "SELECT
-         sum(TIME_TO_SEC(A.event_hold_time)) as event_hold_time
-        FROM
-         student_learning A
-        WHERE
-         A.begin_course_cd = '$Begin_course_cd' AND
-         A.content_cd = '".get_Content_cd($Begin_course_cd)."' AND
-         A.personal_id = '$Personal_id'
-         ";
-
-$res = db_query($sql);
-$resultNum = $res->numRows();
-
-if($resultNum > 0)
+if($USE_MYSQL)
 {
-    $res->fetchInto($row, DB_FETCHMODE_ASSOC);
-    $ReadTextTime = time_output_format($row['event_hold_time']);
-    $smtpl->assign("ReadTextTime", $ReadTextTime);
+	$sql = "SELECT
+			 sum(TIME_TO_SEC(A.event_hold_time)) as event_hold_time
+			FROM
+			 student_learning A
+			WHERE
+			 A.begin_course_cd = '$Begin_course_cd' AND
+			 A.content_cd = '".get_Content_cd($Begin_course_cd)."' AND
+			 A.personal_id = '$Personal_id'
+			 ";
+	
+	$res = db_query($sql);
+	$resultNum = $res->numRows();
+	
+	if($resultNum > 0)
+	{
+		$res->fetchInto($row, DB_FETCHMODE_ASSOC);
+		$ReadTextTime = time_output_format($row['event_hold_time']);
+		$smtpl->assign("ReadTextTime", $ReadTextTime);
+	}
+}
+else if($USE_MONGODB)
+{
+	$res = $db->command(array('aggregate' => 'student_learning', 'pipeline' => array(array('$match' => array('bcd' => intval($Begin_course_cd), 'ccd' => intval(get_Content_cd($Begin_course_cd)), 'pid' => intval($Personal_id))), array('$group' => array('_id' => '$pid', 'event_hold_time' => array('$sum' => '$eht'))))));
+	$resultNum = count($res['result']);
+
+	if($resultNum > 0)
+	{
+		$row = $res['result'][0];
+		$ReadTextTime = time_output_format($row['event_hold_time']);
+		$smtpl->assign("ReadTextTime", $ReadTextTime);
+	}
 }
 //-------------------------------
 

@@ -186,36 +186,62 @@ AUTHOR:q110185
 	//-----------------------------------------------
 	function getReadHour($cd,$personal_id)
 	{
-		$sql = "SELECT 
-				sum(A.event_happen_number) as event_hp_time,
-				sum(TIME_TO_SEC(A.event_hold_time)) as event_hold_time  
-			FROM 
-				student_learning A 
-			WHERE 
-				A.begin_course_cd = '$cd' AND 
-				A.content_cd = '".get_Content_cd($cd)."' AND 
-				A.personal_id = '$personal_id'
-			";
-		$res = db_query($sql);
-		$resultNum = $res->numRows();
-		
-		if($resultNum > 0)
-		{	
-			$res->fetchInto($row, DB_FETCHMODE_ASSOC);
-			//$ReadTextTime = intval(intval($row['event_hold_time'])/3600) .':' .intval((intval($row['event_hold_time'])%3600)/60).':'.intval((intval($row['event_hold_time'])%3600)%60) ;
-			$hour = intval(intval($row['event_hold_time'])/3600) ;
-			$min = intval((intval($row['event_hold_time'])%3600)/60);
-			$sec = intval((intval($row['event_hold_time'])%3600)%60);
-			
-			$hour = ($hour < 10) ? "0".$hour : $hour;
-			$min = ($min <10) ? "0".$min:$min;
-			$sec = ($sec <10) ? "0".$sec:$sec;
-			$ReadTextTime = $hour.":".$min.":".$sec;
-			return $ReadTextTime;
-		}
-		else
+		global $USE_MYSQL, $USE_MONGODB, $db;
+		if($USE_MYSQL)
 		{
-			return   "00:00:00 (H:M)";
+			$sql = "SELECT 
+					sum(A.event_happen_number) as event_hp_time,
+					sum(TIME_TO_SEC(A.event_hold_time)) as event_hold_time  
+				FROM 
+					student_learning A 
+				WHERE 
+					A.begin_course_cd = '$cd' AND 
+					A.content_cd = '".get_Content_cd($cd)."' AND 
+					A.personal_id = '$personal_id'
+				";
+			$res = db_query($sql);
+			$resultNum = $res->numRows();
+			
+			if($resultNum > 0)
+			{	
+				$res->fetchInto($row, DB_FETCHMODE_ASSOC);
+				$hour = intval(intval($row['event_hold_time'])/3600) ;
+				$min = intval((intval($row['event_hold_time'])%3600)/60);
+				$sec = intval((intval($row['event_hold_time'])%3600)%60);
+				
+				$hour = ($hour < 10) ? "0".$hour : $hour;
+				$min = ($min <10) ? "0".$min:$min;
+				$sec = ($sec <10) ? "0".$sec:$sec;
+				$ReadTextTime = $hour.":".$min.":".$sec;
+				return $ReadTextTime;
+			}
+			else
+			{
+				return   "00:00:00 (H:M)";
+			}
+		}
+		else if($USE_MONGODB)
+		{
+			$res = $db->command(array('aggregate' => 'student_learning', 'pipeline' => array(array('$match' => array('bcd' => intval($cd), 'ccd' => intval(get_Content_cd($cd)), 'pid' => intval($personal_id))), array('$group' => array('_id' => '$pid', 'event_hp_time' => array('$sum' => '$ehn'), 'event_hold_time' => array('$sum' => '$eht'))))));
+			$resultNum = count($res);
+
+			if($resultNum > 0)
+			{
+				$row = $res['result'][0];
+				$hour = intval(intval($row['event_hold_time'])/3600) ;
+				$min = intval((intval($row['event_hold_time'])%3600)/60);
+				$sec = intval((intval($row['event_hold_time'])%3600)%60);
+				
+				$hour = ($hour < 10) ? "0".$hour : $hour;
+				$min = ($min <10) ? "0".$min:$min;
+				$sec = ($sec <10) ? "0".$sec:$sec;
+				$ReadTextTime = $hour.":".$min.":".$sec;
+				return $ReadTextTime;
+			}
+			else
+			{
+				return   "00:00:00 (H:M)";
+			}
 		}
 	}
 	//-----------------------------------------------

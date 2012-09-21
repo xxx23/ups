@@ -3,8 +3,6 @@
 require('../../../../session.php');
 $begin_course_cd_before = $_SESSION['begin_course_cd'];
 $personal_id_before = $_SESSION['personal_id'];
-//print '<pre>';
-//print_r($_SESSION);
 if($personal_id_before == "")//登出了
 {
        // $begin_course_cd_before = $_GET['Begin_course_cd'];
@@ -24,6 +22,8 @@ if($personal_id_before == "")//登出了
 //下面這行就會改採用 moodle 的 session
 require_once("../../config.php");
 require_once('locallib.php');
+
+global $USE_MYSQL, $USE_MONGODB, $db;
 
 $_SESSION['begin_course_cd']= $begin_course_cd_before ; 
 $_SESSION['personal_id']= $personal_id_before ;
@@ -53,7 +53,7 @@ if($value=="completed")
            where id= $track[id]+1 ";
     db_query($sql);
     //set  start_time
-    $time_start= $track[value];
+    $time_start= $track['value'];
 }
 else
 {
@@ -62,53 +62,69 @@ else
     set timemodified=$timemodified
            where id= $track[id]";
     db_query($sql);
-    $time_start= $track[value];
+    $time_start= $track['value'];
 }
 
 //=====================joyce 0915=============結點防呆檢查
-  //從content_cd查scorm_id
-  $sql = "select id from mdl_scorm  where content_cd ='$content_cd'";
-  $s_id = db_getOne($sql);
-  $sql = "select scorm from  mdl_scorm_scoes  where id = $track[scoid];";
-  $s_id2 = db_getOne($sql);
+//從content_cd查scorm_id
+$sql = "select id from mdl_scorm  where content_cd ='$content_cd'";
+$s_id = db_getOne($sql);
+$sql = "select scorm from  mdl_scorm_scoes  where id = $track[scoid];";
+$s_id2 = db_getOne($sql);
 
-  if($track['scormid']!= $s_id || $s_id!= $s_id2)
-  {echo $track['scormid'].','.$s_id;  return;}
+if($track['scormid']!= $s_id || $s_id!= $s_id2)
+{echo $track['scormid'].','.$s_id;  return;}
 
 
 //Update student_learning table
 $time_start_strf=strftime("%Y-%m-%d %H:%M:%S", $time_start);
 $time_end_strf=strftime("%Y-%m-%d %H:%M:%S",$timemodified);
-    //query student_learning 
-    $sql = "select * from student_learning where 
-            begin_course_cd ='$begin_course_cd' and
-            personal_id = '$personal_id' and
-            menu_id='$track[scoid]'";
-    $row=db_getRow($sql);
-    if(is_null($row))
-     {
-      //student_learning中沒有紀錄 
-      $sql ="insert into student_learning
-          (begin_course_cd,content_cd,personal_id,menu_id,
-           event_happen_number,event_hold_time,event_occur_time,
-           event_last_time)
-           values ($begin_course_cd,$content_cd,$personal_id,'{$track[scoid]}',
-           1,TIMEDIFF('$time_end_strf','$time_start_strf'),'$time_start_strf','$time_end_strf');";
-      db_query($sql);
-     }
-     else
-     {
-       //student_learning中已有紀錄      
-         $event_happen_number=$row["event_happen_number"]+1;
-         $event_hold_time=$row["event_hold_time"];
-         $sql ="update student_learning
-             set event_happen_number=$event_happen_number,
-             event_hold_time=ADDTIME('$event_hold_time',
-             TIMEDIFF('$time_end_strf','$time_start_strf')),
-             event_last_time='$time_end_strf'
-             where begin_course_cd = '$begin_course_cd' and personal_id = '$personal_id' and menu_id='{$track[scoid]}';";
-        db_query($sql);
-     }
-    //echo "1";
-//}//else
+if($USE_MYSQL)
+{
+	//query student_learning 
+	$sql = "select * from student_learning where 
+		begin_course_cd ='$begin_course_cd' and
+		personal_id = '$personal_id' and
+		menu_id='$track[scoid]'";
+	$row=db_getRow($sql);
+	if(is_null($row))
+	{
+		//student_learning中沒有紀錄 
+		$sql ="insert into student_learning
+			(begin_course_cd,content_cd,personal_id,menu_id,
+			event_happen_number,event_hold_time,event_occur_time,
+			event_last_time)
+			values ($begin_course_cd,$content_cd,$personal_id,'{$track[scoid]}',
+				1,TIMEDIFF('$time_end_strf','$time_start_strf'),'$time_start_strf','$time_end_strf');";
+		db_query($sql);
+	}
+	else
+	{
+		//student_learning中已有紀錄	  
+		$event_happen_number=$row["event_happen_number"]+1;
+		$event_hold_time=$row["event_hold_time"];
+		$sql ="update student_learning
+			set event_happen_number=$event_happen_number,
+			event_hold_time=ADDTIME('$event_hold_time',
+			TIMEDIFF('$time_end_strf','$time_start_strf')),
+				 event_last_time='$time_end_strf'
+				 where begin_course_cd = '$begin_course_cd' and personal_id = '$personal_id' and menu_id='{$track[scoid]}';";
+		db_query($sql);
+	}
+}
+else if($USE_MONGODB)
+{
+	$student_learning = $db->student_learning;
+	$row = $student_learning->findOne(array('bcd' => intval($begin_course_cd), 'pid' => intval($personal_id), 'mid' => intval($track['scoid'])));
+	if($row == NULL)
+	{
+		$student_learning->insert(array('bcd' => intval($begin_course_cd), 'ccd' => intval($content_cd), 'pid' => intval($personal_id), 'mid' => intval($track['scoid']), 'ehn' => 1, 'eht' => intval(intval($timemodified) - intval($time_start)), 'eot' => new MongoDate(strtotime($time_start_strf)), 'elt' => new MongoDate(strtotime($time_end_strf))));
+	}
+	else
+	{
+		$event_happen_number=$row["ehn"]+1;
+		$event_hold_time=$row["eht"];
+		$student_learning->update(array('bcd' => intval($begin_course_cd), 'pid' => intval($personal_id), 'mid' => intval($track['scoid'])), array('$set' => array('ehn' => intval($event_happen_number), 'eht' => intval($event_hold_time) + intval($timemodified) - intval($time_start), 'elt' => new MongoDate(strtotime($time_end_strf)))));
+	}
+}
 ?>

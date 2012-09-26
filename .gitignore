@@ -3,3 +3,5 @@ Install/
 *.tpl.php
 *.swp
 Teaching_Material/scorm/nccudata/*
+import_student_learning.php
+

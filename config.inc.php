@@ -1,4 +1,6 @@
 <?php 
+//ini_set('display_errors', '1');
+//error_reporting(E_ALL);
 //System Begin Time
 	$SYSTEM_BEGIN_YEAR = "2012";
 	$SYSTEM_BEGIN_MONTH = "08";

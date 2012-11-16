@@ -201,12 +201,19 @@
                 global $WEBROOT;
 		$r = $DB_CONN->query($sql);
         
-        if(PEAR::isError($r))
+        // if(PEAR::isError($r))
+        // {
+        //     if($DB_DEBUG)
+        //         die($_SERVER['PHP_SELF'] . ': '.$r->getDebugInfo());
+        //     else
+        //         header("Location:".$WEBROOT."error.html");
+        // }
+        if(!$r)
         {
             if($DB_DEBUG)
-                die($_SERVER['PHP_SELF'] . ': '.$r->getDebugInfo());
+                die($_SERVER['PHP_SELF'] . ': '.$DB_CONN->error);
             else
-                header("Location:".$WEBROOT."error.html");
+                die($_SERVER['PHP_SELF'] . ': '.$DB_CONN->error . ': ' . var_dump($sql));
         }
 		return $r;
 	}
@@ -225,16 +232,27 @@
 
 		global $DB_CONN;
 		global $DB_DEBUG;
-                global $WEBROOT;
-		$r = $DB_CONN->getOne($sql);
-		if(PEAR::isError($r))
+		global $WEBROOT;
+		$r = $DB_CONN->query($sql);
+		// $r = $DB_CONN->getOne($sql);
+
+        if(!$r)
         {
             if($DB_DEBUG)
-                die($_SERVER['PHP_SELF'] . ': '.$r->getDebugInfo());
+                die($_SERVER['PHP_SELF'] . ': '.$DB_CONN->error);
             else
-                header("Location:".$WEBROOT."error.html");
+                die($_SERVER['PHP_SELF'] . ': '.$DB_CONN->error . ': ' . var_dump($sql));
         }
-        return $r;
+		$row = $r->fetch_row();
+		return is_array($row) ? reset($row) : null;
+		// if(PEAR::isError($r))
+        // {
+        //     if($DB_DEBUG)
+        //         die($_SERVER['PHP_SELF'] . ': '.$r->getDebugInfo());
+        //     else
+        //         header("Location:".$WEBROOT."error.html");
+        // }
+        // return $r;
 	}
 
     /*
@@ -251,15 +269,27 @@
 	  	global $DB_CONN;
 		global $DB_DEBUG;
                 global $WEBROOT;
-		$r = $DB_CONN->getRow($sql, DB_FETCHMODE_ASSOC);
-		if(PEAR::isError($r))
+
+		$r = $DB_CONN->query($sql);
+
+        if(!$r)
         {
             if($DB_DEBUG)
-                die($_SERVER['PHP_SELF'] . ': '.$r->getDebugInfo());
+                die($_SERVER['PHP_SELF'] . ': '.$DB_CONN->error);
             else
-                header("Location:".$WEBROOT."error.html");
+                die($_SERVER['PHP_SELF'] . ': '.$DB_CONN->error . ': ' . var_dump($sql));
         }
-        return $r;
+		$row = $t->fetch_assoc();
+		return $row;
+		// $r = $DB_CONN->getRow($sql, DB_FETCHMODE_ASSOC);
+		// if(PEAR::isError($r))
+        // {
+        //     if($DB_DEBUG)
+        //         die($_SERVER['PHP_SELF'] . ': '.$r->getDebugInfo());
+        //     else
+        //         header("Location:".$WEBROOT."error.html");
+        // }
+        // return $r;
 	}
 
     /**
@@ -275,16 +305,31 @@
 		global $DB_CONN;
 		global $DB_DEBUG;
                 global $WEBROOT;
-		$r=Array();
-		$r = $DB_CONN->getAll($sql, null, DB_FETCHMODE_ASSOC) ;
-		if(PEAR::isError($r))
+		$r = $DB_CONN->query($sql);
+
+        if(!$r)
         {
             if($DB_DEBUG)
-                die($_SERVER['PHP_SELF'] . ': '.$r->getDebugInfo());
+                die($_SERVER['PHP_SELF'] . ': '.$DB_CONN->error);
             else
-                header("Location:".$WEBROOT."error.html");
+                die($_SERVER['PHP_SELF'] . ': '.$DB_CONN->error . ': ' . var_dump($sql));
         }
-		return $r;
+		$ret = array();
+		while($row = $r->fetch_assoc())
+		{
+			$ret[] = $row;
+		}
+		return $ret;
+		// $r=Array();
+		// $r = $DB_CONN->getAll($sql, null, DB_FETCHMODE_ASSOC) ;
+		// if(PEAR::isError($r))
+        // {
+        //     if($DB_DEBUG)
+        //         die($_SERVER['PHP_SELF'] . ': '.$r->getDebugInfo());
+        //     else
+        //         header("Location:".$WEBROOT."error.html");
+        // }
+		// return $r;
 	}
 
 

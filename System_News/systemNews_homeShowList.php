@@ -4,8 +4,9 @@ DATE:   2009/09/20
 AUTHOR: 14_不太想玩
 Modify: arnan @ 2009/09/29
 */	
+$MONGO_ONLY = false;
 require_once('../config.php');
-require_once('../session.php');
+// require_once('../session.php');
 
 
 require_once($HOME_PATH.'library/filter.php');
@@ -15,80 +16,157 @@ $tpl = new Smarty;
 
 
 //顯示哪一種公告
-$news_type = optional_param('news_type', 'course-all', PARAM_SAFEDIR);	
+$news_type = optional_param('news_type', 'system', PARAM_SAFEDIR);	
 $showAll = optional_param('showAll', 0, PARAM_INT) ; 
 
-$personal_id = $_SESSION['personal_id'];
+// $personal_id = $_SESSION['personal_id'];
 
+$newsList = array();
 
+$start=microtime();
+$start=explode(" ",$start);
+$start=$start[1]+$start[0]; 
 //是否顯示所有公告
 //預設限制十筆
-$sql_NumRows = ' limit 0, 10';
-if($showAll == 1){ //顯示所有
-	$sql_NumRows = '';
-}
+for($i = 0; $i < 10000; $i++)
+{
 
-//搜尋需要種類的公告
-$sql_get_news_type_where = get_news_type_where_sql($news_type) ;  
+if($USE_MYSQL)
+{
+	$sql_NumRows = ' limit 0, 10';
+	// if($showAll == 1){ //顯示所有
+	// 	$sql_NumRows = '';
+	// }
 
-$get_admin_news = 'SELECT A.*, B.course_type FROM news A, news_target B '
-	.' WHERE B.role_cd=0 AND A.news_cd=B.news_cd '.$sql_get_news_type_where
-	.' ORDER BY A.d_news_begin DESC, A.news_cd DESC '. $sql_NumRows;
-//echo $get_admin_news ;
+	//搜尋需要種類的公告
+	$sql_get_news_type_where = get_news_type_where_sql($news_type) ;  
 
-$all_news = db_getAll($get_admin_news);
+	$get_admin_news = 'SELECT A.news_cd, A.subject, A.personal_id, A.d_news_begin, A.content, A.important, A.frequency, B.course_type FROM news A, news_target B '
+		.' WHERE B.role_cd=0 AND A.news_cd=B.news_cd '.$sql_get_news_type_where
+		.' ORDER BY A.d_news_begin DESC'. $sql_NumRows;
+
+	$all_news = db_getAll($get_admin_news);
+
+	if( !empty($all_news) ) {
+
+		$row_index = 0 ;
+		$new = 0;
+		foreach( $all_news as &$row ) {
+
+			//轉換公告時間，判斷是否為最新公告
+			/* $date = convert_date($row['d_news_begin']) ; */
+			$date = $row['d_news_begin'];
+			// $new = (TIME_date(1) <= ($date + 2))?
+			// 	1:0;
+
+			//從Table news_upload取出資料
+			$cd = intval($row['news_cd']);
+			$get_upload_files = "SELECT file_name, file_url, if_url FROM news_upload WHERE news_cd={$cd}";
+
+			$upload_files = db_getAll($get_upload_files);
 
 
-if( !empty($all_news) ) {
-
-	$row_index = 0 ;
-	foreach( $all_news as &$row ) {
-		
-		//轉換公告時間，判斷是否為最新公告
-		$date = convert_date($row['d_news_begin']) ;
-		$new = (TIME_date(1) <= ($date + 2))?
-			1:0;
-
-		//從Table news_upload取出資料
-		$get_upload_files = "SELECT * FROM news_upload WHERE news_cd="
-		."{$row['news_cd']} ORDER BY file_cd ASC ";
-		
-		$upload_files = db_getAll($get_upload_files);
-		
-
-		unset($file_list);
-		foreach($upload_files as &$each_file) {
-			$file_list[] = array(
-				"showFile" => ($each_file['if_url']==0?1:0),
-				"showUrl" => ($each_file['if_url']==1?1:0),
-				'file_name'=> $each_file['file_name'],
-				'file_url'=> ($each_file['if_url']==1? 
+			unset($file_list);
+			foreach($upload_files as &$each_file)
+			{
+				$file_list[] = array(
+					"showFile" => ($each_file['if_url']==0?1:0),
+					"showUrl" => ($each_file['if_url']==1?1:0),
+					'file_name'=> $each_file['file_name'],
+					'file_url'=> ($each_file['if_url']==1? 
 					$each_file['file_url']:$WEBROOT.$each_file['file_url'])
+				);
+
+			}
+
+
+			$newsList[$row_index ++] = array(
+				"news_cd" => $cd,
+				'course_type' => $row['course_type'],
+				"date" => $date,
+				"level" => convert_important($row['important']),
+				"subject" => $row['subject'],
+				"personal_name" => get_publish_name(intval($row['personal_id'])),
+				"viewNum" => $row['frequency'],
+				"new" => $new,
+				"showContent" => ($row['content']==''?0:1),
+				"content" => $row['content'],
+				"file_list" => $file_list
 			);
 
+		}// end of foeach 
+	}// end of check empty 
+}
+else if($USE_MONGODB)
+{
+	$news = $db->news;
+	$query = array(
+		'r' => 0,
+		'ct' => 0
+	);
+	$projector = array(
+		's' => 1,
+		'p' => 1,
+		'db' => 1,
+		'c' => 1,
+		'i' => 1,
+		'f' => 1,
+		'ct' => 1,
+		'u' => 1,
+		/* 'u.$.t' => 0, */
+		/* 'u.$.f' => 0 */
+	);
+	$cursor = $news->find($query, $projector)->sort(array('cb' => -1))->limit(10);
+	$new = 0;
+	$row_index = 0;
+	if($cursor->hasNext())
+	{
+		$all_news = iterator_to_array($cursor);
+		foreach($all_news as &$row)
+		{
+			$date = $row['db'];
+			// $new = (TIME_date(1) <= ($date + 2))?
+			// 	1:0;
+
+			$file_list = array();
+			foreach($row['u'] as &$each_file)
+			{
+				$f = array(
+					"showFile" => ($each_file['iu']==0?1:0),
+					"showUrl" => ($each_file['iu']==1?1:0),
+					/* 'file_name'=> $each_file['n'], */
+					'file_url'=> ($each_file['iu']==1? 
+					$each_file['u']:$WEBROOT.$each_file['u'])
+				);
+				if(array_key_exists('n', $each_file))
+				{
+					$f['file_name'] = $each_file['n'];
+				}
+				$file_list[] = $f;
+			}
+			$newsList[$row_index ++] = array(
+				"news_cd" => $row['_id'],
+				'course_type' => $row['ct'],
+				"date" => $date,
+				"level" => convert_important($row['i']),
+				"subject" => $row['s'],
+				"personal_name" => get_publish_name($row['p']),
+				"viewNum" => $row['f'],
+				"new" => $new,
+				"showContent" => ($row['c']==''?0:1),
+				"content" => $row['c'],
+				"file_list" => $file_list
+			);
 		}
-		
-		
-		$newsList[$row_index ++] = array(
-			"news_cd" => $row['news_cd'],
-			'course_type' => $row['course_type'],
-			"date" => $date,
-			"level" => convert_important($row['level']),
-			"subject" => $row['subject'],
-			"personal_name" => get_publish_name($row['personal_id']),
-			"viewNum" => $row['frequency'],
-			"new" => $new,
-			"showContent" => ($row['content']==''?0:1),
-			"content" => $row['content'],
-			"file_list" => $file_list
-		);
-		
-	}// end of foeach 
-}// end of check empty 
+	}
+}
+}
+$end=microtime();
+$end=explode(" ",$end);
+$end=$end[1]+$end[0];
 
-
-
-
+printf("%f\n",$end-$start);
+die();
 //=====================================================================
 $RELEATED_PATH = '../';
 $IMAGE_PATH = $RELEATED_PATH . $IMAGE_PATH;

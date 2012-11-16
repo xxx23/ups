@@ -1,37 +1,58 @@
 <?php
 
-$DB_USERNAME = "hsng";
-$DB_USERPASSWORD = "ringline";
+MongoCursor::$timeout = -1;
 
-$m = new Mongo("mongodb://${DB_USERNAME}:${DB_USERPASSWORD}@localhost/elearning");
-
-// $m = new Mongo("mongodb://localhost:27017");
+$m = new Mongo();
 $db = $m->elearning;
 $online_number_s = $db->online_number_s;
 $list = array();
 
-$index = 1000000 ;
-for($i = 1; $i <= $index; $i++)
+$limit = 300000;
+$index = $limit;
+$fd = fopen("/tmp/randomData", "r");
+for($i = 0; $i < $limit; $i++)
 {
-	$list[$i] = $i;
+	$list[] = intval(fgets($fd, 1024));
 }
+if($argc == 2 && $argv[1] == '-s')
+{
+	$isSafe = true;
+}
+else
+{
+	$isSafe = false;
+}
+
 $start=microtime();
 $start=explode(" ",$start);
 $start=$start[1]+$start[0]; 
-for($i = 0; $i < $index; $i++)
+for($i = 0; $i < $limit; $i++)
 {
-	// $mid = new MongoId();
-	// $online_number_shard->insert(array('_id' => $mid, 'pid' => intval(rand(1,10000000)), 'h' => '127.0.0.1', 't' => new MongoDate(), 'idle' => new MongoDate(), 'ss' => '登入系統'));
-	$tmp = intval(rand(1,$index));
-	$id = $list[$tmp];
-	$list[$tmp] = $list[$index];
-	$index--;
+	$id = $list[$i];
 	// $mid = (string)$id . $mid;
-	$online_number_s->insert(array('_id' => $id, 'pid' => $id, 'h' => '127.0.0.1', 't' => new MongoDate(), 'idle' => new MongoDate(), 'ss' => '登入系統'));
+	$data = array(
+		'_id' => $id,
+		'pid' => $id,
+		'h' => '127.0.0.1',
+		't' => new MongoDate(),
+		'idle' => new MongoDate(),
+		'ss' => '登入系統'
+	);
+	$online_number_s->insert($data, $isSafe);
+}
+$_limit = $limit * 3;
+while($online_number_s->count() != $_limit)
+{
+	sleep(1);
+}
+sleep(5); // The balancer may delay
+while($online_number_s->count() != $_limit)
+{
+	sleep(1);
 }
 $end=microtime();
 $end=explode(" ",$end);
 $end=$end[1]+$end[0];
 
-printf("%f seconds\n",$end-$start);
+printf("%f\n",$end - $start - 5);
 

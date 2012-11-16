@@ -1,0 +1,191 @@
+<?php 
+
+// ini_set('display_errors',1);
+// error_reporting(E_ALL);
+//System Begin Time
+	$hostname = gethostname();
+	if(strstr($hostname, 'mongo') != false)
+	{
+		$USE_MYSQL = false;
+	}
+	else
+	{
+		$USE_MYSQL = true;
+	}
+
+	$SYSTEM_BEGIN_YEAR = "2012";
+	$SYSTEM_BEGIN_MONTH = "08";
+	$SYSTEM_BEGIN_DAY = "13";
+
+//Web Server Setting
+	$HOST = "140.123.230.161";
+	if($USE_MYSQL == false)
+	{
+		$HOMEURL = "http://140.123.230.161:5566/";
+	}
+	else
+	{
+		$HOMEURL = "http://140.123.230.161:5567/";
+	}
+	$WEBROOT = "/";
+	$HOME_PATH = "/var/www/";
+
+//database setting
+	$DB_TYPE = "mysql";
+	$DB_HOST = "mysql1";
+	$DB_NAME = "elearning";
+	$DB_USERNAME = "hsng";
+	$DB_USERPASSWORD = "ringline";
+
+//CSS
+	$CSS_PATH = "css/";
+//JavaScript
+	$JAVASCRIPT_PATH = "script/";
+//Image
+	$IMAGE_PATH = "images/";
+//File
+	$FILE_PATH = "file/";
+//Theme
+	$THEME_PATH = "themes/";
+//Library
+
+	$LIBRARY_PATH = "library/";
+//Teaching materials
+	$DATA_FILE_PATH = "/usr/share/nginx/www/ups/Data_File/";
+//Media for streaming
+	$MEDIA_FILE_PATH = "/usr/share/nginx/www/ups/Streaming_File/";
+//Course file
+	$COURSE_FILE_PATH = "/usr/share/nginx/www/ups/Course_File/";
+//Personal Directory
+	$PERSONAL_PATH = "/usr/share/nginx/www/ups/Personal_File/";
+	$WWW_GID = "33";
+
+//FTP setting
+	$FTP_IP = "127.0.0.1";
+	$FTP_PORT = "21";
+	$MAX_UPLOAD_SIZE = "128";
+
+//utility settings
+	$RAR_PATH = "/usr/bin/rar";
+	$PHP_PATH = "php";
+
+//MAIL settings
+	$MAIL_SMTP_HOST = "localhost";
+	$MAIL_SMTP_HOST_PORT = "25";
+	$MAIL_ADMIN_USER = "";
+	$MAIL_ADMIN_PASSWROD = "";
+	$MAIL_ADMIN_EMAIL = "";
+	$MAIL_ADMIN_EMAIL_NICK = "[教育部-教學平台管理者]";
+
+	$UPS_ONLY = true;
+
+	// $USE_MYSQL = false;
+	$USE_MONGODB = !$USE_MYSQL;
+
+	set_include_path( get_include_path() . PATH_SEPARATOR . $HOME_PATH.$LIBRARY_PATH."Smarty". PATH_SEPARATOR . $HOME_PATH.$LIBRARY_PATH."PearDB");
+
+	if($USE_MYSQL)
+	{
+		//Pear DB library
+		// require_once("DB.php");
+
+		
+		//connect to database
+		// $dsn = array(
+		//     'phptype'  => $DB_TYPE,
+		//     'username' => $DB_USERNAME,
+		//     'password' => $DB_USERPASSWORD,
+		//     'hostspec' => $DB_HOST,
+		//     'database' => $DB_NAME
+		// );
+
+		// $options = array(
+		//     'debug'       => 2,
+		//     'portability' => DB_PORTABILITY_ALL,
+		// );
+		
+		// $DB_CONN = DB::connect($dsn, $options);
+		// if (PEAR::isError($DB_CONN))	die($DB_CONN->getMessage());
+		// $DB_HOST = 'mysql-proxy';
+		$DB_HOST = '10.1.1.205';
+		$DB_CONN = new mysqli($DB_HOST, $DB_USERNAME, $DB_USERPASSWORD, $DB_NAME, 4040);
+		if($DB_CONN->connect_errno) 
+		{
+			printf("Connect failed: %s\n", $DB_CONN->connect_error);
+			die();
+		}
+
+		//appended by puppy for avoiding encoding problem
+		// $DB_CONN->query("SET NAMES 'utf8'");
+		// $DB_CONN->set_charset("utf8");
+	}
+	else if($USE_MONGODB)
+	{
+		if($MONGO_ONLY != true)
+		{
+			$DB_HOST = '10.1.1.205';
+			// var_dump(gethostname());
+			$DB_CONN = new mysqli($DB_HOST, $DB_USERNAME, $DB_USERPASSWORD, $DB_NAME, 4040);
+			if($DB_CONN->connect_errno) 
+			{
+				printf("Connect failed: %s\n", $DB_CONN->connect_error);
+				die();
+			}
+		}
+
+		//appended by puppy for avoiding encoding problem
+		// if ($DB_TYPE == "mysql")
+		//       $DB_CONN->query("SET NAMES 'utf8'");
+
+		////////////////////////////////////////////////
+
+		// $m = new Mongo("mongodb://${DB_USERNAME}:${DB_USERPASSWORD}@localhost/elearning");
+
+		MongoCursor::$timeout = -1;
+		$m = new Mongo();
+		// $m = new Mongo("mongodb://localhost:27017", array('timeout' => 2000));
+		// $m = new Mongo("mongodb://127.0.0.1:27017", array('timeout' => 2000));
+		//$m = new Mongo("mongodb://mongo1:27018", array('timeout' => 2000));
+		// $m = new Mongo("mongodb://10.1.1.3:27018", array('timeout' => 2000));
+		$db = $m->elearning;
+		// $db->authenticate($DB_USERNAME, $DB_USERPASSWORD);
+	}
+		    
+	//Smarty library
+	require_once("Smarty.class.php");
+	
+	//Zip library
+	require_once($LIBRARY_PATH . "ziparchive.php");
+	
+	//MySqlDump library
+	require_once($LIBRARY_PATH . "MySqlDump.php");
+	
+	//RSS library
+	require_once($LIBRARY_PATH . "rss_generator.php");
+	
+	//common library
+	require_once($LIBRARY_PATH . "common.php");
+	
+	//time library
+	require_once($LIBRARY_PATH . "time.php");
+
+	//file library
+	require_once($LIBRARY_PATH . "file.php");
+	
+	//system library
+	require_once($LIBRARY_PATH . "system.php");
+	
+	//pdf library
+	require_once($LIBRARY_PATH . "fpdf/chinese.php");
+	
+	//big5 library
+	require_once($LIBRARY_PATH . "big5_func/big5_func.inc");
+	
+	
+	//Learning Tracking library
+	require_once($LIBRARY_PATH . "learningTracking.php");
+    
+	//Learning Tracking Setting
+	$NOISE_TIME = 5;	//seconds
+	// require_once('log.php');
+?>

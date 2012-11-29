@@ -16,22 +16,37 @@ if($DB_CONN->connect_errno)
 }
 
 $ip = '140.123.230.133';
-$limit = 100000;
+$limit = 100;
+$limit2 = 10000;
+$TIME = false;
 
-$start=microtime();
-$start=explode(" ",$start);
-$start=$start[1]+$start[0]; 
+if($TIME)
+{
+	$start=microtime();
+	$start=explode(" ",$start);
+	$start=$start[1]+$start[0]; 
+}
 
+$pid = mt_rand(1, $limit2);
+if(!isset($_SESSION))
+	session_start();
+$_SESSION['personal_id'] = $pid;
 for($i = 0; $i < $limit; $i++)
 {
-	$pid = mt_rand(1, $limit);
+	// $pid = mt_rand(1, $limit2);
+	// if(!isset($_SESSION))
+	// 	session_start();
+	// $_SESSION['personal_id'] = $pid;
 	$sql = "INSERT INTO `login_log` (`pid`, `login_time`, ` ip`) VALUES ('$pid', CURRENT_TIMESTAMP, '$ip');";
 	$r = $DB_CONN->query($sql);
 }
 
-$end=microtime();
-$end=explode(" ",$end);
-$end=$end[1]+$end[0];
-
-printf("%f\n",$end-$start);
-
+if($TIME)
+{
+	$end=microtime();
+	$end=explode(" ",$end);
+	$end=$end[1]+$end[0];
+	
+	printf("%f\n",$end-$start);
+	
+}

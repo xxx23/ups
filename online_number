@@ -1,0 +1,35 @@
+./Routine/countOnlineUser.php:7:                              FROM online_number
+X./Personal_Page/courseList_intoClass.php:57:        /** 登入後會將這個user 記在 online_number **/
+X./Personal_Page/courseList_intoClass.php:59:            $sql = "UPDATE online_number SET status='重新登入中', idle='".date('U')."' WHERE online_cd='".$_SESSION['online_cd ']."'";
+X./Personal_Page/courseList_intoClass.php:63:            $sql = "INSERT INTO online_number (personal_id, host, time, idle, status) VALUES ('".$personal_id."','".$ip."','".date("U")."','".date("U")."','登入系統中')";
+X./Personal_Page/courseList_intoClass.php:65:            $sql = "SELECT online_cd FROM online_number WHERE personal_id='".$personal_id."' and host='".$ip."'";
+X./library/common.php:387:		$sql = "SELECT online_cd FROM online_number WHERE personal_id='".$_SESSION['personal_id']."' and host='".$_SESSION['personal_ip']."'";
+X./library/common.php:393:			$sql = "UPDATE online_number SET status='". $status_now  ."' WHERE online_cd='".$row_online['online_cd']."'";
+./guestLogin.php:47:	/** 登入後會將這個user 記在 online_number **/
+./guestLogin.php:49:		$sql = "UPDATE online_number SET status='重新登入中', idle='".date('U')."' WHERE online_cd='".$_SESSION['online_cd ']."'";
+./guestLogin.php:54:		$sql = "INSERT INTO online_number (personal_id, host, time, idle, status) VALUES ('".$personal_id."','".$ip."','".date("U")."','".date("U")."','登入系統中')";
+./guestLogin.php:57:		$sql = "SELECT online_cd FROM online_number WHERE personal_id='".$personal_id."' and host='".$ip."'";
+X./login_check.php:62:		/** 登入後會將這個user 記在 online_number **/
+X./login_check.php:64:			$sql = "UPDATE online_number SET status='重新登入中', idle='".date('U')."' WHERE online_cd='".$_SESSION['online_cd ']."'";
+X./login_check.php:68:			$sql = "INSERT INTO online_number (personal_id, host, time, idle, status) VALUES ('".$personal_id."','".$ip."','".date("U")."','".date("U")."','登入系統中')";
+X./login_check.php:70:			$sql = "SELECT online_cd FROM online_number WHERE personal_id='".$personal_id."' and host='".$ip."'";
+X./Online/online2.php:17:	//先查詢是否在 online_number
+X./Online/online2.php:18:	$sql = "SELECT COUNT(*) FROM online_number WHERE online_cd='".$_SESSION['online_cd']."'";
+X./Online/online2.php:23:		$sql = "UPDATE online_number SET begin_course_cd='".$_SESSION['begin_course_cd']."', status='觀看公告' WHERE online_cd='".$_SESSION['online_cd']."'";
+X./Online/online2.php:28:		$sql = "INSERT INTO online_number (personal_id, host, time, idle, status, begin_course_cd) 
+X./Online/online2.php:35:		$sql = "SELECT online_cd FROM online_number WHERE personal_id='".$_SESSION['personal_id']."' and host='".$_SESSION['personal_ip']."'";
+X./Online/online2.php:43:	$sql = "DELETE from online_number WHERE time < (" . date("U") . " - $refreshsec)";
+X./Online/online2.php:54:	$sql = "SELECT COUNT(*) FROM online_number";
+X./Online/online2.php:57:	$sql = "SELECT COUNT(*) FROM online_number WHERE begin_course_cd = " .  
+F./Online/online.php:40:	$sql = "SELECT * FROM online_number WHERE online_cd='".$_SESSION[online_cd]."'";
+F./Online/online.php:47:		$sql = "UPDATE online_number SET begin_course_cd='".$_SESSION[begin_course_cd]."', status='觀看公告' WHERE online_cd='".$_SESSION[online_cd]."'";
+F./Online/online.php:53:		$sql = "INSERT INTO online_number (personal_id, host, time, idle, status, begin_course_cd) 
+F./Online/online.php:61:		$sql = "SELECT online_cd FROM online_number WHERE personal_id='".$_SESSION[personal_id]."' and host='".$_SESSION[personal_ip]."'";
+F./Online/online.php:67:	$sql = "DELETE from online_number WHERE (".date("U")." - time) > ($refreshmin * 60)";
+F./Online/online.php:137:	$sql = "SELECT * FROM online_number";
+F./Online/online.php:302:	$sql = "SELECT * FROM online_number";
+X./logout.php:8:$sql = "DELETE FROM online_number WHERE personal_id='".$_SESSION[personal_id]."' and host='".$_SESSION[personal_ip]."'";
+F./Teaching_Material/temp_textbook_frame.php:49:	// 登入後會將這個user 記在 online_number 
+F./Teaching_Material/temp_textbook_frame.php:51:		$sql = "UPDATE online_number SET status='重新登入中', idle='".date('U')."' WHERE online_cd='".$_SESSION['online_cd ']."'";
+F./Teaching_Material/temp_textbook_frame.php:56:		$sql = "INSERT INTO online_number (personal_id, host, time, idle, status) VALUES ('".$personal_id."','".$ip."','".date("U")."','".date("U")."','登入系統中')";
+F./Teaching_Material/temp_textbook_frame.php:59:		$sql = "SELECT online_cd FROM online_number WHERE personal_id='".$personal_id."' and host='".$ip."'";

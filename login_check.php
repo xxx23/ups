@@ -80,13 +80,13 @@ AUTHOR: 14_不太想玩
 			$online_number = $db->online_number;
 			if( isset($_SESSION['online_cd ']) )
 			{ //同一個來源
-				$online_number->update(array('_id' => new MongoId($_SESSION['online_cd'])), array('$set' => array('ss' => '重新登入中', 'idle' => new MongoDate())));
+				$online_number->update(array('_id' => new MongoId($_SESSION['online_cd'])), array('$set' => array('s' => '重新登入中', 'i' => new MongoDate())));
 			}
 			else
 			{ 
 				$mid = new MongoId();
-				$online_number->insert(array('_id' => $mid, 'pid' => intval($personal_id), 'h' => $ip, 't' => new MongoDate(), 'idle' => new MongoDate(), 'ss' => '登入系統'));
-				$_SESSION['online_cd'] = $mid;
+				$online_number->insert(array('_id' => $mid, 'p' => intval($personal_id), 'h' => $ip, 't' => new MongoDate(), 'i' => new MongoDate(), 's' => '登入系統'));
+				$_SESSION['online_cd'] = (string)$mid;
 			}
 		}
 
@@ -145,45 +145,21 @@ AUTHOR: 14_不太想玩
 	function loginLog($pid,$ip,$MAX_LOGIN_LOG_LENGTH)
 	{
 		global $DB_CONN,$MAX_LOGIN_LOG_LENGTH, $USE_MYSQL, $USE_MONGODB, $db;
-        /*$sql = "SELECT COUNT(*) as count FROM `login_log`";
-        $count = db_getOne($sql);
-		if($count > $MAX_LOGIN_LOG_LENGTH)
-		{
-			$sql = "DELETE FROM `login_log` WHERE `login_log`.`login_time`=(SELECT MIN(login_time) FROM (SELECT login_time FROM `login_log`) AS temp)";
-			$res = $DB_CONN->query($sql);
-			if (PEAR::isError($res))	die($res->getMessage());
-        }*/
+
+		$date = date("Y-m-d");
 		if($USE_MYSQL)
 		{
 			$sql = "INSERT INTO `login_log` (`pid`, `login_time`, ` ip`) VALUES ('".$pid."', CURRENT_TIMESTAMP, '".$ip."');";
 			$res = db_query($sql);
+
+			// db_query("INSERT INTO login_statistic (which_month, count) VALUES ('$date', '1') ON DUPLICATE KEY UPDATE count=count+1");
 		}
 		else if($USE_MONGODB)
 		{
 			$login_log = $db->login_log;
-			$cursor = $login_log->find(array(), array('l_t' => 1));
-			// foreach($cursor as $doc)
-			// {
-			// 	var_dump(date('Y-M-d h:i:s', $doc['l_t']->sec));
-			// }
-
-			// die();
-			$login_log->insert(array('pid' => $pid, 'l_t' => new MongoDate(), 'ip' => $ip));
+			$login_log->insert(array('p' => intval($pid), 'l' => new MongoDate(), 'i' => $ip));
+			// $login_log->update(array('_id' => $date), array('$inc' => array('c' => 1)), array('upsert' => true));
 		}
-		// $res = db_query("LOCK TABLES `login_statistic` WRITE");
-		// $date = getdate();
-		// $sql = "SELECT count FROM `login_statistic` WHERE `which_month`='$date[year]/$date[mon]/1 00:00:00'";
-		// $res = db_query($sql);
-		// if($res->numRows($res) > 0)
-		// {
-		// 	$data = $res->fetchRow();
-		// 	$sql = "UPDATE `login_statistic` SET `count` = ".($data[0]+1) ." WHERE `which_month` = '$date[year]/$date[mon]/1 00:00:00'";
-		// }
-		// else
-		// {
-		// 	$sql = "INSERT INTO `login_statistic` (`which_month`, `count`) VALUES ('$date[year]/$date[mon]/1', '1');";
-		// }
-		// $res = db_query($sql);
-		// $res = db_query("UNLOCK TABLES");
+
 	}
 ?>

@@ -4,28 +4,34 @@
 //  檔案格式為   $user_id, date("U") ,$course_id
 //  會使用到session中的$time.
 
+	$MONGO_ONLY = true;
 	$RELEATED_PATH = "../";
 	require_once($RELEATED_PATH . "config.php");
-	require_once($RELEATED_PATH . "session.php");
+	// require_once($RELEATED_PATH . "session.php");
+	session_start();
     require_once($RELEATED_PATH . "library/date.php");
-	//開啟session
-	session_start();	
 
 	global $USE_MONGODB, $USE_MYSQL, $db;
 
 	if(isset($_SESSION['begin_course_cd']))
 		$begin_course_cd = $_SESSION['begin_course_cd'];
-	
+	if(isset($_SESSION['online_cd']))
+		$online_cd = $_SESSION['online_cd'];
+	if(isset($_SESSION['personal_id']))
+		$personal_id = $_SESSION['personal_id'];
+	if(isset($_SESSION['personal_ip']))
+		$personal_ip = $_SESSION['personal_ip'];
+
 	//先查詢是否在 online_number
 	if($USE_MYSQL)
 	{
-		$sql = "SELECT COUNT(*) FROM online_number WHERE online_cd='".$_SESSION['online_cd']."'";
+		$sql = "SELECT COUNT(*) FROM online_number WHERE online_cd='$online_cd'";
 		$isHave = db_getOne($sql);
 	}
 	else if($USE_MONGODB)
 	{
 		$online_number = $db->online_number;
-		$isHave = $online_number->count(array('_id' => new MongoId($_SESSION['online_cd'])));
+		$isHave = $online_number->count(array('_id' => new MongoId("$online_cd")));
 	}
 
 	// 如果已經在裏面的話 就更新資料
@@ -33,40 +39,35 @@
 	{
 		if($USE_MYSQL)
 		{
-			$sql = "UPDATE online_number SET begin_course_cd='".$_SESSION['begin_course_cd']."', status='觀看公告', idle='" . date('U')."' WHERE online_cd='".$_SESSION['online_cd']."'";
+			$sql = "UPDATE online_number SET begin_course_cd='$begin_course_cd', status='觀看公告', idle='" . date('U')."' WHERE online_cd='$online_cd'";
 			$res = db_query($sql);
 		}
 		else if($USE_MONGODB)
 		{
-			$online_number->update(array('_id' => new MongoId($_SESSION['online_cd'])), array('$set' => array('bcd' => intval($_SESSION['begin_course_cd']), 'idle' => new MongoDate, 'ss' => '觀看公告')));
+			$online_number->update(array('_id' => new MongoId($online_cd)), array('$set' => array('b' => intval($begin_course_cd), 'i' => new MongoDate, 's' => '觀看公告')));
 		}
 	}
 	else
 	{
 		if($USE_MYSQL)
 		{
+			global $DB_CONN;
 			$sql = "INSERT INTO online_number (personal_id, host, time, idle, status, begin_course_cd) 
-					VALUES ('".$_SESSION['personal_id']."','".$_SESSION['personal_ip']."','".date('U')."','".date('U')."','觀看公告','".$_SESSION['begin_course_cd']."')";
-			//add by aeil
-			if(!is_null($_SESSION['personal_id']) || !empty($_SESSION['personal_id']))
-			{
-				$res = db_query($sql);
-			}
-			$sql = "SELECT online_cd FROM online_number WHERE personal_id='".$_SESSION['personal_id']."' and host='".$_SESSION['personal_ip']."'";
-			$online_cd = db_getOne($sql);
-			$_SESSION['online_cd'] =	 $online_cd;			
+				VALUES ('$personal_id','$personal_ip','".date('U')."','".date('U')."','觀看公告','$begin_course_cd')";
+			$r = $DB_CONN->query($sql);
+			$_SESSION['online_cd'] = $DB_CONN->insert_id;;			
 		}
 		else if($USE_MONGODB)
 		{
 			$mid = new MongoId();
-			$online_number->insert(array('_id' => $mid, 'pid' => intval($_SESSION['personal_id']), 'h' => $_SESSION['personal_ip'], 't' => new MongoDate(), 'idle' => new MongoDate(), 'ss' => '觀看公告', 'bcd' => intval($_SESSION['begin_course_cd'])));
+			$online_number->insert(array('_id' => $mid, 'p' => intval($personal_id), 'h' => $personal_ip, 't' => new MongoDate(), 'i' => new MongoDate(), 's' => '觀看公告', 'b' => intval($begin_course_cd)));
 			$_SESSION['online_cd'] = $mid;
 		}
 	}	
 	//刪除 idle過久的
 	// 這邊query寫法感覺可以再改進 by carlcarl
-    $refreshmin = 10; //
-    $refreshsec = $refreshmin * 60;
+	$refreshmin = 10; //
+	$refreshsec = $refreshmin * 60;
 	if($USE_MYSQL)
 	{
 		$sql = "DELETE from online_number WHERE idle < (" . date("U") . " - $refreshsec)";
@@ -76,10 +77,10 @@
 	{
 		$d = new MongoDate();
 		$d->sec -= $refreshsec;
-		$online_number->remove(array('idle' => array('$lt' => $d)));
+		$online_number->remove(array('i' => array('$lt' => $d)));
 	}
 
-//------------- display	---------------------
+	//------------- display	---------------------
 	//查出系統上的人數 與 姓名 狀態
 	//查出這堂課的人數 與 姓名 狀態
 	$system_num = 0;
@@ -90,19 +91,20 @@
 	{
 		$sql = "SELECT COUNT(*) FROM online_number";
 		$system_num = db_getOne($sql);
-	
+
 		$sql = "SELECT COUNT(*) FROM online_number WHERE begin_course_cd = " .  
-			$_SESSION['begin_course_cd'] . " AND online_cd <> " . $_SESSION['online_cd'];
+			$begin_course_cd . " AND online_cd <> " . $online_cd;
 		$course_num = db_getOne($sql);
 	}
 	else if($USE_MONGODB)
 	{
 		$system_num = $online_number->count();
-		$course_num = $online_number->count(array('bcd' => intval($_SESSION['begin_course_cd']), '_id' => array('$ne' => new MongoId($_SESSION['online_cd']))));
+		$course_num = $online_number->count(array('b' => intval($begin_course_cd), '_id' => array('$ne' => new MongoId($online_cd))));
 	}
 
+
     //--update add by q110185
-        update_course_tracking();
+        // update_course_tracking();
     //--update end
 	echo $system_num . ',' . $course_num;
 	

@@ -54,10 +54,24 @@ function gen_course_news_path($begin_course_cd) {
 }
 
 function get_publish_name($pid){
-	$num = db_getOne("SELECT count(*) FROM `personal_basic` WHERE personal_id=$pid;");
-	if($num != 1)
-		return "Unknow";
-	return db_getOne("SELECT personal_name FROM `personal_basic` WHERE personal_id=$pid;");
+	global $m, $USE_MONGODB, $USE_MYSQL;
+	if($USE_MONGODB)
+	{
+		$db = $m->elearning;
+		$personal_basic = $db->personal_basic;
+		$result = $personal_basic->findOne(array('p' => $pid));
+		if($result == NULL)
+			return "Unknow";
+		else
+			return "Unknow";
+	}
+	else
+	{
+		$num = db_getOne("SELECT count(*) FROM `personal_basic` WHERE personal_id=$pid;");
+		if($num != 1)
+			return "Unknow";
+		return db_getOne("SELECT personal_name FROM `personal_basic` WHERE personal_id=$pid;");
+	}
 }
 
 //處理important	

@@ -1,6 +1,8 @@
 <?php 
-$process_num = 20;
-print "老爸：我是老爸，我要生{$process_num}個小孩。\n";
+$process_num = 1;
+if(array_key_exists(1, $argv)) {$process_num = intval($argv[1]) * 5;}
+// if($process_num > 10) die($process_num);
+// print "老爸：我是老爸，我要生{$process_num}個小孩。\n";
 $children = array();
 
 $DB_USERNAME = "hsng";
@@ -48,7 +50,7 @@ if($pid)
 	$end=microtime();
 	$end=explode(" ",$end);
 	$end=$end[1]+$end[0];
-	printf("three shards: %f seconds\n",$end-$start);
+	printf("%f\n",$end-$start);
 } 
 else 
 {
@@ -57,17 +59,18 @@ else
 	// sleep($i);
 	// print "我是第{$i}個小朋友，要走了\n";
 	// exit(0);
-	$m = new Mongo("mongodb://${DB_USERNAME}:${DB_USERPASSWORD}@localhost/elearning");
-	$db = $m->elearning;
-	$online_number_s = $db->online_number_s;
-	for($i = 0; $i < 10000; $i++)
-	{
-		$c = $online_number_s->find(array('_id' => intval(rand(1,2000000))));
-		// $c->getNext();
-		foreach($c as $r)
-		{
-			// print($r['pid'] . "\n");
-		}
-	}
+	// $m = new Mongo("mongodb://${DB_USERNAME}:${DB_USERPASSWORD}@localhost/elearning");
+	// $db = $m->elearning;
+	// $online_number_s = $db->online_number_s;
+	// for($i = 0; $i < 10000; $i++)
+	// {
+	// 	$c = $online_number_s->find(array('_id' => intval(rand(1,2000000))));
+	// 	// $c->getNext();
+	// 	foreach($c as $r)
+	// 	{
+	// 		// print($r['pid'] . "\n");
+	// 	}
+	// }
+	require_once('final.php');
 }
 ?>

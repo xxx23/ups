@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Import mysql news 相關資料表到mongodb 的 new 資料表
+ * Import mysql news 相關資料表到mongodb 的 new 資料表(反正規化)
  */
 
 $DB_TYPE = "mysql";
@@ -38,22 +38,25 @@ foreach($all_news as &$row)
 	$u = array();
 	foreach($uploads as &$upload)
 	{
-		$tmp = array(
-			/* 'n' => $upload['file_name'], */
-			't' => intval($upload['file_type']),
-			/* 'f' => $upload['news_file'], */
-			'u' => $upload['file_url'],
-			'iu' => $upload['if_url']
-		);
-		if($upload['file_name'] != '')
+		for($i = 0; $i < 1; $i++)
 		{
-			$tmp['n'] = $upload['file_name'];
+			$tmp = array(
+				/* 'n' => $upload['file_name'], */
+				't' => intval($upload['file_type']),
+				/* 'f' => $upload['news_file'], */
+				'u' => $upload['file_url'],
+				'iu' => $upload['if_url']
+			);
+			if($upload['file_name'] != '')
+			{
+				$tmp['n'] = $upload['file_name'];
+			}
+			if($upload['news_file'] != '')
+			{
+				$tmp['f'] = $upload['news_file'];
+			}
+			$u[] = $tmp;
 		}
-		if($upload['news_file'] != '')
-		{
-			$tmp['f'] = $upload['news_file'];
-		}
-		$u[] = $tmp;
 	}
 	$data = array(
 		's' => $row['subject'],

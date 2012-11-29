@@ -1,0 +1,7 @@
+./login_check.php:61:        loginLog($personal_id,$ip,$MAX_LOGIN_LOG_LENGTH);
+./login_check.php:127:	function loginLog($pid,$ip,$MAX_LOGIN_LOG_LENGTH)
+./login_check.php:129:		global $DB_CONN,$MAX_LOGIN_LOG_LENGTH;
+./login_check.php:130:        /*$sql = "SELECT COUNT(*) as count FROM `login_log`";
+./login_check.php:132:		if($count > $MAX_LOGIN_LOG_LENGTH)
+./login_check.php:134:			$sql = "DELETE FROM `login_log` WHERE `login_log`.`login_time`=(SELECT MIN(login_time) FROM (SELECT login_time FROM `login_log`) AS temp)";
+./login_check.php:138:		$sql = "INSERT INTO `login_log` (`pid`, `login_time`, ` ip`) VALUES ('".$pid."', CURRENT_TIMESTAMP, '".$ip."');";

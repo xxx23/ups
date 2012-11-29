@@ -1,0 +1,25 @@
+./Learning_Tracking/showStudentCourseUseRank.php:384:					From student_learning E
+./Learning_Tracking/showStudentCourseUseRank.php:430:					From student_learning E
+X./Learning_Tracking/showStudentCourseUseLogAction.php:140:				student_learning A 
+X./Learning_Tracking/showAllStudentCourseUseLog.php:126:                            student_learning A 
+X./Learning_Tracking/showCourseUseLogSum.php:95:			student_learning A 
+X./Personal_Page/history_course_list.php:193:				student_learning A 
+X./library/lib_course_pass.php:61:				student_learning A 
+F./update_pass_time.php:6:        FROM `student_learning` 
+X./Teaching_Material/tea_save_node_seq.php:69:  $sql = "select * from student_learning where
+X./Teaching_Material/course_tracking.php:107:			from student_learning 
+X./Teaching_Material/error_report_func.php:67:  $sql = "select * from student_learning where
+X./Teaching_Material/stu_start.php:55:         student_learning A
+X./Teaching_Material/personal_tracking.php:106:	$sql = "select * from student_learning 
+FF./Teaching_Material/scorm/mod/scorm/report1.php:51:$sql = "select * from student_learning where personal_id = $personal_id and content_cd = $content_cd";
+X./Teaching_Material/scorm/mod/scorm/getclosetime.php:83:    $sql = "select * from student_learning where 
+X./Teaching_Material/scorm/mod/scorm/getclosetime.php:91:      $sql ="insert into student_learning
+X./Teaching_Material/scorm/mod/scorm/getclosetime.php:104:         $sql ="update student_learning
+FF./Teaching_Material/scorm/mod/scorm/report.php:42:$sql = "select distinct(menu_id)  from  student_learning  where content_cd = $content_cd;";
+FF./Teaching_Material/scorm/mod/scorm/report.php:50:        from student_learning where content_cd = $content_cd and menu_id = $menu_id";
+X./Teaching_Material/lib/textbook_func.inc:72:  $sql = "select * from student_learning where 
+X./Teaching_Material/lib/learning_record.php:15:	$sql = "select * from student_learning 
+X./Teaching_Material/lib/learning_record.php:22:		$sql = "insert into student_learning 
+X./Teaching_Material/lib/learning_record.php:33:		$sql = "update student_learning set event_last_time = '$Event_last_time', event_happen_number = '$count'
+X./Teaching_Material/lib/learning_record.php:54:	$sql = "select * from student_learning where 
+X./Teaching_Material/lib/learning_record.php:70:	$sql = "update student_learning 

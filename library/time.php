@@ -86,6 +86,7 @@
 	//榡2:hh:mm:ss
 	function TIME_time($choose)
 	{
+		$time = '';
 		switch($choose)
 		{
 		case 1:
